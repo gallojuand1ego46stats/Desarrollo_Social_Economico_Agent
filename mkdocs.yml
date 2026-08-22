@@ -1,0 +1,14 @@
+site_name: Desarrollo_Social_Economico_Agent
+site_description: Trabajo universitario - analisis social y economico
+repo_url: https://github.com/gallojuand1ego46stats/Desarrollo_Social_Economico_Agent
+theme:
+  name: material
+  language: es
+  palette:
+    primary: teal
+  features:
+    - content.code.copy
+markdown_extensions:
+  - admonition
+nav:
+  - Inicio: index.md

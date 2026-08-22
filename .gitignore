@@ -1,0 +1,46 @@
+# ==========================================================
+#  PROTECCION DE DATOS - NO ELIMINAR NI RELAJAR ESTAS REGLAS
+# ==========================================================
+
+# Datos reales: NUNCA se suben a GitHub
+*.csv
+*.xlsx
+*.xls
+*.xlsm
+*.parquet
+*.sav
+*.dta
+*.sqlite
+*.db
+*.rds
+
+datos/*
+!datos/.gitkeep
+resultados/*
+!resultados/.gitkeep
+salidas/
+exports/
+figuras/
+latex/
+
+# Secretos y credenciales
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+token*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Sistema / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
