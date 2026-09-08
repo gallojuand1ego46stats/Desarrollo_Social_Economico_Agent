@@ -1,5 +1,5 @@
 # ==========================================================
-#  PROTECCION DE DATOS - NO ELIMINAR NI RELAJAR ESTAS REGLAS
+# PROTECCION DE DATOS - NO ELIMINAR NI RELAJAR ESTAS REGLAS
 # ==========================================================
 
 # Datos reales: NUNCA se suben a GitHub
@@ -13,15 +13,43 @@
 *.sqlite
 *.db
 *.rds
+*.rda
+*.RData
 
-datos/*
-!datos/.gitkeep
-resultados/*
-!resultados/.gitkeep
-salidas/
-exports/
-figuras/
-latex/
+# Estructura local de datos
+/data/raw/*
+!/data/raw/.gitkeep
+/data/bronze/*
+!/data/bronze/.gitkeep
+/data/silver/*
+!/data/silver/.gitkeep
+/data/gold/*
+!/data/gold/.gitkeep
+
+/data/raw/secop_ii/*
+!/data/raw/secop_ii/.gitkeep
+/data/raw/dane_ipm/*
+!/data/raw/dane_ipm/.gitkeep
+/data/raw/divipola/*
+!/data/raw/divipola/.gitkeep
+
+# Resultados generados
+/outputs/*
+!/outputs/.gitkeep
+/outputs/tablas/*
+!/outputs/tablas/.gitkeep
+/outputs/figuras/*
+!/outputs/figuras/.gitkeep
+
+# Estructuras antiguas del proyecto
+/datos/*
+!/datos/.gitkeep
+/resultados/*
+!/resultados/.gitkeep
+/salidas/
+/exports/
+/figuras/
+/latex/
 
 # Secretos y credenciales
 .env
@@ -31,6 +59,12 @@ latex/
 credentials*
 secrets*
 token*
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
 
 # Python
 __pycache__/
