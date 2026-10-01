@@ -1,0 +1,15 @@
+# PDFs pesados del corpus (no versionar binarios grandes en git)
+corpus/papers/*.pdf
+
+# Índices vectoriales generados (si van por vía propia) — se reconstruyen con el comando del README
+sistema/chroma_db/
+sistema/*.index
+sistema/__pycache__/
+
+# Entornos y claves
+.env
+venv/
+*.key
+
+# Archivos de sistema
+.DS_Store
