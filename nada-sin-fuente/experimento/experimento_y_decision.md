@@ -14,7 +14,7 @@ Cada integrante corrió una consulta bibliográfica real de su eje, en dos trata
 > contratación pública electrónica y reducción de la desigualdad territorial
 > en países en desarrollo."
 
-### Consulta de Juan Diego (eje de vulnerabilidad / IPM)
+### Consulta de Juan / David (eje de vulnerabilidad / IPM)
 Juan Diego definió y ejecutó su propia consulta bibliográfica del eje de
 vulnerabilidad (IPM/DANE) con el mismo protocolo: 5 referencias con DOI por
 tratamiento (A y B). Sus resultados están en la tabla de la sección 2. David
