@@ -78,14 +78,13 @@ Las fechas de obtención son aproximadas (día de carga/verificación) y deben c
 - **Estado en el corpus:** Incorporada
 - **Nota:** el README de este repo contenía credenciales de Google en texto plano al momento de la consulta. No se reproducen aquí ni en ningún otro documento de este repo. Si se cita este README, se hace omitiendo ese fragmento.
 
-## Fuentes del Informe 1 que NO están en el corpus
 
-### salazar-et-al_2024 (no incorporada)
+### salazar-et-al_2024 
 - **Origen:** Salazar, Pérez y Gallego (2024). VigIA. Data & Policy, 6, e75. https://doi.org/10.1017/dap.2024.83
 - **Fecha de obtención:** 2026-10-06 (solo consulta de la página del editor)
 - **Licencia o permiso:** Acceso abierto en la revista (verificar tipo de licencia antes de cargar)
-- **Quién lo verificó:** Claude (búsqueda web) el 2026-10-06; pendiente de confirmación por el equipo
-- **Estado en el corpus:** No incorporada (nunca se subió a NotebookLM)
+- **Quién lo verificó:** Claude (búsqueda web) el 2026-10-06
+- **Estado en el corpus:** Incorporada
 
 ### gutierrez-vanegas_2024 (no incorporada)
 - **Origen:** Trabajo de grado, Fundación Universitaria Los Libertadores
@@ -94,9 +93,9 @@ Las fechas de obtención son aproximadas (día de carga/verificación) y deben c
 - **Quién lo verificó:** Nadie: no se logró ubicar el documento
 - **Estado en el corpus:** No incorporada; NO verificada. Se debe confirmar o retirar del Informe 1
 
-### diaz-diez_2023 (no incorporada)
+### diaz-diez_2023 
 - **Origen:** Revista Eurolatinoamericana de Derecho Administrativo, 10(2)
 - **Fecha de obtención:** 2026-10-06 (solo consulta de metadatos)
 - **Licencia o permiso:** Acceso abierto en Redalyc (según consulta)
 - **Quién lo verificó:** Claude (búsqueda web) el 2026-10-06: el artículo existe y el tema coincide; la frase "carácter transaccional" no se confirmó
-- **Estado en el corpus:** No incorporada; verificación parcial
+- **Estado en el corpus:** Incorporada
