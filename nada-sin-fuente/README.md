@@ -2,7 +2,7 @@
 
 Actividad evaluativa del curso **Consultoría** (Pregrado en Estadística, USTA — docente Javier Mauricio Sierra), 30% del corte. Construida sobre las fuentes del estado del arte del artículo de grado "Contratación pública y vulnerabilidad socioeconómica municipal en Colombia".
 
-**Equipo:** Juan Diego Gallo Quintero, Juan David Parada Fonseca.
+**Equipo:** Juan Diego Gallo Quintero, Juan David Parada Fonseca, David Santiago Sanchez.
 
 ## Cómo está organizado este repo
 

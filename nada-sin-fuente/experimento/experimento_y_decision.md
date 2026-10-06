@@ -9,7 +9,7 @@ ejecutada en dos tratamientos:
 
 | Tratamiento | Qué representa | Herramienta usada |
 |---|---|---|
-| A (control) | Chat sin fuentes ni navegación | Ollama + qwen2.5-coder (`ollama run qwen2.5-coder`), sin plugins ni búsqueda |
+| A (control) | Chat sin fuentes ni navegación | Ollama + qwen2.5-coder (`ollama run qwen3.5-coder`), sin plugins ni búsqueda |
 | B (búsqueda) | Buscador conectado a bases bibliográficas reales | OpenCode, con búsqueda web activa |
 
 ### Consulta utilizada (Juan David — eje de contratación)
@@ -17,7 +17,7 @@ ejecutada en dos tratamientos:
 > contratación pública electrónica y reducción de la desigualdad territorial
 > en países en desarrollo."
 
-### Consulta de Juan Diego (eje de vulnerabilidad)
+### Consulta de Juan Diego  y David Sanchez (eje de vulnerabilidad)
 > Pendiente — Juan Diego debe definir y ejecutar su propia consulta cuando
 > esté disponible, siguiendo el mismo protocolo (Tratamientos A y B).
 

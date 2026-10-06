@@ -1,4 +1,4 @@
-# Inventario de fallos — Juan Diego Gallo Quintero y Davis Sanchez
+# Inventario de fallos — Juan Diego Gallo Quintero y David Sanchez
 
 
 ---
@@ -37,4 +37,4 @@
 ---
 
 **Firma:** Juan Diego Gallo Quintero David Sanchez Guarnizo
-**Fecha:**
+**Fecha:** 02/oct/2026

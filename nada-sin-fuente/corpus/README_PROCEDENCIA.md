@@ -1,10 +1,5 @@
 # README de procedencia — corpus
 
-> Todas las fuentes de este corpus son públicas. No hay documentos de contraparte no públicos involucrados en esta actividad.
-
-## Convención de nombres
-
-`apellido_autor_anio.pdf` (ej. `ardila-rueda_2004.pdf`). Si hay varios autores, se usa el primero seguido de "et al" solo si son más de dos.
 
 ## Archivos
 
@@ -89,4 +84,4 @@
 
 ---
 
-> **Pendiente:** completar fecha de obtención y "quién lo verificó" para cada fuente — esto es justo lo que la Fase 1 (inventario de fallos) debe revisar: ¿cuáles de estas referencias ya abrió cada uno personalmente?
+
