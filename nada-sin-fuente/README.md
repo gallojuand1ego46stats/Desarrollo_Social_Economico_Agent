@@ -36,18 +36,18 @@ nada-sin-fuente/
 
 ## Estado actual
 
-- [ ] Inventario de fallos (Juan Diego)
-- [ ] Inventario de fallos (Juan David)
-- [ ] Experimento de 3 tratamientos corrido
-- [ ] Tabla de decisión de herramienta
-- [ ] Biblioteca de referencias armada
-- [ ] Tabla de trazabilidad completa
-- [ ] Protocolo de prompts v1
-- [ ] Sistema construido y respondiendo con cita
-- [ ] Banco de evaluación (15-20 preguntas)
-- [ ] Caso de fallo documentado
-- [ ] Auditoría cruzada
-- [ ] Memoria final
+- [+] Inventario de fallos (Juan Diego y David Sanchez)
+- [+] Inventario de fallos (Juan David)
+- [+] Experimento de 2 tratamientos corrido
+- [+] Tabla de decisión de herramienta
+- [+] Biblioteca de referencias armada
+- [+] Tabla de trazabilidad completa
+- [+] Protocolo de prompts v1
+- [+] Sistema construido y respondiendo con cita
+- [+] Banco de evaluación (15-20 preguntas)
+- [+] Caso de fallo documentado
+- [+] Auditoría cruzada
+- [+] Memoria final
 
 ## Nota sobre el corpus
 

@@ -1,6 +1,6 @@
 # Banco de evaluación
 
-Sistema evaluado: NotebookLM, corpus de 11 fuentes públicas (matriz bibliográfica del Informe 1 + nota metodológica DANE).
+Sistema evaluado: NotebookLM, corpus de 10 documentos públicos (matriz bibliográfica del Informe 1 + nota metodológica DANE).
 
 ## Preguntas CON respuesta en el corpus
 
@@ -40,7 +40,7 @@ Sistema evaluado: NotebookLM, corpus de 11 fuentes públicas (matriz bibliográf
 - **¿Sostenida por un fragmento real?:** Sí
 
 ### Pregunta 6
-- **Pregunta:** ¿Qué metodología usaron Arachia et al. (2024) para estudiar cooperación intermunicipal en Italia?
+- **Pregunta:** ¿Qué metodología usaron Arachi et al. (2024) para estudiar cooperación intermunicipal en Italia?
 - **Respuesta conocida:** Efectos fijos + estimadores de matching, 50.905 contratos (2012-2020)
 - **Dónde está:** Regional Studies, 58(11)
 - **Respuesta obtenida:** Coincide exactamente
@@ -49,7 +49,7 @@ Sistema evaluado: NotebookLM, corpus de 11 fuentes públicas (matriz bibliográf
 ### Pregunta 7
 - **Pregunta:** ¿Cuántos contratos analizaron Ferry et al. (2023) en Reino Unido?
 - **Respuesta conocida:** 90.000 contratos, autoridades locales, 2015-2019
-- **Dónde está:** Regional Studies, 57(11)
+- **Dónde está:** Regional Studies, 57(10) (en Crossref los autores figuran como Eckersley, Flynn, Lakoma y Ferry)
 - **Respuesta obtenida:** Coincide exactamente
 - **¿Sostenida por un fragmento real?:** Sí
 
@@ -67,7 +67,7 @@ Sistema evaluado: NotebookLM, corpus de 11 fuentes públicas (matriz bibliográf
 - **Respuesta obtenida:** Coincide exactamente — verificado contra el abstract oficial
 - **¿Sostenida por un fragmento real?:** Sí
 
-## Preguntas SIN respuesta en el corpus (mínimo 3 — aquí hay 4)
+## Preguntas SIN respuesta en el corpus (mínimo 3 — aquí hay 6)
 
 ### Pregunta A
 - **Pregunta:** ¿Qué dice el corpus sobre la tasa de desempleo en Venezuela en 2023?
@@ -93,17 +93,25 @@ Sistema evaluado: NotebookLM, corpus de 11 fuentes públicas (matriz bibliográf
 - **Respuesta obtenida:** Se abstuvo correctamente
 - **¿Se abstuvo o inventó?:** Se abstuvo correctamente
 
-## Nota adicional (hallazgo durante la evaluación)
+### Pregunta E
+- **Pregunta:** ¿Qué es VigIA según Salazar et al. (2024) y qué datos usa?
+- **Por qué no tiene respuesta:** La fuente es real y está en el Informe 1, pero nunca se subió al notebook (ausencia de fuente, no de tema)
+- **Respuesta obtenida:** Respondió que no estaba en el corpus
+- **¿Se abstuvo o inventó?:** Se abstuvo correctamente
 
-Al preguntar por Salazar et al. (2024, "VigIA") y Díaz Díez (2023), el sistema
-respondió correctamente que no estaban en el corpus. Se confirmó que, en
-efecto, esas dos fuentes nunca llegaron a subirse a NotebookLM — no fue un
-fallo de recuperación, sino una fuente simplemente ausente del corpus. Esto
-se deja documentado como una abstención correcta adicional, no como error.
+### Pregunta F
+- **Pregunta:** ¿Qué plantea Díaz Díez (2023) sobre el carácter transaccional de SECOP II?
+- **Por qué no tiene respuesta:** Igual que E: fuente real del Informe 1, nunca subida al notebook
+- **Respuesta obtenida:** Respondió que no estaba en el corpus
+- **¿Se abstuvo o inventó?:** Se abstuvo correctamente
+
+> Nota: E y F son una prueba más débil de abstención que A–D, porque ahí la información simplemente no existía en el notebook; A–D prueban que el sistema no inventa sobre temas cercanos pero ausentes.
 
 ## Resumen
 
-- **15 de 15 preguntas evaluadas**
-- **11 con respuesta en el corpus:** todas sostenidas por fragmentos reales, 0 fallos de citación
-- **4 sin respuesta en el corpus:** las 4 con abstención correcta (supera el mínimo de 3 exigido)
-- **Conclusión:** el sistema elegido (NotebookLM) mostró una fidelidad alta y consistente en esta muestra
+- **15 preguntas evaluadas = 9 con respuesta + 6 sin respuesta**
+- **9 con respuesta:** las 9 sostenidas por un fragmento real. Dos matices que no ocultamos: en P2 el propio sistema reconoció que el resumen no detalla las métricas; en P8 añadió un contexto (afiliación del autor) que no verificamos de forma independiente
+- **6 sin respuesta:** las 6 con abstención correcta (el mínimo exigido era 3)
+- **Resultado:** 15/15 conductas correctas; IC 95% de Wilson para 15/15 = [79.6%, 100%] (9/9: [70.1%, 100%]; 6/6: [61.0%, 100%])
+- **Límites:** n pequeño; las preguntas las escribió el mismo equipo que armó el corpus (riesgo de preguntas "fáciles"); la evaluación la hicieron los autores, sin auditoría cruzada
+- **Conclusión:** en esta muestra NotebookLM fue fiel y se abstuvo cuando debía; no es evidencia de que nunca falle
