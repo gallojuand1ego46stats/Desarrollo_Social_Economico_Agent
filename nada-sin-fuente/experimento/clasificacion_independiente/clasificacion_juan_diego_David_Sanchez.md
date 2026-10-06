@@ -1,6 +1,6 @@
-# Clasificación independiente — Juan Diego Gallo Quintero
+# Clasificación independiente — Juan Diego / David 
 
-# Clasificación independiente — Juan Diego Gallo Quintero 
+# Clasificación independiente — Juan Diego / David
 
 Clasificación realizada a ciegas: solo se entregaron los 10 DOI (sin título,
 autor ni clasificación previa de Juan David), para garantizar independencia.
