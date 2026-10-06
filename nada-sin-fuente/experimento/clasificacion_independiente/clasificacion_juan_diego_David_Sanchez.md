@@ -5,7 +5,7 @@
 Clasificación realizada a ciegas: solo se entregaron los 10 DOI (sin título,
 autor ni clasificación previa de Juan David), para garantizar independencia.
 
-| # | DOI | Clasificación (de Juan Diego) |
+| # | DOI | Clasificación|
 |---|---|---|
 | 1 | 10.1257/pol.20140258 | Utilizable |
 | 2 | 10.1596/1813-9450-10311 | Utilizable |
