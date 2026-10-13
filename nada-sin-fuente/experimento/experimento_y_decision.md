@@ -170,3 +170,7 @@ Las similitudes de las preguntas con respuesta (0,482–0,686) y sin respuesta (
 - 3 respuestas no usaron el formato de cita pedido (P1, P3, P8). En la P1 la cita era correcta pero en otro formato, "(2006, p. 8)", y el verificador no la reconoce: es una limitación del verificador.
 - Respuestas fieles pero incompletas: P3 (no menciona Moran, Queen ni 999 permutaciones), P5 (falta el corte k = 33,3 %) y P9 (faltan las 264 entidades y el Poisson).
 - La fidelidad del contenido la calificaron los autores, sin auditoría cruzada.
+
+### Desición: 
+
+Después de realizadas la pruebas con NotebookLM y RAG propio hemos visto las limitaciones de NotebookLM al momento de efectuar un n grande de citas o referencias y se ha comprobado que este tiene difeente tipo de fallos probado con diferentes bancos de preguntas, así que para nuestro fin como artículo se decide usar un modelo RAG bajo el modelo ollama. 
