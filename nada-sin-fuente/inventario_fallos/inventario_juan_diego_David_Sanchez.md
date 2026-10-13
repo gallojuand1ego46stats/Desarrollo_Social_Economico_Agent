@@ -25,7 +25,7 @@
 
 ## Fallo 3
 
-- **Herramienta:** OpenCode (modelo qwen3.5-coder), generando código R para bootstrap BCa
+- **Herramienta:** OpenCode (modelo qwen3.5:4b-mlx), generando código R para bootstrap BCa
 - **Qué generó:** En su primer intento, código que usaba `mean(matriz)` en vez de `rowMeans(matriz)` para calcular las 10.000 réplicas bootstrap
 - **Qué estaba mal:** Ese error de vectorización colapsó las 10.000 réplicas a un solo valor (el gran promedio), produciendo z₀ = −Inf y límites del intervalo de confianza en NaN — resultados estadísticamente imposibles
 - **Cómo lo detecté:** No lo detecté yo — el propio agente ejecutó su código, notó que z₀=−Inf y los límites NaN no tenían sentido, y corrigió el error antes de mostrarme el resultado final; lo reportó explícitamente como "un bug que tuve"

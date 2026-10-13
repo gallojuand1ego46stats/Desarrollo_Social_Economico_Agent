@@ -6,7 +6,7 @@ Cada integrante corrió una consulta bibliográfica real de su eje, en dos trata
 
 | Tratamiento | Qué representa | Herramienta usada |
 |---|---|---|
-| A (control) | Chat sin fuentes ni navegación | Ollama + `qwen2.5-coder` (`ollama run qwen2.5-coder`), sin plugins ni búsqueda |
+| A (control) | Chat sin fuentes ni navegación | Ollama + `qwen3.5:4b-mlx` (`ollama run qwen3.5:4b-mlx`), sin plugins ni búsqueda |
 | B (búsqueda) | Buscador conectado a bases bibliográficas reales | OpenCode (modelo `qwen2.5-coder` vía Ollama), con búsqueda web activa |
 
 ### Consulta utilizada (Juan David — eje de contratación)

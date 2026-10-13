@@ -1,6 +1,8 @@
 # Banco de evaluación
 
-Sistema evaluado: NotebookLM, corpus de 10 documentos públicos (matriz bibliográfica del Informe 1 + nota metodológica DANE).
+Sistemas evaluados con las mismas 15 preguntas:
+- **Versión 1, NotebookLM**: las respuestas documentadas abajo. Corpus de 10 documentos públicos (matriz bibliográfica del Informe 1 + nota metodológica DANE).
+- **Versión 2, RAG propio** (`sistema/rag.py`, `qwen3.5:4b-mlx`): ver la sección "Resultados con el RAG propio" al final y el reporte completo en `sistema/resultados/`.
 
 ## Preguntas CON respuesta en el corpus
 
@@ -115,3 +117,25 @@ Sistema evaluado: NotebookLM, corpus de 10 documentos públicos (matriz bibliogr
 - **Resultado:** 15/15 conductas correctas; IC 95% de Wilson para 15/15 = [79.6%, 100%] (9/9: [70.1%, 100%]; 6/6: [61.0%, 100%])
 - **Límites:** n pequeño; las preguntas las escribió el mismo equipo que armó el corpus (riesgo de preguntas "fáciles"); la evaluación la hicieron los autores, sin auditoría cruzada
 - **Conclusión:** en esta muestra NotebookLM fue fiel y se abstuvo cuando debía; no es evidencia de que nunca falle
+
+## Resultados con el RAG propio (2026-10-13)
+
+Mismas 15 preguntas, corridas con `python rag.py evaluar` (modelo `qwen2.5-coder`, embeddings `bge-m3`, umbral 0,45, k = 5). Reporte completo con respuestas, fragmentos recuperados y similitudes: `sistema/resultados/evaluacion_qwen2.5-coder_2026-10-13_1302.md`.
+
+| ID | Conducta | Fiel | Observación |
+|---|---|---|---|
+| P1 | Responde | Sí | Los 3 pilares correctos; cita en formato distinto "(2006, p. 8)" |
+| P2 | Responde | Sí | Cita válida [Ardila-Rueda, 2004, p. 3] |
+| P3 | Responde | Sí, incompleta | Menciona LISA; no Moran, Queen ni 999 permutaciones. Sin cita |
+| P4 | Se abstiene | Sí | La cifra no está en la nota metodológica (abstención parcial correcta) |
+| P5 | Responde | Sí, incompleta | 5 dimensiones, 15 indicadores, 20 %; falta k = 33,3 % |
+| P6 | Responde | Sí | Efectos fijos, matching, 50.905 contratos; cita válida |
+| P7 | Se abstiene | **No** | Abstención falsa: la pregunta dice "Ferry", el documento es "Eckersley et al." Ver `caso_de_fallo.md` |
+| P8 | Responde | Sí | Coincide; sin cita |
+| P9 | Responde | Sí, general | Correcta; no da 264 entidades ni Poisson. Cita válida |
+| A–F | Se abstienen | Sí | E por umbral (0,407); A, B, C, D y F por la regla del prompt |
+
+- **Conducta correcta: 14/15**, IC 95 % de Wilson [70,2 %, 98,8 %] (NotebookLM: 15/15, [79,6 %, 100 %]). Los intervalos se solapan: con n = 15 no se puede afirmar que un sistema sea mejor.
+- **Citas que no apuntan a un fragmento recuperado: 0.**
+- La columna "Fiel" la calificaron los autores; confirmar antes de entregar.
+

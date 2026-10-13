@@ -2,121 +2,92 @@
 
 ## 1. Diagnóstico
 
-Se ejecutaron 17 pruebas dirigidas sobre los dos ejes del proyecto para
-identificar fallos reales de las herramientas de IA utilizadas, antes de
-construir el sistema final. Se encontraron 4 fallos verificados:
+Se ejecutaron 16 pruebas dirigidas (9 en el eje de contratación y 7 en el de vulnerabilidad) para identificar fallos reales de las herramientas de IA que usábamos, antes de construir el sistema final. Los fallos se identifican por su código en los inventarios (JD = Juan David, JDi = Juan Diego):
 
-1. **Referencias con metadatos incorrectos** (OpenCode, búsqueda conectada):
-   de 5 referencias dadas, 1 combinó un autor real con título, año y DOI de
-   un documento distinto.
-2. **Confusión entre dos datasets reales de SECOP II**: al pedir columnas
-   típicas del dataset, el sistema mezcló campos de "Procesos SECOP 2" y
-   "Contratos Electrónicos" sin advertirlo.
-3. **Bug de vectorización autocorregido** en código de bootstrap BCa: el
-   propio agente detectó y corrigió un error que habría producido resultados
-   estadísticamente imposibles (z₀ = −Inf).
-4. **Inconsistencia entre respuestas propias**: el agente dio un código de
-   documento institucional inventado, contradiciendo una respuesta correcta
-   que él mismo había dado minutos antes para el mismo documento.
+1. **[JD-1] Referencias con metadatos incorrectos** (OpenCode con búsqueda conectada): de 5 referencias, 1 combinó un autor real con título, año y DOI de un documento distinto ("Santamarina" en vez de Marta Santamaría, 2023 en vez de 2025).
+2. **[JD-2] Confusión entre dos datasets reales de SECOP II**: al pedir columnas típicas, el agente mezcló campos de "Procesos SECOP 2" y "Contratos Electrónicos" sin advertirlo.
+3. **[JD-3] Bug de vectorización autocorregido** en código de bootstrap BCa (`mean` en vez de `rowMeans`): el propio agente lo detectó antes de entregar un resultado estadísticamente imposible (z₀ = −Inf).
+4. **[JDi-1] Código institucional inventado**: ante una pregunta trampa sobre el NBI, el agente dio un código de documento del DANE que no existe, contradiciendo el código correcto que él mismo había dado antes (COM-030-PD-001-r-004, V8).
 
-### Patrón observado: confiabilidad distinta según el dominio de la consulta
+JD-2 y JD-3 ocurrieron en una sesión de trabajo compartida y aparecen en los dos inventarios como compartidos.
 
-En el eje de contratación pública (SECOP II), 3 de 9 pruebas (≈33%)
-produjeron un fallo verificable. En el eje de vulnerabilidad socioeconómica
-(IPM/DANE), solo 1 de 7 pruebas (≈14%) produjo un fallo. Con un tamaño de
-muestra tan pequeño, esta diferencia no permite una conclusión estadística
-robusta, pero sugiere que la confiabilidad de un sistema con búsqueda
-conectada depende de qué tan bien documentado públicamente está el dominio
-consultado — el DANE publica documentación extensa y bien indexada; la
-estructura específica de nuestro propio histórico de SECOP II, no.
+### Patrón observado: confiabilidad distinta según el dominio
 
-## 2. Experimento y decisión
+En el eje de contratación (SECOP II), 3 de 9 pruebas (≈33 %) produjeron un fallo verificable; en el de vulnerabilidad (IPM/DANE), 1 de 7 (≈14 %). Con muestras tan pequeñas la diferencia no es una conclusión estadística, pero sugiere que la confiabilidad de un agente con búsqueda depende de qué tan documentado públicamente está el dominio: el DANE publica documentación extensa; la estructura de nuestro histórico de SECOP II, no.
 
-Se ejecutó un experimento de 2 tratamientos (control sin búsqueda vs.
-búsqueda conectada) sobre consultas bibliográficas reales de ambos
-integrantes:
+## 2. Experimento
 
-| Tratamiento | n | Utilizables | Proporción | IC 95% |
+Se corrieron 2 de los 3 tratamientos que plantea la guía (A: control sin búsqueda; B: búsqueda conectada), con el mismo modelo (`qwen3.5:4b-mlx`) y consultas bibliográficas reales de los dos ejes:
+
+| Tratamiento | n | Utilizables | Proporción | IC 95 % (Wilson) |
 |---|---|---|---|---|
-| A (sin búsqueda) | 10 | 0 | 0% | [0%, 27.8%] |
-| B (con búsqueda) | 10 | 9 | 90% | [59.6%, 98.2%] |
+| A (sin búsqueda) | 10 | 0 | 0 % | [0 %, 27,8 %] |
+| B (con búsqueda) | 10 | 9 | 90 % | [59,6 %, 98,2 %] |
 
-La diferencia es contundente pese al tamaño de muestra pequeño por consulta:
-sin ninguna herramienta de búsqueda, el 100% de las referencias dadas fueron
-inventadas. Con búsqueda conectada, la tasa de referencias reales subió a
-90%, aunque no llegó al 100% (ver Fallos 1 y 4).
+Sin búsqueda, todas las referencias fueron inventadas. Con búsqueda, el 90 % fueron reales, pero no el 100 % (ver JD-1).
 
-Un segundo ejercicio midió el acuerdo de clasificación entre los dos
-integrantes sobre 10 referencias comunes, clasificadas de forma
-independiente: **70% de acuerdo**, con las 3 discrepancias concentradas en
-la categoría "existe pero no dice eso" — la más subjetiva de las tres.
+El tratamiento C (contexto cerrado) no se corrió con la misma consulta de "dame referencias", porque esa consulta no tiene sentido en un sistema que solo responde desde documentos cargados. Su evidencia son las evaluaciones del banco de preguntas (sección 4). Es una limitación que declaramos.
 
-**Herramienta elegida:** NotebookLM (vía empaquetada), por su capacidad de
-anclaje con cita de ubicación exacta, frente a OpenCode, que aunque cuenta
-con búsqueda conectada, no garantiza contexto cerrado ni citación verificable
-de forma consistente (ver Fallos 1 y 4).
+**Acuerdo entre clasificadores:** Juan David y Juan Diego clasificaron de forma independiente las mismas 10 referencias. Acuerdo observado 70 %; **κ de Cohen ≈ 0,52** (acuerdo moderado), con IC 95 % bootstrap aproximado [0,13; 0,82], muy amplio por n = 10. Las 3 discrepancias se concentraron en "existe pero no dice eso", la categoría más subjetiva.
 
 ## 3. El sistema
 
-Se construyó un notebook en NotebookLM con 11 fuentes públicas de la matriz
-bibliográfica del estado del arte del proyecto (Informe 1), más la nota
-metodológica del DANE sobre el IPM censal municipal. Dos fuentes (Salazar et
-al., 2024; Díaz Díez, 2023) quedaron pendientes de incorporar por
-restricciones de acceso/tiempo.
+### 3.1 Versión 1: NotebookLM (vía empaquetada), hasta el 2026-10-06
 
-El protocolo de prompts (v1, versionado en `protocolo_prompts/`) exige
-respuesta basada únicamente en las fuentes cargadas, cita con documento y
-ubicación, y abstención explícita cuando la información no está disponible.
+Notebook con 10 documentos públicos: 8 de la matriz bibliográfica del Informe 1, la nota metodológica del DANE sobre el IPM censal y el README del repositorio público de referencia. Tres fuentes del Informe 1 quedaron fuera: Salazar et al. (2024), Gutiérrez Vanegas (2024) y Díaz Díez (2023). Protocolo de prompts v1.
+
+### 3.2 Versión 2: RAG propio (vía propia), desde el 2026-10-13
+
+Por orientación del profesor después de la sustentación, reemplazamos NotebookLM por un RAG propio (`sistema/rag.py`), porque con NotebookLM no podíamos ver ni controlar la recuperación, y la vía empaquetada limitaba la nota a 4,8.
+
+- **Recuperación:** los documentos se parten en fragmentos de 900 caracteres con su página; embeddings `bge-m3` (multilingüe) en Ollama; índice local con numpy; se recuperan los 5 fragmentos más parecidos por similitud coseno. El corpus quedó en 834 fragmentos.
+- **Generación:** `qwen3.5:4b-mlx` en Ollama, temperatura 0, protocolo de prompts v2: responder solo con los fragmentos, cita `[Apellido, año, p. X]` y abstención explícita.
+- **Tres defensas:** contexto cerrado; umbral de similitud (0,45) que abstiene sin llamar al modelo; verificador que comprueba que cada cita apunte a un fragmento recuperado.
+- **Corpus:** los mismos 10 documentos, vueltos a descargar el 2026-10-13. Varios ahora son texto completo donde NotebookLM tenía solo el resumen, así que los dos corpus no son idénticos.
 
 ## 4. Evaluación
 
-Se construyó un banco de 15 preguntas (11 con respuesta conocida, 4 sin
-respuesta en el corpus) para evaluar la fidelidad del sistema final.
-**Resultado: 15 de 15 correctas** — 0 fallos de citación en las preguntas con
-respuesta, y abstención correcta en las 4 preguntas sin respuesta (superando
-el mínimo de 3 exigido). Dos de las abstenciones (Salazar et al., Díaz Díez)
-correspondieron correctamente a fuentes que nunca se incorporaron al corpus,
-confirmando que el sistema no inventa contenido ni cuando podría parecer
-plausible hacerlo.
+Banco de 15 preguntas: 9 con respuesta conocida (P1–P9) y 6 sin respuesta en el corpus (A–F), corrido sobre los dos sistemas.
 
-El caso de fallo documentado corresponde a la etapa de diagnóstico (ver
-`caso_de_fallo.md`), dado que el sistema final no presentó fallos en la
-evaluación directa.
+| | NotebookLM (v1) | RAG propio (v2) |
+|---|---|---|
+| Conducta correcta | 15/15 · [79,6 %, 100 %] | 14/15 · [70,2 %, 98,8 %] |
+| Con respuesta | 9/9 | 8/9 · [56,5 %, 98,0 %] |
+| Abstenciones | 6/6 | 6/6 · [61,0 %, 100 %] |
+| Citas que no apuntan a un fragmento recuperado | no medible | 0 |
+| Auditoría de qué texto usó | No | Sí |
 
-La auditoría cruzada con un equipo par queda pendiente de la asignación del
-profesor en la semana 3.
+Intervalos de Wilson al 95 %. Con n = 15 se solapan: **no podemos afirmar que un sistema sea mejor que el otro.** Lo que cambia es que en el RAG cada respuesta queda auditada (fragmentos, página y similitud) en `sistema/resultados/`.
 
-## 5. Qué corrigieron de su propio anteproyecto
+**Hallazgos del RAG:**
+- **El único fallo (P7)** fue una abstención falsa: la pregunta decía "Ferry et al." y el documento está registrado como "Eckersley et al." (autores según Crossref). Con el autor correcto respondió bien. Es un error por exceso de cautela, no una alucinación, y viene de un error de cita del Informe 1. Está documentado en `evaluacion/caso_de_fallo.md`.
+- **El umbral no separa los grupos:** las similitudes de preguntas con respuesta (0,482–0,686) y sin respuesta (0,407–0,539) se solapan. Solo la pregunta E se abstuvo por umbral; las otras cinco abstenciones dependieron de que el modelo obedeciera el prompt. La similitud sola no basta para decidir cuándo abstenerse.
+- **Respuestas fieles pero incompletas:** P3 (no menciona Moran, Queen ni las 999 permutaciones), P5 (falta el corte k = 33,3 %) y P9 (faltan las 264 entidades y el Poisson).
+- **3 respuestas sin cita en el formato pedido** (P1, P3, P8). En P1 la cita era correcta pero en otro formato y el verificador no la reconoció: es una limitación del verificador.
 
-Al construir la tabla de trazabilidad (`tabla_trazabilidad.md`) se verificó
-cada afirmación sustantiva del estado del arte del Informe 1 contra su fuente
-original. No se identificaron afirmaciones sin respaldo — las 14 citas
-revisadas se sostienen en sus fuentes correspondientes.
+**Límites de la evaluación:** n pequeño; banco escrito por el mismo equipo que armó el corpus; umbral fijado mirando el mismo banco; fidelidad calificada por los autores. La auditoría cruzada con un equipo par queda pendiente de la asignación del profesor.
+
+## 5. Qué corregimos de nuestro propio anteproyecto
+
+Al construir la tabla de trazabilidad (`tabla_trazabilidad.md`) revisamos 14 afirmaciones del Informe 1:
+
+- **Verificación directa del contenido:** 5 (filas 4, 8, 10, 13, 14).
+- **Solo contra NotebookLM:** 7 (filas 1, 2, 3, 5, 6, 7, 9). No cuentan como verificación independiente, porque NotebookLM era la herramienta evaluada.
+- **Pendientes o parciales:** 2. Gutiérrez Vanegas (2024) no se ubicó; Díaz Díez (2023) existe, pero la frase "carácter transaccional" no se confirmó.
+- **Errores del Informe 1 hallados:** "Arachia" debe ser **Arachi**; "Ferry et al. (2023), 57(11)" figura en Crossref como **Eckersley, Flynn, Lakoma y Ferry, 57(10)**. Este segundo error es justamente el que causó el fallo P7 del RAG.
 
 ## 6. Declaración de uso de IA
 
-**Herramientas usadas:** Claude (Anthropic) para diagnóstico, diseño del
-experimento, verificación de referencias y redacción; OpenCode (modelo local
-qwen2.5-coder vía Ollama) como una de las herramientas evaluadas en el
-diagnóstico; NotebookLM (Google) como sistema final de anclaje documental.
+**Herramientas usadas:**
+- Claude (Anthropic): diagnóstico, diseño del experimento, verificación de referencias, redacción y construcción del código del RAG propio.
+- OpenCode y Ollama con `qwen3.5:4b-mlx`: objetos de prueba en el diagnóstico y el experimento.
+- NotebookLM (Google): sistema versión 1.
+- RAG propio con `bge-m3` y `qwen3.5:4b-mlx` en Ollama: sistema versión 2.
 
-**Para qué las usamos:**
-- Gestión de fuentes: NotebookLM
-- Verificación de referencias y hallazgos: Claude, con búsqueda web, contrastando cada DOI y dato específico contra fuentes primarias
-- Redacción de la memoria: Claude, a partir de los datos y hallazgos generados en el proceso
-- Diagnóstico de fallos: OpenCode y Ollama puro, como objetos de prueba
+**Qué NO delegamos en la IA:** la verificación final de cada DOI y dato cuantitativo se contrastó contra fuentes primarias (páginas oficiales, Crossref, SciELO, abstracts originales), y la fidelidad de las respuestas del banco la calificamos nosotros.
 
-**Herramienta de gestión elegida:** NotebookLM, frente a OpenCode y un
-proyecto con archivos de Claude, por su capacidad de anclaje con cita de
-ubicación exacta.
+**Qué tuvimos que corregir de lo que generó:**
+- Un enlace a un documento del Banco de la República generado por Claude estaba mal formado y se corrigió tras verificar.
+- El primer verificador de citas del RAG solo reconoce el formato `[Apellido, año, p. X]`; lo dejamos documentado como limitación en vez de ocultarlo.
 
-**Qué NO usamos IA para:** La verificación final de cada DOI y dato
-cuantitativo se contrastó contra fuentes primarias (páginas oficiales,
-Crossref, Scielo, abstracts originales), no se aceptó ninguna afirmación de
-una IA sin esa verificación independiente.
-
-**Qué tuvimos que corregir de lo que generó:** Un enlace a un documento del
-Banco de la República generado por Claude resultó incorrecto en un primer
-intento (URL mal formada) y se corrigió tras verificación — documentado aquí
-como evidencia adicional de que ninguna fuente de IA se acepta sin verificar,
-ni siquiera las de apoyo en la propia elaboración de este trabajo.
+**Verificaciones hechas por Claude el 2026-10-06:** metadatos de Eckersley et al. y Arachi et al. (Crossref), página de Salazar et al. y existencia de Díaz Díez. El equipo debe confirmarlas en las páginas de los editores.
