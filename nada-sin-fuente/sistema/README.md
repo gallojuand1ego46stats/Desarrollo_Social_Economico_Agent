@@ -38,7 +38,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 ollama pull bge-m3            # embeddings (multilingüe: preguntas en español, papers en inglés)
-ollama pull qwen2.5-coder     # modelo generador actual
+ollama pull qwen3.5:4b        # modelo generador (final)
 ```
 
 ## Poner el corpus
@@ -68,14 +68,15 @@ python rag.py evaluar                       # corre las 15 preguntas y escribe e
 
 `evaluar` deja en `sistema/resultados/` un `.json` con todo y un `.md` con la tabla para calificar a mano la columna **Fiel (S/N)**. Ese `.md` es la evidencia que va a la memoria.
 
-## Cambiar de modelo (p. ej. a Qwen 3.5)
+## Cambiar de modelo
 
 No hay que tocar el código:
 
 ```bash
-python rag.py evaluar --modelo qwen3.5:9b --sin-razonamiento
+python rag.py evaluar --sin-razonamiento                 # modelo por defecto: qwen3.5:4b
+python rag.py evaluar --modelo qwen2.5-coder             # otro modelo, sin tocar el código
 # o para toda la sesión:
-export RAG_MODELO=qwen3.5:9b
+export RAG_MODELO=qwen3.5:4b
 ```
 
 `--sin-razonamiento` apaga el modo "thinking" de Qwen 3.x (más rápido y sin texto extra). Cada evaluación queda en un archivo con el nombre del modelo, así que los resultados de modelos distintos no se mezclan.
@@ -84,7 +85,7 @@ export RAG_MODELO=qwen3.5:9b
 
 | Variable de entorno | Por defecto | Qué controla |
 |---|---|---|
-| `RAG_MODELO` | `qwen2.5-coder` | Modelo generador de Ollama |
+| `RAG_MODELO` | `qwen3.5:4b` | Modelo generador de Ollama |
 | `RAG_EMBEDDINGS` | `bge-m3` | Modelo de embeddings (si se cambia, hay que volver a indexar) |
 | `RAG_TOP_K` | `5` | Fragmentos que se le pasan al modelo |
 | `RAG_UMBRAL` | `0.45` | Similitud mínima para intentar responder |

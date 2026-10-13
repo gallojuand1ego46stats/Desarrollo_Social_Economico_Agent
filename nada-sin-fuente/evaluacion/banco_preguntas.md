@@ -2,7 +2,7 @@
 
 Sistemas evaluados con las mismas 15 preguntas:
 - **Versión 1, NotebookLM**: las respuestas documentadas abajo. Corpus de 10 documentos públicos (matriz bibliográfica del Informe 1 + nota metodológica DANE).
-- **Versión 2, RAG propio** (`sistema/rag.py`, `qwen3.5:4b-mlx`): ver la sección "Resultados con el RAG propio" al final y el reporte completo en `sistema/resultados/`.
+- **Versión 2, RAG propio** (`sistema/rag.py`), evaluado con `qwen2.5-coder` y con `qwen3.5:4b` (modelo final): ver la sección "Resultados con el RAG propio" al final y el reporte completo en `sistema/resultados/`.
 
 ## Preguntas CON respuesta en el corpus
 
@@ -118,7 +118,7 @@ Sistemas evaluados con las mismas 15 preguntas:
 - **Límites:** n pequeño; las preguntas las escribió el mismo equipo que armó el corpus (riesgo de preguntas "fáciles"); la evaluación la hicieron los autores, sin auditoría cruzada
 - **Conclusión:** en esta muestra NotebookLM fue fiel y se abstuvo cuando debía; no es evidencia de que nunca falle
 
-## Resultados con el RAG propio (2026-10-13)
+## Resultados con el RAG propio + `qwen2.5-coder` (2026-10-13)
 
 Mismas 15 preguntas, corridas con `python rag.py evaluar` (modelo `qwen2.5-coder`, embeddings `bge-m3`, umbral 0,45, k = 5). Reporte completo con respuestas, fragmentos recuperados y similitudes: `sistema/resultados/evaluacion_qwen2.5-coder_2026-10-13_1302.md`.
 
@@ -138,4 +138,25 @@ Mismas 15 preguntas, corridas con `python rag.py evaluar` (modelo `qwen2.5-coder
 - **Conducta correcta: 14/15**, IC 95 % de Wilson [70,2 %, 98,8 %] (NotebookLM: 15/15, [79,6 %, 100 %]). Los intervalos se solapan: con n = 15 no se puede afirmar que un sistema sea mejor.
 - **Citas que no apuntan a un fragmento recuperado: 0.**
 - La columna "Fiel" la calificaron los autores; confirmar antes de entregar.
+
+## Resultados con el RAG propio + `qwen3.5:4b`, modelo final (2026-10-13)
+
+Mismo banco, índice, umbral y prompt; solo cambia el modelo generador (`python rag.py evaluar --modelo qwen3.5:4b --sin-razonamiento`). Reporte completo: `sistema/resultados/evaluacion_qwen3.5-4b_2026-10-13_1704.md`.
+
+| ID | Conducta | Fiel | Observación |
+|---|---|---|---|
+| P1 | Responde | Sí | Los 3 pilares; cita válida [Bonet-Morón, 2006, p. 8] |
+| P2 | Responde | Por verificar | Agrega cifras (Antioquia 17 %, Valle y Cundinamarca 9,5 %, Bogotá 1,3 %) citando p. 21 y p. 35, ambas recuperadas. Contrastar con el PDF |
+| P3 | Responde | Sí, incompleta | LISA e IPM; no Moran, Queen ni 999 permutaciones. Cita con autor abreviado [Monsalvo, 2025, p. 4]: página correcta, el verificador la marca inválida |
+| P4 | Se abstiene | Sí | Abstención parcial correcta |
+| P5 | Responde | Sí | Completa: 5 dimensiones con nombres, 20 %, 15 indicadores, k = 33,3 %. Cita en formato no estándar "[Fragmento 2, p. 2]" |
+| P6 | Responde | Sí | Efectos fijos, matching, 50.905 contratos. Cita con autor abreviado [Arachi, 2024, p. 1]: página correcta, el verificador la marca inválida |
+| P7 | Se abstiene | **No** | Misma abstención falsa que con `qwen2.5-coder` (Ferry vs. Eckersley) |
+| P8 | Responde | Sí, con error de palabra | Escribe "licencias" donde el texto dice "licitaciones". Sin cita |
+| P9 | Responde | Por verificar | Tres citas válidas (p. 7, 1 y 5); contrastar el contenido de la p. 7 con el PDF |
+| A–F | Se abstienen | Sí | E por umbral; A, B, C, D y F por la regla del prompt |
+
+- **Conducta correcta: 14/15**, igual que con `qwen2.5-coder`. IC 95 % de Wilson [70,2 %, 98,8 %].
+- **Citas marcadas inválidas: 2** (P3 y P6). Ninguna inventa una fuente: abrevian el nombre del autor. Es una limitación del verificador, que exige el nombre exacto, y del modelo, que no copia la cabecera completa.
+- P2 y P9 quedan "por verificar" hasta contrastarlas con los PDF; la columna "Fiel" la confirman los autores.
 

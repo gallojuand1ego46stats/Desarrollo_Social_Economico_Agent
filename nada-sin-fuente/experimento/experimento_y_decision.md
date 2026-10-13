@@ -6,7 +6,7 @@ Cada integrante corrió una consulta bibliográfica real de su eje, en dos trata
 
 | Tratamiento | Qué representa | Herramienta usada |
 |---|---|---|
-| A (control) | Chat sin fuentes ni navegación | Ollama + `qwen3.5:4b-mlx` (`ollama run qwen3.5:4b-mlx`), sin plugins ni búsqueda |
+| A (control) | Chat sin fuentes ni navegación | Ollama + `qwen2.5-coder` (`ollama run qwen2.5-coder`), sin plugins ni búsqueda |
 | B (búsqueda) | Buscador conectado a bases bibliográficas reales | OpenCode (modelo `qwen2.5-coder` vía Ollama), con búsqueda web activa |
 
 ### Consulta utilizada (Juan David — eje de contratación)
@@ -112,7 +112,7 @@ esta verificación.
 
 ## 6. Herramienta elegida
 
-**Elegimos:** RAG propio (`sistema/rag.py`): Ollama con `bge-m3` para embeddings, índice local con numpy y `qwen3.5 : 4b-mlbx` como modelo generador.
+**Elegimos:** RAG propio (`sistema/rag.py`): Ollama con `bge-m3` para embeddings, índice local con numpy y `qwen3.5:4b` como modelo generador (la primera evaluación se hizo con `qwen2.5-coder`; ver sección 7.5).
 
 **Vía:** ☐ Empaquetada ☐ Gestionada ☒ Propia
 
@@ -130,7 +130,7 @@ esta verificación.
 **Qué perdimos o qué cuesta más:**
 - Hay que mantener el código, el índice y el corpus en disco.
 - Lo calibramos nosotros (umbral 0,45, k = 5, fragmentos de 900 caracteres): son decisiones nuestras que pueden estar mal ajustadas.
-- El modelo local (`qwen2.5-coder`, 7B) es más pequeño que el de NotebookLM.
+- El modelo local (`qwen3.5:4b`, 4.000 millones de parámetros) es mucho más pequeño que el de NotebookLM.
 
 **Alternativas descartadas y por qué:**
 - **OpenCode con búsqueda web:** el fallo JD-1 mostró que mezcla metadatos aun con búsqueda activa, y no fuerza contexto cerrado: puede traer información externa no verificada.
@@ -139,9 +139,9 @@ esta verificación.
 
 ## 7. Sistema final: RAG propio (actualización 2026-10-13)
 
-Por orientación del profesor después de la sustentación, el sistema final pasó de NotebookLM (vía empaquetada) a un RAG propio (`sistema/rag.py`): embeddings `bge-m3` en Ollama, índice local con numpy, modelo generador `qwen2.5-coder`, temperatura 0, top-5 fragmentos, umbral de similitud 0,45 y verificador automático de citas. El protocolo pasó a v2 (`protocolo_prompts/v2.md`).
+Por orientación del profesor después de la sustentación, el sistema final pasó de NotebookLM (vía empaquetada) a un RAG propio (`sistema/rag.py`): embeddings `bge-m3` en Ollama, índice local con numpy, modelo generador `qwen2.5-coder` en la primera evaluación y `qwen3.5:4b` como modelo final (sección 7.5), temperatura 0, top-5 fragmentos, umbral de similitud 0,45 y verificador automático de citas. El protocolo pasó a v2 (`protocolo_prompts/v2.md`).
 
-### 7.1 Resultados con el mismo banco de 15 preguntas
+### 7.1 Resultados con el mismo banco de 15 preguntas (primera evaluación, `qwen2.5-coder`)
 
 | | NotebookLM (v1) | RAG propio (v2) |
 |---|---|---|
@@ -171,6 +171,28 @@ Las similitudes de las preguntas con respuesta (0,482–0,686) y sin respuesta (
 - Respuestas fieles pero incompletas: P3 (no menciona Moran, Queen ni 999 permutaciones), P5 (falta el corte k = 33,3 %) y P9 (faltan las 264 entidades y el Poisson).
 - La fidelidad del contenido la calificaron los autores, sin auditoría cruzada.
 
-### Desición: 
+### 7.5 Cambio de modelo generador: `qwen3.5:4b`
 
-Después de realizadas la pruebas con NotebookLM y RAG propio hemos visto las limitaciones de NotebookLM al momento de efectuar un n grande de citas o referencias y se ha comprobado que este tiene difeente tipo de fallos probado con diferentes bancos de preguntas, así que para nuestro fin como artículo se decide usar un modelo RAG bajo el modelo ollama. 
+Por indicación del profesor, el modelo generador del RAG pasó de `qwen2.5-coder` a `qwen3.5:4b`, esperando que la diferencia fuera mínima. Corrimos de nuevo el mismo banco con el nuevo modelo, sin cambiar nada más (mismo índice, embeddings, umbral y prompt), con el modo de razonamiento desactivado (`--sin-razonamiento`).
+
+| | `qwen2.5-coder` | `qwen3.5:4b` (final) |
+|---|---|---|
+| Conducta correcta | 14/15 | 14/15 |
+| Con respuesta (P1–P9) | 8/9 | 8/9 |
+| Abstenciones (A–F) | 6/6 | 6/6 |
+| Pregunta que falla | P7 (Ferry vs. Eckersley) | P7 (la misma) |
+| Citas marcadas inválidas por el verificador | 0 | 2 |
+| Respuestas sin cita en el formato pedido | 3 | 2 |
+
+La conducta es idéntica, lo que confirma que la diferencia entre modelos es mínima. Diferencias de contenido:
+
+- `qwen3.5:4b` da respuestas más completas: en P5 incluye el corte k = 33,3 % y las cinco dimensiones, y en P1 cita en el formato pedido.
+- Las 2 citas inválidas (P3 y P6) tienen la página correcta, pero el autor abreviado ("Monsalvo" en vez de "Monsalvo Herrera y Jiménez"; "Arachi" sin "et al."). No son fuentes inventadas: el verificador las marca porque exige el nombre exacto de la ficha.
+- En P2 y P9 da cifras y detalles adicionales (porcentajes de inversión por departamento, temas de la p. 7) con citas a páginas recuperadas. Hay que contrastarlos con el PDF antes de darlos por fieles.
+- En P8 escribe "licencias" donde el texto dice "licitaciones".
+
+Reporte completo: `sistema/resultados/evaluacion_qwen3.5-4b_2026-10-13_1704.md`.
+
+### Decisión
+
+El sistema final es el RAG propio con `qwen3.5:4b`. Lo elegimos sobre NotebookLM no porque sus resultados fueran mejores (con n = 15 los dos sistemas tienen intervalos que se solapan), sino porque en el RAG controlamos y podemos auditar cada paso: qué fragmentos recupera, con qué similitud, cuándo se abstiene y si las citas apuntan a texto real.

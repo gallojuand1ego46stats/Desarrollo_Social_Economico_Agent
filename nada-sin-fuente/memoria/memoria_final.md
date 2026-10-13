@@ -17,7 +17,7 @@ En el eje de contratación (SECOP II), 3 de 9 pruebas (≈33 %) produjeron un fa
 
 ## 2. Experimento
 
-Se corrieron 2 de los 3 tratamientos que plantea la guía (A: control sin búsqueda; B: búsqueda conectada), con el mismo modelo (`qwen3.5:4b-mlx`) y consultas bibliográficas reales de los dos ejes:
+Se corrieron 2 de los 3 tratamientos que plantea la guía (A: control sin búsqueda; B: búsqueda conectada), con el mismo modelo (`qwen2.5-coder`) y consultas bibliográficas reales de los dos ejes:
 
 | Tratamiento | n | Utilizables | Proporción | IC 95 % (Wilson) |
 |---|---|---|---|---|
@@ -41,7 +41,7 @@ Notebook con 10 documentos públicos: 8 de la matriz bibliográfica del Informe 
 Por orientación del profesor después de la sustentación, reemplazamos NotebookLM por un RAG propio (`sistema/rag.py`), porque con NotebookLM no podíamos ver ni controlar la recuperación, y la vía empaquetada limitaba la nota a 4,8.
 
 - **Recuperación:** los documentos se parten en fragmentos de 900 caracteres con su página; embeddings `bge-m3` (multilingüe) en Ollama; índice local con numpy; se recuperan los 5 fragmentos más parecidos por similitud coseno. El corpus quedó en 834 fragmentos.
-- **Generación:** `qwen3.5:4b-mlx` en Ollama, temperatura 0, protocolo de prompts v2: responder solo con los fragmentos, cita `[Apellido, año, p. X]` y abstención explícita.
+- **Generación:** `qwen3.5:4b` en Ollama (modelo final, por indicación del profesor; la primera evaluación se hizo con `qwen2.5-coder`), modo de razonamiento desactivado, temperatura 0, protocolo de prompts v2: responder solo con los fragmentos, cita `[Apellido, año, p. X]` y abstención explícita.
 - **Tres defensas:** contexto cerrado; umbral de similitud (0,45) que abstiene sin llamar al modelo; verificador que comprueba que cada cita apunte a un fragmento recuperado.
 - **Corpus:** los mismos 10 documentos, vueltos a descargar el 2026-10-13. Varios ahora son texto completo donde NotebookLM tenía solo el resumen, así que los dos corpus no son idénticos.
 
@@ -49,15 +49,17 @@ Por orientación del profesor después de la sustentación, reemplazamos Noteboo
 
 Banco de 15 preguntas: 9 con respuesta conocida (P1–P9) y 6 sin respuesta en el corpus (A–F), corrido sobre los dos sistemas.
 
-| | NotebookLM (v1) | RAG propio (v2) |
-|---|---|---|
-| Conducta correcta | 15/15 · [79,6 %, 100 %] | 14/15 · [70,2 %, 98,8 %] |
-| Con respuesta | 9/9 | 8/9 · [56,5 %, 98,0 %] |
-| Abstenciones | 6/6 | 6/6 · [61,0 %, 100 %] |
-| Citas que no apuntan a un fragmento recuperado | no medible | 0 |
-| Auditoría de qué texto usó | No | Sí |
+| | NotebookLM (v1) | RAG + `qwen2.5-coder` | RAG + `qwen3.5:4b` (final) |
+|---|---|---|---|
+| Conducta correcta | 15/15 · [79,6 %, 100 %] | 14/15 · [70,2 %, 98,8 %] | 14/15 · [70,2 %, 98,8 %] |
+| Con respuesta | 9/9 | 8/9 · [56,5 %, 98,0 %] | 8/9 · [56,5 %, 98,0 %] |
+| Abstenciones | 6/6 | 6/6 · [61,0 %, 100 %] | 6/6 · [61,0 %, 100 %] |
+| Citas marcadas inválidas por el verificador | no medible | 0 | 2 (autor abreviado, página correcta) |
+| Auditoría de qué texto usó | No | Sí | Sí |
 
 Intervalos de Wilson al 95 %. Con n = 15 se solapan: **no podemos afirmar que un sistema sea mejor que el otro.** Lo que cambia es que en el RAG cada respuesta queda auditada (fragmentos, página y similitud) en `sistema/resultados/`.
+
+**Cambio de modelo:** con `qwen3.5:4b` la conducta fue idéntica a `qwen2.5-coder` (14/15, mismo fallo en P7). Las respuestas fueron más completas (P5 incluye el corte k = 33,3 %), pero en P3 y P6 abrevió el nombre del autor en la cita y el verificador las marcó como inválidas, y en P2 y P9 agregó cifras que hay que contrastar con el PDF.
 
 **Hallazgos del RAG:**
 - **El único fallo (P7)** fue una abstención falsa: la pregunta decía "Ferry et al." y el documento está registrado como "Eckersley et al." (autores según Crossref). Con el autor correcto respondió bien. Es un error por exceso de cautela, no una alucinación, y viene de un error de cita del Informe 1. Está documentado en `evaluacion/caso_de_fallo.md`.
@@ -80,9 +82,9 @@ Al construir la tabla de trazabilidad (`tabla_trazabilidad.md`) revisamos 14 afi
 
 **Herramientas usadas:**
 - Claude (Anthropic): diagnóstico, diseño del experimento, verificación de referencias, redacción y construcción del código del RAG propio.
-- OpenCode y Ollama con `qwen3.5:4b-mlx`: objetos de prueba en el diagnóstico y el experimento.
+- OpenCode y Ollama con `qwen2.5-coder`: objetos de prueba en el diagnóstico y el experimento.
 - NotebookLM (Google): sistema versión 1.
-- RAG propio con `bge-m3` y `qwen3.5:4b-mlx` en Ollama: sistema versión 2.
+- RAG propio con `bge-m3` en Ollama: sistema versión 2. Modelo generador final `qwen3.5:4b`; la primera evaluación se hizo con `qwen2.5-coder`.
 
 **Qué NO delegamos en la IA:** la verificación final de cada DOI y dato cuantitativo se contrastó contra fuentes primarias (páginas oficiales, Crossref, SciELO, abstracts originales), y la fidelidad de las respuestas del banco la calificamos nosotros.
 

@@ -1,0 +1,889 @@
+[
+ {
+  "pregunta": "¿Qué tres pilares propone Bonet-Morón (2006) para consolidar la equidad territorial?",
+  "respuesta": "Bonet-Morón (2006) identifica tres aspectos específicos en los que se deben focalizar las propuestas de política para lograr mayor equidad: involucrar una mayor equidad en el sistema de transferencias del gobierno nacional a los subnacionales, fortalecer el aparato tributario subnacional y establecer unos incentivos claros para mejorar la eficiencia del gasto [Bonet-Morón, 2006, p. 8].",
+  "se_abstuvo": false,
+  "via_abstencion": null,
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.4957,
+  "recuperados": [
+   {
+    "archivo": "bonet-moron_2006.pdf",
+    "apellido": "Bonet-Morón",
+    "anio": 2006,
+    "ubicacion": "58",
+    "similitud": 0.4957
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "38",
+    "similitud": 0.4876
+   },
+   {
+    "archivo": "bonet-moron_2006.pdf",
+    "apellido": "Bonet-Morón",
+    "anio": 2006,
+    "ubicacion": "7",
+    "similitud": 0.4873
+   },
+   {
+    "archivo": "bonet-moron_2006.pdf",
+    "apellido": "Bonet-Morón",
+    "anio": 2006,
+    "ubicacion": "58",
+    "similitud": 0.4766
+   },
+   {
+    "archivo": "bonet-moron_2006.pdf",
+    "apellido": "Bonet-Morón",
+    "anio": 2006,
+    "ubicacion": "8",
+    "similitud": 0.4721
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 1,
+   "citas": [
+    {
+     "cita": "[Bonet-Morón, 2006, p. 8]",
+     "estado": "ok"
+    }
+   ],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "P1",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "Equidad en transferencias, fortalecimiento tributario subnacional, incentivos a la eficiencia del gasto",
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué encontró Ardila-Rueda (2004) sobre inversión pública y posición relativa de los departamentos?",
+  "respuesta": "Ardila-Rueda (2004) encontró que la inversión pública alteró significativamente la posición relativa de los departamentos, ya que sin ella habrían perdido ingresos per cápita durante el período estudiado; específicamente, la mayor proporción de inversión pública la tuvo Antioquia con el 17% del total, seguida por Valle y Cundinamarca (9,5%), mientras que Bogotá mostró la menor relación entre inversión pública y PIB en promedio (1,3%) [Ardila-Rueda, 2004, p. 21]. Además, aunque la brecha de inversión per cápita entre los nuevos departamentos y el departamento con menos inversión (Atlántico) se redujo de diez a seis veces entre 1985 y 1996, la dinámica del resto no cambió al controlar por el PIB minero [Ardila-Rueda, 2004, p. 35].",
+  "se_abstuvo": false,
+  "via_abstencion": null,
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.6077,
+  "recuperados": [
+   {
+    "archivo": "ardila-rueda_2004.pdf",
+    "apellido": "Ardila-Rueda",
+    "anio": 2004,
+    "ubicacion": "3",
+    "similitud": 0.6077
+   },
+   {
+    "archivo": "ardila-rueda_2004.pdf",
+    "apellido": "Ardila-Rueda",
+    "anio": 2004,
+    "ubicacion": "2",
+    "similitud": 0.5576
+   },
+   {
+    "archivo": "ardila-rueda_2004.pdf",
+    "apellido": "Ardila-Rueda",
+    "anio": 2004,
+    "ubicacion": "21",
+    "similitud": 0.5573
+   },
+   {
+    "archivo": "ardila-rueda_2004.pdf",
+    "apellido": "Ardila-Rueda",
+    "anio": 2004,
+    "ubicacion": "20",
+    "similitud": 0.5526
+   },
+   {
+    "archivo": "ardila-rueda_2004.pdf",
+    "apellido": "Ardila-Rueda",
+    "anio": 2004,
+    "ubicacion": "35",
+    "similitud": 0.5502
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 2,
+   "citas": [
+    {
+     "cita": "[Ardila-Rueda, 2004, p. 21]",
+     "estado": "ok"
+    },
+    {
+     "cita": "[Ardila-Rueda, 2004, p. 35]",
+     "estado": "ok"
+    }
+   ],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "P2",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "Persistencia en la distribución del ingreso; la inversión pública afecta la posición relativa",
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué metodología estadística usaron Monsalvo Herrera y Jiménez (2025) para analizar la pobreza en Cundinamarca?",
+  "respuesta": "Monsalvo Herrera y Jiménez (2025) utilizaron el **Índice de Pobreza Multidimensional (MPI)** como indicador general y un modelo basado en **Indicadores Locales de Asociación Espacial (LISA)** para identificar clusters. [Monsalvo, 2025, p. 4]",
+  "se_abstuvo": false,
+  "via_abstencion": null,
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.6016,
+  "recuperados": [
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "1",
+    "similitud": 0.6016
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "4",
+    "similitud": 0.5807
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "3",
+    "similitud": 0.5719
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "12",
+    "similitud": 0.5658
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "4",
+    "similitud": 0.5646
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 1,
+   "citas": [
+    {
+     "cita": "[Monsalvo, 2025, p. 4]",
+     "estado": "autor/año no está en lo recuperado"
+    }
+   ],
+   "citas_invalidas": [
+    {
+     "cita": "[Monsalvo, 2025, p. 4]",
+     "estado": "autor/año no está en lo recuperado"
+    }
+   ],
+   "sin_citas": false
+  },
+  "id": "P3",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "Índice de Moran, LISA, matriz de pesos tipo Queen orden 1, 999 permutaciones, GeoDa/ArcGIS",
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Cuántos municipios y corregimientos se usaron para el cálculo de pobreza municipal del DANE 2018?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "modelo",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.6311,
+  "recuperados": [
+   {
+    "archivo": "dane_ipm_2018.pdf",
+    "apellido": "DANE",
+    "anio": 2020,
+    "ubicacion": "1",
+    "similitud": 0.6311
+   },
+   {
+    "archivo": "dane_ipm_2018.pdf",
+    "apellido": "DANE",
+    "anio": 2020,
+    "ubicacion": "2",
+    "similitud": 0.6295
+   },
+   {
+    "archivo": "repo_desarrollo_social_y_economico.md",
+    "apellido": "Repositorio desarrollo_social_y_economico",
+    "anio": 2025,
+    "ubicacion": "sección «5. Datos y Fuentes»",
+    "similitud": 0.5768
+   },
+   {
+    "archivo": "dane_ipm_2018.pdf",
+    "apellido": "DANE",
+    "anio": 2020,
+    "ubicacion": "1",
+    "similitud": 0.5678
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "12",
+    "similitud": 0.5607
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "P4",
+  "tipo": "abstencion_parcial",
+  "respuesta_conocida": "El documento cargado (nota metodológica) no trae la cifra; está en el boletín técnico. Lo correcto es decir que no está en el documento cargado.",
+  "conducta_correcta_auto": null
+ },
+ {
+  "pregunta": "¿Qué estructura de dimensiones e indicadores tiene el IPM censal municipal del DANE?",
+  "respuesta": "La medida de pobreza multidimensional municipal del DANE cuenta con **cinco dimensiones**: condiciones educativas del hogar, condiciones de la niñez y juventud, salud, trabajo y acceso a servicios públicos domiciliarios. Estas cinco dimensiones tienen un peso de **20%** cada una. Dentro de ellas se incluyen **15 indicadores** en total, los cuales cuentan con el mismo peso dentro de su dimensión respectiva. Se considera que un hogar está en situación de pobreza si tiene privación en por lo menos el **33,3%** de los indicadores.\n\n[Fragmento 2, p. 2]\n[Fragmento 3, p. 2]",
+  "se_abstuvo": false,
+  "via_abstencion": null,
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.5983,
+  "recuperados": [
+   {
+    "archivo": "dane_ipm_2018.pdf",
+    "apellido": "DANE",
+    "anio": 2020,
+    "ubicacion": "5",
+    "similitud": 0.5983
+   },
+   {
+    "archivo": "dane_ipm_2018.pdf",
+    "apellido": "DANE",
+    "anio": 2020,
+    "ubicacion": "2",
+    "similitud": 0.5981
+   },
+   {
+    "archivo": "dane_ipm_2018.pdf",
+    "apellido": "DANE",
+    "anio": 2020,
+    "ubicacion": "2",
+    "similitud": 0.5826
+   },
+   {
+    "archivo": "dane_ipm_2018.pdf",
+    "apellido": "DANE",
+    "anio": 2020,
+    "ubicacion": "1",
+    "similitud": 0.5531
+   },
+   {
+    "archivo": "ardila-rueda_2004.pdf",
+    "apellido": "Ardila-Rueda",
+    "anio": 2004,
+    "ubicacion": "15",
+    "similitud": 0.5384
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": true
+  },
+  "id": "P5",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "5 dimensiones (20% c/u), 15 indicadores, corte k = 33,3%",
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué metodología usaron Arachi et al. (2024) para estudiar cooperación intermunicipal en Italia?",
+  "respuesta": "Arachi et al. (2024) utilizaron un modelo de regresión de efectos fijos y estimadores de emparejamiento alternativos para analizar una muestra de 50.905 contratos de obras públicas italianos [Arachi, 2024, p. 1].",
+  "se_abstuvo": false,
+  "via_abstencion": null,
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.6027,
+  "recuperados": [
+   {
+    "archivo": "arachi-et-al_2024.pdf",
+    "apellido": "Arachi et al.",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.6027
+   },
+   {
+    "archivo": "arachi-et-al_2024.pdf",
+    "apellido": "Arachi et al.",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.601
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "72",
+    "similitud": 0.5169
+   },
+   {
+    "archivo": "arachi-et-al_2024.pdf",
+    "apellido": "Arachi et al.",
+    "anio": 2024,
+    "ubicacion": "9",
+    "similitud": 0.5159
+   },
+   {
+    "archivo": "arachi-et-al_2024.pdf",
+    "apellido": "Arachi et al.",
+    "anio": 2024,
+    "ubicacion": "6",
+    "similitud": 0.515
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 1,
+   "citas": [
+    {
+     "cita": "[Arachi, 2024, p. 1]",
+     "estado": "autor/año no está en lo recuperado"
+    }
+   ],
+   "citas_invalidas": [
+    {
+     "cita": "[Arachi, 2024, p. 1]",
+     "estado": "autor/año no está en lo recuperado"
+    }
+   ],
+   "sin_citas": false
+  },
+  "id": "P6",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "Efectos fijos + estimadores de matching, 50.905 contratos (2012-2020)",
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Cuántos contratos analizaron Ferry et al. (2023) en Reino Unido?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "modelo",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.5008,
+  "recuperados": [
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "46",
+    "similitud": 0.5008
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "35",
+    "similitud": 0.4901
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "66",
+    "similitud": 0.4825
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "73",
+    "similitud": 0.4784
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "47",
+    "similitud": 0.4767
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "P7",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "Más de 90.000 contratos de autoridades locales, 2015-2019 (autores en Crossref: Eckersley, Flynn, Lakoma y Ferry)",
+  "conducta_correcta_auto": false
+ },
+ {
+  "pregunta": "¿Para qué se usaron los modelos de clasificación de Figueroa-Gómez y Galpin (2024)?",
+  "respuesta": "Los modelos de clasificación se utilizaron para automatizar la identificación de licencias de interés en el proceso de contratación pública, específicamente para detectar oportunidades de servicios, suministros y ventas de productos a entidades estatales, con el fin de generar mayores oportunidades de recursos para la Universidad Minuto de Dios.",
+  "se_abstuvo": false,
+  "via_abstencion": null,
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.4823,
+  "recuperados": [
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.4823
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "2",
+    "similitud": 0.4365
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "5",
+    "similitud": 0.4337
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "5",
+    "similitud": 0.4261
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "6",
+    "similitud": 0.4188
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": true
+  },
+  "id": "P8",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "Clasificación supervisada para identificar licitaciones de interés en SECOP II",
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué dice Rodriguez-Plesa et al. (2022) sobre contratación pública sostenible?",
+  "respuesta": "Rodriguez-Plesa et al. (2022) argumentan que la contratación pública sostenible implica actividades de intención e implementación para mejorar el bienestar social de la comunidad, impactando el desempeño social de la empresa en áreas como filantropía, derechos humanos y ética [Rodriguez-Plesa et al., 2022, p. 7]. Además, sostienen que los gobiernos locales pueden utilizar la contratación pública sostenible como un mecanismo estratégico para abordar problemas ambientales, sociales y económicos mediante el uso eficiente de fondos públicos, promoviendo así el bienestar del medio ambiente [Rodriguez-Plesa et al., 2022, p. 1]. Ellos también señalan que las prácticas de contratación pública pueden influir en los patrones de producción y consumo a través de estas iniciativas sostenibles [Rodriguez-Plesa et al., 2022, p. 5].",
+  "se_abstuvo": false,
+  "via_abstencion": null,
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.6861,
+  "recuperados": [
+   {
+    "archivo": "rodriguez-plesa-et-al_2022.pdf",
+    "apellido": "Rodriguez-Plesa et al.",
+    "anio": 2022,
+    "ubicacion": "7",
+    "similitud": 0.6861
+   },
+   {
+    "archivo": "rodriguez-plesa-et-al_2022.pdf",
+    "apellido": "Rodriguez-Plesa et al.",
+    "anio": 2022,
+    "ubicacion": "1",
+    "similitud": 0.643
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "39",
+    "similitud": 0.617
+   },
+   {
+    "archivo": "rodriguez-plesa-et-al_2022.pdf",
+    "apellido": "Rodriguez-Plesa et al.",
+    "anio": 2022,
+    "ubicacion": "5",
+    "similitud": 0.608
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "69",
+    "similitud": 0.6
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 3,
+   "citas": [
+    {
+     "cita": "[Rodriguez-Plesa et al., 2022, p. 7]",
+     "estado": "ok"
+    },
+    {
+     "cita": "[Rodriguez-Plesa et al., 2022, p. 1]",
+     "estado": "ok"
+    },
+    {
+     "cita": "[Rodriguez-Plesa et al., 2022, p. 5]",
+     "estado": "ok"
+    }
+   ],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "P9",
+  "tipo": "con_respuesta",
+  "respuesta_conocida": "Índice de Contratación Verde y de Equidad Social, 264 gobiernos locales, regresión de Poisson",
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué dice el corpus sobre la tasa de desempleo en Venezuela en 2023?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "modelo",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.4925,
+  "recuperados": [
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "36",
+    "similitud": 0.4925
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "36",
+    "similitud": 0.4893
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "38",
+    "similitud": 0.4642
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "37",
+    "similitud": 0.4568
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "38",
+    "similitud": 0.4526
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "A",
+  "tipo": "sin_respuesta",
+  "respuesta_conocida": null,
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Cuál es el presupuesto de contratación pública de México en 2023?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "modelo",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.4961,
+  "recuperados": [
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "71",
+    "similitud": 0.4961
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "39",
+    "similitud": 0.4807
+   },
+   {
+    "archivo": "arachi-et-al_2024.pdf",
+    "apellido": "Arachi et al.",
+    "anio": 2024,
+    "ubicacion": "5",
+    "similitud": 0.4775
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.4756
+   },
+   {
+    "archivo": "ferry-et-al_2023.pdf",
+    "apellido": "Eckersley et al.",
+    "anio": 2023,
+    "ubicacion": "70",
+    "similitud": 0.4722
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "B",
+  "tipo": "sin_respuesta",
+  "respuesta_conocida": null,
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué dice el corpus sobre IA en auditoría de contratos públicos?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "modelo",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.4732,
+  "recuperados": [
+   {
+    "archivo": "rodriguez-plesa-et-al_2022.pdf",
+    "apellido": "Rodriguez-Plesa et al.",
+    "anio": 2022,
+    "ubicacion": "5",
+    "similitud": 0.4732
+   },
+   {
+    "archivo": "sarter_2024.pdf",
+    "apellido": "Sarter",
+    "anio": 2024,
+    "ubicacion": "20",
+    "similitud": 0.4644
+   },
+   {
+    "archivo": "rodriguez-plesa-et-al_2022.pdf",
+    "apellido": "Rodriguez-Plesa et al.",
+    "anio": 2022,
+    "ubicacion": "6",
+    "similitud": 0.4616
+   },
+   {
+    "archivo": "sarter_2024.pdf",
+    "apellido": "Sarter",
+    "anio": 2024,
+    "ubicacion": "20",
+    "similitud": 0.4587
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.4571
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "C",
+  "tipo": "sin_respuesta",
+  "respuesta_conocida": null,
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Cuántos municipios de Colombia tienen población menor a 5.000 habitantes?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "modelo",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.5386,
+  "recuperados": [
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "27",
+    "similitud": 0.5386
+   },
+   {
+    "archivo": "ardila-rueda_2004.pdf",
+    "apellido": "Ardila-Rueda",
+    "anio": 2004,
+    "ubicacion": "16",
+    "similitud": 0.5379
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "12",
+    "similitud": 0.5348
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "23",
+    "similitud": 0.5345
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "22",
+    "similitud": 0.5326
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "D",
+  "tipo": "sin_respuesta",
+  "respuesta_conocida": null,
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué es VigIA según Salazar et al. (2024) y qué datos usa?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "umbral",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.4073,
+  "recuperados": [
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "37",
+    "similitud": 0.4073
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "39",
+    "similitud": 0.395
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "10",
+    "similitud": 0.3897
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "39",
+    "similitud": 0.385
+   },
+   {
+    "archivo": "monsalvo-herrera-jimenez_2025.pdf",
+    "apellido": "Monsalvo Herrera y Jiménez",
+    "anio": 2025,
+    "ubicacion": "30",
+    "similitud": 0.3816
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "E",
+  "tipo": "sin_respuesta",
+  "respuesta_conocida": null,
+  "conducta_correcta_auto": true
+ },
+ {
+  "pregunta": "¿Qué plantea Díaz Díez (2023) sobre el carácter transaccional de SECOP II?",
+  "respuesta": "No encuentro esto en las fuentes del corpus.",
+  "se_abstuvo": true,
+  "via_abstencion": "modelo",
+  "modelo": "qwen3.5:4b",
+  "umbral": 0.45,
+  "similitud_max": 0.4976,
+  "recuperados": [
+   {
+    "archivo": "repo_desarrollo_social_y_economico.md",
+    "apellido": "Repositorio desarrollo_social_y_economico",
+    "anio": 2025,
+    "ubicacion": "sección «1. Descripción General»",
+    "similitud": 0.4976
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.4861
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.4841
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "1",
+    "similitud": 0.4658
+   },
+   {
+    "archivo": "figueroa-gomez-galpin_2024.pdf",
+    "apellido": "Figueroa-Gómez y Galpin",
+    "anio": 2024,
+    "ubicacion": "2",
+    "similitud": 0.4457
+   }
+  ],
+  "verificacion_citas": {
+   "n_citas": 0,
+   "citas": [],
+   "citas_invalidas": [],
+   "sin_citas": false
+  },
+  "id": "F",
+  "tipo": "sin_respuesta",
+  "respuesta_conocida": null,
+  "conducta_correcta_auto": true
+ }
+]

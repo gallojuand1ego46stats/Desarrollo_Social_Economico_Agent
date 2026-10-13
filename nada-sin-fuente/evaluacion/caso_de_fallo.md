@@ -1,7 +1,7 @@
 # Caso de fallo
 
-**Sistema:** RAG propio, versión 2 (`sistema/rag.py`, modelo `qwen3.5:4b-mlx`, embeddings `bge-m3`).
-**Evidencia:** `sistema/resultados/evaluacion_qwen3.5:4b-mlx_2026-10-13_1302.md`, pregunta P7.
+**Sistema:** RAG propio, versión 2 (`sistema/rag.py`, embeddings `bge-m3`). El fallo ocurrió igual con los dos modelos generadores evaluados: `qwen2.5-coder` y `qwen3.5:4b` (final).
+**Evidencia:** pregunta P7 en `sistema/resultados/evaluacion_qwen2.5-coder_2026-10-13_1302.md` y en `sistema/resultados/evaluacion_qwen3.5-4b_2026-10-13_1704.md`.
 
 **Qué estaba mal:** A la pregunta "¿Cuántos contratos analizaron Ferry et al. (2023) en Reino Unido?" el sistema respondió "No encuentro esto en las fuentes del corpus.", aunque el documento sí está en el corpus y contiene la respuesta (más de 90.000 contratos de autoridades locales). Es una **abstención falsa**.
 
@@ -9,7 +9,7 @@
 
 El origen está en nuestro propio anteproyecto: el Informe 1 citaba "Ferry et al. (2023)", que es el error de cita que encontramos al construir la tabla de trazabilidad (fila 5).
 
-**Cómo lo detectamos:** El chequeo automático del banco lo marcó como "REVISAR" (pregunta con respuesta que terminó en abstención). Repetimos la misma pregunta con el autor correcto, "Eckersley et al. (2023)", y el sistema respondió "90.000 contratos" con una cita válida a la página 35, que el verificador confirmó.
+**Cómo lo detectamos:** El chequeo automático del banco lo marcó como "REVISAR" (pregunta con respuesta que terminó en abstención). Repetimos la misma pregunta con el autor correcto, "Eckersley et al. (2023)", y el sistema (con `qwen2.5-coder`) respondió "90.000 contratos" con una cita válida a la página 35, que el verificador confirmó. Que el fallo se repita idéntico con `qwen3.5:4b` confirma que la causa es el nombre del autor y no el modelo.
 
 **Por qué importa:** Es un fallo por exceso de cautela, el opuesto a una alucinación: el sistema prefirió no responder antes que suponer una equivalencia de autores que no estaba en el texto. Para nosotros es el fallo menos dañino, pero sigue siendo un fallo: alguien que use la cita del Informe 1 tal como estaba no obtiene la respuesta.
 

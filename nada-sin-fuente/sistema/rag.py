@@ -36,7 +36,7 @@ DIR_RESULTADOS = AQUI / "resultados"
 ARCHIVO_FUENTES = AQUI / "fuentes.json"
 ARCHIVO_BANCO = AQUI / "banco.json"
 
-MODELO = os.environ.get("RAG_MODELO", "qwen2.5-coder")
+MODELO = os.environ.get("RAG_MODELO", "qwen3.5:4b")
 MODELO_EMBEDDINGS = os.environ.get("RAG_EMBEDDINGS", "bge-m3")
 TOP_K = int(os.environ.get("RAG_TOP_K", "5"))
 # Similitud coseno mínima del mejor fragmento para intentar responder.
