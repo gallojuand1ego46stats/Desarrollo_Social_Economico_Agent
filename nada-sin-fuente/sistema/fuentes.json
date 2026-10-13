@@ -1,15 +1,63 @@
 {
- "_nota": "Ficha de cada archivo de corpus/papers/. El nombre del archivo debe coincidir EXACTAMENTE. 'apellido' y 'anio' son lo que el sistema pone en la cita [Apellido, año, p. X]. Los nombres de archivo salen de corpus/README_PROCEDENCIA.md.",
+ "_nota": "Ficha de cada archivo de corpus/papers/. El nombre del archivo debe coincidir EXACTAMENTE. 'apellido' y 'anio' son lo que el sistema pone en la cita [Apellido, año, p. X]. Los nombres de archivo salen de corpus/README_PROCEDENCIA.md. 'alias' son otros nombres con que se cita el mismo documento (p. ej. en el Informe 1); el sistema los muestra en la cabecera de los fragmentos y el verificador los acepta.",
  "fuentes": {
-  "ardila-rueda_2004.pdf": {"apellido": "Ardila-Rueda", "anio": 2004},
-  "bonet-moron_2006.pdf": {"apellido": "Bonet-Morón", "anio": 2006},
-  "arachi-et-al_2024.pdf": {"apellido": "Arachi et al.", "anio": 2024},
-  "ferry-et-al_2023.pdf": {"apellido": "Eckersley et al.", "anio": 2023},
-  "sarter_2024.pdf": {"apellido": "Sarter", "anio": 2024},
-  "rodriguez-plesa-et-al_2022.pdf": {"apellido": "Rodriguez-Plesa et al.", "anio": 2022},
-  "figueroa-gomez-galpin_2024.pdf": {"apellido": "Figueroa-Gómez y Galpin", "anio": 2024},
-  "monsalvo-herrera-jimenez_2025.pdf": {"apellido": "Monsalvo Herrera y Jiménez", "anio": 2025},
-  "dane_ipm_2018.pdf": {"apellido": "DANE", "anio": 2020},
-  "repo_desarrollo_social_y_economico.md": {"apellido": "Repositorio desarrollo_social_y_economico", "anio": 2025}
+  "ardila-rueda_2004.pdf": {
+   "apellido": "Ardila-Rueda",
+   "anio": 2004
+  },
+  "bonet-moron_2006.pdf": {
+   "apellido": "Bonet-Morón",
+   "anio": 2006
+  },
+  "arachi-et-al_2024.pdf": {
+   "apellido": "Arachi et al.",
+   "anio": 2024,
+   "alias": [
+    {
+     "apellido": "Arachia et al.",
+     "anio": 2024
+    }
+   ]
+  },
+  "ferry-et-al_2023.pdf": {
+   "apellido": "Eckersley et al.",
+   "anio": 2023,
+   "alias": [
+    {
+     "apellido": "Ferry et al.",
+     "anio": 2023
+    }
+   ]
+  },
+  "sarter_2024.pdf": {
+   "apellido": "Sarter",
+   "anio": 2024
+  },
+  "rodriguez-plesa-et-al_2022.pdf": {
+   "apellido": "Rodriguez-Plesa et al.",
+   "anio": 2022
+  },
+  "figueroa-gomez-galpin_2024.pdf": {
+   "apellido": "Figueroa-Gómez y Galpin",
+   "anio": 2024
+  },
+  "monsalvo-herrera-jimenez_2025.pdf": {
+   "apellido": "Monsalvo Herrera y Jiménez",
+   "anio": 2025
+  },
+  "dane_ipm_2018.pdf": {
+   "apellido": "DANE",
+   "anio": 2020,
+   "alias": [
+    {
+     "apellido": "DANE",
+     "anio": 2018
+    }
+   ]
+  },
+  "repo_desarrollo_social_y_economico.md": {
+   "apellido": "Repositorio desarrollo_social_y_economico",
+   "anio": 2025
+  }
  }
 }

@@ -1,4 +1,4 @@
 ollama>=0.5
 pypdf>=4.0
 numpy>=1.24
-fonttools>=4.0
+fonttools>=4.0   # la usa pypdf para leer algunas fuentes de los PDF (sin ella salen advertencias)

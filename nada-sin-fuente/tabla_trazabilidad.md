@@ -18,7 +18,7 @@
 | 9 | "utilizaron datos abiertos de SECOP II para desarrollar modelos de clasificación destinados a identificar procesos de contratación de interés" | Figueroa-Gómez y Galpin (2024) | SN Computer Science 5, 87, Resumen | Solo NotebookLM | Juan David | 2026-10-02 |
 | 10 | "desarrollaron VigIA, una herramienta basada en datos abiertos de SECOP II para detectar ineficiencias y construir índices de riesgo" | Salazar, Pérez y Gallego (2024) | Data & Policy 6, e75, Resumen | **Directa** (página del editor en Cambridge Core, 2026-10-06). No está en el corpus de NotebookLM | Claude (búsqueda web); el equipo debe confirmar | 2026-10-06 |
 | 11 | "utilizó Isolation Forest sobre datos abiertos de SECOP II para identificar banderas rojas" | Gutiérrez Vanegas (2024) | Trabajo de grado, Univ. Los Libertadores | **Pendiente: NO verificada.** No se ubicó el documento | — | — |
-| 12 | "analiza el carácter transaccional de SECOP II y su relación con los principios de publicidad y transparencia" | Díaz Díez (2023) | Rev. Eurolatinoamericana de Derecho Administrativo 10(2) | **Parcial**: el artículo existe en Redalyc y el tema coincide; la frase "transaccional" no se confirmó | Claude (búsqueda web) | 2026-10-06 |
+| 12 | "analiza el carácter transaccional de SECOP II y su relación con los principios de publicidad y transparencia" | Díaz Díez (2023) | Rev. Eurolatinoamericana de Derecho Administrativo 10(2) | **Parcial**: el artículo existe en Redalyc y el tema coincide. Una segunda revisión con IA (2026-10-13) reporta que la sección 4.1 describe a SECOP II como plataforma transaccional; DOI 10.14409/redoeda.v10i2.12920. Falta que el equipo lo confirme en el PDF | Claude (búsqueda web) | 2026-10-06 / 2026-10-13 |
 | 13 | "el histórico reporta 7.827.129 registros y 59 variables, con última fecha de publicación 2025-10-05" | `Historico_de_Datos.ipynb`, repo público ustadistica/desarrollo_social_y_economico | README del repo | **Directa** (consulta al repo) | Juan David | 2026-09 |
 | 14 | Estructura de 5 dimensiones y 15 indicadores del IPM censal municipal | DANE (2020), Nota metodológica COM-030-PD-001-r-004 V8, 31-01-2020 | Tabla 1 | **Directa** (documento oficial y CONPES) | Juan David | 2026-10-02 |
 
@@ -28,3 +28,5 @@
 - Solo contra NotebookLM (no independiente): filas 1, 2, 3, 5 (contenido), 6 (contenido), 7 y 9.
 - Pendiente o parcial: filas 11 y 12.
 - Correcciones al Informe 1 encontradas al construir esta tabla: "Arachia" → "Arachi"; "Ferry et al. 57(11)" → "Eckersley, Flynn, Lakoma y Ferry, 57(10)"; Gutiérrez Vanegas y Díaz Díez sin verificar.
+- Las filas 10 y 12, y los metadatos de las filas 5 y 6, los verificó Claude (búsqueda web), no el equipo: cuentan como verificación directa de la fuente, pero el equipo debe confirmarlas.
+- La fila 4 cita como ubicación el rango del artículo completo (pp. 213–251); los detalles de método (Moran, Queen, 999 permutaciones) están en el cuerpo, no en el resumen, y falta precisar la página.

@@ -1,6 +1,6 @@
 # Nada sin fuente
 
-Actividad evaluativa del curso **Consultoría** (Pregrado en Estadística, USTA — docente Javier Mauricio Sierra), . Construida sobre las fuentes del estado del arte del artículo de grado "Contratación pública y vulnerabilidad socioeconómica municipal en Colombia".
+Actividad evaluativa del curso **Consultoría** (Pregrado en Estadística, USTA — docente Javier Mauricio Sierra). Construida sobre las fuentes del estado del arte del artículo de grado "Contratación pública y vulnerabilidad socioeconómica municipal en Colombia".
 
 **Equipo:** Juan Diego Gallo Quintero, Juan David Parada Fonseca, David Santiago Sanchez.
 
@@ -8,46 +8,52 @@ Actividad evaluativa del curso **Consultoría** (Pregrado en Estadística, USTA 
 
 ```
 nada-sin-fuente/
-├── README.md                          ← este archivo
-├── inventario_fallos/                 ← Entregable 1 (individual, semana 1)
-│   ├── inventario_juan_diego.md
-│   └── inventario_juan_david.md
-├── experimento/                       ← Entregable 2 (semana 1)
+├── README.md                                   ← este archivo
+├── inventario_fallos/                          ← Entregable 1
+│   ├── inventario_juan_david.md
+│   └── inventario_juan_diego_David_Sanchez.md
+├── experimento/                                ← Entregable 2
 │   ├── experimento_y_decision.md
 │   └── clasificacion_independiente/
-│       ├── clasificacion_juan_diego.md
-│       └── clasificacion_juan_david.md
-├── corpus/                            ← Entregable 3a-3b (semana 2)
+│       ├── clasificacion_juan_david.md
+│       └── clasificacion_juan_diego_David_Sanchez.md
+├── corpus/                                     ← Entregable 3a-3b
 │   ├── README_PROCEDENCIA.md
-│   └── papers/                        ← PDFs de la matriz bibliográfica (no versionados en git, ver .gitignore)
-├── tabla_trazabilidad.md              ← Entregable 3c (semana 2)
-├── protocolo_prompts/                 ← Entregable 3d (semana 2)
-│   ├── v1.md
+│   ├── MANIFIESTO.md                           ← huella de cada archivo indexado (python rag.py manifiesto)
+│   └── papers/                                 ← PDFs (no versionados en git, ver .gitignore)
+├── tabla_trazabilidad.md                       ← Entregable 3c
+├── protocolo_prompts/                          ← Entregable 3d
+│   ├── v1.md                                   ← NotebookLM (versión 1 del sistema)
+│   ├── v2.md                                   ← RAG propio (versión 2 y 2.1)
 │   └── CHANGELOG.md
-├── evaluacion/                        ← Entregable 4 (semana 3)
+├── sistema/                                    ← RAG propio (vía propia)
+│   ├── README.md                               ← cómo instalarlo y usarlo
+│   ├── rag.py                                  ← indexar, calibrar, manifiesto, preguntar, evaluar, reverificar
+│   ├── fuentes.json · banco.json · requirements.txt
+│   ├── tests/test_rag.py                       ← pruebas sin Ollama
+│   └── resultados/                             ← reporte de cada evaluación
+├── evaluacion/                                 ← Entregable 4
 │   ├── banco_preguntas.md
 │   ├── caso_de_fallo.md
 │   └── acta_auditoria_cruzada.md
-├── sistema/                           ← Solo si van por vía propia (RAG local)
-│   └── README.md
-└── memoria/                           ← Entregable 5 (semana 3)
-    └── memoria_final.md
+└── memoria/memoria_final.md                    ← Entregable 5
 ```
 
-## Estado actual
+## Estado actual (2026-10-13)
 
-- [+] Inventario de fallos (Juan Diego y David Sanchez)
-- [+] Inventario de fallos (Juan David)
-- [+] Experimento de 2 tratamientos corrido
-- [+] Tabla de decisión de herramienta
-- [+] Biblioteca de referencias armada
-- [+] Tabla de trazabilidad completa
-- [+] Protocolo de prompts v1
-- [+] Sistema construido y respondiendo con cita
-- [+] Banco de evaluación (15-20 preguntas)
-- [+] Caso de fallo documentado
-- [+] Auditoría cruzada
-- [+] Memoria final
+- [x] Inventario de fallos (Juan David)
+- [x] Inventario de fallos (Juan Diego y David Sánchez)
+- [x] Experimento: 2 de 3 tratamientos (A control, B búsqueda); el C se evalúa con el banco de preguntas
+- [x] Decisión de herramienta: RAG propio (vía propia), que reemplazó a NotebookLM después de la sustentación
+- [x] Corpus: 10 documentos; Salazar et al., Gutiérrez Vanegas y Díaz Díez no se incorporaron
+- [~] Tabla de trazabilidad: 14 afirmaciones; 5 con verificación directa (2 de ellas hechas por Claude, por confirmar), 7 solo contra NotebookLM, 2 pendientes o parciales
+- [x] Protocolo de prompts v1 (NotebookLM), v2 y v2.1 (RAG)
+- [x] Sistema: RAG propio con `qwen3.5:4b`, `rag.py` v2.1 con pruebas automáticas
+- [~] Banco de evaluación: 15 preguntas corridas en NotebookLM (15/15) y en el RAG (14/15); P2 y P9 por verificar contra el PDF; falta re-correr con la v2.1
+- [x] Caso de fallo documentado (P7)
+- [ ] Auditoría cruzada con un equipo par (el acta está vacía; pendiente de asignación del profesor)
+- [x] Memoria final
+- [ ] Visto bueno del profesor
 
 ## Nota sobre el corpus
 

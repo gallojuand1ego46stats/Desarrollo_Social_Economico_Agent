@@ -147,16 +147,17 @@ Mismo banco, índice, umbral y prompt; solo cambia el modelo generador (`python 
 |---|---|---|---|
 | P1 | Responde | Sí | Los 3 pilares; cita válida [Bonet-Morón, 2006, p. 8] |
 | P2 | Responde | Por verificar | Agrega cifras (Antioquia 17 %, Valle y Cundinamarca 9,5 %, Bogotá 1,3 %) citando p. 21 y p. 35, ambas recuperadas. Contrastar con el PDF |
-| P3 | Responde | Sí, incompleta | LISA e IPM; no Moran, Queen ni 999 permutaciones. Cita con autor abreviado [Monsalvo, 2025, p. 4]: página correcta, el verificador la marca inválida |
+| P3 | Responde | Parcial | LISA e IPM; no Moran, Queen ni 999 permutaciones. Cita con autor abreviado [Monsalvo, 2025, p. 4]: página correcta (falso positivo del verificador v2.0; válida con el v2.1) |
 | P4 | Se abstiene | Sí | Abstención parcial correcta |
 | P5 | Responde | Sí | Completa: 5 dimensiones con nombres, 20 %, 15 indicadores, k = 33,3 %. Cita en formato no estándar "[Fragmento 2, p. 2]" |
-| P6 | Responde | Sí | Efectos fijos, matching, 50.905 contratos. Cita con autor abreviado [Arachi, 2024, p. 1]: página correcta, el verificador la marca inválida |
+| P6 | Responde | Sí | Efectos fijos, matching, 50.905 contratos. Cita con autor abreviado [Arachi, 2024, p. 1]: página correcta (falso positivo del verificador v2.0; válida con el v2.1) |
 | P7 | Se abstiene | **No** | Misma abstención falsa que con `qwen2.5-coder` (Ferry vs. Eckersley) |
-| P8 | Responde | Sí, con error de palabra | Escribe "licencias" donde el texto dice "licitaciones". Sin cita |
+| P8 | Responde | Parcial | Escribe "licencias" donde el texto dice "licitaciones" y omite SECOP II y el carácter supervisado. Sin cita. La afiliación a la Corporación Universitaria Minuto de Dios aparece en la página del editor (revisión con IA, 2026-10-13; confirmar) |
 | P9 | Responde | Por verificar | Tres citas válidas (p. 7, 1 y 5); contrastar el contenido de la p. 7 con el PDF |
 | A–F | Se abstienen | Sí | E por umbral; A, B, C, D y F por la regla del prompt |
 
 - **Conducta correcta: 14/15**, igual que con `qwen2.5-coder`. IC 95 % de Wilson [70,2 %, 98,8 %].
-- **Citas marcadas inválidas: 2** (P3 y P6). Ninguna inventa una fuente: abrevian el nombre del autor. Es una limitación del verificador, que exige el nombre exacto, y del modelo, que no copia la cabecera completa.
+- **Citas inválidas: 0** con el verificador v2.1 (`python rag.py reverificar`). El v2.0 había marcado 2 (P3 y P6), pero eran falsos positivos: autor abreviado con la página correcta. Con el v2.1 quedan 4 citas válidas en formato no estándar (P3, P5 ×2, P6) y 1 respuesta sin cita (P8).
 - P2 y P9 quedan "por verificar" hasta contrastarlas con los PDF; la columna "Fiel" la confirman los autores.
+- Conducta (8/9 respondió cuando debía) no es lo mismo que fidelidad: de esas 8 respuestas, 3 son fieles (P1, P5, P6), 2 parciales (P3, P8) y 2 están por verificar (P2, P9); P4 es abstención parcial correcta.
 

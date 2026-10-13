@@ -11,11 +11,15 @@ El origen está en nuestro propio anteproyecto: el Informe 1 citaba "Ferry et al
 
 **Cómo lo detectamos:** El chequeo automático del banco lo marcó como "REVISAR" (pregunta con respuesta que terminó en abstención). Repetimos la misma pregunta con el autor correcto, "Eckersley et al. (2023)", y el sistema (con `qwen2.5-coder`) respondió "90.000 contratos" con una cita válida a la página 35, que el verificador confirmó. Que el fallo se repita idéntico con `qwen3.5:4b` confirma que la causa es el nombre del autor y no el modelo.
 
+**Límite de la evidencia:** esa re-ejecución con "Eckersley" se hizo a mano con `python rag.py preguntar` y su salida no quedó guardada en `sistema/resultados/`. La hipótesis es plausible, pero se apoya en una sola re-corrida no archivada.
+
 **Por qué importa:** Es un fallo por exceso de cautela, el opuesto a una alucinación: el sistema prefirió no responder antes que suponer una equivalencia de autores que no estaba en el texto. Para nosotros es el fallo menos dañino, pero sigue siendo un fallo: alguien que use la cita del Informe 1 tal como estaba no obtiene la respuesta.
 
 **Qué haríamos distinto:**
 1. Corregir la cita en el Informe 1 (Eckersley, Flynn, Lakoma y Ferry, 2023, 57(10)).
 2. Registrar en `fuentes.json` los nombres alternativos de cada documento (por ejemplo "Ferry et al." como alias de "Eckersley et al.") e incluirlos en la cabecera de los fragmentos, para que el modelo pueda reconocer las dos formas de citarlo.
+
+**Estado (2026-10-13):** la corrección 2 ya está implementada en `rag.py` v2.1, con los alias Ferry et al. (2023), Arachia et al. (2024) y DANE (2018), una regla nueva en el prompt (protocolo v2.1) y una prueba automática de regresión (`test_cabecera_muestra_alias_regresion_p7`). Falta volver a correr la evaluación para confirmar que P7 se responde; esa corrida queda guardada con el texto de los fragmentos. La corrección 1 (Informe 1) está pendiente.
 
 ## Fallo de referencia de la etapa de diagnóstico
 

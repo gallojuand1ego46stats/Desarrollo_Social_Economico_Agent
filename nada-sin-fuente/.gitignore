@@ -1,15 +1,17 @@
-# PDFs pesados del corpus (no versionar binarios grandes en git)
-corpus/papers/*.pdf
+# Corpus: PDFs y textos de las editoriales (no se redistribuyen). Ver corpus/MANIFIESTO.md
+corpus/papers/
 
-# Índices vectoriales generados (si van por vía propia) — se reconstruyen con el comando del README
-sistema/chroma_db/
-sistema/*.index
-sistema/__pycache__/
+# Índice del RAG (se reconstruye con: python rag.py indexar)
+sistema/indice/
 
-# Entornos y claves
-.env
+# Entornos, cachés y claves
+sistema/.venv/
+.venv/
 venv/
+__pycache__/
+.env
 *.key
 
 # Archivos de sistema
 .DS_Store
+.Rhistory

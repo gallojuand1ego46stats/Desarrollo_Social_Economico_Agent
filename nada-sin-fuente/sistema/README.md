@@ -27,7 +27,11 @@ Las tres defensas contra la alucinación, y qué familia atacan:
 | Umbral de similitud: si nada se parece a la pregunta, se abstiene sin preguntarle al modelo | `UMBRAL` | Búsqueda / abstención |
 | Verificador de citas: marca citas con autor, año o página que no estaban en lo recuperado | `verificar_citas` | Anclaje (citas deformadas) |
 
-El verificador comprueba que la cita **apunte** a un fragmento real; no comprueba que el contenido sea fiel. Eso lo califica una persona en el reporte de evaluación.
+El verificador comprueba que la cita **apunte** a un fragmento real (autor o alias, año y página); no comprueba que el contenido sea fiel. Eso lo califica una persona en el reporte de evaluación, que desde la v2.1 incluye el texto de los fragmentos que vio el modelo.
+
+Estados del verificador (v2.1): `ok`; `ok (autor abreviado)`, `ok (alias)` y `ok (formato no estándar: …)` son citas válidas fuera del formato pedido; `inválida: …` son citas que no apuntan a lo recuperado. La abstención solo cuenta si la respuesta es exactamente la frase de abstención.
+
+**Alias.** Si un documento se cita con otro nombre (en el Informe 1 decía "Ferry et al." y el documento es de Eckersley et al.), se agrega en `fuentes.json` con `"alias": [{"apellido": "Ferry et al.", "anio": 2023}]`. El alias aparece en la cabecera del fragmento y el verificador lo acepta. No hace falta volver a indexar.
 
 ## Instalación (una vez, en el Mac)
 
@@ -43,7 +47,7 @@ ollama pull qwen3.5:4b        # modelo generador (final)
 
 ## Poner el corpus
 
-Copiar los 10 archivos del corpus (los mismos que se subieron a NotebookLM) a `nada-sin-fuente/corpus/papers/`, con **exactamente** los nombres de `corpus/README_PROCEDENCIA.md`:
+Copiar los 10 archivos del corpus a `nada-sin-fuente/corpus/papers/`, con **exactamente** los nombres de `corpus/README_PROCEDENCIA.md`:
 
 ```
 ardila-rueda_2004.pdf            bonet-moron_2006.pdf
@@ -63,10 +67,13 @@ Si un PDF es escaneado (imagen), pypdf no extrae texto y ese documento queda vac
 python rag.py indexar                       # construye el índice (repetir si cambia el corpus)
 python rag.py calibrar                      # similitudes del banco y umbral sugerido (no usa el modelo generador)
 python rag.py preguntar "¿Qué estructura tiene el IPM censal municipal del DANE?"
-python rag.py evaluar                       # corre las 15 preguntas y escribe el reporte
+python rag.py manifiesto                    # escribe corpus/MANIFIESTO.md (huella SHA-256, páginas, fragmentos)
+python rag.py evaluar --sin-razonamiento    # corre las 15 preguntas y escribe el reporte
+python rag.py reverificar resultados/<archivo>.json   # re-aplica el verificador a respuestas ya guardadas
+python tests/test_rag.py                    # 21 pruebas sin Ollama
 ```
 
-`evaluar` deja en `sistema/resultados/` un `.json` con todo y un `.md` con la tabla para calificar a mano la columna **Fiel (S/N)**. Ese `.md` es la evidencia que va a la memoria.
+`evaluar` deja en `sistema/resultados/` un `.json` (con un bloque `corrida`: modelo y su digest, razonamiento, umbral, k, huellas del índice; y, por pregunta, el texto de cada fragmento recuperado) y un `.md` con la tabla para calificar a mano **Fiel (S/P/N)**, **Calificó** y **Fecha**. Ese `.md` es la evidencia que va a la memoria. Las corridas de la v2.0 (las de las 13:02 y 17:04 del 2026-10-13) no guardaban el texto de los fragmentos.
 
 ## Cambiar de modelo
 
@@ -90,7 +97,7 @@ export RAG_MODELO=qwen3.5:4b
 | `RAG_TOP_K` | `5` | Fragmentos que se le pasan al modelo |
 | `RAG_UMBRAL` | `0.45` | Similitud mínima para intentar responder |
 
-El umbral de 0,45 es un punto de partida, no un valor medido. Se ajusta con `calibrar`. Calibrarlo con el mismo banco que luego se evalúa lo sobreajusta: si se hace así, hay que declararlo en la memoria.
+El umbral de 0,45 se fijó como punto de partida mirando las similitudes del mismo banco con `calibrar`; no se validó con preguntas independientes. Calibrar con el mismo banco que luego se evalúa lo sobreajusta, y así lo declaramos en la memoria. Lo correcto sería un banco de calibración aparte.
 
 ## Importante
 

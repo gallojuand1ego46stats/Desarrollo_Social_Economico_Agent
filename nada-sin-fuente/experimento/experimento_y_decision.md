@@ -81,8 +81,15 @@ por casualidad. Con las marginales de las dos tablas (Juan David: 4 Utilizable,
 1 Existe pero no dice eso, 5 No existe; Juan Diego: 5, 2, 3), el acuerdo esperado
 por azar es p_e = 0,37 y **κ = (0,70 − 0,37)/(1 − 0,37) ≈ 0,52**, acuerdo
 moderado (escala de Landis y Koch). Con solo 10 ítems la incertidumbre es grande:
-un bootstrap percentil da un IC 95% aproximado de [0,13, 0,82]. Se reporta como
-dato exploratorio, no como medida precisa.
+un bootstrap percentil (20.000 réplicas, semilla 1) da un IC 95 % de [0,13; 1,00]:
+con 10 ítems, algunas remuestras tienen acuerdo perfecto. (Una versión anterior de
+este documento decía [0,13; 0,82]; no lo pudimos reproducir.) Se reporta como dato
+exploratorio, no como medida precisa.
+
+**Límite de diseño:** Juan Diego clasificó solo con el DOI. Con el DOI se puede
+decidir si la referencia existe, pero no si "dice eso", porque para eso hace falta
+la afirmación que se le atribuye. Eso puede explicar, más que la subjetividad, que
+los 3 desacuerdos estén en esa categoría.
 
 **¿En qué categoría se concentró el desacuerdo?** En los 3 casos de
 discrepancia, al menos uno de los dos clasificadores usó la categoría "Existe
@@ -109,6 +116,8 @@ esta verificación.
 | Costo | Gratis | Incluido en plan ya usado | Gratis (modelo local) |
 | Exportación a APA 7 | No nativa, exportación manual de notas | No nativa | No aplica |
 | Reproducibilidad (otra persona rehace el índice) | Alta — solo requiere subir los mismos PDFs | Alta | Media — requiere mismo setup local |
+
+> Nota: los comportamientos de NotebookLM y del proyecto con archivos de Claude en esta tabla vienen de su documentación y de nuestro uso, no de una prueba formal; solo NotebookLM se evaluó con el banco de preguntas.
 
 ## 6. Herramienta elegida
 
@@ -166,8 +175,8 @@ Las similitudes de las preguntas con respuesta (0,482–0,686) y sin respuesta (
 ### 7.4 Limitaciones
 
 - El corpus del RAG no es idéntico al de NotebookLM: los PDF se volvieron a descargar el 2026-10-13 y varios ahora son texto completo, donde antes solo había resumen (ver `corpus/README_PROCEDENCIA.md`).
-- El umbral se fijó mirando el mismo banco con el que se evalúa.
-- 3 respuestas no usaron el formato de cita pedido (P1, P3, P8). En la P1 la cita era correcta pero en otro formato, "(2006, p. 8)", y el verificador no la reconoce: es una limitación del verificador.
+- El umbral 0,45 se fijó como punto de partida mirando las similitudes de este mismo banco; no hay un banco de calibración separado. Con 0,50 se abstendrían por umbral 5 de las 6 preguntas sin respuesta, pero se perderían P1 y P8.
+- Con `qwen2.5-coder`, 2 respuestas no tienen cita (P3, P8) y 1 cita es válida pero en formato narrativo (P1, "Bonet-Morón (2006, p. 8)"). El verificador v2.0 no reconocía ese formato; el v2.1 sí.
 - Respuestas fieles pero incompletas: P3 (no menciona Moran, Queen ni 999 permutaciones), P5 (falta el corte k = 33,3 %) y P9 (faltan las 264 entidades y el Poisson).
 - La fidelidad del contenido la calificaron los autores, sin auditoría cruzada.
 
@@ -181,17 +190,31 @@ Por indicación del profesor, el modelo generador del RAG pasó de `qwen2.5-code
 | Con respuesta (P1–P9) | 8/9 | 8/9 |
 | Abstenciones (A–F) | 6/6 | 6/6 |
 | Pregunta que falla | P7 (Ferry vs. Eckersley) | P7 (la misma) |
-| Citas marcadas inválidas por el verificador | 0 | 2 |
-| Respuestas sin cita en el formato pedido | 3 | 2 |
+| Citas marcadas inválidas por el verificador v2.0 | 0 | 2 (falsos positivos: autor abreviado; con el v2.1 son 0) |
+| Respuestas sin ninguna cita válida (verificador v2.1) | 2 (P3, P8) | 1 (P8) |
 
 La conducta es idéntica, lo que confirma que la diferencia entre modelos es mínima. Diferencias de contenido:
 
 - `qwen3.5:4b` da respuestas más completas: en P5 incluye el corte k = 33,3 % y las cinco dimensiones, y en P1 cita en el formato pedido.
-- Las 2 citas inválidas (P3 y P6) tienen la página correcta, pero el autor abreviado ("Monsalvo" en vez de "Monsalvo Herrera y Jiménez"; "Arachi" sin "et al."). No son fuentes inventadas: el verificador las marca porque exige el nombre exacto de la ficha.
+- Las 2 citas que el verificador v2.0 marcó inválidas (P3 y P6) tienen la página correcta, pero el autor abreviado ("Monsalvo" en vez de "Monsalvo Herrera y Jiménez"; "Arachi" sin "et al."). No son fuentes inventadas: eran falsos positivos del verificador, corregidos en la v2.1.
 - En P2 y P9 da cifras y detalles adicionales (porcentajes de inversión por departamento, temas de la p. 7) con citas a páginas recuperadas. Hay que contrastarlos con el PDF antes de darlos por fieles.
-- En P8 escribe "licencias" donde el texto dice "licitaciones".
+- En P8 escribe "licencias" donde el texto dice "licitaciones" y omite SECOP II: la calificamos como parcialmente fiel.
 
 Reporte completo: `sistema/resultados/evaluacion_qwen3.5-4b_2026-10-13_1704.md`.
+
+### 7.6 Versión 2.1 tras una auditoría (2026-10-13)
+
+Una segunda revisión (una sesión de Claude distinta, que auditó la carpeta) encontró problemas que corregimos en `rag.py` v2.1:
+
+| Problema | Corrección |
+|---|---|
+| Los resultados no guardaban el texto que vio el modelo ni los parámetros (razonamiento, k, digest del modelo) | Cada corrida guarda el texto de los fragmentos y un bloque `corrida` con modelo, digest, umbral, k, razonamiento y huellas del índice |
+| P7: "Ferry" vs. "Eckersley" | `fuentes.json` admite alias (Ferry et al. 2023, Arachia et al. 2024, DANE 2018); la cabecera de cada fragmento los muestra y una regla del prompt (v2.1) indica que es el mismo documento |
+| El verificador marcaba como inválidas citas correctas: listas de páginas ("p. 4, 5"), dos citas en un corchete, autor abreviado | Ahora las reconoce; las abreviadas o fuera del formato pedido se marcan aparte como "formato no estándar" |
+| Una respuesta con contenido inventado más la frase de abstención contaba como abstención | La abstención solo cuenta si la respuesta es exactamente la frase; las mezcladas se reportan |
+| No había pruebas | `sistema/tests/test_rag.py`: 21 pruebas sin Ollama, incluida una de regresión de P7 |
+
+Re-aplicando el verificador v2.1 a las respuestas ya guardadas (sin volver a llamar al modelo), `qwen3.5:4b` queda con 0 citas inválidas (antes 2), 4 en formato no estándar y 1 respuesta sin cita (P8). Para confirmar que el alias corrige P7 hay que volver a correr la evaluación con la v2.1.
 
 ### Decisión
 
