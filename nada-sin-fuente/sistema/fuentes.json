@@ -1,0 +1,15 @@
+{
+ "_nota": "Ficha de cada archivo de corpus/papers/. El nombre del archivo debe coincidir EXACTAMENTE. 'apellido' y 'anio' son lo que el sistema pone en la cita [Apellido, año, p. X]. Los nombres de archivo salen de corpus/README_PROCEDENCIA.md.",
+ "fuentes": {
+  "ardila-rueda_2004.pdf": {"apellido": "Ardila-Rueda", "anio": 2004},
+  "bonet-moron_2006.pdf": {"apellido": "Bonet-Morón", "anio": 2006},
+  "arachi-et-al_2024.pdf": {"apellido": "Arachi et al.", "anio": 2024},
+  "ferry-et-al_2023.pdf": {"apellido": "Eckersley et al.", "anio": 2023},
+  "sarter_2024.pdf": {"apellido": "Sarter", "anio": 2024},
+  "rodriguez-plesa-et-al_2022.pdf": {"apellido": "Rodriguez-Plesa et al.", "anio": 2022},
+  "figueroa-gomez-galpin_2024.pdf": {"apellido": "Figueroa-Gómez y Galpin", "anio": 2024},
+  "monsalvo-herrera-jimenez_2025.pdf": {"apellido": "Monsalvo Herrera y Jiménez", "anio": 2025},
+  "dane_ipm_2018.pdf": {"apellido": "DANE", "anio": 2020},
+  "repo_desarrollo_social_y_economico.md": {"apellido": "Repositorio desarrollo_social_y_economico", "anio": 2025}
+ }
+}
