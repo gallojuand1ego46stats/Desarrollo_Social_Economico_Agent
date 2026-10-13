@@ -1,8 +1,6 @@
 # README de procedencia — corpus
 
-Corpus cargado en NotebookLM: **10 documentos**. Las fuentes marcadas "no incorporada" están en el Informe 1 pero no se subieron al notebook.
-Las fechas de obtención son aproximadas (día de carga/verificación) y deben confirmarse contra el historial de cada integrante.
-
+> **Actualización 2026-10-13 (RAG propio):** los 10 archivos se volvieron a obtener el 2026-10-13 para indexarlos en el RAG propio (`sistema/`), porque los originales cargados a NotebookLM no se conservaron. Varios son ahora texto completo donde antes solo había resumen, así que el corpus del RAG no es idéntico al de NotebookLM. El archivo `repo_desarrollo_social_y_economico.md` se armó copiando el README del repositorio público y **omitiendo el párrafo con credenciales**. Los PDF no se suben al repositorio (`corpus/papers/` está en `.gitignore`).
 ## Archivos
 
 ### ardila-rueda_2004.pdf

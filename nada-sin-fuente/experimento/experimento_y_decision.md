@@ -112,36 +112,61 @@ esta verificación.
 
 ## 6. Herramienta elegida
 
-**Elegimos:** NotebookLM
+**Elegimos:** RAG propio (`sistema/rag.py`): Ollama con `bge-m3` para embeddings, índice local con numpy y `qwen3.5 : 4b-mlbx` como modelo generador.
 
-**Vía:** ☒ Empaquetada ☐ Gestionada ☐ Propia
+**Vía:** ☐ Empaquetada ☐ Gestionada ☒ Propia
+
+**Historia de la decisión:**
+- **Versión 1 (hasta la sustentación del 2026-10-06): NotebookLM, vía empaquetada.** Se eligió porque daba contexto cerrado con citas desde el primer día. Sobre ella se corrió el banco de 15 preguntas (15/15).
+- **Versión 2 (desde 2026-10-13): RAG propio, vía propia.** Cambiamos por orientación del profesor después de la sustentación. Con NotebookLM no controlábamos ni podíamos auditar la recuperación (qué fragmentos usa, con qué criterio, cuándo decide abstenerse), y la vía empaquetada limitaba la nota a 4,8. Los resultados de los dos sistemas sobre el mismo banco están en la sección 7.
+
+**Qué ganamos con la vía propia:**
+- Se guarda exactamente qué fragmentos (documento, página y similitud) vio el modelo en cada respuesta.
+- Abstención doble: por umbral de similitud, antes de llamar al modelo, y por regla del prompt.
+- Verificación automática de que cada cita apunte a un fragmento recuperado. En v1 la verificación de citas fue en parte circular, hecha con el mismo NotebookLM.
+- El modelo generador se cambia con un parámetro (`--modelo`), sin tocar el código.
+- Todo corre local, sin claves ni servicios externos.
+
+**Qué perdimos o qué cuesta más:**
+- Hay que mantener el código, el índice y el corpus en disco.
+- Lo calibramos nosotros (umbral 0,45, k = 5, fragmentos de 900 caracteres): son decisiones nuestras que pueden estar mal ajustadas.
+- El modelo local (`qwen2.5-coder`, 7B) es más pequeño que el de NotebookLM.
 
 **Alternativas descartadas y por qué:**
-- OpenCode: aunque ya lo usamos y tiene búsqueda conectada, el Fallo JD-1 demostró que mezcla metadatos incluso con búsqueda activa, y no fuerza contexto cerrado (puede traer información externa no verificada desde el corpus)
-- Proyecto con archivos de Claude: válido, pero NotebookLM está diseñado específicamente para citar con ubicación exacta del fragmento fuente, que es el requisito más estricto del protocolo de prompts (v1)
+- **OpenCode con búsqueda web:** el fallo JD-1 mostró que mezcla metadatos aun con búsqueda activa, y no fuerza contexto cerrado: puede traer información externa no verificada.
+- **Proyecto con archivos de Claude (vía gestionada):** daba contexto cerrado, pero, igual que NotebookLM, no permite ver ni controlar la recuperación.
+- **NotebookLM (vía empaquetada):** fue la versión 1. Se reemplazó por las razones de arriba, pero se conserva como punto de comparación.
 
-## 7. Resumen para el visto bueno (media página)
+## 7. Sistema final: RAG propio (actualización 2026-10-13)
 
-**Qué encontramos en el experimento:** sin búsqueda conectada, 0% de las
-referencias bibliográficas dadas por el agente fueron reales (10 de 10
-inutilizables). Con búsqueda conectada, la tasa subió a 90% en el total (9 de 10; 4 de 5 en el eje de contratación), aunque
-incluso con búsqueda se encontró un caso de metadatos mezclados entre un
-autor real y un documento distinto.
+Por orientación del profesor después de la sustentación, el sistema final pasó de NotebookLM (vía empaquetada) a un RAG propio (`sistema/rag.py`): embeddings `bge-m3` en Ollama, índice local con numpy, modelo generador `qwen2.5-coder`, temperatura 0, top-5 fragmentos, umbral de similitud 0,45 y verificador automático de citas. El protocolo pasó a v2 (`protocolo_prompts/v2.md`).
 
-**Herramienta elegida:** NotebookLM (vía empaquetada), por su capacidad de
-anclaje con cita de ubicación exacta, descartando OpenCode pese a tener
-búsqueda conectada, porque no garantiza contexto cerrado ni cita verificable.
+### 7.1 Resultados con el mismo banco de 15 preguntas
 
-**Corpus:** 10 documentos públicos cargados (matriz bibliográfica del estado del
-arte más el repositorio público de referencia); 3 fuentes del Informe 1 quedaron fuera.
+| | NotebookLM (v1) | RAG propio (v2) |
+|---|---|---|
+| Conducta correcta | 15/15 · Wilson [79,6 %, 100 %] | 14/15 · Wilson [70,2 %, 98,8 %] |
+| Con respuesta (P1–P9) | 9/9 | 8/9 · Wilson [56,5 %, 98,0 %] |
+| Abstenciones (A–F) | 6/6 | 6/6 · Wilson [61,0 %, 100 %] |
+| Citas que no apuntan a un fragmento recuperado | no medible | 0 |
+| Se puede auditar qué texto usó | No | Sí (fragmentos y similitud por respuesta) |
 
-**Cómo vamos a evaluar:** banco de 15 preguntas (9 con respuesta conocida y localizada en el corpus,
-6 sin respuesta disponible), para verificar que el sistema se abstiene en vez de inventar.
+Con n = 15 los intervalos se solapan: **no se puede afirmar que un sistema sea mejor que el otro.** Lo que sí cambia es la auditabilidad.
 
-### Por qué vía empaquetada (NotebookLM) y no un RAG propio
+Reporte completo: `sistema/resultados/evaluacion_qwen2.5-coder_2026-10-13_*.md`.
 
-**RAG propio:** control total (chunking, embeddings, recuperación, prompt), auditoría de lo recuperado, reproducibilidad exacta, privacidad local y sin techo de nota. Costos: tiempo de construcción y evaluación, riesgo de errores propios y menor calidad de generación con un modelo local pequeño.
+### 7.2 El único fallo: P7
 
-**NotebookLM:** sin infraestructura, contexto cerrado y cita con fragmento exacto de fábrica, gratis. Costos: caja negra (no se audita la recuperación), dependencia de Google, nube, techo en la nota por ser vía empaquetada.
+La P7 pregunta por "Ferry et al. (2023)", pero el documento está registrado como "Eckersley et al. (2023)" (autores según Crossref). El sistema se abstuvo. Al repetir la pregunta con "Eckersley et al." respondió correctamente (90.000 contratos, cita válida a la p. 35). Es una **abstención falsa causada por el error de cita del Informe 1**: el sistema prefirió no suponer que eran el mismo documento. Es un error por exceso de cautela, no una alucinación.
 
-**Decisión:** con un corpus de 10 documentos públicos y el tiempo disponible, las ventajas del RAG propio (escala, privacidad, control fino) no compensaban su costo. La caja negra se compensa evaluando el resultado (protocolo v1, trazabilidad y banco de 15 preguntas). **Limitación:** no se probó un RAG propio; la comparación es argumentada, no medida. Se reconsideraría la vía propia con documentos no públicos, un corpus mayor o necesidad de reproducibilidad exacta.
+### 7.3 Lo que aprendimos del umbral
+
+Las similitudes de las preguntas con respuesta (0,482–0,686) y sin respuesta (0,407–0,539) se solapan: ningún umbral separa los dos grupos. Con 0,45 solo la pregunta E se abstuvo por umbral; las otras cinco abstenciones dependieron de que el modelo obedeciera la regla del prompt. **La similitud sola no basta para decidir cuándo abstenerse**; por eso el sistema usa doble defensa.
+
+### 7.4 Limitaciones
+
+- El corpus del RAG no es idéntico al de NotebookLM: los PDF se volvieron a descargar el 2026-10-13 y varios ahora son texto completo, donde antes solo había resumen (ver `corpus/README_PROCEDENCIA.md`).
+- El umbral se fijó mirando el mismo banco con el que se evalúa.
+- 3 respuestas no usaron el formato de cita pedido (P1, P3, P8). En la P1 la cita era correcta pero en otro formato, "(2006, p. 8)", y el verificador no la reconoce: es una limitación del verificador.
+- Respuestas fieles pero incompletas: P3 (no menciona Moran, Queen ni 999 permutaciones), P5 (falta el corte k = 33,3 %) y P9 (faltan las 264 entidades y el Poisson).
+- La fidelidad del contenido la calificaron los autores, sin auditoría cruzada.
