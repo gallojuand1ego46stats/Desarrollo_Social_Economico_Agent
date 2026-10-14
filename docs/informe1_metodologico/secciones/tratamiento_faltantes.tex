@@ -1,7 +1,7 @@
 \section{Tratamiento de datos faltantes}
 \label{ch:tratamiento_faltantes}
 
-\section{Definición de faltante}
+\subsection{Definición de faltante}
 \label{sec:def_faltante}
 
 En este proyecto, ``dato faltante'' no es una categoría única. Se distingue rigurosamente entre:
@@ -14,7 +14,7 @@ En este proyecto, ``dato faltante'' no es una categoría única. Se distingue ri
     \item \textbf{Caso 0/0:} Numerador y denominador son cero $\rightarrow$ cociente indefinido.
 \end{enumerate}
 
-\section{No respuesta (NR)}
+\subsection{No respuesta (NR)}
 \label{sec:no_respuesta}
 
 Los ítems clasificados como NR en los cuadros censales se tratan como \textbf{cuestión de calidad del dato}, no como faltante para imputar. Se conservan dos definiciones de denominador, generando \textbf{dos versiones de cada indicador sensible a NR}:
@@ -37,7 +37,7 @@ El ítem ``No tiene estrato'' (viviendas en zona rural sin asignación de estrat
     \item Se documenta en \texttt{nr\_item\_municipal.csv} y se analiza su sensibilidad aparte.
 \end{itemize}
 
-\section{Ausencia estructural}
+\subsection{Ausencia estructural}
 \label{sec:ausencia_estructural}
 
 \begin{itemize}
@@ -47,7 +47,7 @@ El ítem ``No tiene estrato'' (viviendas en zona rural sin asignación de estrat
     \item \textbf{Justificación:} Una ausencia estructural no debe interpretarse como ausencia del fenómeno socioeconómico. Imputar ceros donde no existe la población de referencia crearía indicadores espurios.
 \end{itemize}
 
-\section{Denominadores nulos}
+\subsection{Denominadores nulos}
 \label{sec:denominador_cero}
 
 Cuando el denominador de un indicador es cero (población de referencia inexistente en ese municipio-área):
@@ -58,7 +58,7 @@ Cuando el denominador de un indicador es cero (población de referencia inexiste
     \item El municipio se mantiene en la base (no se elimina), pero el indicador no contribuye a análisis multivariado para ese caso.
 \end{itemize}
 
-\section{Casos 0/0}
+\subsection{Casos 0/0}
 \label{sec:caso_0_0}
 
 Cuando numerador $=0$ y denominador $=0$ simultáneamente (ej. cero hogares sin energía y cero hogares totales en un área):
@@ -69,12 +69,12 @@ Cuando numerador $=0$ y denominador $=0$ simultáneamente (ej. cero hogares sin 
     \item No se convierte en 0 ni en 1; permanece como \textbf{indeterminado}.
 \end{itemize}
 
-\section{Municipios sin determinadas áreas}
+\subsection{Municipios sin determinadas áreas}
 \label{sec:municipios_sin_areas}
 
 Los 20 municipios sin cabecera y los 192 sin centro poblado se conservan en el universo. Sus indicadores para las áreas inexistentes son NA estructural. Para el análisis municipal agregado (nivel Total), se usan los totales municipales que \textbf{sí existen} (población total, hogares totales, viviendas totales). La proporcionalidad rural/urbana se documenta en \texttt{municipios\_sin\_cabecera.csv} (columna \texttt{pct\_rural\_disperso}).
 
-\section{Decisiones de tratamiento adoptadas}
+\subsection{Decisiones de tratamiento adoptadas}
 \label{sec:decisiones_tratamiento}
 
 \begin{table}[htbp]
@@ -98,7 +98,7 @@ IPM Cabecera en 20 municipios & Ausencia estructural (sin cabecera) & 20 NA estr
 \end{adjustbox}
 \end{table}
 
-\section{Justificación de no imputación}
+\subsection{Justificación de no imputación}
 \label{sec:justificacion_no_imputacion}
 
 \begin{enumerate}
@@ -109,3 +109,5 @@ IPM Cabecera en 20 municipios & Ausencia estructural (sin cabecera) & 20 NA estr
 \end{enumerate}
 
 La decisión final sobre qué versión (base total o base válida) usar en el PCA queda \textbf{pendiente} y se basará en la sensibilidad documentada (\texttt{sensibilidad\_nr.csv}, \texttt{sensibilidad\_nr\_municipio.csv}) y en la evaluación de adecuación multivariada de cada matriz.
+
+

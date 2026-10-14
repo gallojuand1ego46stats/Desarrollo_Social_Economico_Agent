@@ -1,10 +1,12 @@
 \section{Unidad territorial y universo de análisis}
 \label{ch:unidad_analisis}
 
-\section{Municipio como unidad de análisis}
+\subsection{Municipio como unidad de análisis}
 \label{sec:municipio_unidad}
 
-El municipio es la unidad territorial básica de la organización político-administrativa colombiana (Constitución de 1991, Art. 286; Ley 136 de 1994). Es el nivel donde convergen:
+El municipio es la unidad administrativa de interés sustantivo del proyecto. Sin embargo, la base analítica de 2018 contiene \textbf{1.122 códigos territoriales} y no debe describirse como un universo de 1.122 municipios: incluye 18 áreas no municipalizadas (ANM), además de unidades con particularidades de cabecera. En esta etapa, la unidad observada es el código territorial conservado en las fuentes CNPV/IPM; las ANM se identifican por separado y no se fusionan con municipios.
+
+La escala territorial es pertinente para el estudio porque:
 
 \begin{itemize}
     \item Competencias en prestación de servicios públicos (educación, salud, agua, saneamiento).
@@ -13,9 +15,9 @@ El municipio es la unidad territorial básica de la organización político-admi
     \item Identidad territorial para análisis de vulnerabilidad y políticas públicas.
 \end{itemize}
 
-La elección del municipio (y no el departamento, la localidad o el corregimiento) responde a la necesidad de \textbf{comparabilidad nacional} y \textbf{coherencia con la unidad de contratación pública} (SECOP II registra entidad contratante y lugar de ejecución a nivel municipal).
+La elección de esta escala responde a la \textbf{comparabilidad entre fuentes} y a la posibilidad de armonizarla con la información de contratación pública. La entidad contratante y el lugar de ejecución de SECOP II no son conceptos equivalentes a la residencia de la población censada; la regla territorial para el futuro enlace deberá definirse y validarse antes del análisis.
 
-\section{Códigos territoriales}
+\subsection{Códigos territoriales}
 \label{sec:codigos_territoriales}
 
 \begin{itemize}
@@ -25,46 +27,46 @@ La elección del municipio (y no el departamento, la localidad o el corregimient
     \item \textbf{Consistencia entre fuentes:} La unión entre tablas CNPV, IPM y DIVIPOLA se realiza exclusivamente por \texttt{codigo\_municipio}.
 \end{itemize}
 
-\section{Cobertura municipal}
+\subsection{Cobertura municipal}
 \label{sec:cobertura_municipal}
 
-El universo de trabajo adoptado son los \textbf{1.122 códigos municipales} que tienen datos en el CNPV 2018 y el IPM 2018. Esta cifra se valida en \texttt{resultados/base\_trabajo/validaciones.csv} (validación ``Llave/prefijo ipm\_municipal\_ancho'': 1.122 evaluados, 0 violaciones).
+El universo de trabajo adoptado son los \textbf{1.122 códigos territoriales} con datos en CNPV 2018 e IPM 2018. Esta cifra se valida en \texttt{resultados/base\_trabajo/validaciones.csv} (llave/prefijo de \texttt{ipm\_municipal\_ancho}: 1.122 evaluados, cero violaciones). La cifra describe registros territoriales, no el número de municipios administrativos.
 
 \begin{table}[htbp]
 \centering
-\caption{Universo municipal y cobertura}
+\caption{Universo de códigos territoriales y cobertura}
 \label{tab:universo_municipal}
 \begin{tabular}{@{}lrr@{}}
 \toprule
 \textbf{Concepto} & \textbf{Cantidad} & \textbf{Fuente/Evidencia} \\
 \midrule
-Municipios en CNPV 2018 (cuadros municipales) & 1.122 & \texttt{universo\_municipal\_maestro.csv} \\
-Municipios en IPM 2018 (hoja municipal) & 1.122 & \texttt{validaciones.csv} \\
-Municipios en DIVIPOLA 20260917 & $\approx$1.122 & \texttt{DIVIPOLA-\_Codigos\_municipios\_20260917.csv} \\
-Coincidencia CNPV $\cap$ IPM & 1.122 & \texttt{Final\_Base.md}, validaciones \\
+Códigos territoriales CNPV 2018 & 1.122 & \texttt{universo\_municipal\_maestro.csv} \\
+Códigos territoriales IPM 2018 & 1.122 & \texttt{resultados/base\_trabajo/validaciones.csv} \\
+Registros del universo compartido CNPV $\cap$ IPM & 1.122 & \texttt{Final\_Base.md}, validaciones \\
+Áreas no municipalizadas incluidas & 18 & DIVIPOLA; identificadas en controles territoriales \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\section{Coincidencias entre fuentes}
+\subsection{Coincidencias entre fuentes}
 \label{sec:coincidencias}
 
 La homologación territorial entre CNPV 2018, IPM 2018 y DIVIPOLA se realizó mediante \texttt{codigo\_municipio}. Los controles de llave/prefijo en \texttt{validaciones.csv} reportan \textbf{cero violaciones} para todas las tablas intermedias (\texttt{contexto\_1PM}, \texttt{contexto\_1V}, \texttt{hogares\_1HM\_2HM}, \texttt{persona\_demo\_17PM}, \texttt{persona\_social\_5PM}, \texttt{viviendas\_6V}, \texttt{viviendas\_8V}, \texttt{viviendas\_10V}, \texttt{ipm\_municipal\_ancho}).
 
-\section{No coincidencias y casos especiales}
+\subsection{Diferencias territoriales y casos especiales}
 \label{sec:no_coincidencias}
 
 A pesar de la coincidencia en el conteo total (1.122), existen \textbf{diferencias estructurales} que no son errores sino consecuencias de definiciones territoriales distintas:
 
-\subsection{Municipios sin cabecera (20 casos)}
+\subsection{Unidades territoriales sin cabecera (20 casos)}
 \label{sec:municipios_sin_cabecera}
 
-Veinte municipios no tienen área ``Cabecera'' censada en 2018. Estos coinciden exactamente con los \textbf{20 valores \texttt{NA} estructurales del IPM para Cabeceras} (validación ``20 NA IPM cabeceras = municipios sin cabecera'': 20 evaluados, 0 violaciones).
+Veinte unidades territoriales no tienen área ``Cabecera'' censada en 2018. Coinciden con los \textbf{20 valores \texttt{NA} estructurales del IPM para Cabeceras} (validación ``20 NA IPM cabeceras = unidades sin cabecera'': 20 evaluados, 0 violaciones).
 
 \begin{itemize}
     \item 18 corresponden a \textbf{Áreas No Municipalizadas (ANM)} en DIVIPOLA 2026.
     \item 2 códigos adicionales: \texttt{94343} (Barrancominas, 7.207 hab.) y \texttt{94663} (Mapiripana, 1.011 hab.), cuya población rural dispersa suma 8.218 hab.
-    \item Población total en los 20 municipios sin cabecera: \textbf{34.787 habitantes} (incluye 26.569 en las 18 ANM + 8.218 en los dos códigos adicionales).
+    \item Población total en las 20 unidades sin cabecera: \textbf{34.787 habitantes} (incluye 26.569 en las 18 ANM + 8.218 en los dos códigos adicionales).
     \item Proporción rural dispersa en estos municipios: 47,27\% -- 100\%.
     \item Detalle en \texttt{resultados/base\_trabajo/municipios\_sin\_cabecera.csv} y \texttt{resumen\_sin\_cabecera\_departamento.csv}.
 \end{itemize}
@@ -107,7 +109,7 @@ El archivo \texttt{resultados/base\_trabajo/areas\_inexistentes.csv} documenta, 
     \item \textbf{Tratamiento:} Se completan como \textbf{ceros estructurales} y se marcan con \textit{flags}; \textbf{no se imputan} estadísticamente. No se crean filas para áreas inexistentes.
 \end{itemize}
 
-\section{Resumen de decisiones territoriales}
+\subsection{Resumen de decisiones territoriales}
 \label{sec:resumen_territorial}
 
 \begin{table}[htbp]
@@ -130,3 +132,6 @@ Cobertura 5PM / pob\_10mas & 28 municipios con cobertura $<0,9$ (umbral configur
 \end{tabular}
 \end{adjustbox}
 \end{table}
+
+
+

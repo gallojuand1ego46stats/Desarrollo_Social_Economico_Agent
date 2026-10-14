@@ -5,7 +5,6 @@
 \usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
@@ -32,10 +31,10 @@
 \usepackage{tabularx}
 \usepackage{ragged2e}
 
-% Configuración de interlineado APA 7 (doble interlineado)
+% Interlineado doble para lectura y revisión académica.
 \doublespacing
 
-% Sangría de primera línea (APA 7: 1.27 cm)
+% Sangría de primera línea.
 \setlength{\parindent}{1.27cm}
 \setlength{\parskip}{0pt}
 
@@ -54,7 +53,7 @@
   pdfcreator={pdfLaTeX}
 }
 
-% Estilo de secciones (APA 7)
+% Jerarquía de títulos: secciones principales y subsecciones.
 \titleformat{\section}
   {\normalfont\large\bfseries}{\thesection}{0.5em}{}
 \titleformat{\subsection}
@@ -63,10 +62,10 @@
   {\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.5em}{}
 
 % Numeración
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
 
-% Configuración de captions para tablas y figuras (APA 7)
+% Configuración uniforme de captions.
 \captionsetup{
   font=normalsize,
   labelfont=bf,
@@ -76,7 +75,7 @@
   skip=6pt
 }
 
-% Bibliografía APA 7
+% Bibliografía autor-fecha con natbib.
 \bibliographystyle{apalike}
 
 \begin{document}
@@ -93,40 +92,24 @@
 \clearpage
 \listoftables
 \clearpage
-\listoffigures
-\clearpage
 
 % Contenido principal
 \pagenumbering{arabic}
 
 \input{secciones/introduccion}
-\clearpage
-\input{secciones/metodologia}
-\clearpage
 \input{secciones/marco_conceptual}
-\clearpage
+\input{secciones/metodologia}
 \input{secciones/fuentes}
-\clearpage
 \input{secciones/unidad_analisis}
-\clearpage
 \input{secciones/seleccion_bases}
-\clearpage
 \input{secciones/tratamiento_faltantes}
-\clearpage
 \input{secciones/indicadores}
-\clearpage
 \input{secciones/control_calidad}
-\clearpage
 \input{secciones/diagnostico}
-\clearpage
 \input{secciones/preparacion_pca}
-\clearpage
 \input{secciones/reproducibilidad}
-\clearpage
 \input{secciones/limitaciones}
-\clearpage
 \input{secciones/estado_proyecto}
-\clearpage
 \input{secciones/conclusiones}
 \clearpage
 
@@ -143,3 +126,4 @@
 \input{anexos/anexo_b}
 
 \end{document}
+

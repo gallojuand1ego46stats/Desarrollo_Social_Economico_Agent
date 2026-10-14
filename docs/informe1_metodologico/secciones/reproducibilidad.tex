@@ -1,7 +1,7 @@
 \section{Reproducibilidad y arquitectura computacional}
 \label{ch:reproducibilidad}
 
-\section{Organización del repositorio}
+\subsection{Organización del repositorio}
 \label{sec:organizacion_repo}
 
 La estructura del repositorio es la siguiente:
@@ -55,7 +55,7 @@ La estructura del repositorio es la siguiente:
     \item[\texttt{main.tex}] Este informe
 \end{description}
 
-\section{Scripts principales}
+\subsection{Scripts principales}
 \label{sec:scripts_principales}
 
 \begin{table}[htbp]
@@ -77,7 +77,7 @@ La estructura del repositorio es la siguiente:
 \end{adjustbox}
 \end{table}
 
-\section{Flujo de procesamiento}
+\subsection{Flujo de procesamiento}
 \label{sec:flujo_procesamiento}
 
 \begin{enumerate}
@@ -94,7 +94,7 @@ La estructura del repositorio es la siguiente:
     \begin{enumerate}
         \item Lee tablas intermedias (solo lectura, verifica MD5).
         \item Calcula denominadores desde 1PM y 1V\_MPIO.
-        \item Construye 14 indicadores (7 PCA provisionales + 7 descripción/solapamiento IPM).
+        \item Construye indicadores a partir de la especificación vigente; la auditoría registra 17 definiciones y siete variables candidatas provisionales.
         \item Genera versiones base total y base válida para indicadores con NR.
         \item Produce matrices candidatas, \texttt{especificacion\_indicadores.csv}, controles, sensibilidad, \textit{flags}, hashes.
     \end{enumerate}
@@ -106,7 +106,7 @@ La estructura del repositorio es la siguiente:
     \item \textbf{Prueba de integridad:} \texttt{R/tests/test\_pipeline\_indicadores.R} regenera todo y compara MD5.
 \end{enumerate}
 
-\section{Trazabilidad}
+\subsection{Trazabilidad}
 \label{sec:trazabilidad}
 
 Cada decisión metodológica clave tiene su archivo de evidencia:
@@ -135,7 +135,7 @@ Diagnósticos aptitud PCA & \texttt{resultados/base\_trabajo/diagnosticos\_aptit
 \end{adjustbox}
 \end{table}
 
-\section{Control de integridad}
+\subsection{Control de integridad}
 \label{sec:control_integridad}
 
 \begin{itemize}
@@ -145,7 +145,7 @@ Diagnósticos aptitud PCA & \texttt{resultados/base\_trabajo/diagnosticos\_aptit
     \item \textbf{Refactorización verificada:} Octubre 2026 regeneró 34 CSV idénticos byte-a-byte a la línea base (\texttt{docs/calidad/Refactorizacion\_Pipeline\_Indicadores}).
 \end{itemize}
 
-\section{Reproducibilidad}
+\subsection{Reproducibilidad}
 \label{sec:reproducibilidad_practica}
 
 Para reproducir el estado actual del pipeline desde la raíz del repositorio:
@@ -170,3 +170,6 @@ Rscript R/tests/test_pipeline_indicadores.R
     \item Los archivos Excel fuente en \texttt{datos/} \textbf{no están versionados} (ver \texttt{.gitignore}); deben obtenerse del DANE.
     \item La bóveda Obsidian (\texttt{.obsidian/}) contiene notas metodológicas enlazadas (\texttt{Inicio\_Proyecto.md}, \texttt{Final\_Base.md}, \texttt{VERIFICACION\_CONSOLIDADOS.md}, etc.) que documentan decisiones y vinculan a archivos reproducibles.
 \end{itemize}
+
+
+

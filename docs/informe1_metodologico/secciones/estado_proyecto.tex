@@ -2,7 +2,7 @@
 \label{ch:estado_proyecto}
 \label{sec:estado_proyecto}
 
-\section{Tabla de estado general}
+\subsection{Tabla de estado general}
 \label{sec:estado_general}
 
 \begin{table}[htbp]
@@ -31,7 +31,7 @@ Espacial & \textbf{Pendiente} (condicionado) & -- & Si asociación lo justifica:
 \end{adjustbox}
 \end{table}
 
-\section{Decisiones vigentes registradas (extracto de \texttt{Resumen\_General.md})}
+\subsection{Decisiones vigentes registradas (extracto de \texttt{Resumen\_General.md})}
 \label{sec:decisiones_vigentes}
 
 \begin{enumerate}
@@ -45,11 +45,11 @@ Espacial & \textbf{Pendiente} (condicionado) & -- & Si asociación lo justifica:
     \item Decisiones de inclusión: \textbf{provisionales} (7 indicadores matriz candidata).
 \end{enumerate}
 
-\section{Resultados comprobados que orientan el siguiente paso}
+\subsection{Resultados comprobados que orientan el siguiente paso}
 \label{sec:resultados_comprobados}
 
 \begin{itemize}
-    \item Universo 1.122 municipios; validaciones de llaves, prefijos, sumas y rangos: \textbf{cero violaciones}.
+    \item Universo 1.122 códigos territoriales (incluye ANM); validaciones de llaves, prefijos, sumas y rangos: \textbf{cero violaciones}.
     \item 20 municipios sin cabecera (coinciden con 20 NA IPM Cabeceras); 192 sin centro poblado.
     \item 335 ausencias estructurales edad (119 municipios); 1.202 ausencias tipo vivienda.
     \item Códigos 94663 y 27493: asuntos territoriales pendientes, documentados para crosswalk SECOP.
@@ -59,7 +59,7 @@ Espacial & \textbf{Pendiente} (condicionado) & -- & Si asociación lo justifica:
     \item Refactorización pipeline: 34 CSV regenerados idénticos byte-a-byte; prueba \texttt{test\_pipeline\_indicadores.R} PASS.
 \end{itemize}
 
-\section{Pendientes y decisiones del autor (próximas acciones)}
+\subsection{Pendientes y decisiones del autor (próximas acciones)}
 \label{sec:pendientes_acciones}
 
 \begin{enumerate}
@@ -73,7 +73,7 @@ Espacial & \textbf{Pendiente} (condicionado) & -- & Si asociación lo justifica:
     \item \textbf{Solo después de lo anterior:} ejecutar y documentar PCA, selección de componentes, estabilidad/bootstrap si corresponde, validación externa con IPM. \textbf{El IVS todavía no existe como producto validado.}
 \end{enumerate}
 
-\section{Arquitectura futura del proyecto}
+\subsection{Arquitectura futura del proyecto}
 \label{sec:arquitectura_futura}
 
 El informe está diseñado para crecer modularmente:
@@ -98,3 +98,4 @@ ANÁLISIS ESPACIAL (condicionado a resultados)
 \end{verbatim}
 
 Cada etapa futura se añadirá como capítulo/sección sin reescribir la metodología ya consolidada en este Informe 1.
+

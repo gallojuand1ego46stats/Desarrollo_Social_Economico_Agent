@@ -1,24 +1,24 @@
 \section{Conclusiones metodológicas}
 \label{ch:conclusiones}
 
-\section{¿Qué se ha construido hasta ahora?}
+\subsection{¿Qué se ha construido hasta ahora?}
 
 \begin{enumerate}
-    \item \textbf{Universo municipal consolidado:} 1.122 municipios con datos CNPV 2018 e IPM 2018, homologados por \texttt{codigo\_municipio} (5 caracteres), validados con cero violaciones estructurales.
+    \item \textbf{Universo territorial consolidado:} 1.122 códigos territoriales, incluidas áreas no municipalizadas con datos CNPV 2018 e IPM 2018, homologados por \texttt{codigo\_municipio} (5 caracteres), validados con cero violaciones estructurales.
     \item \textbf{Bases intermedias auditadas:} 9 tablas tidy en \texttt{datos/intermedio/} (contexto 1PM, 1V; hogares 1HM/2HM; personas demo 17PM; personas social 5PM; viviendas 6V, 8V, 10V; IPM municipal ancho), con integridad verificada por MD5.
-    \item \textbf{14 indicadores socioeconómicos municipales} construidos con fórmulas explícitas (numerador, denominador, población de referencia), en dos versiones para NR (base total / base válida), documentados en \texttt{especificacion\_indicadores.csv}.
+    \item \textbf{17 definiciones operativas de indicadores} construidos con fórmulas explícitas (numerador, denominador, población de referencia), en dos versiones para NR (base total / base válida), documentados en \texttt{especificacion\_indicadores.csv}.
     \item \textbf{7 indicadores candidatos provisionales para PCA:} desocupación/inactividad, sin energía, sin gas, sin recolección, sin internet, hogares con menores, estrato 1--2.
     \item \textbf{7 indicadores de descripción/solapamiento IPM:} nivel educativo, material paredes, acueducto, alcantarillado, hacinamiento, trabajo infantil/informalidad/dependencia (vía IPM), hogares con adultos 60+ (dirección pendiente).
-    \item \textbf{Diagnósticos estadísticos preliminares:} descriptivos, correlaciones, KMO global ($\approx 0,642$), Bartlett ($p<0,001$), MSA individual (estrato 1--2 $\approx 0,414$), outliers ($|z|>4$ en 32 municipios), sensibilidad NR.
+    \item \textbf{Diagnósticos estadísticos preliminares:} descriptivos, correlaciones, KMO global ($\approx 0,642$), Bartlett ($p<0,001$), MSA individual (estrato 1--2 $\approx 0,414$), outliers ($|z|>4$ en 32 unidades territoriales), sensibilidad NR.
     \item \textbf{Tratamiento territorial documentado:} 20 municipios sin cabecera, 192 sin centro poblado, códigos 94663/27493 con \textit{crosswalk} para SECOP futuro, ausencias estructurales distinguibles de faltantes.
     \item \textbf{Pipeline reproducible y modularizado parcialmente:} 4 scripts principales + funciones + prueba de integridad byte-a-byte.
 \end{enumerate}
 
-\section{¿Qué decisiones metodológicas están consolidadas?}
+\subsection{¿Qué decisiones metodológicas están consolidadas?}
 
 \begin{itemize}
     \item Municipio como unidad de análisis; \texttt{codigo\_municipio} (5 chars) como llave única.
-    \item No imputación estadística; ceros estructurales + flags; NA para denominador cero y 0/0.
+    \item No imputación estadística; las ausencias estructurales se distinguen de los faltantes; NA para denominador cero y 0/0.
     \item Dualidad base total / base válida para NR como escenarios de sensibilidad (no decisión definitiva).
     \item \texttt{no\_tiene\_estrato} distinguido de NR genuino.
     \item IPM Municipal reservado como \textbf{validación externa}; exclusión de indicadores que replican privaciones IPM de la matriz PCA.
@@ -27,7 +27,7 @@
     \item Controles de calidad: validaciones estructurales PASS, consistencia conteos PASS, rangos PASS, integridad MD5 PASS.
 \end{itemize}
 
-\section{¿Qué problemas fueron detectados y cómo fueron tratados?}
+\subsection{¿Qué problemas fueron detectados y cómo fueron tratados?}
 
 \begin{table}[htbp]
 \centering
@@ -54,7 +54,7 @@ Sensibilidad NR & Diferencias base total vs. válida & Documentada en \texttt{se
 \end{adjustbox}
 \end{table}
 
-\section{¿Qué información queda lista para el análisis multivariado?}
+\subsection{¿Qué información queda lista para el análisis multivariado?}
 
 \begin{itemize}
     \item Matriz candidata base total: \texttt{datos/trabajo/matriz\_base\_total.csv} (1.122 $\times$ 7).
@@ -62,14 +62,14 @@ Sensibilidad NR & Diferencias base total vs. válida & Documentada en \texttt{se
     \item Parámetros de estandarización: \texttt{resultados/base\_trabajo/parametros\_estandarizacion.csv}.
     \item Correlaciones pares: \texttt{resultados/base\_trabajo/correlaciones\_pares.csv}.
     \item Diagnósticos aptitud: \texttt{resultados/base\_trabajo/diagnosticos\_aptitud.csv}, \texttt{kmo\_por\_indicador.csv}.
-    \item Outliers: \texttt{resultados/base\_trabajo/outliers\_z\_mayor\_4.csv} (32 municipios).
+    \item Outliers: \texttt{resultados/base\_trabajo/outliers\_z\_mayor\_4.csv} (32 unidades territoriales).
     \item Sensibilidad NR: \texttt{sensibilidad\_nr.csv}, \texttt{sensibilidad\_nr\_municipio.csv}.
     \item Especificación completa de indicadores: \texttt{especificacion\_indicadores.csv}.
 \end{itemize}
 
 \textbf{Condición:} La matriz debe ser \textbf{aprobada por el autor} tras revisar concepto, denominadores, dirección, cobertura y sensibilidad NR (puntos 58--59 de \texttt{Resumen\_General.md}).
 
-\section{¿Qué etapas faltan?}
+\subsection{¿Qué etapas faltan?}
 
 \begin{enumerate}
     \item \textbf{Auditoría estadística integral} (comparar base total vs. válida, transformaciones, parallel analysis, estabilidad).
@@ -82,6 +82,8 @@ Sensibilidad NR & Diferencias base total vs. válida & Documentada en \texttt{se
     \item \textbf{Análisis espacial} (condicionado a resultados de asociación).
 \end{enumerate}
 
-\section{Cierre}
+\subsection{Cierre}
 
 Este Informe 1 establece una \textbf{base metodológica rigurosa, trazable y reproducible} para el análisis de la correspondencia entre contratación pública y vulnerabilidad socioeconómica municipal en Colombia. Las decisiones documentadas priorizan la transparencia sobre la premura: se distinguen claramente los hallazgos consolidados de las decisiones provisionales y de las etapas pendientes. El IVS \textbf{no existe aún}; su construcción requerirá completar la auditoría estadística, ejecutar y validar el PCA, y solo entonces proceder a la validación externa y al análisis sustantivo con SECOP II. La arquitectura modular del informe y del pipeline computacional permite incorporar cada etapa futura sin reescribir lo ya consolidado.
+
+

@@ -1,43 +1,27 @@
-\section{Especificación completa de indicadores (fuente: \texttt{especificacion\_indicadores.csv})}
+\section{Especificación vigente de indicadores}
 \label{anexo:a}
 
-Este anexo reproduce la especificación técnica de los 14 indicadores construida por \texttt{R/02\_base\_final\_indicadores.R}. La versión autoritativa es el archivo CSV en \texttt{resultados/base\_trabajo/especificacion\_indicadores.csv}.
+La especificación reproducible se mantiene en \texttt{resultados/base\_trabajo/especificacion\_indicadores.csv}. La auditoría estadística registra 17 definiciones operativas: siete variables de una matriz candidata provisional y otras variables descriptivas, contextuales o pendientes de revisión. La tabla resume únicamente las siete candidatas; su presencia no implica aprobación conceptual ni que se haya ejecutado el PCA.
 
-\begin{table}[htbp]
-\centering
-\caption{Especificación completa de indicadores}
-\label{tab:especificacion_indicadores}
-\begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{@{}llllllll@{}}
+\begin{longtable}{@{}p{0.31\textwidth}p{0.27\textwidth}p{0.32\textwidth}@{}}
+\caption{Variables de la matriz candidata y principales reservas conceptuales}\label{tab:especificacion_indicadores}\\
 \toprule
-\textbf{Indicador} & \textbf{Fuente} & \textbf{Cuadro} & \textbf{Numerador} & \textbf{Denominador} & \textbf{Pob. ref.} & \textbf{Dirección} & \textbf{Uso} \\
+\textbf{Variable} & \textbf{Medida observada} & \textbf{Reserva para interpretación} \\
 \midrule
-actividad\_desocupacion\_incapacidad\_hogar & PERSONAS\_SOCIAL & 5PM & Desocupados + Incapacidad & Pob. 10+ años & 1PM (10+) & Alto = mayor vuln. & PCA provisional \\
-sin\_energia\_electrica & VIVIENDAS & 8V & Viviendas sin energía & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & PCA provisional \\
-sin\_gas\_red\_publica & VIVIENDAS & 8V & Viviendas sin gas & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & PCA provisional \\
-sin\_recoleccion\_basuras & VIVIENDAS & 8V & Viviendas sin recolección & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & PCA provisional \\
-sin\_internet & VIVIENDAS & 8V & Viviendas sin internet & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & PCA provisional \\
-hogares\_con\_menores15 & HOGARES & 1HM & Hogares con menores <15 & Total hogares & 1HM Total & Alto = mayor vuln. & PCA provisional \\
-estrato\_1\_2 & VIVIENDAS & 10V & Personas estrato 1-2 & Personas en hogares part. & 10V Total & Alto = mayor vuln. & PCA provisional \\
-nivel\_educativo\_bajo & PERSONAS\_DEMOGRAFICO & 17PM & Categorías bajo nivel & Pob. 5+ años & 17PM Total & Alto = mayor vuln. & Descripción (solapa IPM) \\
-material\_paredes\_inadecuado & VIVIENDAS & 6V & Viviendas mat. inadecuado & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & Descripción (duplica IPM) \\
-sin\_acueducto & VIVIENDAS & 8V & Viviendas sin acueducto & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & Descripción (duplica IPM) \\
-sin\_alcantarillado & VIVIENDAS & 8V & Viviendas sin alcantarillado & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & Descripción (duplica IPM) \\
-hacinamiento\_critico & VIVIENDAS & 5V & Hogares >3 pers/cuarto & Viviendas ocupadas presentes & 1V\_MPIO & Alto = mayor vuln. & Descripción (duplica IPM) \\
-hogares\_con\_adultos\_60mas & HOGARES & 2HM & Hogares con adultos 60+ & Total hogares & 1HM Total & \textbf{Pendiente} & Pendiente \\
-IPM\_Municipal & IPM & IPM\_municipios\_region & Agregado 15 privaciones & -- & Municipal & Alto = mayor vuln. & Validación externa \\
+\endfirsthead
+\toprule
+\textbf{Variable} & \textbf{Medida observada} & \textbf{Reserva para interpretación} \\
+\midrule
+\endhead
+Actividad combinada & Proporción de población 10+ en categorías combinadas de actividad & Agrupa búsqueda de empleo, oficios del hogar, incapacidad permanente y otras categorías; no equivale a desempleo ni a una medida unidimensional de vulnerabilidad. \\
+Sin energía eléctrica & Viviendas ocupadas sin energía eléctrica & Indicador de servicio básico; interpretar con contexto de oferta territorial. \\
+Sin gas de red & Viviendas ocupadas sin gas de red pública & La disponibilidad depende de infraestructura y oferta local. \\
+Sin recolección de basuras & Viviendas ocupadas sin recolección de basuras & La cobertura puede reflejar provisión del servicio y dispersión poblacional. \\
+Sin internet & Viviendas ocupadas sin internet & Distribución próxima al techo en parte del universo; revisar capacidad discriminante y no respuesta. \\
+Hogares con menores de 15 & Proporción de hogares con menores de 15 años & Es una característica de composición del hogar, no una privación directa. \\
+Estratos 1 y 2 & Proporción de personas en estratos 1 y 2 & Proxy administrativo con cobertura territorial desigual; MSA individual reportado de 0,414. \\
 \bottomrule
-\end{tabular}
-\end{adjustbox}
-\end{table}
+\end{longtable}
 
-\textbf{Notas:}
-\begin{itemize}
-    \item Los 7 primeros conforman la matriz candidata provisional para PCA.
-    \item Los siguientes 6 (nivel educativo a hacinamiento) se calculan para descripción y validación cruzada; quedan fuera de PCA por solapamiento directo con IPM.
-    \item \texttt{hogares\_con\_adultos\_60mas} tiene dirección pendiente (correlación negativa con IPM).
-    \item \texttt{IPM\_Municipal} no entra al PCA; es criterio de validación externa.
-    \item \texttt{sin\_gas\_red\_publica} y \texttt{sin\_internet} tienen techo alto (prevalencia alta en muchos municipios); evaluar discriminación.
-    \item \texttt{estrato\_1\_2}: MSA bajo ($\approx 0,414$); decisión de inclusión pendiente.
-    \item \texttt{17PM}: verificar si es asistencia escolar (duplica Inasistencia IPM) o nivel educativo.
-\end{itemize}
+Los diagnósticos disponibles son preliminares (KMO global 0,642; Bartlett $\chi^2=4664,873$, 21 grados de libertad, $p<0,001$). No certifican por sí mismos la pertinencia del análisis ni sustituyen la revisión conceptual, la evaluación de estabilidad y la decisión sobre balance entre dominios. El IPM Municipal se reserva para análisis descriptivos y eventual contraste externo; cualquier asociación debe interpretarse considerando el solapamiento conceptual de sus privaciones con variables censales.
+

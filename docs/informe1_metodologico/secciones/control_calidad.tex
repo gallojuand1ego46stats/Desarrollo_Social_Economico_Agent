@@ -1,7 +1,7 @@
 \section{Control de calidad de los indicadores}
 \label{ch:control_calidad}
 
-\section{Validaciones estructurales}
+\subsection{Validaciones estructurales}
 \label{sec:validaciones_estructurales}
 
 El script \texttt{R/01\_verificar\_consolidados.R} ejecuta validaciones estructurales sobre las tablas intermedias (\texttt{datos/intermedio/}) y genera \texttt{resultados/verificacion\_consolidados/validaciones.csv}. Todos los controles reportan \textbf{cero violaciones} en la ejecución registrada (13/10/2026).
@@ -23,7 +23,7 @@ Llave/prefijo persona\_social\_5PM & Unicidad y formato llave municipal & 12.828
 Llave/prefijo viviendas\_6V & Unicidad y formato llave municipal & 6.652 & 0 & PASS \\
 Llave/prefijo viviendas\_8V & Unicidad y formato llave municipal & 4.276 & 0 & PASS \\
 Llave/prefijo viviendas\_10V & Unicidad y formato llave municipal & 4.276 & 0 & PASS \\
-Llave/prefijo ipm\_municipal\_ancho & Unicidad 1.122 municipios & 1.122 & 0 & PASS \\
+Llave/prefijo ipm\_municipal\_ancho & Unicidad de códigos territoriales & 1.122 & 0 & PASS \\
 Suma grupos edad = total & Consistencia 1PM & 4.276 & 0 & PASS \\
 Hombre + mujer = total 1PM & Consistencia sexo & 81.244 & 0 & PASS \\
 Suma población municipal = control nacional & Control nacional 1PM & 1 & 0 & PASS \\
@@ -33,7 +33,7 @@ MD5 insumos sin cambios & Integridad archivos entrada & 11 & 0 & PASS \\
 \end{adjustbox}
 \end{table}
 
-\section{Consistencia de conteos}
+\subsection{Consistencia de conteos}
 \label{sec:consistencia_conteos}
 
 La auditoría de conteos (\texttt{auditoria\_conteos.csv}) verifica por cada variable de conteo:
@@ -47,24 +47,24 @@ La auditoría de conteos (\texttt{auditoria\_conteos.csv}) verifica por cada var
 
 Resultados: \textbf{1.037.032 conteos evaluados, 0 valores negativos, 0 valores no enteros} (validaciones ``Valores negativos en conteos'' y ``Valores no enteros en conteos'': PASS).
 
-\section{Rangos}
+\subsection{Rangos}
 \label{sec:rangos}
 
 Todos los indicadores construidos como proporciones se validan en el rango $[0,1]$:
 
 \begin{itemize}
-    \item \texttt{actividad\_desocupacion\_incapacidad\_hogar}: 1.122 municipios, 0 violaciones.
-    \item \texttt{sin\_energia\_electrica}: 1.122 municipios, 0 violaciones.
-    \item \texttt{sin\_gas\_red\_publica}: 1.122 municipios, 0 violaciones.
-    \item \texttt{sin\_recoleccion\_basuras}: 1.122 municipios, 0 violaciones.
-    \item \texttt{sin\_internet}: 1.122 municipios, 0 violaciones.
-    \item \texttt{hogares\_con\_menores15}: 1.122 municipios, 0 violaciones.
-    \item \texttt{estrato\_1\_2}: 1.122 municipios, 0 violaciones.
+    \item \texttt{actividad\_desocupacion\_incapacidad\_hogar}: 1.122 unidades territoriales, 0 violaciones.
+    \item \texttt{sin\_energia\_electrica}: 1.122 unidades territoriales, 0 violaciones.
+    \item \texttt{sin\_gas\_red\_publica}: 1.122 unidades territoriales, 0 violaciones.
+    \item \texttt{sin\_recoleccion\_basuras}: 1.122 unidades territoriales, 0 violaciones.
+    \item \texttt{sin\_internet}: 1.122 unidades territoriales, 0 violaciones.
+    \item \texttt{hogares\_con\_menores15}: 1.122 unidades territoriales, 0 violaciones.
+    \item \texttt{estrato\_1\_2}: 1.122 unidades territoriales, 0 violaciones.
 \end{itemize}
 
 El IPM Municipal se valida en rango $[0,100]$: 21.318 valores evaluados, 0 violaciones.
 
-\section{Valores imposibles}
+\subsection{Valores imposibles}
 \label{sec:valores_imposibles}
 
 \begin{itemize}
@@ -74,15 +74,15 @@ El IPM Municipal se valida en rango $[0,100]$: 21.318 valores evaluados, 0 viola
     \item \textbf{IPM fuera de $[0,100]$:} 0 (validado).
 \end{itemize}
 
-\section{Duplicados}
+\subsection{Duplicados}
 \label{sec:duplicados}
 
 \begin{itemize}
-    \item \textbf{Llaves universo 2018 únicas:} 1.122 municipios, 0 duplicados (validación ``Llaves universo 2018 únicas'': PASS).
-    \item \textbf{IPM Municipal = IPM (columna duplicada):} 1.122 municipios, 0 diferencias $>10^{-10}$ (validación PASS). Se conserva una sola columna.
+    \item \textbf{Llaves del universo 2018 únicas:} 1.122 códigos territoriales, 0 duplicados (validación ``Llaves universo 2018 únicas'': PASS).
+    \item \textbf{IPM Municipal = IPM (columna duplicada):} 1.122 códigos territoriales, 0 diferencias $>10^{-10}$ (validación PASS). Se conserva una sola columna.
 \end{itemize}
 
-\section{Cobertura territorial}
+\subsection{Cobertura territorial}
 \label{sec:cobertura_territorial_calidad}
 
 \begin{table}[htbp]
@@ -94,16 +94,16 @@ El IPM Municipal se valida en rango $[0,100]$: 21.318 valores evaluados, 0 viola
 \toprule
 \textbf{Fuente/Variable} & \textbf{Universo} & \textbf{Cobertura completa} & \textbf{Hallazgos} \\
 \midrule
-CNPV 2018 (todos los cuadros) & 1.122 municipios & 1.122 (100\%) & 20 sin cabecera, 192 sin centro poblado \\
-IPM 2018 Municipal & 1.122 municipios & 1.122 (100\%) & 20 NA en Cabeceras (coinciden con sin cabecera) \\
-IPM 15 privaciones & 1.122 $\times$ 15 & 100\% & Sin NA fuera de Cabeceras \\
+CNPV 2018 (todos los cuadros) & 1.122 unidades territoriales & 1.122 (100\%) & 20 sin cabecera, 192 sin centro poblado \\
+IPM 2018 Municipal & 1.122 unidades territoriales & 1.122 (100\%) & 20 NA en Cabeceras (coinciden con sin cabecera) \\
+IPM 15 privaciones & 1.122 $\times$ 15 unidades & 100\% & Sin NA fuera de Cabeceras \\
 DIVIPOLA 20260917 & $\approx$1.122 & 1.122 coinciden & Diferencias por cambios admin. recientes \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
 \end{table}
 
-\section{Integridad de fuentes}
+\subsection{Integridad de fuentes}
 \label{sec:integridad_fuentes}
 
 \begin{itemize}
@@ -112,13 +112,13 @@ DIVIPOLA 20260917 & $\approx$1.122 & 1.122 coinciden & Diferencias por cambios a
     \item \textbf{Tolerancias numéricas:} Configuradas en \texttt{R/00\_config.R} (\texttt{tolerancia\_suma = 1e-8}, \texttt{tolerancia\_ipm = 1e-10}, \texttt{tolerancia\_auditoria = 1e-10}).
 \end{itemize}
 
-\section{Resumen de hallazgos de control}
+\subsection{Resumen de hallazgos de control}
 \label{sec:resumen_hallazgos}
 
 El archivo \texttt{resumen\_hallazgos.csv} consolida las cifras de control:
 
 \begin{itemize}
-    \item Universo CNPV/IPM: 1.122 municipios (PASS).
+    \item Universo CNPV/IPM: 1.122 códigos territoriales (PASS).
     \item Combinaciones edad ausentes: 335 (119 municipios) -- ausencias estructurales.
     \item Área Centro poblado: 299 municipios la tienen.
     \item Área Rural disperso: 25 municipios la tienen.

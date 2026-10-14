@@ -1,7 +1,7 @@
 \section{Fuentes de información}
 \label{ch:fuentes}
 
-\section{Censo Nacional de Población y Vivienda 2018 (CNPV 2018)}
+\subsection{Censo Nacional de Población y Vivienda 2018 (CNPV 2018)}
 \label{sec:cnpv}
 
 El CNPV 2018 es la fuente primaria de información sociodemográfica y de vivienda a nivel municipal. Se utilizaron cuatro de los seis tomos temáticos publicados por el DANE:
@@ -26,7 +26,7 @@ Viviendas & \texttt{VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX} & 1V\_MPIO, 6V\_MPIO, 8
 
 Los cuadros departamentales y nacionales fueron \textbf{descartados} por no corresponder a la unidad de análisis municipal. La selección de cuadros y variables se documenta en \texttt{docs/diccionario/decisiones\_variables\_IVS\_CNPV2018.csv} (115 filas, con decisión, motivo y notas de verificación).
 
-\section{Índice de Pobreza Multidimensional 2018 (IPM 2018)}
+\subsection{Índice de Pobreza Multidimensional 2018 (IPM 2018)}
 \label{sec:ipm}
 \label{sec:ipm_validacion}
 
@@ -44,7 +44,7 @@ El IPM 2018 organizado por región (\texttt{IPM\_2018\_organizado\_region.xlsx})
     \item \textbf{Exclusión de indicadores redundantes:} Las 15 privaciones del IPM se compararon con los indicadores censales candidatos; aquellas que replican directamente conceptos del IPM (ej. material inadecuado de paredes, hacinamiento, agua, alcantarillado, analfabetismo, rezago escolar, inasistencia, barreras primera infancia, trabajo infantil, informalidad, dependencia, barreras salud, aseguramiento, pisos) se marcaron como \texttt{DESCARTAR} o \texttt{DESCRIPCIÓN} en la especificación de indicadores, según el criterio documentado en \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}.
 \end{itemize}
 
-\section{DIVIPOLA -- Códigos municipales}
+\subsection{DIVIPOLA -- Códigos municipales}
 \label{sec:divipola}
 
 Archivo: \texttt{DIVIPOLA-\_Codigos\_municipios\_20260917.csv} (82.076 bytes).
@@ -55,7 +55,7 @@ Archivo: \texttt{DIVIPOLA-\_Codigos\_municipios\_20260917.csv} (82.076 bytes).
     \item Los 1.122 códigos del universo CNPV/IPM 2018 se validan contra DIVIPOLA; las discrepancias (ej. códigos 94663, 27493, 18 áreas no municipalizadas -- ANM) se documentan y \textbf{no se resuelven en la base 2018}, reservándose para el \textit{crosswalk} SECOP.
 \end{itemize}
 
-\section{SECOP II -- Contratación pública (fuente futura)}
+\subsection{SECOP II -- Contratación pública (fuente futura)}
 \label{sec:secop_fuente}
 
 El Sistema Electrónico de Contratación Pública (SECOP II) es la fuente de datos de contratación pública a nivel nacional. \textbf{No se ha integrado aún}. Su incorporación está planificada como etapa posterior (Sección \ref{sec:secop_futuro}). Requiere:
@@ -67,7 +67,7 @@ El Sistema Electrónico de Contratación Pública (SECOP II) es la fuente de dat
     \item \textit{Crosswalk} territorial con códigos 2018 (ver \texttt{crosswalk\_enlace.csv}).
 \end{itemize}
 
-\section{Justificación de las fuentes}
+\subsection{Justificación de las fuentes}
 \label{sec:justificacion_fuentes}
 
 \begin{table}[htbp]
@@ -87,3 +87,5 @@ SECOP II & Fuente primaria de contratación pública; detalle contractual, tempo
 \end{tabular}
 \end{adjustbox}
 \end{table}
+
+

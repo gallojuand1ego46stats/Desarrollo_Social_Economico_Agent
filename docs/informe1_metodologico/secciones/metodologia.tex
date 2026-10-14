@@ -1,17 +1,17 @@
 \section{Planteamiento metodológico}
 \label{ch:metodologia}
 
-\section{Pregunta de investigación}
+\subsection{Pregunta de investigación}
 \label{sec:pregunta_investigacion}
 
-¿Existe una correspondencia entre la distribución territorial de la contratación pública y las condiciones de vulnerabilidad socioeconómica de los municipios colombianos?
+¿Cómo se asocia la distribución territorial de la contratación pública con las condiciones socioeconómicas de las unidades territoriales colombianas?
 
-\section{Objetivo general}
+\subsection{Objetivo general}
 \label{sec:objetivo_general}
 
-Analizar la correspondencia territorial entre la contratación pública (SECOP II) y la vulnerabilidad socioeconómica municipal, mediante la construcción de un Índice de Vulnerabilidad Socioeconómica (IVS) basado en Análisis de Componentes Principales (PCA) sobre indicadores derivados del CNPV 2018, validado externamente con el IPM 2018.
+En una etapa futura, analizar la asociación territorial entre indicadores de contratación pública (SECOP II) y condiciones socioeconómicas observadas en unidades territoriales colombianas. El diseño previsto contempla construir y evaluar una medida sintética con indicadores del CNPV 2018 y contrastarla con el IPM 2018; el uso de PCA y la denominación IVS son hipótesis metodológicas por evaluar, no decisiones ya validadas.
 
-\section{Objetivos específicos}
+\subsection{Objetivos específicos}
 \label{sec:objetivos_especificos}
 
 \begin{enumerate}
@@ -19,29 +19,29 @@ Analizar la correspondencia territorial entre la contratación pública (SECOP I
     \item Construir indicadores socioeconómicos municipales comparables, con fórmulas explícitas, poblaciones de referencia definidas y dirección de vulnerabilidad orientada.
     \item Realizar control de calidad estructural y estadístico de los indicadores (consistencia, cobertura, rangos, outliers, correlaciones, aptitud multivariada).
     \item Evaluar la adecuación de la matriz de indicadores para Análisis de Componentes Principales (KMO, Bartlett, MSA, estructura de correlaciones, distribución).
-    \item Ejecutar PCA, seleccionar componentes, interpretar cargas y construir el IVS (etapa \textbf{pendiente}).
+    \item Evaluar si PCA es apropiado; si lo es, seleccionar componentes, interpretar cargas y valorar si procede construir un índice sintético (etapa \textbf{pendiente}).
     \item Validar el IVS externamente mediante correlación con el IPM municipal agregado, evitando circularidad (etapa \textbf{pendiente}).
     \item Integrar datos de contratación pública SECOP II a nivel municipal-año (etapa \textbf{pendiente}).
     \item Analizar la asociación/correspondencia entre IVS y patrones de contratación pública (etapa \textbf{pendiente}).
     \item Realizar análisis espacial condicionado a resultados previos (etapa \textbf{pendiente}).
 \end{enumerate}
 
-\section{Unidad de análisis}
+\subsection{Unidad de análisis}
 \label{sec:unidad_analisis_met}
 
-El \textbf{municipio} es la unidad de análisis. Se utilizan los 1.122 códigos municipales presentes en el CNPV 2018 y el IPM 2018, identificados mediante \texttt{codigo\_municipio} como texto de cinco caracteres (formato DIVIPOLA). No se fusionan ni excluyen códigos en los datos de 2018; los conflictos territoriales se reservan para un \textit{crosswalk} futuro con SECOP II (ver \texttt{resultados/base\_trabajo/crosswalk\_enlace.csv}).
+La unidad observada es el \textbf{código territorial} de cinco caracteres en CNPV/IPM 2018. El universo de 1.122 códigos incluye áreas no municipalizadas, por lo que no equivale a 1.122 municipios. No se fusionan ni excluyen códigos en los datos de 2018; los conflictos se documentan para un posible \textit{crosswalk} con SECOP II (\texttt{resultados/base\_trabajo/crosswalk\_enlace.csv}).
 
-\section{Alcance del estudio}
+\subsection{Alcance del estudio}
 \label{sec:alcance}
 
 \begin{itemize}
-    \item \textbf{Cobertura territorial:} 1.122 municipios de Colombia según CNPV/IPM 2018.
+    \item \textbf{Cobertura territorial:} 1.122 códigos/unidades territoriales presentes en CNPV/IPM 2018; el conjunto incluye áreas no municipalizadas y no equivale a 1.122 municipios.
     \item \textbf{Período de referencia:} Año censal 2018 (fotografía transversal).
-    \item \textbf{Dimensión analítica:} Vulnerabilidad socioeconómica medida mediante indicadores censales.
+    \item \textbf{Dimensión analítica:} Condiciones socioeconómicas estructurales observadas en el censo, interpretadas con cautela como aproximaciones parciales a factores asociados con vulnerabilidad.
     \item \textbf{Variables excluidas del alcance actual:} Contratación pública (SECOP II), análisis longitudinal, inferencia causal.
 \end{itemize}
 
-\section{Naturaleza del análisis}
+\subsection{Naturaleza del análisis}
 \label{sec:naturaleza}
 
-El análisis es \textbf{descriptivo y asociativo}. No se realizan inferencias causales. El PCA se plantea como técnica de reducción de dimensionalidad y síntesis de información socioeconómica multidimensional; el IVS resultante sería un indicador compuesto de vulnerabilidad. La validación externa con IPM y la asociación con SECOP II son pasos posteriores de validación y análisis sustantivo, respectivamente.
+El análisis de esta etapa es \textbf{transversal, descriptivo y ecológico}: las unidades de observación son territorios y los datos censales corresponden a 2018. No se realizan inferencias causales ni se infieren condiciones de personas u hogares a partir de promedios territoriales. La asociación con SECOP II requerirá armonizar periodos y unidades geográficas; comparar el censo de 2018 con una ventana contractual 2015--2025 sin una estrategia temporal explícita no sería una comparación contemporánea.

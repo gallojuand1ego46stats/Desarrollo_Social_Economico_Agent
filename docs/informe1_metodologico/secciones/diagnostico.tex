@@ -1,7 +1,7 @@
 \section{Diagnóstico estadístico preliminar}
 \label{ch:diagnostico}
 
-\section{Estadística descriptiva disponible}
+\subsection{Estadística descriptiva disponible}
 \label{sec:estadistica_descriptiva}
 
 El script \texttt{R/03\_auditoria\_indicadores.R} genera diagnósticos estadísticos preliminares sobre la matriz de indicadores candidatos (7 indicadores, base total y base válida). Los resultados se almacenan en \texttt{resultados/auditoria\_estadistica/} y \texttt{resultados/base\_trabajo/}.
@@ -11,30 +11,30 @@ El script \texttt{R/03\_auditoria\_indicadores.R} genera diagnósticos estadíst
 \caption{Estadísticos descriptivos por indicador (matriz base total) -- extracto de \texttt{estadisticos\_indicadores.csv}}
 \label{tab:estadisticos_descriptivos}
 \begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{@{}lrrrrrr@{}}
+\begin{tabular}{@{}lrrrrr@{}}
 \toprule
-\textbf{Indicador} & \textbf{Media} & \textbf{Mediana} & \textbf{DE} & \textbf{Asimetría} & \textbf{\% Ceros} & \textbf{Rango} \\
+\textbf{Indicador} & \textbf{Mediana} & \textbf{Media} & \textbf{DE} & \textbf{P1--P99} & \textbf{Asimetría} \\
 \midrule
-actividad\_desocupacion\_incapacidad\_hogar & -- & -- & -- & -- & -- & [0,1] \\
-sin\_energia\_electrica & -- & -- & -- & -- & -- & [0,1] \\
-sin\_gas\_red\_publica & -- & -- & -- & -- & -- & [0,1] \\
-sin\_recoleccion\_basuras & -- & -- & -- & -- & -- & [0,1] \\
-sin\_internet & -- & -- & -- & -- & -- & [0,1] \\
-hogares\_con\_menores15 & -- & -- & -- & -- & -- & [0,1] \\
-estrato\_1\_2 & -- & -- & -- & -- & -- & [0,1] \\
+\texttt{actividad\_desocupacion\_incapacidad\_hogar} & 0,366 & 0,377 & 0,083 & 0,203--0,651 & 1,148 \\
+\texttt{sin\_energia\_electrica} & 0,033 & 0,089 & 0,155 & 0,002--0,859 & 3,368 \\
+\texttt{sin\_gas\_red\_publica} & 0,713 & 0,671 & 0,273 & 0,083--1,000 & $-0,486$ \\
+\texttt{sin\_recoleccion\_basuras} & 0,506 & 0,490 & 0,255 & 0,015--0,988 & $-0,102$ \\
+\texttt{sin\_internet} & 0,920 & 0,869 & 0,141 & 0,328--0,989 & $-2,305$ \\
+\texttt{hogares\_con\_menores15} & 0,451 & 0,460 & 0,094 & 0,276--0,699 & 0,382 \\
+\texttt{estrato\_1\_2} & 0,901 & 0,837 & 0,184 & 0,048--0,988 & $-2,374$ \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
 \end{table}
 
-\noindent \textit{Nota: Los valores exactos deben leerse de \texttt{estadisticos\_indicadores.csv} y \texttt{varianza\_indicadores.csv}. En esta versión del informe se reporta la estructura; los números finales se insertarán tras la auditoría integral.}
+\noindent \textit{Nota:} $n=1.122$ en todos los indicadores. Estadísticos de \texttt{resultados/base\_trabajo/estadisticos\_indicadores.csv}; DE calculada como raíz cuadrada de la varianza en \texttt{varianza\_indicadores.csv}. P1--P99 resume el 98\% central y no sustituye el rango completo. Los valores son descriptivos de la base total, no estimaciones poblacionales con error muestral.
 
-\section{Variabilidad}
+\subsection{Variabilidad}
 \label{sec:variabilidad}
 
 El archivo \texttt{varianza\_indicadores.csv} reporta la varianza de cada indicador y señala variables con \textbf{varianza casi nula} (umbral configurable en \texttt{R/00\_config.R}: \texttt{varianza\_casi\_nula = 1e-8}). Una varianza muy baja indica escasa discriminación entre municipios y posible exclusión de la matriz PCA.
 
-\section{Correlaciones preliminares}
+\subsection{Correlaciones preliminares}
 \label{sec:correlaciones_preliminares}
 
 \begin{itemize}
@@ -43,9 +43,9 @@ El archivo \texttt{varianza\_indicadores.csv} reporta la varianza de cada indica
     \item \texttt{pares\_correlacion\_ge\_095.csv}: Pares con $|r| \ge 0,95$ -- \textbf{vacío}.
 \end{itemize}
 
-La ausencia de correlaciones extremadamente altas ($|r| \ge 0,90$) sugiere que no hay redundancia lineal severa entre los 7 indicadores candidatos, aunque la correlación moderada/alta entre algunos pares debe evaluarse en el contexto multivariado (KMO, MSA).
+La ausencia de pares por encima del umbral descriptivo $|r|\ge0,90$ indica que no se detectó colinealidad bivariada extrema; no descarta redundancia conceptual ni patrones multivariados. Cuatro de los siete candidatos describen servicios y conectividad, por lo que el componente podría reflejar en gran medida ese bloque. Debe evaluarse el equilibrio entre dominios antes de construir una puntuación compuesta.
 
-\section{Outliers}
+\subsection{Outliers}
 \label{sec:outliers}
 
 \begin{itemize}
@@ -55,10 +55,10 @@ La ausencia de correlaciones extremadamente altas ($|r| \ge 0,90$) sugiere que n
     \item \textbf{No se eliminan automáticamente.} Estos municipios deben revisarse contra las fuentes originales y el contexto territorial antes de cualquier decisión de winsorización o exclusión.
 \end{itemize}
 
-\section{Diagnósticos de adecuación multivariada}
+\subsection{Diagnósticos de adecuación multivariada}
 \label{sec:diagnosticos_aptitud}
 
-El archivo \texttt{diagnosticos\_aptitud.csv} reporta:
+El archivo \texttt{diagnosticos\_aptitud.csv} reporta para la matriz base total:
 
 \begin{table}[htbp]
 \centering
@@ -69,26 +69,26 @@ El archivo \texttt{diagnosticos\_aptitud.csv} reporta:
 \toprule
 \textbf{Diagnóstico} & \textbf{Valor} & \textbf{Interpretación} \\
 \midrule
-KMO global & $\approx 0,642$ & Moderado (umbral adecuado $\ge 0,70$; mínimo $\ge 0,50$) \\
-Test de Bartlett & $\chi^2 \approx 4664,873$, gl=21, $p < 0,001$ & Significativo: rechaza matriz identidad \\
-Determinante de la matriz de correlación & $\approx 0,0154$ & $> 0,00001$: no colinealidad perfecta \\
+KMO global & 0,642 & Diagnóstico heurístico intermedio; no es criterio único de aprobación \\
+Test de Bartlett & $\chi^2 = 4664,873$, gl=21, $p < 0,001$ & Rechaza matriz identidad; con $n=1.122$ puede detectar asociaciones pequeñas \\
+Determinante de la matriz de correlación & 0,0154 & Describe la matriz; por sí solo no demuestra una solución adecuada \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
 \end{table}
 
-\section{Medida de Adecuación Muestral Individual (MSA por indicador)}
+\subsection{Medida de Adecuación Muestral Individual (MSA por indicador)}
 \label{sec:msa_individual}
 
 El archivo \texttt{kmo\_por\_indicador.csv} reporta el MSA (KMO individual) para cada uno de los 7 indicadores:
 
 \begin{itemize}
-    \item La mayoría de indicadores tienen MSA $> 0,50$ (mínimo aceptable).
-    \item \textbf{Alerta:} El indicador \texttt{estrato\_1\_2} (proxy estrato 1--2) tiene \textbf{MSA $\approx 0,414$}, \textbf{por debajo del mínimo} ($0,50$). Esto sugiere que este indicador no comparte varianza común suficiente con el resto del conjunto y su inclusión en el PCA debe reconsiderarse.
+    \item Seis indicadores tienen MSA entre 0,554 y 0,882; estos valores son diagnósticos y no sustituyen la revisión conceptual ni de cargas/comunalidades.
+    \item \textbf{Alerta:} \texttt{estrato\_1\_2} tiene MSA $=0,414$. Su inclusión debilita la adecuación compartida y debe reconsiderarse junto con su problema de cobertura conceptual en territorios rurales.
     \item Ver \texttt{Resumen\_General.md}, punto 40: ``el MSA de estrato 1--2 es bajo ($\approx 0,414$)''.
 \end{itemize}
 
-\section{Sensibilidad a No Respuesta (NR)}
+\subsection{Sensibilidad a No Respuesta (NR)}
 \label{sec:sensibilidad_nr_diag}
 
 La comparación entre \textbf{base total} (incluye NR en denominador) y \textbf{base válida} (excluye NR) muestra:
@@ -99,10 +99,10 @@ La comparación entre \textbf{base total} (incluye NR en denominador) y \textbf{
     \item Las diferencias municipales y agregadas \textbf{deben revisarse} antes de fijar la base analítica principal (Decisión vigente en \texttt{Resumen\_General.md}, punto 27 y punto 59).
 \end{itemize}
 
-\section{Estado de la auditoría estadística}
+\subsection{Estado de la auditoría estadística}
 \label{sec:auditoria_pendiente}
 
-\textbf{Importante:} Los diagnósticos reportados en esta sección son \textbf{preliminares}. La \textbf{auditoría estadística integral está pendiente} y debe incluir, como mínimo:
+\textbf{Importante:} Los diagnósticos reportados son \textbf{preliminares} y se refieren principalmente a la matriz base total. La \textbf{auditoría estadística integral está pendiente} y debe incluir, como mínimo:
 
 \begin{enumerate}
     \item Comparación sistemática de correlaciones, KMO y MSA entre \textbf{matriz base total} y \textbf{matriz base válida}.

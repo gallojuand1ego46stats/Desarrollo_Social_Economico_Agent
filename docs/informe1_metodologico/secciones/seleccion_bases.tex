@@ -1,7 +1,7 @@
 \section{Proceso de selección y depuración de bases}
 \label{ch:seleccion_bases}
 
-\section{Inventario inicial}
+\subsection{Inventario inicial}
 \label{sec:inventario_inicial}
 
 Se partió de \textbf{seis archivos fuente originales} del CNPV 2018 provistos por el DANE:
@@ -17,7 +17,7 @@ Se partió de \textbf{seis archivos fuente originales} del CNPV 2018 provistos p
 
 El inventario de hojas, columnas y estructura se generó con \texttt{R/01\_verificar\_consolidados.R} y se documenta en \texttt{datos/intermedio/nombres\_columnas\_fuente.csv} y \texttt{resultados/verificacion\_consolidados/VERIFICACION\_CONSOLIDADOS.md}.
 
-\section{Inspección de hojas/cuadros}
+\subsection{Inspección de hojas/cuadros}
 \label{sec:inspeccion_cuadros}
 
 Cada archivo Excel contiene múltiples hojas (cuadros) a diferentes niveles geográficos (nacional, departamental, municipal). La inspección identificó:
@@ -28,10 +28,10 @@ Cada archivo Excel contiene múltiples hojas (cuadros) a diferentes niveles geog
     \item \textbf{Nivel nacional:} Sin desagregación municipal -- \textbf{descartados}.
 \end{itemize}
 
-\section{Selección de cuadros relevantes}
+\subsection{Selección de cuadros relevantes}
 \label{sec:seleccion_cuadros}
 
-De los cientos de cuadros disponibles, se seleccionaron \textbf{8 cuadros municipales} basados en su relevancia para construir indicadores de vulnerabilidad socioeconómica no redundantes con el IPM:
+Se identificaron \textbf{nueve cuadros municipales operativos}: siete aportan categorías usadas en indicadores y dos aportan contexto o denominadores. La inclusión de una hoja no implica que todos sus indicadores sean adecuados para PCA:
 
 \begin{table}[htbp]
 \centering
@@ -56,14 +56,14 @@ VIVIENDAS & VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX & 10V\_MPIO & Personas en hogare
 \end{adjustbox}
 \end{table}
 
-\noindent * 17PM tiene nota de verificación pendiente: el índice del DANE lo describe como ``asistencia escolar'' (igual que 18PM), mientras que 17PD trata ``nivel educativo''. Si es asistencia escolar, duplica Inasistencia escolar del IPM y debe reconsiderarse. Ver \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}, fila 37.
+\noindent * La identificación y el uso de 17PM deben verificarse contra el inventario y las hojas fuente antes de construir indicadores educativos. En esta versión esos indicadores no integran la matriz candidata; se excluyen por población de referencia y solapamiento conceptual con el IPM.
 
-\section{Selección de variables}
+\subsection{Selección de variables}
 \label{sec:seleccion_variables}
 
-Para cada cuadro seleccionado, se identificaron las variables (columnas) necesarias para construir numeradores y denominadores de los indicadores. La especificación completa está en \texttt{resultados/base\_trabajo/especificacion\_indicadores.csv} (14 indicadores candidatos con fuente, cuadro, numerador, denominador, población de referencia, dirección esperada y propuesta de inclusión).
+Para cada cuadro se identificaron las variables necesarias para construir numeradores y denominadores. La especificación vigente registra 17 definiciones operativas; siete integran la matriz candidata y las restantes se destinan a descripción, contexto o revisión. La auditoría registra esta cuenta en \texttt{resultados/auditoria\_estadistica/09\_resumen\_auditoria.csv}. Los borradores que informan 14 indicadores deben actualizarse antes de citar ese total como cifra consolidada.
 
-\section{Criterios de inclusión}
+\subsection{Criterios de inclusión}
 \label{sec:criterios_inclusion}
 
 \begin{enumerate}
@@ -74,7 +74,7 @@ Para cada cuadro seleccionado, se identificaron las variables (columnas) necesar
     \item \textbf{Calidad de la variable:} Sin problemas insalvables de cobertura, ceros estructurales masivos, o ambigüedad conceptual.
 \end{enumerate}
 
-\section{Criterios de exclusión}
+\subsection{Criterios de exclusión}
 \label{sec:criterios_exclusion}
 
 \begin{enumerate}
@@ -88,7 +88,7 @@ Para cada cuadro seleccionado, se identificaron las variables (columnas) necesar
 
 Estos criterios se aplicaron sistemáticamente y se documentaron en \texttt{decisiones\_variables\_IVS\_CNPV2018.csv} (columna \texttt{decision}: INCLUIDA, CONTEXTO, VALIDACIÓN, DESCARTAR; columna \texttt{motivo} y \texttt{razon}).
 
-\section{Homologación territorial}
+\subsection{Homologación territorial}
 \label{sec:homologacion}
 
 \begin{enumerate}
@@ -98,7 +98,7 @@ Estos criterios se aplicaron sistemáticamente y se documentaron en \texttt{deci
     \item Las discrepancias territoriales (94663, 27493, municipios sin cabecera, ANM) se documentan en \texttt{crosswalk\_enlace.csv} y \textbf{no se aplican a los conteos 2018}.
 \end{enumerate}
 
-\section{Consolidación}
+\subsection{Consolidación}
 \label{sec:consolidacion}
 
 El proceso de consolidación, ejecutado por \texttt{R/02\_base\_final\_indicadores.R} (configurado en \texttt{R/00\_config.R}), produce:
@@ -112,3 +112,5 @@ El proceso de consolidación, ejecutado por \texttt{R/02\_base\_final\_indicador
 \end{itemize}
 
 La consolidación se documenta en \texttt{Final\_Base.md} y \texttt{Estructura\_Bases.md}.
+
+
