@@ -1,0 +1,171 @@
+\section{Construcción de indicadores socioeconómicos}
+\label{ch:indicadores}
+
+\section{Principios de construcción}
+\label{sec:principios_construccion}
+
+Todo indicador se construye siguiendo el esquema:
+
+\begin{equation}
+I_j = \frac{N_j}{D_j}
+\label{eq:indicador}
+\end{equation}
+
+donde $I_j$ es el indicador $j$, $N_j$ el numerador (conteo de la condición de vulnerabilidad) y $D_j$ el denominador (población de referencia). Cuando el indicador es una proporción, $I_j \in [0,1]$. Cuando es una tasa, se expresa por $10^3$ o $10^4$ habitantes según la magnitud.
+
+Los principios rectores son:
+
+\begin{enumerate}
+    \item \textbf{Transparencia de fórmula:} Numerador, denominador y población de referencia explícitos en \texttt{especificacion\_indicadores.csv}.
+    \item \textbf{Comparabilidad municipal:} Mismo denominador conceptual para todos los municipios.
+    \item \textbf{Escala homogénea:} Proporciones $[0,1]$ para indicadores PCA; tasas estandarizadas para descripción.
+    \item \textbf{Dirección de vulnerabilidad:} Valor alto $\Rightarrow$ mayor vulnerabilidad (Sección \ref{sec:direccion_vulnerabilidad}).
+    \item \textbf{Tratamiento de NR:} Dos versiones (base total / base válida) para indicadores con categoría NR (Sección \ref{ch:tratamiento_faltantes}).
+    \item \textbf{Denominador cero $\rightarrow$ NA + flag:} No se imputa, no se elimina el municipio.
+\end{enumerate}
+
+\section{Numeradores}
+\label{sec:numeradores}
+
+Los numeradores son conteos directos de las condiciones de vulnerabilidad extraídos de los cuadros censales seleccionados:
+
+\begin{itemize}
+    \item \texttt{1HM}: Hogares con personas menores de 15 años (Total, Cabecera, Centro poblado, Rural disperso).
+    \item \texttt{2HM}: Hogares con personas de 60 años y más (Total, Cabecera, Centro poblado, Rural disperso).
+    \item \texttt{5PM}: Personas de 10 años y más por actividad realizada la semana anterior (Ocupado, Desocupado, Inactivo, por sexo).
+    \item \texttt{6V}: Viviendas ocupadas con personas presentes por material predominante de paredes exteriores.
+    \item \texttt{8V}: Viviendas ocupadas con personas presentes por disponibilidad de servicios públicos (Energía, Gas, Acueducto, Alcantarillado, Recolección, Internet).
+    \item \texttt{10V}: Personas censadas en hogares particulares por estrato de energía (1, 2, 3, 4, 5, 6, Sin estrato).
+    \item \texttt{17PM}: Población de 5 años y más por asistencia escolar y sexo (pendiente verificación: ¿nivel educativo o asistencia?).
+\end{itemize}
+
+\section{Denominadores y poblaciones de referencia}
+\label{sec:denominadores}
+
+\begin{table}[htbp]
+\centering
+\caption{Denominadores por indicador}
+\label{tab:denominadores}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Indicador} & \textbf{Denominador} & \textbf{Fuente denominador} \\
+\midrule
+Prop. hogares con menores & Total hogares (1HM Total) & 1HM \\
+Prop. hogares con adultos 60+ & Total hogares (1HM Total) & 1HM \\
+Tasa desocupación (10+) & Población 10+ años (1PM) & 1PM (grupos 10+) \\
+Tasa inactividad (10+) & Población 10+ años (1PM) & 1PM (grupos 10+) \\
+Prop. viviendas sin energía & Viviendas ocupadas presentes (1V\_MPIO) & 1V\_MPIO \\
+Prop. viviendas sin gas & Viviendas ocupadas presentes (1V\_MPIO) & 1V\_MPIO \\
+Prop. viviendas sin recolección & Viviendas ocupadas presentes (1V\_MPIO) & 1V\_MPIO \\
+Prop. viviendas sin internet & Viviendas ocupadas presentes (1V\_MPIO) & 1V\_MPIO \\
+Prop. hogares estrato 1-2 & Personas en hogares particulares (10V Total) & 10V \\
+Prop. población 5+ nivel educativo & Población 5+ años (17PM Total = 1PM 5+) & 17PM / 1PM \\
+Prop. viviendas material paredes inadecuado & Viviendas ocupadas presentes (1V\_MPIO) & 1V\_MPIO \\
+Prop. viviendas sin acueducto & Viviendas ocupadas presentes (1V\_MPIO) & 1V\_MPIO \\
+Prop. viviendas sin alcantarillado & Viviendas ocupadas presentes (1V\_MPIO) & 1V\_MPIO \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\section{Verificación de población de referencia}
+\label{sec:verif_pob_ref}
+
+\begin{itemize}
+    \item El total de \texttt{17PM} coincide exactamente con la población de 5+ años de \texttt{1PM} en los 1.122 municipios (validación ``Diferencias total 17PM vs población 5+ 1PM'': 0, PASS). Ver \texttt{Final\_Base.md}.
+    \item \texttt{17PM} \textbf{no permite} filtrar categorías de nivel educativo restringidas a población de 10+ años; se calculan usando el total de 17PM y se documenta la discrepancia.
+    \item \texttt{pob\_10mas} se calculó desde los grupos de 1PM de 10 años o más; la cobertura de 5PM se coteja contra ese valor (28 municipios con cobertura $<0,9$).
+\end{itemize}
+
+\section{Escala}
+\label{sec:escala}
+
+\begin{itemize}
+    \item \textbf{Indicadores para PCA (provisionales):} Proporciones $[0,1]$ (7 indicadores).
+    \item \textbf{Indicadores de descripción/solapamiento IPM:} Proporciones $[0,1]$ (7 indicadores).
+    \item \textbf{No se usan conteos absolutos} en la matriz PCA (no son comparables entre municipios de distinto tamaño).
+\end{itemize}
+
+\section{Dirección de vulnerabilidad}
+\label{sec:direccion_vulnerabilidad}
+
+La decisión metodológica es orientar los indicadores para que:
+
+\begin{equation}
+\text{valor alto} \Rightarrow \text{mayor vulnerabilidad}
+\end{equation}
+
+\begin{table}[htbp]
+\centering
+\caption{Dirección de vulnerabilidad por indicador}
+\label{tab:direccion_vulnerabilidad}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Indicador} & \textbf{Dirección} & \textbf{Nota} \\
+\midrule
+Prop. hogares con menores 15 & Alto = mayor vuln. & Carga demográfica infantil \\
+Prop. hogares con adultos 60+ & \textbf{Pendiente} & Correlación negativa con privaciones IPM ($-0,06$ a $-0,63$); puede ser transición demográfica \\
+Tasa desocupación 10+ & Alto = mayor vuln. & Privación laboral \\
+Tasa inactividad 10+ & Alto = mayor vuln. & Privación laboral \\
+Prop. viviendas sin energía & Alto = mayor vuln. & Privación servicios \\
+Prop. viviendas sin gas & Alto = mayor vuln. & Privación servicios \\
+Prop. viviendas sin recolección & Alto = mayor vuln. & Privación servicios \\
+Prop. viviendas sin internet & Alto = mayor vuln. & Privación conectividad \\
+Prop. hogares estrato 1-2 & Alto = mayor vuln. & Proxy ingreso bajo \\
+Prop. población 5+ bajo nivel educativo & Alto = mayor vuln. & Privación capital humano (si 17PM es nivel educativo) \\
+Prop. viviendas paredes inadecuadas & Alto = mayor vuln. & Privación vivienda (duplica IPM) \\
+Prop. viviendas sin acueducto & Alto = mayor vuln. & Privación servicios (duplica IPM) \\
+Prop. viviendas sin alcantarillado & Alto = mayor vuln. & Privación servicios (duplica IPM) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\textbf{Nota crítica:} El indicador ``Hogares con adultos 60+'' muestra correlación \textbf{negativa} con casi todas las privaciones del IPM (Spearman $-0,06$ a $-0,63$): los municipios más envejecidos tienden a ser \textit{menos} vulnerables. Su dirección debe definirse conceptualmente antes del PCA (puede comportarse como variable de transición demográfica, no de privación). Ver \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}, fila 5.
+
+\section{Indicadores seleccionados (matriz candidata provisional)}
+\label{sec:indicadores_seleccionados}
+
+Siete indicadores conforman la \textbf{matriz candidata para diagnóstico PCA} (base total y base válida):
+
+\begin{enumerate}
+    \item \texttt{actividad\_desocupacion\_incapacidad\_hogar} (derivado de 5PM) -- \textit{dirección: alto = mayor vuln.}
+    \item \texttt{sin\_energia\_electrica} (derivado de 8V) -- alto = mayor vuln.
+    \item \texttt{sin\_gas\_red\_publica} (derivado de 8V) -- alto = mayor vuln.
+    \item \texttt{sin\_recoleccion\_basuras} (derivado de 8V) -- alto = mayor vuln.
+    \item \texttt{sin\_internet} (derivado de 8V) -- alto = mayor vuln.
+    \item \texttt{hogares\_con\_menores15} (derivado de 1HM) -- alto = mayor vuln.
+    \item \texttt{estrato\_1\_2} (derivado de 10V) -- alto = mayor vuln.
+\end{enumerate}
+
+Estos 7 indicadores son \textbf{provisionales} (Decisión vigente registrada en \texttt{Resumen\_General.md}, punto 30). La decisión final de inclusión corresponde al autor tras revisar conceptualmente denominadores (gas/internet, actividad, hogares con menores, estrato 1-2) y comparar sensibilidad NR entre matrices.
+
+\section{Indicadores descartados del PCA (descripción/solapamiento IPM)}
+\label{sec:indicadores_descartados}
+
+Siete indicadores se calculan para descripción y validación cruzada, pero \textbf{quedan fuera de la matriz PCA propuesta} por solapamiento directo con privaciones del IPM:
+
+\begin{enumerate}
+    \item Nivel educativo (17PM) -- duplica ``Bajo logro educativo'' / ``Analfabetismo'' IPM.
+    \item Material inadecuado de paredes (6V) -- duplica ``Material inadecuado de paredes exteriores'' IPM.
+    \item Sin acueducto (8V) -- duplica ``Sin acceso a fuente de agua mejorada'' IPM.
+    \item Sin alcantarillado (8V) -- duplica ``Inadecuada eliminación de excretas'' IPM.
+    \item Hacinamiento crítico (5V) -- duplica ``Hacinamiento crítico'' IPM.
+    \item Trabajo infantil / informalidad / dependencia -- no construidos desde CNPV; ya en IPM.
+    \item Hogares con adultos 60+ -- dirección pendiente; correlación negativa con IPM.
+\end{enumerate}
+
+\section{Indicadores reservados para validación}
+\label{sec:indicadores_validacion}
+
+\begin{itemize}
+    \item \textbf{IPM Municipal (agregado):} 15 privaciones ponderadas. \textbf{No entra al PCA}. Se usa como criterio de validación externa del IVS (el PC1 de los 14 indicadores IPM correlaciona $\approx 0,95$ en valor absoluto con IPM Municipal). Ver \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}, fila 105.
+    \item \textbf{IPM por dominio (Cabeceras, Centros poblados y Rural):} Solo para análisis de brechas urbano-rural futuro.
+\end{itemize}
+
+\section{Especificación técnica}
+\label{sec:especificacion_tecnica}
+
+La especificación completa de los 14 indicadores (fuente, cuadro, numerador, denominador, población de referencia, dirección esperada, propuesta de inclusión, notas) está en \texttt{resultados/base\_trabajo/especificacion\_indicadores.csv}. Este archivo es la \textbf{fuente única de verdad} para la construcción de indicadores y debe ser aprobado/modificado por el autor antes de ejecutar PCA definitivo.

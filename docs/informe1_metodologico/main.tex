@@ -1,0 +1,145 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{natbib}
+\usepackage[
+  margin=2.54cm
+]{geometry}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{indentfirst}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{titlesec}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+% Configuración de interlineado APA 7 (doble interlineado)
+\doublespacing
+
+% Sangría de primera línea (APA 7: 1.27 cm)
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+
+% Configuración de hipervínculos
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  filecolor=black,
+  urlcolor=black,
+  citecolor=black,
+  pdftitle={Informe 1 Metodológico - Proyecto Desarrollo Social Económico},
+  pdfauthor={Juan Diego Gallo},
+  pdfsubject={Metodología},
+  pdfkeywords={vulnerabilidad socioeconómica, PCA, indicadores municipales, Colombia},
+  pdfproducer={LaTeX},
+  pdfcreator={pdfLaTeX}
+}
+
+% Estilo de secciones (APA 7)
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.5em}{}
+
+% Numeración
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Configuración de captions para tablas y figuras (APA 7)
+\captionsetup{
+  font=normalsize,
+  labelfont=bf,
+  textfont=it,
+  justification=raggedright,
+  singlelinecheck=false,
+  skip=6pt
+}
+
+% Bibliografía APA 7
+\bibliographystyle{apalike}
+
+\begin{document}
+
+% Portada
+\input{secciones/portada}
+
+% Páginas preliminares
+\pagenumbering{roman}
+\input{secciones/resumen}
+\input{secciones/palabras_clave}
+
+\tableofcontents
+\clearpage
+\listoftables
+\clearpage
+\listoffigures
+\clearpage
+
+% Contenido principal
+\pagenumbering{arabic}
+
+\input{secciones/introduccion}
+\clearpage
+\input{secciones/metodologia}
+\clearpage
+\input{secciones/marco_conceptual}
+\clearpage
+\input{secciones/fuentes}
+\clearpage
+\input{secciones/unidad_analisis}
+\clearpage
+\input{secciones/seleccion_bases}
+\clearpage
+\input{secciones/tratamiento_faltantes}
+\clearpage
+\input{secciones/indicadores}
+\clearpage
+\input{secciones/control_calidad}
+\clearpage
+\input{secciones/diagnostico}
+\clearpage
+\input{secciones/preparacion_pca}
+\clearpage
+\input{secciones/reproducibilidad}
+\clearpage
+\input{secciones/limitaciones}
+\clearpage
+\input{secciones/estado_proyecto}
+\clearpage
+\input{secciones/conclusiones}
+\clearpage
+
+% Bibliografía
+\bibliography{referencias}
+\clearpage
+
+% Anexos
+\appendix
+\section*{Anexos}
+\addcontentsline{toc}{section}{Anexos}
+\input{anexos/anexo_a}
+\clearpage
+\input{anexos/anexo_b}
+
+\end{document}

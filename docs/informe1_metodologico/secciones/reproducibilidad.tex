@@ -1,0 +1,172 @@
+\section{Reproducibilidad y arquitectura computacional}
+\label{ch:reproducibilidad}
+
+\section{Organización del repositorio}
+\label{sec:organizacion_repo}
+
+La estructura del repositorio es la siguiente:
+
+\begin{description}
+    \item[\texttt{Desarrollo\_Social\_Economico\_Agent/}] Raíz del proyecto
+    \item[\texttt{datos/}]
+    \begin{description}
+        \item[\texttt{intermedio/}] Tablas tidy de auditoría estructural (solo lectura)
+        \item[\texttt{trabajo/}] Denominadores, indicadores, matrices candidatas
+        \item[\texttt{*.xlsx}] Fuentes originales (CNPV, IPM, DIVIPOLA) -- no versionados
+    \end{description}
+    \item[\texttt{docs/}]
+    \begin{description}
+        \item[\texttt{calidad/}]
+        \begin{description}
+            \item[\texttt{auditorias/}] Reportes de verificación y auditoría
+            \item[\texttt{limpieza/}] Reportes de limpieza
+            \item[\texttt{refactorizacion/}] Doc. de refactorización pipeline
+        \end{description}
+        \item[\texttt{diccionario/}] Decisiones variables, diccionarios por fuente
+        \item[\texttt{metodologia/}] Documentos metodológicos
+        \item[\texttt{handoff/}] Resúmenes de transferencia
+        \item[\texttt{informe1\_metodologico/}] ESTE INFORME
+    \end{description}
+    \item[\texttt{R/}]
+    \begin{description}
+        \item[\texttt{00\_config.R}] Parámetros editables (rutas, umbrales, banderas)
+        \item[\texttt{01\_verificar\_consolidados.R}] Verificación estructural, universo maestro
+        \item[\texttt{02\_base\_final\_indicadores.R}] Construcción indicadores, matrices, diagnósticos
+        \item[\texttt{03\_auditoria\_indicadores.R}] Auditoría estadística preliminar
+        \item[\texttt{funciones/}]
+        \begin{description}
+            \item[\texttt{io.R}] Lectura/escritura, conversión, hashes MD5
+            \item[\texttt{validacion.R}] Controles estructurales y de calidad
+            \item[\texttt{auditoria\_estadistica.R}] Diagnósticos multivariados (KMO, Bartlett, etc.)
+        \end{description}
+        \item[\texttt{tests/}]
+        \begin{description}
+            \item[\texttt{test\_pipeline\_indicadores.R}] Prueba de integridad byte-a-byte
+        \end{description}
+    \end{description}
+    \item[\texttt{resultados/}]
+    \begin{description}
+        \item[\texttt{verificacion\_consolidados/}] Inventarios, validaciones, especificación
+        \item[\texttt{base\_trabajo/}] 25 CSV: indicadores, calidad, sensibilidad, hashes
+        \item[\texttt{auditoria\_estadistica/}] Diagnósticos multivariados
+    \end{description}
+    \item[\texttt{OLVIDADOS/}] 17 scripts históricos archivados
+    \item[\texttt{.obsidian/}] Bóveda Obsidian (notas metodológicas enlazadas)
+    \item[\texttt{main.tex}] Este informe
+\end{description}
+
+\section{Scripts principales}
+\label{sec:scripts_principales}
+
+\begin{table}[htbp]
+\centering
+\caption{Scripts principales del pipeline activo}
+\label{tab:scripts_principales}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Script} & \textbf{Función} & \textbf{Salidas clave} \\
+\midrule
+\texttt{R/00\_config.R} & Parámetros globales: rutas, umbrales NR, cobertura, outliers, KMO, banderas PCA/bootstrap & Configuración centralizada \\
+\texttt{R/01\_verificar\_consolidados.R} & Lee Excel como texto, reconstruye llaves 5 chars, genera inventario, mapa llaves, cobertura, discrepancias, universo maestro, tablas tidy & \texttt{datos/intermedio/*.csv}, \texttt{resultados/verificacion\_consolidados/} \\
+\texttt{R/02\_base\_final\_indicadores.R} & Crea denominadores, indicadores (base total/válida), matrices candidatas, diagnósticos, sensibilidad NR, hashes & \texttt{datos/trabajo/}, \texttt{resultados/base\_trabajo/} \\
+\texttt{R/03\_auditoria\_indicadores.R} & Descriptivos, correlaciones, KMO global/individual, Bartlett, outliers, estandarización & \texttt{resultados/auditoria\_estadistica/} \\
+\texttt{R/tests/test\_pipeline\_indicadores.R} & Prueba de integridad: regenera 34 CSV y compara byte-a-byte con línea base & PASS/FAIL \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\section{Flujo de procesamiento}
+\label{sec:flujo_procesamiento}
+
+\begin{enumerate}
+    \item \textbf{Configuración:} \texttt{R/00\_config.R} define todas las rutas, umbrales y banderas.
+    \item \textbf{Verificación consolidados:} \texttt{R/01\_verificar\_consolidados.R}
+    \begin{enumerate}
+        \item Lee los 4 libros Excel CNPV hoja a hoja (como texto, sin chunking real).
+        \item Reconstruye \texttt{codigo\_municipio} (5 chars) y valida contra universo maestro.
+        \item Genera tablas intermedias \texttt{datos/intermedio/} (contexto, hogares, personas, viviendas, IPM).
+        \item Produce inventario, mapa de llaves, cobertura, discrepancias, controles.
+        \item Documenta en \texttt{VERIFICACION\_CONSOLIDADOS.md}.
+    \end{enumerate}
+    \item \textbf{Construcción indicadores:} \texttt{R/02\_base\_final\_indicadores.R}
+    \begin{enumerate}
+        \item Lee tablas intermedias (solo lectura, verifica MD5).
+        \item Calcula denominadores desde 1PM y 1V\_MPIO.
+        \item Construye 14 indicadores (7 PCA provisionales + 7 descripción/solapamiento IPM).
+        \item Genera versiones base total y base válida para indicadores con NR.
+        \item Produce matrices candidatas, \texttt{especificacion\_indicadores.csv}, controles, sensibilidad, \textit{flags}, hashes.
+    \end{enumerate}
+    \item \textbf{Auditoría estadística:} \texttt{R/03\_auditoria\_indicadores.R}
+    \begin{enumerate}
+        \item Lee matrices candidatas y calcula descriptivos, correlaciones, KMO, Bartlett, outliers, estandarización.
+        \item \textbf{No ejecuta PCA ni bootstrap} (\texttt{ejecutar\_pca = FALSE}).
+    \end{enumerate}
+    \item \textbf{Prueba de integridad:} \texttt{R/tests/test\_pipeline\_indicadores.R} regenera todo y compara MD5.
+\end{enumerate}
+
+\section{Trazabilidad}
+\label{sec:trazabilidad}
+
+Cada decisión metodológica clave tiene su archivo de evidencia:
+
+\begin{table}[htbp]
+\centering
+\caption{Trazabilidad decisiones -- archivo evidencia}
+\label{tab:trazabilidad}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Decisión} & \textbf{Archivo evidencia} \\
+\midrule
+Selección de variables & \texttt{docs/diccionario/decisiones\_variables\_IVS\_CNPV2018.csv} \\
+Especificación indicadores & \texttt{resultados/base\_trabajo/especificacion\_indicadores.csv} \\
+Universo municipal (1.122) & \texttt{datos/intermedio/universo\_municipal\_maestro.csv} \\
+Validaciones estructurales & \texttt{resultados/verificacion\_consolidados/validaciones.csv} \\
+Tratamiento NR (base total/válida) & \texttt{R/00\_config.R}, \texttt{sensibilidad\_nr.csv} \\
+Ausencias estructurales & \texttt{resultados/base\_trabajo/ausencias\_estructurales\_1PM.csv} \\
+Municipios sin cabecera & \texttt{resultados/base\_trabajo/municipios\_sin\_cabecera.csv} \\
+Crosswalk territorial SECOP & \texttt{resultados/base\_trabajo/crosswalk\_enlace.csv} \\
+Integridad insumos (MD5) & \texttt{resultados/base\_trabajo/md5\_insumos\_antes/despues.csv} \\
+Diagnósticos aptitud PCA & \texttt{resultados/base\_trabajo/diagnosticos\_aptitud.csv}, \texttt{kmo\_por\_indicador.csv} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\section{Control de integridad}
+\label{sec:control_integridad}
+
+\begin{itemize}
+    \item \textbf{Hashes MD5:} 11 archivos de entrada monitoreados; hashes antes y después de cada ejecución confirman \textbf{sin modificaciones}.
+    \item \textbf{Tolerancias numéricas:} \texttt{tolerancia\_suma = 1e-8}, \texttt{tolerancia\_ipm = 1e-10}, \texttt{tolerancia\_auditoria = 1e-10} (en \texttt{R/00\_config.R}).
+    \item \textbf{Controles de consistencia:} Suma grupos edad = total; Hombre + Mujer = Total; Sumas municipales = Control nacional; 17PM total = suma categorías; 5PM total = suma categorías; 8V servicios = suma categorías; 10V BU = suma BV:CD.
+    \item \textbf{Refactorización verificada:} Octubre 2026 regeneró 34 CSV idénticos byte-a-byte a la línea base (\texttt{docs/calidad/Refactorizacion\_Pipeline\_Indicadores}).
+\end{itemize}
+
+\section{Reproducibilidad}
+\label{sec:reproducibilidad_practica}
+
+Para reproducir el estado actual del pipeline desde la raíz del repositorio:
+
+\begin{verbatim}
+# 1. Verificación consolidados (genera datos/intermedio/, resultados/verificacion_consolidados/)
+Rscript R/01_verificar_consolidados.R
+
+# 2. Construcción indicadores y diagnósticos base (genera datos/trabajo/, resultados/base_trabajo/)
+Rscript R/02_base_final_indicadores.R
+
+# 3. Auditoría estadística preliminar (genera resultados/auditoria_estadistica/)
+Rscript R/03_auditoria_indicadores.R
+
+# 4. Prueba de integridad (opcional, verifica regeneración byte-a-byte)
+Rscript R/tests/test_pipeline_indicadores.R
+\end{verbatim}
+
+\begin{itemize}
+    \item Requiere R $\ge$ 4.0 y paquetes: \texttt{readxl, readr, dplyr, tidyr, stringr, purrr, janitor, tibble, lubridate, data.table}.
+    \item No hay \texttt{renv.lock} ni \texttt{DESCRIPTION} versionado; versiones de paquetes no fijadas (deuda técnica documentada).
+    \item Los archivos Excel fuente en \texttt{datos/} \textbf{no están versionados} (ver \texttt{.gitignore}); deben obtenerse del DANE.
+    \item La bóveda Obsidian (\texttt{.obsidian/}) contiene notas metodológicas enlazadas (\texttt{Inicio\_Proyecto.md}, \texttt{Final\_Base.md}, \texttt{VERIFICACION\_CONSOLIDADOS.md}, etc.) que documentan decisiones y vinculan a archivos reproducibles.
+\end{itemize}

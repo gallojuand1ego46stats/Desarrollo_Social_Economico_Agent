@@ -1,0 +1,88 @@
+\section{Limitaciones actuales}
+\label{ch:limitaciones}
+\label{sec:etapas_pendientes}
+
+El presente informe documenta el estado del proyecto al 13 de octubre de 2026. Las siguientes limitaciones son \textbf{parte inherente del estado actual de la investigación}, no fallas del proyecto:
+
+\section{Auditoría estadística integral pendiente}
+\label{sec:auditoria_pendiente_limitaciones}
+
+Los diagnósticos reportados en el Capítulo \ref{ch:diagnostico} (KMO $\approx 0,642$, Bartlett significativo, MSA estrato 1--2 $\approx 0,414$, 32 municipios con $|z|>4$, sensibilidad NR) son \textbf{preliminares}. Falta:
+
+\begin{itemize}
+    \item Comparación sistemática base total vs. base válida (correlaciones, KMO, MSA).
+    \item Evaluación de transformaciones para asimetría/curtosis (ej. techo en gas, internet).
+    \item \textit{Parallel analysis} para retención de componentes.
+    \item Análisis de estabilidad (bootstrap, sensibilidad a outliers).
+    \item Decisión fundamentada sobre variables problemáticas (estrato 1--2, hogares con menores, dirección adultos 60+).
+\end{itemize}
+
+\textbf{No se ha aprobado la matriz para PCA definitivo.}
+
+\section{PCA no ejecutado}
+\label{sec:pca_pendiente}
+
+\begin{itemize}
+    \item No se han estimado componentes principales.
+    \item No se han inspeccionado eigenvalues, scree plot, cargas, varianza explicada.
+    \item No se ha evaluado interpretabilidad del PC1 como ``vulnerabilidad general''.
+    \item No se ha definido criterio de retención (Kaiser, scree, parallel analysis, varianza acumulada).
+\end{itemize}
+
+\section{IVS (Índice de Vulnerabilidad Socioeconómica) no construido}
+\label{sec:ivs_pendiente}
+
+\begin{itemize}
+    \item No existe un índice sintético validado.
+    \item No se han calculado scores municipales de vulnerabilidad.
+    \item No se ha orientado el signo (score alto = mayor vulnerabilidad).
+    \item No se ha evaluado estabilidad del ranking municipal.
+\end{itemize}
+
+\section{Validación externa con IPM pendiente}
+\label{sec:validacion_ipm_pendiente}
+
+\begin{itemize}
+    \item El IPM Municipal agregado está reservado como criterio de validación.
+    \item No se ha correlacionado IVS con IPM (evitando circularidad por exclusión de indicadores redundantes).
+    \item No se ha analizado concordancia de rankings, análisis de residuos, ni sensibilidad de la validación.
+\end{itemize}
+
+\section{Integración SECOP II pendiente}
+\label{sec:secop_pendiente}
+
+\begin{itemize}
+    \item No se han obtenido ni integrado datos de SECOP II.
+    \item No se ha definido ventana temporal definitiva (exploratoria 2015--2025).
+    \item No se han construido indicadores municipales-año de contratación (valor, número, concentración, sectores).
+    \item No se ha resuelto el \textit{crosswalk} territorial definitivo (códigos 94663, 27493 pendientes de verificación DANE/IGAC).
+    \item No se ha definido denominador para tasas de contratación (PIB municipal, población, presupuesto, referencia nacional).
+\end{itemize}
+
+\section{Análisis de asociación/correspondencia pendiente}
+\label{sec:asociacion_pendiente}
+
+\begin{itemize}
+    \item Condicionado a la existencia de IVS validado y datos SECOP II integrados.
+    \item Requiere definición de hipótesis nulas, modelos (correlación, regresión, panel), y prueba de focalización.
+\end{itemize}
+
+\section{Análisis espacial condicionado}
+\label{sec:espacial_condicionado}
+
+\begin{itemize}
+    \item Solo procederá si el diagnóstico de asociación lo justifica.
+    \item Requiere: matriz de pesos espaciales (contigüidad, distancia), test de Moran's I, modelos espaciales (SAR, SEM, SDM), detección de clústeres (LISA).
+    \item Condicionado a resultados de etapas previas.
+\end{itemize}
+
+\section{Otras limitaciones técnicas}
+\label{sec:otras_limitaciones}
+
+\begin{itemize}
+    \item \textbf{Entorno R no versionado:} No hay \texttt{renv.lock} ni \texttt{DESCRIPTION}; versiones de paquetes no fijadas.
+    \item \textbf{Fuentes Excel no versionadas:} Archivos en \texttt{datos/} excluidos por \texttt{.gitignore}; reproducibilidad requiere acceso a fuentes originales DANE.
+    \item \textbf{Cobertura baja en algunos indicadores:} 28 municipios con cobertura 5PM/pob\_10mas $<0,9$; 26 con menores15 HOGARES $<0,9$; 20 con 60+ HOGARES $<0,95$. Umbrales son parámetros operativos editables en \texttt{R/00\_config.R}, requieren aprobación metodológica.
+    \item \textbf{Verificación pendiente 17PM:} El cuadro 17PM está descrito en el índice DANE como ``asistencia escolar'' (igual que 18PM), pero 17PD trata ``nivel educativo''. Si es asistencia, duplica Inasistencia IPM y debe reconsiderarse. Ver \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}, fila 37.
+    \item \textbf{Deuda de modularización:} La construcción principal de denominadores e indicadores permanece en gran parte dentro de \texttt{R/02\_base\_final\_indicadores.R} (pendiente extraer a \texttt{R/funciones/}).
+\end{itemize}

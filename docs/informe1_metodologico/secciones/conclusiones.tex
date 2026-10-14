@@ -1,0 +1,87 @@
+\section{Conclusiones metodológicas}
+\label{ch:conclusiones}
+
+\section{¿Qué se ha construido hasta ahora?}
+
+\begin{enumerate}
+    \item \textbf{Universo municipal consolidado:} 1.122 municipios con datos CNPV 2018 e IPM 2018, homologados por \texttt{codigo\_municipio} (5 caracteres), validados con cero violaciones estructurales.
+    \item \textbf{Bases intermedias auditadas:} 9 tablas tidy en \texttt{datos/intermedio/} (contexto 1PM, 1V; hogares 1HM/2HM; personas demo 17PM; personas social 5PM; viviendas 6V, 8V, 10V; IPM municipal ancho), con integridad verificada por MD5.
+    \item \textbf{14 indicadores socioeconómicos municipales} construidos con fórmulas explícitas (numerador, denominador, población de referencia), en dos versiones para NR (base total / base válida), documentados en \texttt{especificacion\_indicadores.csv}.
+    \item \textbf{7 indicadores candidatos provisionales para PCA:} desocupación/inactividad, sin energía, sin gas, sin recolección, sin internet, hogares con menores, estrato 1--2.
+    \item \textbf{7 indicadores de descripción/solapamiento IPM:} nivel educativo, material paredes, acueducto, alcantarillado, hacinamiento, trabajo infantil/informalidad/dependencia (vía IPM), hogares con adultos 60+ (dirección pendiente).
+    \item \textbf{Diagnósticos estadísticos preliminares:} descriptivos, correlaciones, KMO global ($\approx 0,642$), Bartlett ($p<0,001$), MSA individual (estrato 1--2 $\approx 0,414$), outliers ($|z|>4$ en 32 municipios), sensibilidad NR.
+    \item \textbf{Tratamiento territorial documentado:} 20 municipios sin cabecera, 192 sin centro poblado, códigos 94663/27493 con \textit{crosswalk} para SECOP futuro, ausencias estructurales distinguibles de faltantes.
+    \item \textbf{Pipeline reproducible y modularizado parcialmente:} 4 scripts principales + funciones + prueba de integridad byte-a-byte.
+\end{enumerate}
+
+\section{¿Qué decisiones metodológicas están consolidadas?}
+
+\begin{itemize}
+    \item Municipio como unidad de análisis; \texttt{codigo\_municipio} (5 chars) como llave única.
+    \item No imputación estadística; ceros estructurales + flags; NA para denominador cero y 0/0.
+    \item Dualidad base total / base válida para NR como escenarios de sensibilidad (no decisión definitiva).
+    \item \texttt{no\_tiene\_estrato} distinguido de NR genuino.
+    \item IPM Municipal reservado como \textbf{validación externa}; exclusión de indicadores que replican privaciones IPM de la matriz PCA.
+    \item 17PM total = población 5+ de 1PM; \texttt{pob\_10mas} desde 1PM.
+    \item Conflictos territoriales (94663, 27493, municipios sin cabecera, ANM) \textbf{no resueltos en datos 2018}; reservados para \textit{crosswalk} SECOP.
+    \item Controles de calidad: validaciones estructurales PASS, consistencia conteos PASS, rangos PASS, integridad MD5 PASS.
+\end{itemize}
+
+\section{¿Qué problemas fueron detectados y cómo fueron tratados?}
+
+\begin{table}[htbp]
+\centering
+\caption{Problemas detectados y tratamiento}
+\label{tab:problemas_detectados}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Problema} & \textbf{Detección} & \textbf{Tratamiento adoptado} \\
+\midrule
+Municipios sin cabecera (20) & Validación IPM Cabeceras = NA & Conservados; NA estructural; documentados en \texttt{municipios\_sin\_cabecera.csv} \\
+Código 94663 (Mapiripana) & Relación con 94343 (Barrancominas) & Documentado para crosswalk SECOP; no fusionado en 2018 \\
+Código 27493 (Nuevo Belén de Bajirá) & Conflicto histórico con 05480 Mutatá & Hipótesis 27615 Riosucio como padre; pendiente verificación DANE/IGAC \\
+Ausencias estructurales edad/vivienda & 335 + 1.202 combinaciones ausentes & Ceros estructurales + flags; no imputación \\
+Cobertura baja 5PM / pob\_10mas (28) & Validación umbral 0,9 & Documentado; umbral editable en \texttt{R/00\_config.R} \\
+Cobertura baja menores15 HOGARES (26) & Validación umbral 0,9 & Documentado; umbral editable \\
+Cobertura baja 60+ HOGARES (20) & Validación umbral 0,95 & Documentado; umbral editable \\
+MSA estrato 1--2 bajo ($\approx 0,414$) & \texttt{kmo\_por\_indicador.csv} & Alerta documentada; decisión de inclusión pendiente \\
+Dirección hogares con adultos 60+ & Correlación negativa con IPM & Fuera de matriz candidata; decisión conceptual pendiente \\
+Verificación 17PM (asistencia vs. nivel) & Índice DANE describe asistencia & Pendiente abrir hoja; si asistencia, duplica IPM \\
+Sensibilidad NR & Diferencias base total vs. válida & Documentada en \texttt{sensibilidad\_nr*.csv}; decisión pendiente \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\section{¿Qué información queda lista para el análisis multivariado?}
+
+\begin{itemize}
+    \item Matriz candidata base total: \texttt{datos/trabajo/matriz\_base\_total.csv} (1.122 $\times$ 7).
+    \item Matriz candidata base válida: \texttt{datos/trabajo/matriz\_base\_valida.csv} (1.122 $\times$ 7).
+    \item Parámetros de estandarización: \texttt{resultados/base\_trabajo/parametros\_estandarizacion.csv}.
+    \item Correlaciones pares: \texttt{resultados/base\_trabajo/correlaciones\_pares.csv}.
+    \item Diagnósticos aptitud: \texttt{resultados/base\_trabajo/diagnosticos\_aptitud.csv}, \texttt{kmo\_por\_indicador.csv}.
+    \item Outliers: \texttt{resultados/base\_trabajo/outliers\_z\_mayor\_4.csv} (32 municipios).
+    \item Sensibilidad NR: \texttt{sensibilidad\_nr.csv}, \texttt{sensibilidad\_nr\_municipio.csv}.
+    \item Especificación completa de indicadores: \texttt{especificacion\_indicadores.csv}.
+\end{itemize}
+
+\textbf{Condición:} La matriz debe ser \textbf{aprobada por el autor} tras revisar concepto, denominadores, dirección, cobertura y sensibilidad NR (puntos 58--59 de \texttt{Resumen\_General.md}).
+
+\section{¿Qué etapas faltan?}
+
+\begin{enumerate}
+    \item \textbf{Auditoría estadística integral} (comparar base total vs. válida, transformaciones, parallel analysis, estabilidad).
+    \item \textbf{Decisión final de variables} para PCA (aprobar 7 provisionales, resolver estrato 1--2, adultos 60+, 17PM).
+    \item \textbf{Ejecución de PCA} (eigenvalues, scree, parallel analysis, cargas, varianza explicada, interpretabilidad).
+    \item \textbf{Construcción del IVS} (scores PC1 orientados, evaluación de estabilidad/bootstrap).
+    \item \textbf{Validación externa con IPM Municipal} (correlación, rankings, residuos, sin circularidad).
+    \item \textbf{Integración SECOP II} (obtención, limpieza, panel municipal-año, \textit{crosswalk} territorial).
+    \item \textbf{Análisis de asociación} IVS vs. SECOP II (correlación, modelos, focalización).
+    \item \textbf{Análisis espacial} (condicionado a resultados de asociación).
+\end{enumerate}
+
+\section{Cierre}
+
+Este Informe 1 establece una \textbf{base metodológica rigurosa, trazable y reproducible} para el análisis de la correspondencia entre contratación pública y vulnerabilidad socioeconómica municipal en Colombia. Las decisiones documentadas priorizan la transparencia sobre la premura: se distinguen claramente los hallazgos consolidados de las decisiones provisionales y de las etapas pendientes. El IVS \textbf{no existe aún}; su construcción requerirá completar la auditoría estadística, ejecutar y validar el PCA, y solo entonces proceder a la validación externa y al análisis sustantivo con SECOP II. La arquitectura modular del informe y del pipeline computacional permite incorporar cada etapa futura sin reescribir lo ya consolidado.

@@ -1,0 +1,89 @@
+\section{Fuentes de información}
+\label{ch:fuentes}
+
+\section{Censo Nacional de Población y Vivienda 2018 (CNPV 2018)}
+\label{sec:cnpv}
+
+El CNPV 2018 es la fuente primaria de información sociodemográfica y de vivienda a nivel municipal. Se utilizaron cuatro de los seis tomos temáticos publicados por el DANE:
+
+\begin{table}[htbp]
+\centering
+\caption{Fuentes CNPV 2018 utilizadas}
+\label{tab:fuentes_cnpv}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Tomo} & \textbf{Archivo original} & \textbf{Cuadros municipales seleccionados} & \textbf{Uso principal} \\
+\midrule
+Hogares & \texttt{HOGARES\_Cuadros\_CNPV\_2018.XLSX} & 1HM, 2HM & Estructura hogares: menores 15 años, adultos 60+ \\
+Personas Demográfico & \texttt{PERSONAS\_DEMOGRAFICO\_Cuadros\_CNPV\_2018.xlsx} & 1PM, 17PM & Población total (denominadores), nivel educativo \\
+Personas Social & \texttt{PERSONAS\_SOCIAL\_Cuadros\_CNPV\_2018.XLSX} & 5PM & Actividad laboral (desocupación, inactividad) \\
+Viviendas & \texttt{VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX} & 1V\_MPIO, 6V\_MPIO, 8V\_MPIO, 10V\_MPIO & Condición ocupación, materiales, servicios, estrato \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Los cuadros departamentales y nacionales fueron \textbf{descartados} por no corresponder a la unidad de análisis municipal. La selección de cuadros y variables se documenta en \texttt{docs/diccionario/decisiones\_variables\_IVS\_CNPV2018.csv} (115 filas, con decisión, motivo y notas de verificación).
+
+\section{Índice de Pobreza Multidimensional 2018 (IPM 2018)}
+\label{sec:ipm}
+\label{sec:ipm_validacion}
+
+El IPM 2018 organizado por región (\texttt{IPM\_2018\_organizado\_region.xlsx}) contiene:
+
+\begin{itemize}
+    \item Hoja \texttt{IPM\_municipios\_region}: 1.122 municipios $\times$ 15 indicadores de privación + IPM Municipal (agregado).
+    \item Hojas por dominio geográfico (Cabeceras, Centros poblados y Rural disperso) --- \textbf{no usadas para PCA}, solo para análisis de brechas urbano-rural futuras.
+    \item Diccionarios y controles de calidad internos.
+\end{itemize}
+
+\textbf{Uso en el proyecto:}
+\begin{itemize}
+    \item \textbf{Validación externa futura:} El IPM Municipal agregado se reserva como criterio de validación del IVS (Sección \ref{sec:ipm_validacion}). \textbf{No entra al PCA} para evitar circularidad.
+    \item \textbf{Exclusión de indicadores redundantes:} Las 15 privaciones del IPM se compararon con los indicadores censales candidatos; aquellas que replican directamente conceptos del IPM (ej. material inadecuado de paredes, hacinamiento, agua, alcantarillado, analfabetismo, rezago escolar, inasistencia, barreras primera infancia, trabajo infantil, informalidad, dependencia, barreras salud, aseguramiento, pisos) se marcaron como \texttt{DESCARTAR} o \texttt{DESCRIPCIÓN} en la especificación de indicadores, según el criterio documentado en \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}.
+\end{itemize}
+
+\section{DIVIPOLA -- Códigos municipales}
+\label{sec:divipola}
+
+Archivo: \texttt{DIVIPOLA-\_Codigos\_municipios\_20260917.csv} (82.076 bytes).
+
+\begin{itemize}
+    \item Provee la lista maestra de códigos municipales (5 dígitos), nombres, departamentos y tipos de cabecera.
+    \item Se utiliza como \textbf{referencia territorial} para homologación y verificación de cobertura.
+    \item Los 1.122 códigos del universo CNPV/IPM 2018 se validan contra DIVIPOLA; las discrepancias (ej. códigos 94663, 27493, 18 áreas no municipalizadas -- ANM) se documentan y \textbf{no se resuelven en la base 2018}, reservándose para el \textit{crosswalk} SECOP.
+\end{itemize}
+
+\section{SECOP II -- Contratación pública (fuente futura)}
+\label{sec:secop_fuente}
+
+El Sistema Electrónico de Contratación Pública (SECOP II) es la fuente de datos de contratación pública a nivel nacional. \textbf{No se ha integrado aún}. Su incorporación está planificada como etapa posterior (Sección \ref{sec:secop_futuro}). Requiere:
+
+\begin{itemize}
+    \item Obtención de datos (parquet trimestrales, API, o descarga masiva).
+    \item Definición de ventana temporal (exploratoria 2015--2025).
+    \item Construcción de indicadores municipales-año (valor, número, concentración, sectores).
+    \item \textit{Crosswalk} territorial con códigos 2018 (ver \texttt{crosswalk\_enlace.csv}).
+\end{itemize}
+
+\section{Justificación de las fuentes}
+\label{sec:justificacion_fuentes}
+
+\begin{table}[htbp]
+\centering
+\caption{Justificación de fuentes utilizadas}
+\label{tab:justificacion_fuentes}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Fuente} & \textbf{Justificación} & \textbf{Limitaciones reconocidas} \\
+\midrule
+CNPV 2018 & Cobertura censal universal; desglose municipal; variables de vivienda, demografía, educación, trabajo, hogares. & Fotografía 2018; no captura dinámicas recientes; algunas variables con categorías NR amplias. \\
+IPM 2018 & Referente oficial de pobreza multidimensional; 15 privaciones validadas; disponible a nivel municipal. & Agrega privaciones en un índice; usar sus componentes en PCA generaría circularidad si se valida con el agregado. \\
+DIVIPOLA & Estándar oficial de códigos territoriales; permite homologación y trazabilidad. & Versión 2026 vs. datos 2018: cambios administrativos recientes no reflejados en datos censales. \\
+SECOP II & Fuente primaria de contratación pública; detalle contractual, temporal, geográfico. & Pendiente de obtención, limpieza, agregación municipal y definición de denominadores. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

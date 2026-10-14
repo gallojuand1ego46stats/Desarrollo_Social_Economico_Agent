@@ -1,0 +1,77 @@
+\section{Marco metodológico y conceptual}
+\label{ch:marco_conceptual}
+
+\section{Vulnerabilidad socioeconómica}
+\label{sec:vulnerabilidad}
+
+La vulnerabilidad socioeconómica se entiende aquí como la \textbf{propensión de una población territorial a experimentar privaciones en múltiples dimensiones del bienestar} (salud, educación, trabajo, vivienda, servicios públicos, ingreso), de modo que la ocurrencia de eventos adversos o la ausencia de capacidades de respuesta generan deterioros sostenidos en las condiciones de vida \citep{alkire2011multidimensional, cepal2016horizontes}.
+
+A diferencia de la pobreza monetaria unidimensional, el enfoque de vulnerabilidad adopta una perspectiva \textbf{multidimensional, relacional y territorial}: las privaciones se manifiestan en combinaciones específicas según el contexto local, y la capacidad de respuesta depende de activos individuales, colectivos e institucionales disponibles en el territorio \citep{sen1999development, rodriguez2010vulnerabilidad}.
+
+\section{Medición multidimensional}
+\label{sec:medicion_multidimensional}
+
+La medición de la vulnerabilidad socioeconómica requiere:
+
+\begin{enumerate}
+    \item \textbf{Selección de dimensiones y indicadores} teóricamente fundados y empíricamente observables.
+    \item \textbf{Construcción de indicadores comparables} a nivel municipal (tasas, proporciones, índices normalizados).
+    \item \textbf{Agregación} que respete la multidimensionalidad (evitando compensabilidad indebida entre dimensiones).
+    \item \textbf{Validación} interna (consistencia estadística) y externa (con criterios independientes).
+\end{enumerate}
+
+En el contexto colombiano, el \textbf{Índice de Pobreza Multidimensional (IPM)} del DANE constituye el referente oficial \citep{dane2019ipm}. El IPM 2018 incluye 15 privaciones agrupadas en 5 dimensiones (educación, niñez y juventud, trabajo, salud, vivienda y servicios públicos). Este proyecto \textbf{no replica el IPM}; construye un índice sintético propio (IVS) a partir de indicadores censales complementarios y no redundantes con el IPM, reservando al IPM la función de \textit{validación externa posterior} (Sección \ref{sec:ipm_validacion}).
+
+\section{Indicadores socioeconómicos}
+\label{sec:indicadores_conceptual}
+
+Un indicador socioeconómico municipal debe cumplir:
+
+\begin{itemize}
+    \item \textbf{Relevancia:} Captar una faceta de vulnerabilidad (privación, carencia, rezago, exclusión).
+    \item \textbf{Comparabilidad:} Mismo denominador conceptual y escala homogénea (proporción $[0,1]$ o tasa por $10^3$/ $10^4$ hab.).
+    \item \textbf{Direccionalidad:} Valor alto $\Rightarrow$ mayor vulnerabilidad (o se documenta la excepción).
+    \item \textbf{Independencia relativa:} Baja colinealidad con otros indicadores de la matriz; no duplicar privaciones ya capturadas por el IPM si se busca validación externa no circular.
+    \item \textbf{Disponibilidad:} Observado para la totalidad (o casi totalidad) del universo municipal.
+\end{itemize}
+
+\section{Reducción de dimensionalidad y PCA}
+\label{sec:pca_conceptual}
+
+El Análisis de Componentes Principales (PCA) es una técnica de \textbf{reducción de dimensionalidad} que transforma un conjunto de variables correlacionadas en un conjunto menor de componentes no correlacionados (componentes principales), combinaciones lineales de las variables originales que explican la máxima varianza posible \citep{jolliffe2002principal, abdi2010principal}.
+
+En el contexto de índices compuestos de vulnerabilidad, el PCA se utiliza para:
+
+\begin{itemize}
+    \item Identificar la estructura común latente entre indicadores.
+    \item Sintetizar la información en pocos componentes (idealmente el primer componente, PC1).
+    \item Construir un índice sintético (scores del PC1) ponderado por la estructura de covarianzas/correlaciones de los datos, no por pesos arbitrarios.
+\end{itemize}
+
+\textbf{Supuestos y precauciones críticas:}
+
+\begin{enumerate}
+    \item \textbf{Adecuación multivariada:} KMO global $>0,6$ (idealmente $>0,7$), MSA individual $>0,5$, Bartlett significativa \citep{kaiser1974little}.
+    \item \textbf{Linealidad y correlaciones:} El PCA captura estructura lineal; correlaciones muy altas ($|r|>0,9$) indican redundancia; correlaciones muy bajas sugieren ausencia de factor común.
+    \item \textbf{Distribución:} Asimetría y curtosis extremas pueden distorsionar componentes; se evalúan transformaciones (log, raíz cuadrada, winsorización).
+    \item \textbf{Escalado:} Se estandarizan variables (media 0, desviación 1) cuando tienen unidades o rangos distintos; aquí todas son proporciones $[0,1]$.
+    \item \textbf{Interpretabilidad:} El PC1 debe representar un constructo teóricamente coherente (``vulnerabilidad general''), no un artefacto matemático.
+    \item \textbf{No circularidad con validación externa:} Si el IPM se usa para validar el IVS, los indicadores que replican directamente privaciones del IPM deben excluirse de la matriz PCA o tratarse con extrema cautela \citep{booysen2002overview}.
+\end{enumerate}
+
+\textbf{Estado actual:} Los diagnósticos preliminares (KMO $\approx 0,642$, Bartlett $p<0,001$, determinante $\approx 0,0154$, MSA estrato 1--2 $\approx 0,414$) son \textbf{insuficientes} para aprobar el PCA. La auditoría estadística integral está pendiente (Sección \ref{sec:auditoria_pendiente_limitaciones}).
+
+\section{Relación futura con contratación pública (SECOP II)}
+\label{sec:secop_futuro}
+
+La integración con SECOP II es una etapa \textbf{posterior y condicionada} a la consolidación del IVS. El diseño metodológico previsto contempla:
+
+\begin{itemize}
+    \item \textbf{Unidad de análisis municipal-año:} Panel de municipios (1.122) $\times$ años (ventana exploratoria 2015--2025).
+    \item \textbf{Indicadores SECOP II:} Valor total contratado, número de contratos, concentración (Herfindahl), tipos de contrato, sectores, adjudicatarios.
+    \item \textbf{Denominadores:} PIB municipal, población, presupuesto municipal, o valor total de contratación nacional como referencia.
+    \item \textbf{Análisis de asociación:} Correlaciones, modelos de panel, análisis de correspondencia, pruebas de hipótesis sobre focalización.
+    \item \textbf{Análisis espacial:} Autocorrelación espacial (Moran's I), modelos espaciales, clústeres de vulnerabilidad-contratación, solo si el diagnóstico lo justifica.
+\end{itemize}
+
+El \texttt{crosswalk\_enlace.csv} documenta las equivalencias territoriales pendientes para este enlace futuro (códigos 94663 $\rightarrow$ 94343, hipótesis 27493 $\rightarrow$ 27615).

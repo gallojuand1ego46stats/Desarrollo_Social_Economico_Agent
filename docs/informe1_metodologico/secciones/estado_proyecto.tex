@@ -1,0 +1,100 @@
+\section{Estado del proyecto y etapas siguientes}
+\label{ch:estado_proyecto}
+\label{sec:estado_proyecto}
+
+\section{Tabla de estado general}
+\label{sec:estado_general}
+
+\begin{table}[htbp]
+\centering
+\caption{Estado del proyecto por etapa (corte 13/10/2026)}
+\label{tab:estado_proyecto}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Etapa} & \textbf{Estado} & \textbf{Evidencia principal} & \textbf{Próximo paso} \\
+\midrule
+Selección de fuentes & \textbf{Completado} & \texttt{CUADROS\_MUNICIPALES\_UNIDOS.xlsx}, \texttt{IPM\_2018\_organizado\_region.xlsx}, \texttt{DIVIPOLA} & -- \\
+Selección de variables & \textbf{Provisional} (7 PCA + 7 descripción) & \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}, \texttt{especificacion\_indicadores.csv} & Aprobar/modificar lista candidata, confirmar direcciones \\
+Integración territorial & \textbf{Completado} (verificación llaves) & \texttt{validaciones.csv}, \texttt{universo\_municipal\_maestro.csv} & Resolver 27493 y 94663 para crosswalk SECOP \\
+Tratamiento de faltantes & \textbf{Documentado} (sin imputación, dualidad base total/válida) & \texttt{R/00\_config.R}, \texttt{sensibilidad\_nr.csv}, \texttt{ausencias\_estructurales\_1PM.csv} & Decidir base analítica principal usando sensibilidad \\
+Construcción indicadores & \textbf{Completado} (base total y base válida) & \texttt{datos/trabajo/}, \texttt{resultados/base\_trabajo/} & Confirmar fórmulas, denominadores, dirección \\
+Auditoría estadística & \textbf{Pendiente} (diagnósticos preliminares disponibles) & \texttt{resultados/auditoria\_estadistica/}, \texttt{diagnosticos\_aptitud.csv}, \texttt{kmo\_por\_indicador.csv} & Ejecutar auditoría integral; decidir sobre PCA \\
+PCA & \textbf{Pendiente} & -- & Evaluar adecuación, seleccionar componentes, interpretar cargas \\
+IVS & \textbf{Pendiente} & -- & Construir índice sintético, evaluar estabilidad, orientar signo \\
+Validación IPM & \textbf{Pendiente} & -- & Correlacionar IVS con IPM Municipal (evitando circularidad) \\
+SECOP II & \textbf{Pendiente} & -- & Obtener datos, definir período/denominador, integrar municipal-año \\
+Asociación & \textbf{Pendiente} & -- & Analizar correspondencia IVS vs. SECOP II \\
+Espacial & \textbf{Pendiente} (condicionado) & -- & Si asociación lo justifica: autocorrelación, modelos espaciales, clústeres \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\section{Decisiones vigentes registradas (extracto de \texttt{Resumen\_General.md})}
+\label{sec:decisiones_vigentes}
+
+\begin{enumerate}
+    \item Universo: \textbf{1.122 códigos municipales CNPV/IPM 2018}, sin fusiones ni exclusiones en datos 2018.
+    \item Llave de unión: \texttt{codigo\_municipio} como texto de 5 caracteres; nunca nombre municipal.
+    \item Sin imputación estadística: ausencias estructurales $\rightarrow$ ceros + flags; áreas inexistentes $\rightarrow$ no crear filas.
+    \item Cocientes 0/0 $\rightarrow$ NA + \texttt{flag\_indice\_indefinido}; 20 NA IPM Cabeceras $\rightarrow$ NA estructural.
+    \item NR: base total (incluye NR) y base válida (excluye NR) como escenarios de sensibilidad; \texttt{no\_tiene\_estrato} separado.
+    \item IPM agregado: \textbf{validación externa}; no entra al PCA. Privaciones que replican IPM $\rightarrow$ fuera de matriz candidata.
+    \item 17PM total = población 5+ de 1PM; \texttt{pob\_10mas} desde 1PM; 17PM no permite filtrar 10+.
+    \item Decisiones de inclusión: \textbf{provisionales} (7 indicadores matriz candidata).
+\end{enumerate}
+
+\section{Resultados comprobados que orientan el siguiente paso}
+\label{sec:resultados_comprobados}
+
+\begin{itemize}
+    \item Universo 1.122 municipios; validaciones de llaves, prefijos, sumas y rangos: \textbf{cero violaciones}.
+    \item 20 municipios sin cabecera (coinciden con 20 NA IPM Cabeceras); 192 sin centro poblado.
+    \item 335 ausencias estructurales edad (119 municipios); 1.202 ausencias tipo vivienda.
+    \item Códigos 94663 y 27493: asuntos territoriales pendientes, documentados para crosswalk SECOP.
+    \item Matriz candidata base total: KMO $\approx 0,642$; Bartlett $\chi^2\approx 4664,873$, gl=21, $p<0,001$; determinante $\approx 0,0154$; sin pares $|r|\ge0,90$; 32 municipios con $|z|>4$.
+    \item Sensibilidad NR: diferencias municipales y agregadas documentadas; requieren revisión antes de fijar base analítica.
+    \item \textbf{Recomendación auditoría:} no ejecutar PCA definitivo aún (KMO moderado, MSA estrato 1--2 bajo, actividad mezcla estados, falta comparar base total vs. válida).
+    \item Refactorización pipeline: 34 CSV regenerados idénticos byte-a-byte; prueba \texttt{test\_pipeline\_indicadores.R} PASS.
+\end{itemize}
+
+\section{Pendientes y decisiones del autor (próximas acciones)}
+\label{sec:pendientes_acciones}
+
+\begin{enumerate}
+    \item Revisar concepto y denominadores de gas/internet, actividad, hogares con menores, estrato 1--2; aprobar o modificar lista candidata.
+    \item Comparar sensibilidad de correlaciones/KMO entre matriz base total y base válida; revisar 32 códigos extremos con fuentes; no eliminarlos automáticamente.
+    \item Confirmar umbrales de cobertura en \texttt{R/00\_config.R} (parámetros operativos editables).
+    \item Resolver para enlace SECOP el tratamiento de 27493 y 94663, con verificación territorial externa; mantener intactos códigos originales CNPV/IPM.
+    \item Decidir si se mantienen escenarios base total/base válida NR o cuál será principal, usando sensibilidad documentada.
+    \item Conseguir/integrar datos SECOP II, definir período, denominador y unidad temporal; pipeline no implementado.
+    \item Completar extracción de bloques de denominadores y cálculo de indicadores de \texttt{R/02\_base\_final\_indicadores.R} antes de extender pipeline.
+    \item \textbf{Solo después de lo anterior:} ejecutar y documentar PCA, selección de componentes, estabilidad/bootstrap si corresponde, validación externa con IPM. \textbf{El IVS todavía no existe como producto validado.}
+\end{enumerate}
+
+\section{Arquitectura futura del proyecto}
+\label{sec:arquitectura_futura}
+
+El informe está diseñado para crecer modularmente:
+
+\begin{verbatim}
+INFORME 1 (ESTE DOCUMENTO)
+  Metodología y construcción de indicadores
+           ↓
+AUDITORÍA ESTADÍSTICA INTEGRAL
+           ↓
+PCA (exploratorio → definitivo)
+           ↓
+ÍNDICE SINTÉTICO / IVS (construcción + estabilidad)
+           ↓
+VALIDACIÓN EXTERNA CON IPM MUNICIPAL
+           ↓
+INTEGRACIÓN SECOP II (panel municipal-año)
+           ↓
+ANÁLISIS DE ASOCIACIÓN / CORRESPONDENCIA
+           ↓
+ANÁLISIS ESPACIAL (condicionado a resultados)
+\end{verbatim}
+
+Cada etapa futura se añadirá como capítulo/sección sin reescribir la metodología ya consolidada en este Informe 1.

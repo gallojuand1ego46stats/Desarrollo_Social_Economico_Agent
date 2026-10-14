@@ -1,0 +1,136 @@
+\section{Control de calidad de los indicadores}
+\label{ch:control_calidad}
+
+\section{Validaciones estructurales}
+\label{sec:validaciones_estructurales}
+
+El script \texttt{R/01\_verificar\_consolidados.R} ejecuta validaciones estructurales sobre las tablas intermedias (\texttt{datos/intermedio/}) y genera \texttt{resultados/verificacion\_consolidados/validaciones.csv}. Todos los controles reportan \textbf{cero violaciones} en la ejecución registrada (13/10/2026).
+
+\begin{table}[htbp]
+\centering
+\caption{Validaciones estructurales clave (extracto de \texttt{validaciones.csv})}
+\label{tab:validaciones_estructurales}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+\textbf{Validación} & \textbf{Concepto} & \textbf{N evaluado} & \textbf{N violaciones} & \textbf{Estado} \\
+\midrule
+Llave/prefijo contexto\_1PM & Unicidad y formato llave municipal & 80.909 & 0 & PASS \\
+Llave/prefijo contexto\_1V & Unicidad y formato llave municipal & 4.276 & 0 & PASS \\
+Llave/prefijo hogares\_1HM\_2HM & Unicidad y formato llave municipal & 4.488 & 0 & PASS \\
+Llave/prefijo persona\_demo\_17PM & Unicidad y formato llave municipal & 12.828 & 0 & PASS \\
+Llave/prefijo persona\_social\_5PM & Unicidad y formato llave municipal & 12.828 & 0 & PASS \\
+Llave/prefijo viviendas\_6V & Unicidad y formato llave municipal & 6.652 & 0 & PASS \\
+Llave/prefijo viviendas\_8V & Unicidad y formato llave municipal & 4.276 & 0 & PASS \\
+Llave/prefijo viviendas\_10V & Unicidad y formato llave municipal & 4.276 & 0 & PASS \\
+Llave/prefijo ipm\_municipal\_ancho & Unicidad 1.122 municipios & 1.122 & 0 & PASS \\
+Suma grupos edad = total & Consistencia 1PM & 4.276 & 0 & PASS \\
+Hombre + mujer = total 1PM & Consistencia sexo & 81.244 & 0 & PASS \\
+Suma población municipal = control nacional & Control nacional 1PM & 1 & 0 & PASS \\
+MD5 insumos sin cambios & Integridad archivos entrada & 11 & 0 & PASS \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\section{Consistencia de conteos}
+\label{sec:consistencia_conteos}
+
+La auditoría de conteos (\texttt{auditoria\_conteos.csv}) verifica por cada variable de conteo:
+
+\begin{itemize}
+    \item Valores disponibles (no NA).
+    \item Valores faltantes (NA).
+    \item Valores negativos (deben ser 0).
+    \item Valores no enteros (deben ser 0, son conteos).
+\end{itemize}
+
+Resultados: \textbf{1.037.032 conteos evaluados, 0 valores negativos, 0 valores no enteros} (validaciones ``Valores negativos en conteos'' y ``Valores no enteros en conteos'': PASS).
+
+\section{Rangos}
+\label{sec:rangos}
+
+Todos los indicadores construidos como proporciones se validan en el rango $[0,1]$:
+
+\begin{itemize}
+    \item \texttt{actividad\_desocupacion\_incapacidad\_hogar}: 1.122 municipios, 0 violaciones.
+    \item \texttt{sin\_energia\_electrica}: 1.122 municipios, 0 violaciones.
+    \item \texttt{sin\_gas\_red\_publica}: 1.122 municipios, 0 violaciones.
+    \item \texttt{sin\_recoleccion\_basuras}: 1.122 municipios, 0 violaciones.
+    \item \texttt{sin\_internet}: 1.122 municipios, 0 violaciones.
+    \item \texttt{hogares\_con\_menores15}: 1.122 municipios, 0 violaciones.
+    \item \texttt{estrato\_1\_2}: 1.122 municipios, 0 violaciones.
+\end{itemize}
+
+El IPM Municipal se valida en rango $[0,100]$: 21.318 valores evaluados, 0 violaciones.
+
+\section{Valores imposibles}
+\label{sec:valores_imposibles}
+
+\begin{itemize}
+    \item \textbf{Conteos negativos:} 0 (validado).
+    \item \textbf{Conteos no enteros:} 0 (validado).
+    \item \textbf{Proporciones $<0$ o $>1$:} 0 (validado).
+    \item \textbf{IPM fuera de $[0,100]$:} 0 (validado).
+\end{itemize}
+
+\section{Duplicados}
+\label{sec:duplicados}
+
+\begin{itemize}
+    \item \textbf{Llaves universo 2018 únicas:} 1.122 municipios, 0 duplicados (validación ``Llaves universo 2018 únicas'': PASS).
+    \item \textbf{IPM Municipal = IPM (columna duplicada):} 1.122 municipios, 0 diferencias $>10^{-10}$ (validación PASS). Se conserva una sola columna.
+\end{itemize}
+
+\section{Cobertura territorial}
+\label{sec:cobertura_territorial_calidad}
+
+\begin{table}[htbp]
+\centering
+\caption{Cobertura territorial y calidad por fuente}
+\label{tab:cobertura_calidad}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Fuente/Variable} & \textbf{Universo} & \textbf{Cobertura completa} & \textbf{Hallazgos} \\
+\midrule
+CNPV 2018 (todos los cuadros) & 1.122 municipios & 1.122 (100\%) & 20 sin cabecera, 192 sin centro poblado \\
+IPM 2018 Municipal & 1.122 municipios & 1.122 (100\%) & 20 NA en Cabeceras (coinciden con sin cabecera) \\
+IPM 15 privaciones & 1.122 $\times$ 15 & 100\% & Sin NA fuera de Cabeceras \\
+DIVIPOLA 20260917 & $\approx$1.122 & 1.122 coinciden & Diferencias por cambios admin. recientes \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\section{Integridad de fuentes}
+\label{sec:integridad_fuentes}
+
+\begin{itemize}
+    \item \textbf{Hashes MD5:} \texttt{md5\_insumos\_antes.csv} y \texttt{md5\_insumos\_despues.csv} confirman que los 11 archivos de entrada monitoreados \textbf{no cambiaron} durante la ejecución del pipeline.
+    \item \textbf{Archivos de solo lectura:} Los CSV en \texttt{datos/intermedio/} se tratan como entradas de solo lectura; sus hashes se verifican antes y después.
+    \item \textbf{Tolerancias numéricas:} Configuradas en \texttt{R/00\_config.R} (\texttt{tolerancia\_suma = 1e-8}, \texttt{tolerancia\_ipm = 1e-10}, \texttt{tolerancia\_auditoria = 1e-10}).
+\end{itemize}
+
+\section{Resumen de hallazgos de control}
+\label{sec:resumen_hallazgos}
+
+El archivo \texttt{resumen\_hallazgos.csv} consolida las cifras de control:
+
+\begin{itemize}
+    \item Universo CNPV/IPM: 1.122 municipios (PASS).
+    \item Combinaciones edad ausentes: 335 (119 municipios) -- ausencias estructurales.
+    \item Área Centro poblado: 299 municipios la tienen.
+    \item Área Rural disperso: 25 municipios la tienen.
+    \item Área Cabecera: 6 municipios con incidencias (ver detalle).
+    \item Área Total: 5 municipios con incidencias.
+    \item Edad 85+: 89 ausencias; 80-84: 62; 75-79: 33.
+    \item 18 municipios ANM DIVIPOLA sin cabecera (población 26.569).
+    \item Cobertura baja 5PM / pob\_10mas: 28 municipios ($<0,9$).
+    \item Cobertura baja menores15 HOGARES: 26 municipios ($<0,9$).
+    \item Cobertura baja 60+ HOGARES: 20 municipios ($<0,95$).
+    \item Ítems NR $>5\%$: 83 municipios; $>10\%$: 37; $>20\%$: 7 (excluye \texttt{no\_tiene\_estrato}).
+    \item 20 NA IPM Cabeceras = 20 municipios sin cabecera (PASS).
+\end{itemize}
+
+Todos los controles programados están en estado \textbf{PASS}. La refactorización del pipeline (octubre 2026) regeneró los 34 CSV previos de \texttt{datos/trabajo/} y \texttt{resultados/base\_trabajo/} \textbf{sin diferencias byte a byte} respecto de la línea base (ver \texttt{docs/calidad/Refactorizacion\_Pipeline\_Indicadores} y \texttt{R/tests/test\_pipeline\_indicadores.R}).

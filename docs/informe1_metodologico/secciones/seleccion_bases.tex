@@ -1,0 +1,114 @@
+\section{Proceso de selección y depuración de bases}
+\label{ch:seleccion_bases}
+
+\section{Inventario inicial}
+\label{sec:inventario_inicial}
+
+Se partió de \textbf{seis archivos fuente originales} del CNPV 2018 provistos por el DANE:
+
+\begin{enumerate}
+    \item \texttt{HOGARES\_Cuadros\_CNPV\_2018.XLSX} (976.096 bytes)
+    \item \texttt{PERSONAS\_DEMOGRAFICO\_Cuadros\_CNPV\_2018.xlsx} (140.535.605 bytes)
+    \item \texttt{PERSONAS\_SOCIAL\_Cuadros\_CNPV\_2018.XLSX} (222.529.081 bytes)
+    \item \texttt{VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX} (8.406.337 bytes)
+    \item \texttt{anexo-censal-pobreza-municipal-2018.xlsx} (1.295.335 bytes) -- Anexo metodológico IPM
+    \item \texttt{IPM\_2018\_organizado\_region.xlsx} (2.137.634 bytes) -- IPM ya procesado por región
+\end{enumerate}
+
+El inventario de hojas, columnas y estructura se generó con \texttt{R/01\_verificar\_consolidados.R} y se documenta en \texttt{datos/intermedio/nombres\_columnas\_fuente.csv} y \texttt{resultados/verificacion\_consolidados/VERIFICACION\_CONSOLIDADOS.md}.
+
+\section{Inspección de hojas/cuadros}
+\label{sec:inspeccion_cuadros}
+
+Cada archivo Excel contiene múltiples hojas (cuadros) a diferentes niveles geográficos (nacional, departamental, municipal). La inspección identificó:
+
+\begin{itemize}
+    \item \textbf{Nivel municipal:} Hojas con sufijo \texttt{\_MPIO} o \texttt{\_PM} / \texttt{\_HM} / \texttt{\_VM}.
+    \item \textbf{Nivel departamental:} Sufijo \texttt{\_DPTO} o \texttt{\_PD} / \texttt{\_HD} / \texttt{\_VD} -- \textbf{descartados}.
+    \item \textbf{Nivel nacional:} Sin desagregación municipal -- \textbf{descartados}.
+\end{itemize}
+
+\section{Selección de cuadros relevantes}
+\label{sec:seleccion_cuadros}
+
+De los cientos de cuadros disponibles, se seleccionaron \textbf{8 cuadros municipales} basados en su relevancia para construir indicadores de vulnerabilidad socioeconómica no redundantes con el IPM:
+
+\begin{table}[htbp]
+\centering
+\caption{Cuadros seleccionados del CNPV 2018}
+\label{tab:cuadros_seleccionados}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Fuente} & \textbf{Archivo} & \textbf{Cuadro/Hoja} & \textbf{Contenido principal} & \textbf{Decisión} \\
+\midrule
+HOGARES & HOGARES\_Cuadros\_CNPV\_2018.XLSX & 1HM & Hogares con menores $<$15 años por área & INCLUIDA \\
+HOGARES & HOGARES\_Cuadros\_CNPV\_2018.XLSX & 2HM & Hogares con adultos $\ge$60 años por área & INCLUIDA \\
+PERSONAS\_DEMOGRAFICO & PERSONAS\_DEMOGRAFICO\_Cuadros\_CNPV\_2018.xlsx & 1PM & Población total por sexo y grupos de edad & CONTEXTO (denominador) \\
+PERSONAS\_DEMOGRAFICO & PERSONAS\_DEMOGRAFICO\_Cuadros\_CNPV\_2018.xlsx & 17PM & Población 5+ por asistencia escolar y sexo & INCLUIDA* \\
+PERSONAS\_SOCIAL & PERSONAS\_SOCIAL\_Cuadros\_CNPV\_2018.XLSX & 5PM & Población 10+ por actividad realizada la semana anterior & INCLUIDA \\
+VIVIENDAS & VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX & 1V\_MPIO & Viviendas por condición de ocupación & CONTEXTO (denominador) \\
+VIVIENDAS & VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX & 6V\_MPIO & Viviendas ocupadas por material paredes exteriores & INCLUIDA \\
+VIVIENDAS & VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX & 8V\_MPIO & Viviendas ocupadas por disponibilidad servicios públicos & INCLUIDA \\
+VIVIENDAS & VIVIENDAS\_Cuadros\_CNPV\_2018.XLSX & 10V\_MPIO & Personas en hogares por estrato de energía & INCLUIDA \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\noindent * 17PM tiene nota de verificación pendiente: el índice del DANE lo describe como ``asistencia escolar'' (igual que 18PM), mientras que 17PD trata ``nivel educativo''. Si es asistencia escolar, duplica Inasistencia escolar del IPM y debe reconsiderarse. Ver \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}, fila 37.
+
+\section{Selección de variables}
+\label{sec:seleccion_variables}
+
+Para cada cuadro seleccionado, se identificaron las variables (columnas) necesarias para construir numeradores y denominadores de los indicadores. La especificación completa está en \texttt{resultados/base\_trabajo/especificacion\_indicadores.csv} (14 indicadores candidatos con fuente, cuadro, numerador, denominador, población de referencia, dirección esperada y propuesta de inclusión).
+
+\section{Criterios de inclusión}
+\label{sec:criterios_inclusion}
+
+\begin{enumerate}
+    \item \textbf{Nivel geográfico municipal:} El cuadro debe tener desagregación municipal.
+    \item \textbf{Relevancia para vulnerabilidad:} La variable captura una privación, carencia, rezago o exclusión (ej. hogares con menores, desocupación, vivienda sin servicios, estrato bajo).
+    \item \textbf{No redundancia con IPM:} No replica directamente una de las 15 privaciones del IPM, o si lo hace, se marca para \textbf{descripción/validación} (no para PCA).
+    \item \textbf{Disponibilidad de denominador:} Existe población de referencia clara en el mismo cuadro o en cuadro vinculado (1PM, 1V\_MPIO).
+    \item \textbf{Calidad de la variable:} Sin problemas insalvables de cobertura, ceros estructurales masivos, o ambigüedad conceptual.
+\end{enumerate}
+
+\section{Criterios de exclusión}
+\label{sec:criterios_exclusion}
+
+\begin{enumerate}
+    \item \textbf{Nivel geográfico no municipal:} Departamental, nacional.
+    \item \textbf{No mide privación:} Variables de composición familiar (jefatura, tipología hogar, estado civil, fecundidad, parentesco, autorreconocimiento étnico, territorialidad étnica, migración).
+    \item \textbf{Redundancia con IPM:} Duplican directamente una privación del IPM (ej. analfabetismo, rezago escolar, inasistencia, barreras primera infancia, trabajo infantil, informalidad, dependencia, hacinamiento, material paredes/pisos, agua, alcantarillado, barreras salud, aseguramiento).
+    \item \textbf{Subpoblación pequeña / celdas fragmentadas:} Discapacidad (grados, causas, ayudas), tipologías de hogar generacional/ciclo de vida.
+    \item \textbf{Descripción dudosa / error en índice:} 19PM (descripción idéntica a 18PM).
+    \item \textbf{Edades simples (3PM):} Archivo pesado, celdas pequeñas; se reconstruye desde 1PM.
+\end{enumerate}
+
+Estos criterios se aplicaron sistemáticamente y se documentaron en \texttt{decisiones\_variables\_IVS\_CNPV2018.csv} (columna \texttt{decision}: INCLUIDA, CONTEXTO, VALIDACIÓN, DESCARTAR; columna \texttt{motivo} y \texttt{razon}).
+
+\section{Homologación territorial}
+\label{sec:homologacion}
+
+\begin{enumerate}
+    \item Todas las tablas se leen conservando \texttt{codigo\_municipio} como \textbf{texto de 5 caracteres}.
+    \item Se construye un \textbf{universo maestro municipal} (\texttt{universo\_municipal\_maestro.csv}) con los 1.122 códigos.
+    \item Cada tabla intermedia se valida contra el universo maestro (llave/prefijo, cobertura).
+    \item Las discrepancias territoriales (94663, 27493, municipios sin cabecera, ANM) se documentan en \texttt{crosswalk\_enlace.csv} y \textbf{no se aplican a los conteos 2018}.
+\end{enumerate}
+
+\section{Consolidación}
+\label{sec:consolidacion}
+
+El proceso de consolidación, ejecutado por \texttt{R/02\_base\_final\_indicadores.R} (configurado en \texttt{R/00\_config.R}), produce:
+
+\begin{itemize}
+    \item \textbf{Tablas de contexto (denominadores):} \texttt{contexto\_1PM.csv}, \texttt{contexto\_1V.csv} (poblaciones de referencia).
+    \item \textbf{Tablas de indicadores en base total y base válida:} Para cada indicador sensible a NR, dos versiones (ver Sección \ref{ch:tratamiento_faltantes}).
+    \item \textbf{Matrices candidatas para PCA:} \texttt{matriz\_base\_total.csv}, \texttt{matriz\_base\_valida.csv} (1.122 filas $\times$ 7 indicadores candidatos).
+    \item \textbf{Archivos de diagnóstico y control:} 25 CSV en \texttt{resultados/base\_trabajo/} (ver lista en introducción).
+    \item \textbf{Integridad de insumos:} Hashes MD5 antes y después (\texttt{md5\_insumos\_antes.csv}, \texttt{md5\_insumos\_despues.csv}) confirman \textbf{sin cambios} en los archivos de entrada monitoreados.
+\end{itemize}
+
+La consolidación se documenta en \texttt{Final\_Base.md} y \texttt{Estructura\_Bases.md}.

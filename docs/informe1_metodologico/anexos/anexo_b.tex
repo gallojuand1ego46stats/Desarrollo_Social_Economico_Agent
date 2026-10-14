@@ -1,0 +1,89 @@
+\section{Inventario de productos reproducibles (CSV generados)}
+\label{anexo:b}
+
+\subsection{Archivos en \texttt{datos/intermedio/} (entradas de solo lectura, verificadas por MD5)}
+\label{anexo:b_intermedio}
+
+\begin{enumerate}
+    \item \texttt{contexto\_1PM.csv} -- Población total por municipio, sexo, grupos de edad, áreas.
+    \item \texttt{contexto\_1V.csv} -- Viviendas por condición de ocupación, municipio, áreas, tipos.
+    \item \texttt{hogares\_1HM\_2HM.csv} -- Hogares con menores 15 y adultos 60+ por municipio, áreas.
+    \item \texttt{persona\_demo\_17PM.csv} -- Población 5+ por asistencia escolar/nivel educativo, sexo, municipio, áreas.
+    \item \texttt{persona\_social\_5PM.csv} -- Población 10+ por actividad realizada, sexo, municipio, áreas.
+    \item \texttt{viviendas\_6V.csv} -- Viviendas ocupadas por material paredes exteriores, municipio, áreas.
+    \item \texttt{viviendas\_8V.csv} -- Viviendas ocupadas por disponibilidad servicios, municipio, áreas.
+    \item \texttt{viviendas\_10V.csv} -- Personas en hogares por estrato energía, municipio, áreas.
+    \item \texttt{ipm\_municipal\_ancho.csv} -- IPM municipal: 15 privaciones + IPM Municipal + IPM (duplicado) + Cabeceras + Centros poblados.
+    \item \texttt{universo\_municipal\_maestro.csv} -- Lista maestra 1.122 códigos municipales con nombres, departamentos.
+    \item \texttt{control\_nacional.csv} -- Totales nacionales de referencia (población, hogares, viviendas).
+\end{enumerate}
+
+\subsection{Archivos en \texttt{datos/trabajo/} (denominadores, indicadores, matrices)}
+\label{anexo:b_trabajo}
+
+\begin{enumerate}
+    \item \texttt{denominadores\_indicadores.csv} -- Denominadores calculados por indicador y municipio.
+    \item \texttt{indicadores\_base\_total.csv} -- 14 indicadores en versión base total (incluye NR en denominador).
+    \item \texttt{indicadores\_base\_valida.csv} -- 14 indicadores en versión base válida (excluye NR).
+    \item \texttt{matriz\_base\_total.csv} -- Matriz 1.122 $\times$ 7 (indicadores PCA provisionales, base total).
+    \item \texttt{matriz\_base\_valida.csv} -- Matriz 1.122 $\times$ 7 (indicadores PCA provisionales, base válida).
+    \item \texttt{parametros\_estandarizacion.csv} -- Media y DE por indicador para estandarización (pre-PCA).
+\end{enumerate}
+
+\subsection{Archivos en \texttt{resultados/verificacion\_consolidados/} (inventario y validaciones)}
+\label{anexo:b_verificacion}
+
+\begin{enumerate}
+    \item \texttt{nombres\_columnas\_fuente.csv} -- Inventario de tablas origen y sus columnas.
+    \item \texttt{validaciones.csv} -- Resultados de validaciones programadas (llaves, sumas, rangos, MD5).
+    \item \texttt{VERIFICACION\_CONSOLIDADOS.md} -- Reporte narrativo de verificación estructural.
+\end{enumerate}
+
+\subsection{Archivos en \texttt{resultados/base\_trabajo/} (25 CSV: calidad, sensibilidad, diagnósticos)}
+\label{anexo:b_base_trabajo}
+
+\begin{enumerate}
+    \item \texttt{especificacion\_indicadores.csv} -- Especificación completa 14 indicadores (fuente, numerador, denominador, dirección, uso).
+    \item \texttt{crosswalk\_enlace.csv} -- Equivalencias territoriales para enlace SECOP futuro (94663, 27493, etc.).
+    \item \texttt{validaciones.csv} -- (Copia) Validaciones de indicadores y matriz.
+    \item \texttt{auditoria\_conteos.csv} -- Auditoría por variable: disponibles, faltantes, negativos, no enteros.
+    \item \texttt{areas\_inexistentes.csv} -- Municipios donde no existe Cabecera/Centro poblado/Rural disperso.
+    \item \texttt{ausencias\_estructurales\_1PM.csv} -- Combinaciones municipio-área-edad ausentes en 1PM (335, 119 municipios).
+    \item \texttt{municipios\_sin\_cabecera.csv} -- Detalle 20 municipios sin cabecera (código, nombre, tipo, población).
+    \item \texttt{resumen\_sin\_cabecera\_departamento.csv} -- Agrupación por departamento de municipios sin cabecera.
+    \item \texttt{resumen\_hallazgos.csv} -- Resumen cifras de control y hallazgos con estado.
+    \item \texttt{covariables\_descriptivas.csv} -- Datos municipales de contexto (población, \% rural, banderas calidad).
+    \item \texttt{estadisticos\_indicadores.csv} -- Descriptivos por indicador (rango, media, mediana, asimetría, \% ceros).
+    \item \texttt{varianza\_indicadores.csv} -- Varianza por indicador; señalización varianza casi nula.
+    \item \texttt{outliers\_z\_mayor\_4.csv} -- Conteo municipios con al menos un $|z|>4$ (32 municipios).
+    \item \texttt{parametros\_estandarizacion.csv} -- Media y DE para estandarizar indicadores propuestos.
+    \item \texttt{correlaciones\_pares.csv} -- Correlación Pearson para cada par de 7 indicadores (21 pares).
+    \item \texttt{pares\_correlacion\_ge\_090.csv} -- Pares con $|r|\ge0,90$ (vacío).
+    \item \texttt{pares\_correlacion\_ge\_095.csv} -- Pares con $|r|\ge0,95$ (vacío).
+    \item \texttt{diagnosticos\_aptitud.csv} -- KMO global, Bartlett, determinante (diagnósticos previos, no PCA).
+    \item \texttt{kmo\_por\_indicador.csv} -- MSA (KMO individual) por indicador (estrato 1--2 $\approx 0,414$).
+    \item \texttt{nr\_item\_municipal.csv} -- Valores municipales de ítems NR (con bases y proporciones; estrato ``no tiene'' aparte).
+    \item \texttt{sensibilidad\_nr\_municipio.csv} -- Comparación municipal base total vs. base válida (diferencias, marcas).
+    \item \texttt{sensibilidad\_nr.csv} -- Resumen sensibilidad NR por indicador.
+    \item \texttt{md5\_insumos\_antes.csv} -- Hashes MD5 de 11 archivos entrada antes de ejecución.
+    \item \texttt{md5\_insumos\_despues.csv} -- Hashes MD5 después; confirman sin cambios.
+\end{enumerate}
+
+\subsection{Archivos en \texttt{resultados/auditoria\_estadistica/} (diagnósticos multivariados)}
+\label{anexo:b_auditoria}
+
+Generados por \texttt{R/03\_auditoria\_indicadores.R} (9 salidas). Contenido detallado pendiente de documentar en reporte \texttt{Auditoria\_Estadistica\_Indicadores}.
+
+\subsection{Archivos de configuración y scripts}
+\label{anexo:b_scripts}
+
+\begin{itemize}
+    \item \texttt{R/00\_config.R} -- Parámetros editables (rutas, umbrales NR, cobertura, outliers, KMO, banderas PCA/bootstrap).
+    \item \texttt{R/01\_verificar\_consolidados.R} -- Verificación estructural, universo maestro.
+    \item \texttt{R/02\_base\_final\_indicadores.R} -- Construcción indicadores, matrices, diagnósticos base.
+    \item \texttt{R/03\_auditoria\_indicadores.R} -- Auditoría estadística preliminar (descriptivos, correlaciones, KMO, Bartlett, outliers).
+    \item \texttt{R/funciones/io.R} -- Lectura/escritura, conversión, hashes MD5.
+    \item \texttt{R/funciones/validacion.R} -- Controles estructurales y de calidad.
+    \item \texttt{R/funciones/auditoria\_estadistica.R} -- Diagnósticos multivariados.
+    \item \texttt{R/tests/test\_pipeline\_indicadores.R} -- Prueba integridad byte-a-byte (34 CSV regenerados idénticos).
+\end{itemize}

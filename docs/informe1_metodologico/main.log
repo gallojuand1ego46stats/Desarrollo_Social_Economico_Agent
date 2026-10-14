@@ -1,0 +1,1834 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.18)  13 OCT 2026 19:00
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count283
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2101.
+\U@D=\dimen149
+\l@unhyphenated=\language79
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count284
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4196.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
+-spanish.tex)
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 4320.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
+df
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks17
+\es@quotdepth=\count285
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
+on input line 3.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
+ on input line 3.
+ (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxtext.sty
+Package: newtxtext 2024/04/01 v1.744(Michael Sharpe) latex and unicode latex su
+pport for TeXGyreTermesX
+
+`newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes a
+nd its extensions (msharpe)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count286
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count287
+)) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.tex))
+\XKV@depth=\count288
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\xs_counta=\count289
+\xs_countb=\count290
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty)
+LaTeX Font Info:    Setting ntxLF sub-encoding to TS1/0 on input line 24.
+LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 24.
+LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 24.
+LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.tex)
+\ntx@tmpcnta=\count291
+\ntx@cnt=\count292
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes.sty
+Package: fontaxes 2026-01-02 v2.0.2 Font selection axes (deprecated)
+Applying: [2024-11-01] Use figureversions if present on input line 74.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/figureversions\figureve
+rsions.sty
+Package: figureversions 2025-04-29 v1.0.1 Figure versions
+)
+Already applied: [0000-00-00] Fall back to v1 on input line 76.
+)
+\tx@sixem=\dimen150
+\tx@y=\dimen151
+\tx@x=\dimen152
+\tx@tmpdima=\dimen153
+\tx@tmpdimb=\dimen154
+\tx@tmpdimc=\dimen155
+\tx@tmpdimd=\dimen156
+\tx@tmpdime=\dimen157
+\tx@tmpdimf=\dimen158
+\tx@dimA=\dimen159
+\tx@dimAA=\dimen160
+\tx@dimB=\dimen161
+\tx@dimBB=\dimen162
+\tx@dimC=\dimen163
+LaTeX Info: Redefining \oldstylenums on input line 902.
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxmath.sty
+Package: newtxmath 2024/09/22 v1.754
+
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen164
+))
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen165
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count293
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count294
+\leftroot@=\count295
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count296
+\DOTSCASE@=\count297
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen166
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count298
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count299
+\dotsspace@=\muskip17
+\c@parentequation=\count300
+\dspbrk@lvl=\count301
+\tag@help=\toks23
+\row@=\count302
+\column@=\count303
+\maxfields@=\count304
+\andhelp@=\toks24
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks25
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count305
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.tex)
+\tx@Isdigit=\count306
+\tx@IsAlNum=\count307
+\tx@tA=\toks27
+\tx@tB=\toks28
+\tx@su=\read3
+
+amsthm NOT loaded
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 402.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/minntx/m/n on input line 402.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/m/n on input line 402.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/minntx/m/n --> OT1/minntx/b/n on input line 403.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/qhv/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/qhv/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/qhv/m/n --> OT1/qhv/b/n on input line 412.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 419.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/minntx/m/it on input line 419.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/minntx/m/it on input line 419.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 420.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> T1/ntxtt/m/n on input line 420.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> T1/ntxtt/m/n on input line 420.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/b/n on input line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/b/n on input line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/minntx/m/it --> OT1/minntx/b/it on input line 423.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/ntxtt/m/n --> T1/ntxtt/b/n on input line 426.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 534.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ntxmi/m/it on input line 534.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ntxmi/m/it on input line 534.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 535.
+\symlettersA=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 582.
+Now handling font encoding LMS ...
+... no UTF-8 mapping file for font encoding LMS
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 604.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 604.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 605.
+\symAMSm=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 630.
+\symsymbolsC=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 651.
+Now handling font encoding LMX ...
+... no UTF-8 mapping file for font encoding LMX
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 664.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 6
+64.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 664.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 664
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 664.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 665.
+\symlargesymbolsTXA=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 679.
+\tx@sbptoks=\toks29
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 902.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 903.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 904.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 905.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 910.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 911.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 913.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 915.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 919.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 920.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 966.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 991.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 992.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 2057.
+LaTeX Info: Redefining \Bbbk on input line 2847.
+LaTeX Info: Redefining \not on input line 2995.
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup8
+\symAMSb=\mathgroup9
+LaTeX Font Info:    Redeclaring math delimiter \ulcorner on input line 74.
+LaTeX Font Info:    Redeclaring math delimiter \urcorner on input line 75.
+LaTeX Font Info:    Redeclaring math delimiter \llcorner on input line 76.
+LaTeX Font Info:    Redeclaring math delimiter \lrcorner on input line 77.
+LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
+LaTeX Font Info:    Redeclaring math symbol \lozenge on input line 142.
+)
+LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 44.
+LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 45.
+LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \blacksquare on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \centerdot on input line 49.
+LaTeX Font Info:    Redeclaring math symbol \blacklozenge on input line 51.
+LaTeX Font Info:    Redeclaring math symbol \circlearrowright on input line 52.
+
+LaTeX Font Info:    Redeclaring math symbol \circlearrowleft on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \leftrightharpoons on input line 56
+.
+LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 57.
+LaTeX Font Info:    Redeclaring math symbol \Vdash on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Vvdash on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \vDash on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \twoheadrightarrow on input line 61
+.
+LaTeX Font Info:    Redeclaring math symbol \twoheadleftarrow on input line 62.
+
+LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 64.
+
+LaTeX Font Info:    Redeclaring math symbol \upuparrows on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \downdownarrows on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \upharpoonright on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonright on input line 69.
+
+LaTeX Font Info:    Redeclaring math symbol \upharpoonleft on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonleft on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \rightarrowtail on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \leftarrowtail on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrows on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \rightleftarrows on input line 75.
+LaTeX Font Info:    Redeclaring math symbol \Lsh on input line 76.
+LaTeX Font Info:    Redeclaring math symbol \Rsh on input line 77.
+LaTeX Font Info:    Redeclaring math symbol \leftrightsquigarrow on input line 
+79.
+LaTeX Font Info:    Redeclaring math symbol \looparrowleft on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \looparrowright on input line 81.
+LaTeX Font Info:    Redeclaring math symbol \circeq on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \succsim on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \gtrsim on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \gtrapprox on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \multimap on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \therefore on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \because on input line 88.
+LaTeX Font Info:    Redeclaring math symbol \doteqdot on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \triangleq on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \precsim on input line 92.
+LaTeX Font Info:    Redeclaring math symbol \lesssim on input line 93.
+LaTeX Font Info:    Redeclaring math symbol \lessapprox on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \eqslantless on input line 95.
+LaTeX Font Info:    Redeclaring math symbol \eqslantgtr on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqprec on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqsucc on input line 98.
+LaTeX Font Info:    Redeclaring math symbol \preccurlyeq on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \leqq on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \leqslant on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \lessgtr on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \backprime on input line 103.
+LaTeX Font Info:    Redeclaring math symbol \risingdotseq on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \fallingdotseq on input line 105.
+LaTeX Font Info:    Redeclaring math symbol \succcurlyeq on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \geqq on input line 107.
+LaTeX Font Info:    Redeclaring math symbol \geqslant on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \gtrless on input line 109.
+LaTeX Font Info:    Redeclaring math symbol \bigstar on input line 117.
+LaTeX Font Info:    Redeclaring math symbol \between on input line 118.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangledown on input line 11
+9.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 1
+20.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 12
+1.
+LaTeX Font Info:    Redeclaring math symbol \vartriangle on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangle on input line 123.
+LaTeX Font Info:    Redeclaring math symbol \triangledown on input line 124.
+LaTeX Font Info:    Redeclaring math symbol \eqcirc on input line 125.
+LaTeX Font Info:    Redeclaring math symbol \lesseqgtr on input line 126.
+LaTeX Font Info:    Redeclaring math symbol \gtreqless on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \lesseqqgtr on input line 128.
+LaTeX Font Info:    Redeclaring math symbol \gtreqqless on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Rrightarrow on input line 130.
+LaTeX Font Info:    Redeclaring math symbol \Lleftarrow on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \veebar on input line 132.
+LaTeX Font Info:    Redeclaring math symbol \barwedge on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \doublebarwedge on input line 134.
+LaTeX Font Info:    Redeclaring math symbol \measuredangle on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \sphericalangle on input line 138.
+LaTeX Font Info:    Redeclaring math symbol \varpropto on input line 139.
+LaTeX Font Info:    Redeclaring math symbol \smallsmile on input line 140.
+LaTeX Font Info:    Redeclaring math symbol \smallfrown on input line 141.
+LaTeX Font Info:    Redeclaring math symbol \Subset on input line 142.
+LaTeX Font Info:    Redeclaring math symbol \Supset on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Cup on input line 144.
+LaTeX Font Info:    Redeclaring math symbol \Cap on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \curlywedge on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \curlyvee on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \leftthreetimes on input line 150.
+LaTeX Font Info:    Redeclaring math symbol \rightthreetimes on input line 151.
+
+LaTeX Font Info:    Redeclaring math symbol \subseteqq on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \supseteqq on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \bumpeq on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Bumpeq on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \lll on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \ggg on input line 158.
+LaTeX Font Info:    Redeclaring math symbol \circledS on input line 160.
+LaTeX Font Info:    Redeclaring math symbol \pitchfork on input line 161.
+LaTeX Font Info:    Redeclaring math symbol \dotplus on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \backsim on input line 163.
+LaTeX Font Info:    Redeclaring math symbol \backsimeq on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \complement on input line 165.
+LaTeX Font Info:    Redeclaring math symbol \intercal on input line 166.
+LaTeX Font Info:    Redeclaring math symbol \circledcirc on input line 167.
+LaTeX Font Info:    Redeclaring math symbol \circledast on input line 168.
+LaTeX Font Info:    Redeclaring math symbol \circleddash on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \lvertneqq on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \gvertneqq on input line 172.
+LaTeX Font Info:    Redeclaring math symbol \nleq on input line 173.
+LaTeX Font Info:    Redeclaring math symbol \ngeq on input line 174.
+LaTeX Font Info:    Redeclaring math symbol \nless on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \ngtr on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \nprec on input line 177.
+LaTeX Font Info:    Redeclaring math symbol \nsucc on input line 178.
+LaTeX Font Info:    Redeclaring math symbol \lneqq on input line 179.
+LaTeX Font Info:    Redeclaring math symbol \gneqq on input line 180.
+LaTeX Font Info:    Redeclaring math symbol \nleqslant on input line 181.
+LaTeX Font Info:    Redeclaring math symbol \ngeqslant on input line 182.
+LaTeX Font Info:    Redeclaring math symbol \lneq on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \gneq on input line 184.
+LaTeX Font Info:    Redeclaring math symbol \npreceq on input line 185.
+LaTeX Font Info:    Redeclaring math symbol \nsucceq on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \precnsim on input line 187.
+LaTeX Font Info:    Redeclaring math symbol \succnsim on input line 188.
+LaTeX Font Info:    Redeclaring math symbol \lnsim on input line 189.
+LaTeX Font Info:    Redeclaring math symbol \gnsim on input line 190.
+LaTeX Font Info:    Redeclaring math symbol \nleqq on input line 191.
+LaTeX Font Info:    Redeclaring math symbol \ngeqq on input line 192.
+LaTeX Font Info:    Redeclaring math symbol \precneqq on input line 193.
+LaTeX Font Info:    Redeclaring math symbol \succneqq on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \precnapprox on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \succnapprox on input line 196.
+LaTeX Font Info:    Redeclaring math symbol \lnapprox on input line 197.
+LaTeX Font Info:    Redeclaring math symbol \gnapprox on input line 198.
+LaTeX Font Info:    Redeclaring math symbol \nsim on input line 199.
+LaTeX Font Info:    Redeclaring math symbol \ncong on input line 200.
+LaTeX Font Info:    Redeclaring math symbol \diagup on input line 201.
+LaTeX Font Info:    Redeclaring math symbol \diagdown on input line 202.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 203.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneq on input line 204.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteqq on input line 205.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteqq on input line 206.
+LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 207.
+LaTeX Font Info:    Redeclaring math symbol \supsetneqq on input line 208.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneqq on input line 209.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneqq on input line 210.
+LaTeX Font Info:    Redeclaring math symbol \subsetneq on input line 211.
+LaTeX Font Info:    Redeclaring math symbol \supsetneq on input line 212.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteq on input line 213.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteq on input line 214.
+LaTeX Font Info:    Redeclaring math symbol \nparallel on input line 215.
+LaTeX Font Info:    Redeclaring math symbol \nmid on input line 216.
+LaTeX Font Info:    Redeclaring math symbol \nshortmid on input line 217.
+LaTeX Font Info:    Redeclaring math symbol \nshortparallel on input line 218.
+LaTeX Font Info:    Redeclaring math symbol \nvdash on input line 219.
+LaTeX Font Info:    Redeclaring math symbol \nVdash on input line 220.
+LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 221.
+LaTeX Font Info:    Redeclaring math symbol \nVDash on input line 222.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglerighteq on input line 223
+.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglelefteq on input line 224.
+
+LaTeX Font Info:    Redeclaring math symbol \ntriangleleft on input line 225.
+LaTeX Font Info:    Redeclaring math symbol \ntriangleright on input line 226.
+LaTeX Font Info:    Redeclaring math symbol \nleftarrow on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \nrightarrow on input line 228.
+LaTeX Font Info:    Redeclaring math symbol \nLeftarrow on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \nRightarrow on input line 230.
+LaTeX Font Info:    Redeclaring math symbol \nLeftrightarrow on input line 231.
+
+LaTeX Font Info:    Redeclaring math symbol \nleftrightarrow on input line 232.
+
+LaTeX Font Info:    Redeclaring math symbol \divideontimes on input line 233.
+LaTeX Font Info:    Redeclaring math symbol \varnothing on input line 234.
+LaTeX Font Info:    Redeclaring math symbol \nexists on input line 235.
+LaTeX Font Info:    Redeclaring math symbol \Finv on input line 236.
+LaTeX Font Info:    Redeclaring math symbol \Game on input line 237.
+LaTeX Font Info:    Redeclaring math symbol \eth on input line 240.
+LaTeX Font Info:    Redeclaring math symbol \eqsim on input line 241.
+LaTeX Font Info:    Redeclaring math symbol \beth on input line 242.
+LaTeX Font Info:    Redeclaring math symbol \gimel on input line 243.
+LaTeX Font Info:    Redeclaring math symbol \daleth on input line 244.
+LaTeX Font Info:    Redeclaring math symbol \lessdot on input line 245.
+LaTeX Font Info:    Redeclaring math symbol \gtrdot on input line 246.
+LaTeX Font Info:    Redeclaring math symbol \ltimes on input line 247.
+LaTeX Font Info:    Redeclaring math symbol \rtimes on input line 248.
+LaTeX Font Info:    Redeclaring math symbol \shortmid on input line 249.
+LaTeX Font Info:    Redeclaring math symbol \shortparallel on input line 250.
+LaTeX Font Info:    Redeclaring math symbol \smallsetminus on input line 251.
+LaTeX Font Info:    Redeclaring math symbol \thicksim on input line 252.
+LaTeX Font Info:    Redeclaring math symbol \thickapprox on input line 253.
+LaTeX Font Info:    Redeclaring math symbol \approxeq on input line 254.
+LaTeX Font Info:    Redeclaring math symbol \succapprox on input line 255.
+LaTeX Font Info:    Redeclaring math symbol \precapprox on input line 256.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 257.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 258.
+
+LaTeX Font Info:    Redeclaring math symbol \digamma on input line 259.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 260.
+
+
+! LaTeX Error: Command `\Bbbk' already defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.261 ...ol{\Bbbk}           {\mathord}{AMSb}{"7C}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Redeclaring math symbol \hslash on input line 262.
+LaTeX Font Info:    Redeclaring math symbol \backepsilon on input line 265.
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen173
+\Gin@req@width=\dimen174
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count308
+\float@exts=\toks30
+\float@box=\box55
+\@float@everytoks=\toks31
+\@floatcapt=\box56
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen175
+\lightrulewidth=\dimen176
+\cmidrulewidth=\dimen177
+\belowrulesep=\dimen178
+\belowbottomsep=\dimen179
+\aboverulesep=\dimen180
+\abovetopsep=\dimen181
+\cmidrulesep=\dimen182
+\cmidrulekern=\dimen183
+\defaultaddspace=\dimen184
+\@cmidla=\count309
+\@cmidlb=\count310
+\@aboverulesep=\dimen185
+\@belowrulesep=\dimen186
+\@thisruleclass=\count311
+\@lastruleclass=\count312
+\@thisrulewidth=\dimen187
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count313
+\LTcapwidth=\dimen188
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count314
+\LT@rows=\count315
+\c@LT@tables=\count316
+\c@LT@chunks=\count317
+\LT@p@ftn=\toks32
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen189
+\ar@mcellbox=\box62
+\extrarowheight=\dimen190
+\NC@list=\toks33
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box63
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip60
+\multirow@cntb=\count318
+\multirow@dima=\skip61
+\bigstrutjot=\dimen191
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count319
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen192
+\Hy@linkcounter=\count320
+\Hy@pagecounter=\count321
+ (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count322
+ (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count323
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen193
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count324
+\Field@Width=\dimen194
+\Fld@charsize=\dimen195
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count325
+\c@Item=\count326
+\c@Hfootnote=\count327
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count328
+\c@bookmark@seq@number=\count329
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip62
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+)
+==> First Aid for cleveref.sty applied!
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip63
+\bibsep=\skip64
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count330
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count331
+\Gm@cntv=\count332
+\c@Gm@tempcnt=\count333
+\Gm@bindingoffset=\dimen196
+\Gm@wd@mp=\dimen197
+\Gm@odd@mp=\dimen198
+\Gm@even@mp=\dimen199
+\Gm@layoutwidth=\dimen256
+\Gm@layoutheight=\dimen257
+\Gm@layouthoffset=\dimen258
+\Gm@layoutvoffset=\dimen259
+\Gm@dimlist=\toks34
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen260
+\captionmargin=\dimen261
+\caption@leftmargin=\dimen262
+\caption@rightmargin=\dimen263
+\caption@width=\dimen264
+\caption@indent=\dimen265
+\caption@parindent=\dimen266
+\caption@hangindent=\dimen267
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count334
+\c@continuedfloat=\count335
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.s
+ty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count336
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count337
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\enitkv@toks@=\toks35
+\labelindent=\skip65
+\enit@outerparindent=\dimen268
+\enit@toks=\toks36
+\enit@inbox=\box64
+\enit@count@id=\count338
+\enitdp@description=\count339
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
+\csq@reset=\count340
+\csq@gtype=\count341
+\csq@glevel=\count342
+\csq@qlevel=\count343
+\csq@maxlvl=\count344
+\csq@tshold=\count345
+\csq@ltx@everypar=\toks37
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2026-05-19 v5.2p csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.st
+y
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nom
+etadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
+Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
+\c@r@tfl@t=\count346
+\rotFPtop=\skip66
+\rotFPbot=\skip67
+\rot@float@box=\box65
+\rot@mess@toks=\toks38
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box66
+\beforetitleunit=\skip68
+\aftertitleunit=\skip69
+\ttl@plus=\dimen269
+\ttl@minus=\dimen270
+\ttl@toksa=\toks39
+\titlewidth=\dimen271
+\titlewidthlast=\dimen272
+\titlewidthfirst=\dimen273
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.s
+ty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box67
+)
+\tc@llx=\dimen274
+\tc@lly=\dimen275
+\tc@urx=\dimen276
+\tc@ury=\dimen277
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen278
+\adjbox@Height=\dimen279
+\adjbox@Depth=\dimen280
+\adjbox@Totalheight=\dimen281
+\adjbox@pwidth=\dimen282
+\adjbox@pheight=\dimen283
+\adjbox@pdepth=\dimen284
+\adjbox@ptotalheight=\dimen285
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count347
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box68
+\sift@deathcycles=\count348
+\@vwid@loff=\dimen286
+\@vwid@roff=\dimen287
+)
+==> First Aid for varwidth.sty applied!
+) (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen288
+\TX@old@table=\dimen289
+\TX@old@col=\dimen290
+\TX@target=\dimen291
+\TX@delta=\dimen292
+\TX@cols=\count349
+\TX@ftn=\toks40
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip70
+\RaggedLeftLeftskip=\skip71
+\RaggedRightLeftskip=\skip72
+\CenteringRightskip=\skip73
+\RaggedLeftRightskip=\skip74
+\RaggedRightRightskip=\skip75
+\CenteringParfillskip=\skip76
+\RaggedLeftParfillskip=\skip77
+\RaggedRightParfillskip=\skip78
+\JustifyingParfillskip=\skip79
+\CenteringParindent=\skip80
+\RaggedLeftParindent=\skip81
+\RaggedRightParindent=\skip82
+\JustifyingParindent=\skip83
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
+ 82.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtlf.fd
+File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
+)
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.95pt on input line 82.
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+
+(main.aux
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 13.
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 82.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
+ 82.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\omlntxmi.fd
+File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 82.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
+82.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 82.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
+ 82.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 82.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
+e 82.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count350
+\scratchdimen=\dimen293
+\scratchbox=\box69
+\nofMPsegments=\count351
+\nofMParguments=\count352
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count353
+\MPscratchDim=\dimen294
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
+\everyMPtoPDFconversion=\toks42
+)
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+\c@mv@tabular=\count356
+\c@mv@boldtabular=\count357
+LaTeX Info: Command `\dddot' is already robust on input line 82.
+LaTeX Info: Command `\ddddot' is already robust on input line 82.
+Package hyperref Info: Link coloring ON on input line 82.
+ (main.out) (main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.2698pt, 452.96826pt, 72.2698pt)
+* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96826pt
+* \textheight=700.50723pt
+* \oddsidemargin=-0.00018pt
+* \evensidemargin=-0.00018pt
+* \topmargin=-37.00018pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+(secciones/portada.tex
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 17.28pt on input line 6.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 17.28pt on input line 6.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 14.4pt on input line 7.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 7.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 9.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 12.0pt on input line 9.
+ [1
+
+{C:/Users/juand/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/juan
+d/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}]) (seccio
+nes/resumen.tex
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 1.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 10.95pt on input line 4.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.95pt on input line 4.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
+e 8.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1minntx.fd
+File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
+)
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
+8.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxmia.fd
+File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
+8.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
+8.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.1pt on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
+16.
+
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 10.95pt on input line 16.
+)
+(secciones/palabras_clave.tex
+Overfull \hbox (65.83331pt too wide) in paragraph at lines 15--1
+\T1/ntxtlf/b/n/10.95 Scripts de re-fe-ren-cia: \T1/ntxtt/m/n/10.95 R/00_config.
+R\T1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 R/01_verificar_consolidados.R\T1/nt
+xtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 R/02_base_final_indicadores.R\T1/ntxtlf/m/
+n/10.95 ,
+ []
+
+
+Overfull \hbox (85.11847pt too wide) in paragraph at lines 15--1
+\T1/ntxtlf/b/n/10.95 Productos re-pro-du-ci-bles: \T1/ntxtt/m/n/10.95 datos/tra
+bajo/\T1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 resultados/base_trabajo/\T1/ntx
+tlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 resultados/auditoria_estadistica/\T1/ntxtlf
+/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--1
+
+ []
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 1.
+[1
+
+{C:/Users/juand/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf
+.enc}{C:/Users/juand/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec
+-tlf-pc.enc}]) (main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
+(Font)              scaled to size 10.95pt on input line 2.
+ [2] [3] [4] [5] [6]
+Overfull \hbox (2.73747pt too wide) detected at line 110
+\T1/ntxtlf/b/n/10.95 100. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 111
+\T1/ntxtlf/b/n/10.95 101. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 112
+\T1/ntxtlf/b/n/10.95 102. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 113
+\T1/ntxtlf/b/n/10.95 103. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 114
+\T1/ntxtlf/b/n/10.95 104. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 115
+\T1/ntxtlf/b/n/10.95 105. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 116
+\T1/ntxtlf/b/n/10.95 106. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 117
+\T1/ntxtlf/b/n/10.95 107. 
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
+17.
+(C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <10.95> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 117.
+
+Overfull \hbox (2.73747pt too wide) detected at line 118
+\T1/ntxtlf/b/n/10.95 108. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 119
+\T1/ntxtlf/b/n/10.95 109. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 120
+\T1/ntxtlf/b/n/10.95 110. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 121
+\T1/ntxtlf/b/n/10.95 111. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 122
+\T1/ntxtlf/b/n/10.95 112. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 123
+\T1/ntxtlf/b/n/10.95 113. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 124
+\T1/ntxtlf/b/n/10.95 114. 
+ []
+
+[7]
+Overfull \hbox (2.73747pt too wide) detected at line 125
+\T1/ntxtlf/b/n/10.95 115. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 126
+\T1/ntxtlf/b/n/10.95 116. 
+ []
+
+
+Overfull \hbox (2.73747pt too wide) detected at line 127
+\T1/ntxtlf/b/n/10.95 117. 
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [8] (main.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (68.81937pt too wide) in paragraph at lines 12--12
+ [][] [][][]\T1/ntxtlf/m/n/10.95 Estadísticos des-crip-ti-vos por in-di-ca-dor 
+(ma-triz ba-se to-tal) -- ex-trac-to de \T1/ntxtt/m/n/10.95 estadisticos_indica
+dores.csv[][] [][]  
+ []
+
+)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+ [9
+
+] (main.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+ [10
+
+] (secciones/introduccion.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30     \item S
+                elecciÃ³n y auditorÃ­a de fuentes primarias: Censo Nacional ...
+[1
+
+]) [2] [3] (secciones/metodologia.tex
+Overfull \hbox (43.27077pt too wide) in paragraph at lines 32--33
+\T1/ntxtlf/m/n/10.95 se re-ser-van pa-ra un \T1/ntxtlf/m/it/10.95 cross-walk \T
+1/ntxtlf/m/n/10.95 fu-tu-ro con SE-COP II (ver \T1/ntxtt/m/n/10.95 resultados/b
+ase_trabajo/crosswalk_enlace.csv\T1/ntxtlf/m/n/10.95 ). 
+ []
+
+[4
+
+]) [5] (secciones/marco_conceptual.tex [6
+
+]
+Overfull \hbox (12.49275pt too wide) in paragraph at lines 48--49
+[]\T1/ntxtlf/m/n/10.95 Construir un ín-di-ce sin-té-ti-co (sco-res del PC1) pon
+-de-ra-do por la es-truc-tu-ra de co-va-rian-zas/correlaciones
+ []
+
+[7]
+Overfull \hbox (24.55319pt too wide) in paragraph at lines 74--75
+[]\T1/ntxtlf/b/n/10.95 Análisis es-pa-cial: \T1/ntxtlf/m/n/10.95 Au-to-co-rre-l
+a-ción es-pa-cial (Mo-ran's I), mo-de-los es-pa-cia-les, clús-te-res de vulnera
+bilidad-
+ []
+
+) [8] (secciones/fuentes.tex
+Overfull \hbox (164.0686pt too wide) in paragraph at lines 27--28
+\T1/ntxtlf/m/n/10.95 aná-li-sis mu-ni-ci-pal. La se-lec-ción de cua-dros y va-r
+ia-bles se do-cu-men-ta en \T1/ntxtt/m/n/10.95 docs/diccionario/decisiones_vari
+ables_IVS_CNPV2018.csv
+ []
+
+[9
+
+]) [10] (secciones/unidad_analisis.tex
+Overfull \hbox (69.82501pt too wide) in paragraph at lines 37--47
+ [][] 
+ []
+
+
+Overfull \hbox (21.93144pt too wide) in paragraph at lines 52--53
+\T1/ntxtlf/m/n/10.95 pa-ra to-das las ta-blas in-ter-me-dias (\T1/ntxtt/m/n/10.
+95 contexto_1PM\T1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 contexto_1V\T1/ntxtlf
+/m/n/10.95 , \T1/ntxtt/m/n/10.95 hogares_1HM_2HM\T1/ntxtlf/m/n/10.95 , \T1/ntxt
+t/m/n/10.95 persona_demo_17PM\T1/ntxtlf/m/n/10.95 ,
+ []
+
+[11
+
+]
+Overfull \hbox (137.03787pt too wide) in paragraph at lines 69--70
+[]\T1/ntxtlf/m/n/10.95 Detalle en \T1/ntxtt/m/n/10.95 resultados/base_trabajo/m
+unicipios_sin_cabecera.csv \T1/ntxtlf/m/n/10.95 y \T1/ntxtt/m/n/10.95 resumen_s
+in_cabecera_departamento.csv\T1/ntxtlf/m/n/10.95 . 
+ []
+
+[12] [13]) [14] (secciones/seleccion_bases.tex
+Overfull \hbox (1.5758pt too wide) in paragraph at lines 14--15
+[]\T1/ntxtt/m/n/10.95 anexo-censal-pobreza-municipal-2018.xlsx \T1/ntxtlf/m/n/1
+0.95 (1.295.335 by-tes) -- Ane-xo me-to-do-ló-gi-co IPM 
+ []
+
+
+Overfull \hbox (1.27016pt too wide) in paragraph at lines 18--19
+[]\T1/ntxtlf/m/n/10.95 El in-ven-ta-rio de ho-jas, co-lum-nas y es-truc-tu-ra s
+e ge-ne-ró con \T1/ntxtt/m/n/10.95 R/01_verificar_consolidados.R
+ []
+
+
+Overfull \hbox (264.69238pt too wide) in paragraph at lines 18--19
+\T1/ntxtlf/m/n/10.95 y se do-cu-men-ta en \T1/ntxtt/m/n/10.95 datos/intermedio/
+nombres_columnas_fuente.csv \T1/ntxtlf/m/n/10.95 y \T1/ntxtt/m/n/10.95 resultad
+os/verificacion_consolidados/VERIFICACION_CONSOLIDADOS.md\T1/ntxtlf/m/n/10.95 .
+ 
+ []
+
+
+Overfull \hbox (221.73126pt too wide) in paragraph at lines 64--65
+\T1/ntxtlf/m/n/10.95 nu-me-ra-do-res y de-no-mi-na-do-res de los in-di-ca-do-re
+s. La es-pe-ci-fi-ca-ción com-ple-ta es-tá en \T1/ntxtt/m/n/10.95 resultados/ba
+se_trabajo/especificacion_indicadores.csv
+ []
+
+[15
+
+] [16]
+Overfull \hbox (83.24063pt too wide) in paragraph at lines 89--90
+[]\T1/ntxtlf/m/n/10.95 Estos cri-te-rios se apli-ca-ron sis-te-má-ti-ca-men-te 
+y se do-cu-men-ta-ron en \T1/ntxtt/m/n/10.95 decisiones_variables_IVS_CNPV2018.
+csv
+ []
+
+
+Overfull \hbox (2.212pt too wide) in paragraph at lines 109--110
+[]\T1/ntxtlf/b/n/10.95 Matrices can-di-da-tas pa-ra PCA: \T1/ntxtt/m/n/10.95 ma
+triz_base_total.csv\T1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 matriz_base_valid
+a.csv \T1/ntxtlf/m/n/10.95 (1.122
+ []
+
+
+Overfull \hbox (72.37158pt too wide) in paragraph at lines 111--112
+[]\T1/ntxtlf/b/n/10.95 Integridad de in-su-mos: \T1/ntxtlf/m/n/10.95 Hashes MD5
+ an-tes y des-pués (\T1/ntxtt/m/n/10.95 md5_insumos_antes.csv\T1/ntxtlf/m/n/10.
+95 , \T1/ntxtt/m/n/10.95 md5_insumos_despues.csv\T1/ntxtlf/m/n/10.95 )
+ []
+
+[17]) [18] (secciones/tratamiento_faltantes.tex
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 23.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.1pt on input line 23.
+ [19
+
+]
+Overfull \hbox (131.63594pt too wide) in paragraph at lines 45--46
+\T1/ntxtlf/m/n/10.95 sen-tes en 1PM (119 mu-ni-ci-pios); 1.202 com-bi-na-cio-ne
+s de ti-po de vi-vien-da au-sen-tes. Ver \T1/ntxtt/m/n/10.95 ausencias_estructu
+rales_1PM.csv\T1/ntxtlf/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (94.9011pt too wide) in paragraph at lines 46--47
+[]\T1/ntxtlf/b/n/10.95 Tratamiento: \T1/ntxtlf/m/n/10.95 Se com-ple-tan co-mo \
+T1/ntxtlf/b/n/10.95 ce-ros es-truc-tu-ra-les \T1/ntxtlf/m/n/10.95 y se mar-can 
+con \T1/ntxtlf/m/it/10.95 flags \T1/ntxtlf/m/n/10.95 (ej. \T1/ntxtt/m/n/10.95 f
+lag_ausencia_estructural_edad\T1/ntxtlf/m/n/10.95 ,
+ []
+
+[20]) [21] (secciones/indicadores.tex [22
+
+] [23]
+Overfull \hbox (5.80994pt too wide) in paragraph at lines 126--127
+\T1/ntxtlf/m/n/10.95 va-ria-ble de tran-si-ción de-mo-grá-fi-ca, no de pri-va-c
+ión). Ver \T1/ntxtt/m/n/10.95 decisiones_variables_IVS_CNPV2018.csv\T1/ntxtlf/m
+/n/10.95 ,
+ []
+
+[24])
+Overfull \hbox (198.34975pt too wide) in paragraph at lines 171--117
+\T1/ntxtlf/m/n/10.95 bla-ción de re-fe-ren-cia, di-rec-ción es-pe-ra-da, pro-pu
+es-ta de in-clu-sión, no-tas) es-tá en \T1/ntxtt/m/n/10.95 resultados/base_trab
+ajo/especificacion_indicadores.csv\T1/ntxtlf/m/n/10.95 .
+ []
+
+[25] [26] (secciones/control_calidad.tex
+Overfull \hbox (51.73753pt too wide) in paragraph at lines 7--8
+\T1/ntxtlf/m/n/10.95 in-ter-me-dias (\T1/ntxtt/m/n/10.95 datos/intermedio/\T1/n
+txtlf/m/n/10.95 ) y ge-ne-ra \T1/ntxtt/m/n/10.95 resultados/verificacion_consol
+idados/validaciones.csv\T1/ntxtlf/m/n/10.95 .
+ []
+
+LaTeX Font Info:    Font shape `T1/ntxtt/m/it' in size <10.95> not available
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 11.
+[27
+
+] [28]
+Overfull \hbox (47.14192pt too wide) in paragraph at lines 112--113
+[]\T1/ntxtlf/b/n/10.95 Tolerancias nu-mé-ri-cas: \T1/ntxtlf/m/n/10.95 Con-fi-gu
+-ra-das en \T1/ntxtt/m/n/10.95 R/00_config.R \T1/ntxtlf/m/n/10.95 (\T1/ntxtt/m/
+n/10.95 tolerancia_suma = 1e-8\T1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 tolera
+ncia_ipm
+ []
+
+)
+Overfull \hbox (20.26701pt too wide) in paragraph at lines 136--119
+\T1/ntxtlf/b/n/10.95 cias by-te a by-te \T1/ntxtlf/m/n/10.95 res-pec-to de la l
+í-nea ba-se (ver \T1/ntxtt/m/n/10.95 docs/calidad/Refactorizacion_Pipeline_Indi
+cadores
+ []
+
+[29] [30] (secciones/diagnostico.tex
+Overfull \hbox (35.51265pt too wide) in paragraph at lines 30--31
+\T1/ntxtlf/m/it/10.95 Nota: Los va-lo-res exac-tos de-ben leer-se de \T1/txtt/m
+/sl/10.95 estadisticos_indicadores.csv \T1/ntxtlf/m/it/10.95 y \T1/txtt/m/sl/10
+.95 varianza_indicadores.csv\T1/ntxtlf/m/it/10.95 .
+ []
+
+[31
+
+]
+Overfull \hbox (24.652pt too wide) in paragraph at lines 54--55
+[]\T1/ntxtlf/m/n/10.95 Resultado: \T1/ntxtlf/b/n/10.95 32 mu-ni-ci-pios \T1/ntx
+tlf/m/n/10.95 pre-sen-tan al me-nos un in-di-ca-dor con $\LMS/ntxsy/m/n/10.95 j
+\OML/ntxmi/m/it/10.95 z\LMS/ntxsy/m/n/10.95 j \OML/ntxmi/m/it/10.95 > \OT1/minn
+tx/m/n/10.95 4$\T1/ntxtlf/m/n/10.95 . Ver \T1/ntxtt/m/n/10.95 outliers_z_mayor_
+4.csv\T1/ntxtlf/m/n/10.95 . 
+ []
+
+[32]
+Overfull \hbox (47.25789pt too wide) in paragraph at lines 113--114
+[]\T1/ntxtlf/m/n/10.95 Decisión fun-da-men-ta-da so-bre in-clu-sión/exclusión d
+e \T1/ntxtt/m/n/10.95 estrato_1_2 \T1/ntxtlf/m/n/10.95 (MSA ba-jo) y \T1/ntxtt/
+m/n/10.95 hogares_con_menores15
+ []
+
+) [33] [34] (secciones/preparacion_pca.tex [35
+
+]
+Overfull \hbox (16.2803pt too wide) in paragraph at lines 43--44
+[]\T1/ntxtlf/b/n/10.95 Estado: \T1/ntxtlf/m/it/10.95 Pro-vi-sio-nal\T1/ntxtlf/m
+/n/10.95 . La de-ci-sión fi-nal de in-clu-sión co-rres-pon-de al au-tor (ver \T
+1/ntxtt/m/n/10.95 Resumen_General.md\T1/ntxtlf/m/n/10.95 ,
+ []
+
+[36] [37]) [38] (secciones/reproducibilidad.tex [39
+
+] [40]
+Overfull \hbox (60.44835pt too wide) in paragraph at lines 143--144
+[]\T1/ntxtlf/b/n/10.95 Tolerancias nu-mé-ri-cas: \T1/ntxtt/m/n/10.95 tolerancia
+_suma = 1e-8\T1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 tolerancia_ipm = 1e-10\T
+1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 tolerancia_auditoria
+ []
+
+
+Overfull \hbox (98.91016pt too wide) in paragraph at lines 165--165
+[]\T1/ntxtt/m/n/10.95 # 1. Verificación consolidados (genera datos/intermedio/,
+ resultados/verificacion_consolidados/)[] 
+ []
+
+[41]
+Overfull \hbox (116.15636pt too wide) in paragraph at lines 165--165
+[]\T1/ntxtt/m/n/10.95 # 2. Construcción indicadores y diagnósticos base (genera
+ datos/trabajo/, resultados/base_trabajo/)[] 
+ []
+
+
+Overfull \hbox (6.93042pt too wide) in paragraph at lines 165--165
+[]\T1/ntxtt/m/n/10.95 # 3. Auditoría estadística preliminar (genera resultados/
+auditoria_estadistica/)[] 
+ []
+
+
+Overfull \hbox (2.77145pt too wide) in paragraph at lines 168--169
+[]\T1/ntxtlf/m/n/10.95 Requiere R $\LMS/ntxsy/m/n/10.95 ^^U$ \T1/ntxtlf/m/n/10.
+95 4.0 y pa-que-tes: \T1/ntxtt/m/n/10.95 readxl, readr, dplyr, tidyr, stringr, 
+purrr, janitor,
+ []
+
+
+Overfull \hbox (11.16798pt too wide) in paragraph at lines 171--172
+[]\T1/ntxtlf/m/n/10.95 La bó-ve-da Ob-si-dian (\T1/ntxtt/m/n/10.95 .obsidian/\T
+1/ntxtlf/m/n/10.95 ) con-tie-ne no-tas me-to-do-ló-gi-cas en-la-za-das (\T1/ntx
+tt/m/n/10.95 Inicio_Proyecto.md\T1/ntxtlf/m/n/10.95 ,
+ []
+
+) [42] (secciones/limitaciones.tex [43
+
+] [44]
+Overfull \hbox (2.74623pt too wide) in paragraph at lines 87--88
+\T1/ntxtlf/m/n/10.95 en gran par-te den-tro de \T1/ntxtt/m/n/10.95 R/02_base_fi
+nal_indicadores.R \T1/ntxtlf/m/n/10.95 (pen-dien-te ex-traer a \T1/ntxtt/m/n/10
+.95 R/funciones/\T1/ntxtlf/m/n/10.95 ). 
+ []
+
+) [45] (secciones/estado_proyecto.tex
+LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <12> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 34.
+ [46
+
+]
+Overfull \hbox (56.4943pt too wide) in paragraph at lines 59--60
+[]\T1/ntxtlf/m/n/10.95 Refactorización pi-pe-li-ne: 34 CSV re-ge-ne-ra-dos idén
+-ti-cos byte-a-byte; prue-ba \T1/ntxtt/m/n/10.95 test_pipeline_indicadores.R
+ []
+
+
+Overfull \hbox (80.4264pt too wide) in paragraph at lines 72--73
+[]\T1/ntxtlf/m/n/10.95 Completar ex-trac-ción de blo-ques de de-no-mi-na-do-res
+ y cálcu-lo de in-di-ca-do-res de \T1/ntxtt/m/n/10.95 R/02_base_final_indicador
+es.R
+ []
+
+[47]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtt on input line
+ 98.
+ (C:\Users\juand\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtt.fd
+File: ts1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Info: Symbol \textdownarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+LaTeX Info: Symbol \textdownarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+LaTeX Info: Symbol \textdownarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+LaTeX Info: Symbol \textdownarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+LaTeX Info: Symbol \textdownarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+LaTeX Info: Symbol \textdownarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+LaTeX Info: Symbol \textdownarrow not provided by
+            font family ntxtt in TS1 encoding.
+            Default family used instead on input line 98.
+) [48] (secciones/conclusiones.tex [49
+
+]
+Overfull \hbox (23.09593pt too wide) in paragraph at lines 62--63
+[]\T1/ntxtlf/m/n/10.95 Parámetros de es-tan-da-ri-za-ción: \T1/ntxtt/m/n/10.95 
+resultados/base_trabajo/parametros_estandarizacion.csv\T1/ntxtlf/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (71.95567pt too wide) in paragraph at lines 64--65
+[]\T1/ntxtlf/m/n/10.95 Diagnósticos ap-ti-tud: \T1/ntxtt/m/n/10.95 resultados/b
+ase_trabajo/diagnosticos_aptitud.csv\T1/ntxtlf/m/n/10.95 , \T1/ntxtt/m/n/10.95 
+kmo_por_indicador.csv\T1/ntxtlf/m/n/10.95 . 
+ []
+
+[50]) [51] (main.bbl) [52
+
+] (anexos/anexo_a.tex
+Overfull \hbox (105.85223pt too wide) in paragraph at lines 4--5
+[]\T1/ntxtlf/m/n/10.95 Este ane-xo re-pro-du-ce la es-pe-ci-fi-ca-ción téc-ni-c
+a de los 14 in-di-ca-do-res cons-trui-da por \T1/ntxtt/m/n/10.95 R/02_base_fina
+l_indicadores.R\T1/ntxtlf/m/n/10.95 .
+ []
+
+
+Overfull \hbox (47.24672pt too wide) in paragraph at lines 4--5
+\T1/ntxtlf/m/n/10.95 La ver-sión au-to-ri-ta-ti-va es el ar-chi-vo CSV en \T1/n
+txtt/m/n/10.95 resultados/base_trabajo/especificacion_indicadores.csv\T1/ntxtlf
+/m/n/10.95 . 
+ []
+
+) [53
+
+] (anexos/anexo_b.tex [54
+
+]
+Overfull \hbox (19.82898pt too wide) in paragraph at lines 56--57
+[]\T1/ntxtt/m/n/10.95 estadisticos_indicadores.csv \T1/ntxtlf/m/n/10.95 -- Des-
+crip-ti-vos por in-di-ca-dor (ran-go, me-dia, me-dia-na, asimetría,$ $%
+ []
+
+[55] [56]) [57] (main.aux
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2020/03/25>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 15484E82A738A06898182C2ED3F2B3EF;29583.
+ ) 
+Here is how much of TeX's memory you used:
+ 23084 strings out of 467871
+ 381409 string characters out of 5418376
+ 797060 words of memory out of 5000000
+ 51086 multiletter control sequences out of 15000+600000
+ 689477 words of font info for 105 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,10n,117p,823b,881s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\juand\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
+1095.pk><C:/Users/juand/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/
+NewTXMI.pfb><C:/Users/juand/AppData/Local/Programs/MiKTeX/fonts/type1/public/ne
+wtx/NewTXMI7.pfb><C:/Users/juand/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/txfonts/t1xbtt.pfb><C:/Users/juand/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/txfonts/t1xtt.pfb><C:/Users/juand/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/txfonts/t1xtt.pfb><C:/Users/juand/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/newtx/txmiaX.pfb><C:/Users/juand/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/newtx/txsys.pfb><C:/Users/juand/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/newtx/ztmb.pfb><C:/Users/juand/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/juand/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on main.pdf (68 pages, 461393 bytes).
+PDF statistics:
+ 1402 PDF objects out of 1440 (max. 8388607)
+ 434 named destinations out of 1000 (max. 500000)
+ 1081 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,97 @@
+\section{Preparación para PCA}
+\label{ch:preparacion_pca}
+
+\section{Objetivo del PCA}
+\label{sec:objetivo_pca}
+
+El Análisis de Componentes Principales (PCA) tendrá como objetivo:
+
+\begin{enumerate}
+    \item \textbf{Reducir la dimensionalidad} de la matriz de indicadores socioeconómicos municipales (inicialmente 7 candidatos provisionales) a un número pequeño de componentes no correlacionados.
+    \item \textbf{Identificar la estructura común latente} que explique la covarianza entre indicadores de vulnerabilidad.
+    \item \textbf{Sintetizar la información socioeconómica} en uno o pocos índices compuestos interpretables.
+    \item \textbf{Construir eventualmente un Índice de Vulnerabilidad Socioeconómica (IVS)} a partir de los scores del primer componente principal (PC1), orientado para que valores altos representen mayor vulnerabilidad.
+\end{enumerate}
+
+\section{Justificación metodológica}
+\label{sec:justificacion_pca}
+
+\begin{itemize}
+    \item Los indicadores de vulnerabilidad son \textbf{multidimensionales y correlacionados}; el PCA extrae la varianza compartida.
+    \item A diferencia de índices con pesos arbitrarios (iguales, de expertos, o basados en prevalencia), el PCA pondera por la \textbf{estructura empírica de covarianzas/correlaciones} de los datos.
+    \item El PC1, si representa un constructo coherente (``vulnerabilidad general''), proporciona una síntesis unidimensional válida para análisis territoriales y validación externa.
+    \item El PCA es \textbf{reproducible y transparente}: pesos = eigenvectores, scores = proyecciones, varianza explicada = eigenvalues.
+\end{itemize}
+
+\textbf{Advertencia:} El PCA \textbf{no es apropiado} si: (a) la adecuación multivariada es insuficiente (KMO global $<0,6$, MSA individual $<0,5$); (b) no existe estructura factorial interpretable; (c) el PC1 no representa vulnerabilidad sino un artefacto matemático; (d) hay circularidad con la validación externa (IPM).
+
+\section{Variables candidatas}
+\label{sec:variables_candidatas_pca}
+
+La \textbf{matriz candidata provisional} (base total y base válida) contiene 7 indicadores:
+
+\begin{enumerate}
+    \item \texttt{actividad\_desocupacion\_incapacidad\_hogar} -- Desocupación/inactividad 10+ años.
+    \item \texttt{sin\_energia\_electrica} -- Viviendas sin energía.
+    \item \texttt{sin\_gas\_red\_publica} -- Viviendas sin gas natural.
+    \item \texttt{sin\_recoleccion\_basuras} -- Viviendas sin recolección de basuras.
+    \item \texttt{sin\_internet} -- Viviendas sin internet.
+    \item \texttt{hogares\_con\_menores15} -- Hogares con menores de 15 años.
+    \item \texttt{estrato\_1\_2} -- Población en estrato 1--2.
+\end{enumerate}
+
+\textbf{Estado:} \textit{Provisional}. La decisión final de inclusión corresponde al autor (ver \texttt{Resumen\_General.md}, puntos 5, 30, 58). Deben aprobarse/modificarse concepto y denominadores de gas/internet, actividad, hogares con menores y estrato 1--2.
+
+\section{Criterios que deberán evaluarse}
+\label{sec:criterios_evaluacion_pca}
+
+Antes de ejecutar PCA definitivo, se debe evaluar y documentar:
+
+\begin{enumerate}
+    \item \textbf{Adecuación multivariada:} KMO global ($\ge 0,70$ deseable), MSA individual ($\ge 0,50$ c/u), Bartlett ($p<0,05$).
+    \item \textbf{Selección final de variables:} Dirección de vulnerabilidad definida, colinealidad aceptable (VIF $< 5-10$), no redundancia con IPM (para validación externa no circular).
+    \item \textbf{Distribución de variables:} Asimetría, curtosis, concentración de ceros; transformaciones si es necesario (log, raíz, winsorización).
+    \item \textbf{Correlaciones y MSA:} Matriz de correlaciones, KMO global e individual, determinante.
+    \item \textbf{Eigenvalues y varianza explicada:} Eigenvalues $> 1$ (Kaiser), scree plot, \textit{parallel analysis} (Horn, 1965) para retención objetiva.
+    \item \textbf{Estructura factorial:} Cargas del PC1 (y PC2 si se retiene), interpretabilidad teórica, ausencia de cargas cruzadas problemáticas.
+    \item \textbf{Signo del componente:} Orientar PC1 para que \textbf{score alto = mayor vulnerabilidad} (el signo es arbitrario en PCA).
+    \item \textbf{Estabilidad:} Sensibilidad a outliers (32 municipios $|z|>4$), bootstrap/jackknife si procede, comparación base total vs. base válida.
+    \item \textbf{Scores municipales:} Distribución, rangos, percentiles, mapa preliminar.
+\end{enumerate}
+
+\section{Procedimientos pendientes}
+\label{sec:procedimientos_pendientes_pca}
+
+\begin{enumerate}
+    \item \textbf{Aprobar lista definitiva de indicadores} (concepto, denominador, dirección, tratamiento NR).
+    \item \textbf{Confirmar umbrales de cobertura} configurados en \texttt{R/00\_config.R} (parámetros operativos editables, no decisiones universales).
+    \item \textbf{Comparar sensibilidad NR} entre matriz base total y base válida (correlaciones, KMO, MSA) -- \texttt{Resumen\_General.md}, punto 59.
+    \item \textbf{Revisar 32 municipios con $|z|>4$} contra fuentes y contexto territorial -- no eliminar automáticamente.
+    \item \textbf{Resolver decisión sobre \texttt{estrato\_1\_2}} (MSA $\approx 0,414$): excluir, transformar, o mantener con justificación.
+    \item \textbf{Definir dirección de \texttt{hogares\_con\_adultos\_60mas}} (correlación negativa con IPM) -- incluir o reservar como covariables.
+    \item \textbf{Ejecutar PCA exploratorio}, inspeccionar eigenvalues, scree, parallel analysis, cargas.
+    \item \textbf{Seleccionar componentes} con criterio documentado y justificado.
+    \item \textbf{Interpretar cargas} y validar que PC1 representa ``vulnerabilidad general''.
+    \item \textbf{Construir IVS} (scores PC1 orientados) y evaluar estabilidad.
+    \item \textbf{Validar externamente con IPM Municipal} (correlación, concordancia de rankings, análisis de residuos).
+\end{enumerate}
+
+\section{Precauciones frente a circularidad con IPM}
+\label{sec:precauciones_circularidad}
+
+\begin{itemize}
+    \item El \textbf{IPM Municipal (agregado) se reserva exclusivamente como validación externa}. No entra al PCA.
+    \item Indicadores que \textbf{replican directamente privaciones del IPM} (material paredes, acueducto, alcantarillado, hacinamiento, analfabetismo, rezago, inasistencia, barreras primera infancia, trabajo infantil, informalidad, dependencia, barreras salud, aseguramiento, pisos) se han \textbf{excluido de la matriz candidata PCA} o se marcan como \texttt{DESCRIPCIÓN} en \texttt{especificacion\_indicadores.csv}.
+    \item Si un indicador censal (ej. 6V: material paredes) duplica una privación IPM, la decisión documentada es: \textbf{usar uno solo} (preferiblemente el del IPM por ser oficial validado, y usar el censal solo para validar consistencia). Ver \texttt{decisiones\_variables\_IVS\_CNPV2018.csv}, fila 104.
+    \item La validación externa consistirá en correlacionar el IVS (PC1 de indicadores \textit{no IPM}) con el IPM Municipal. Una correlación alta (en valor absoluto) apoya la validez convergente; una correlación baja exige revisión teórica del IVS.
+\end{itemize}
+
+\section{Configuración técnica}
+\label{sec:config_tecnica_pca}
+
+\begin{itemize}
+    \item \texttt{R/00\_config.R}: \texttt{ejecutar\_pca = FALSE}, \texttt{ejecutar\_bootstrap = FALSE} (bandas de seguridad).
+    \item \texttt{R/03\_auditoria\_indicadores.R}: Genera diagnósticos previos (descriptivos, correlaciones, KMO, Bartlett, outliers, estandarización) \textbf{sin estimar componentes}.
+    \item \texttt{R/funciones/auditoria\_estadistica.R}: Funciones modulares para diagnósticos multivariados.
+    \item Cuando se autorice: \texttt{ejecutar\_pca = TRUE} activará la estimación (por implementar/extender en pipeline).
+\end{itemize}

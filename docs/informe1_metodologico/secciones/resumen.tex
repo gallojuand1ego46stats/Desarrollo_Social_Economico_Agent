@@ -1,0 +1,17 @@
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+
+Este informe documenta el proceso metodológico del proyecto \textit{Desarrollo Social Económico}, cuyo objetivo central es estudiar la correspondencia entre la distribución territorial de la contratación pública (SECOP II) y las condiciones de vulnerabilidad socioeconómica de los municipios colombianos. La pregunta de investigación guía es: \textbf{¿Existe una correspondencia entre la distribución territorial de la contratación pública y las condiciones de vulnerabilidad socioeconómica de los municipios colombianos?}
+
+El presente informe cubre las etapas completadas hasta la fecha: selección y auditoría de fuentes de información (CNPV 2018, IPM 2018, DIVIPOLA), definición de la unidad de análisis municipal (1.122 municipios), homologación territorial, tratamiento de datos faltantes, construcción de indicadores socioeconómicos municipales, control de calidad y diagnósticos estadísticos preliminares. Se han construido 14 indicadores candidatos (7 para análisis PCA provisional y 7 de descripción/solapamiento con IPM) a partir de 8 cuadros censales seleccionados, con fórmulas explícitas de numeradores y denominadores, y se han documentado las decisiones sobre dirección de vulnerabilidad y tratamiento de no respuesta (escenarios de base total y base válida).
+
+Los diagnósticos preliminares reportan KMO global $\approx 0,642$, prueba de Bartlett significativa ($p<0,001$), determinante $\approx 0,0154$, ausencia de pares con correlación $|r|\ge0,90$, y 32 municipios con al menos un $|z|>4$. El MSA del indicador de estrato 1–2 es bajo ($\approx 0,414$). Estos resultados son \textbf{diagnósticos previos}; \textbf{no se ha ejecutado un PCA definitivo} y la auditoría estadística integral permanece pendiente.
+
+El Índice de Vulnerabilidad Socioeconómica (IVS) \textbf{no está construido}. El IPM municipal se reserva como validación externa futura para evitar circularidad. La integración con SECOP II, el análisis de asociación y el análisis espacial son etapas posteriores condicionadas a la consolidación del IVS.
+
+Este informe está diseñado para ser modular y ampliable, permitiendo incorporar posteriormente la auditoría estadística completa, el PCA, la construcción del IVS, su validación, la integración SECOP II y los análisis espaciales sin reescribir las secciones metodológicas ya consolidadas.
+
+\vspace{1cm}
+\noindent\textbf{Fecha de corte:} 13 de octubre de 2026.\\
+\textbf{Scripts de referencia:} \texttt{R/00\_config.R}, \texttt{R/01\_verificar\_consolidados.R}, \texttt{R/02\_base\_final\_indicadores.R}, \texttt{R/03\_auditoria\_indicadores.R}.\\
+\textbf{Productos reproducibles:} \texttt{datos/trabajo/}, \texttt{resultados/base\_trabajo/}, \texttt{resultados/auditoria\_estadistica/}.
