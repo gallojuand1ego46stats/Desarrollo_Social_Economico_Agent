@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "d80922d7db6deb1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb64bd953ba15631",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79a51322088d2027",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "75f67c7a94afc7d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "7af3b90b098471d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c452570e61ce9c05",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "fbc90c80149d1a9a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "b88ae9a06b653ea1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 205.5
+  },
+  "right": {
+    "id": "39b60278b55f91df",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7cb5f9229d06ff9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e898dcf3dd411cd4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "980ca0c96d90ca61",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "0b58eaf7558de791",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "414dcce0a0a86d2e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "3343fb01d3eea5ed",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "79a51322088d2027",
+  "lastOpenFiles": [
+    "docs/calidad/DIAGNOSTICO_ESTADO_ACTUAL.md",
+    "docs/Resumen_GPT.md",
+    "R/separate_dictionaries_final.R",
+    "R/separate_dictionaries.R",
+    "R/funciones/utils.R",
+    "R/funciones/generar_informe_calidad.R",
+    "R/funciones/auditoria_territorial.R",
+    "R/funciones/auditoria_ipm.R",
+    "R/funciones/auditoria_archivos_v2.R",
+    "R/funciones/auditoria_archivos.R",
+    "R/final_auditoria_working.R",
+    "R/final_auditoria_fixed2.R",
+    "nada-sin-fuente/experimento/clasificacion_independiente/clasificacion_juan_diego_David_Sanchez.md",
+    "nada-sin-fuente/sistema/resultados/evaluacion_qwen3.5-4b_2026-10-13_1704.md",
+    "nada-sin-fuente/sistema/resultados/evaluacion_qwen2.5-coder_2026-10-13_1302.md",
+    "nada-sin-fuente/experimento/clasificacion_independiente/clasificacion_juan_david.md",
+    "nada-sin-fuente/sistema/README.md",
+    "nada-sin-fuente/protocolo_prompts/v2.md",
+    "nada-sin-fuente/protocolo_prompts/v1.md",
+    "nada-sin-fuente/memoria/memoria_final.md",
+    "nada-sin-fuente/protocolo_prompts/CHANGELOG.md",
+    "nada-sin-fuente/experimento/experimento_y_decision.md",
+    "nada-sin-fuente/inventario_fallos/inventario_juan_diego_David_Sanchez.md",
+    "nada-sin-fuente/inventario_fallos/inventario_juan_david.md",
+    "nada-sin-fuente/evaluacion/caso_de_fallo.md",
+    "nada-sin-fuente/evaluacion/banco_preguntas.md",
+    "nada-sin-fuente/evaluacion/acta_auditoria_cruzada.md",
+    "nada-sin-fuente/corpus/README_PROCEDENCIA.md",
+    "nada-sin-fuente/corpus/MANIFIESTO.md",
+    "nada-sin-fuente/tabla_trazabilidad.md",
+    "nada-sin-fuente/README.md",
+    "data/README.md",
+    "docs/handoff_GPT/Resumen_GPT.md",
+    "docs/informe1_metodologico/CHANGELOG_FORMATO.md",
+    "docs/informe1_metodologico_backup/README_Informe1.md",
+    "docs/informe1_metodologico/README_Informe1.md"
+  ]
+}

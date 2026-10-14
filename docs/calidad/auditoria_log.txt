@@ -1,0 +1,198 @@
+=== INICIO DE AUDITORÍA ROBUSTA ===
+Fecha y hora: 2026-09-21 16:02:06 
+Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent 
+Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos 
+
+[16:02:06] ETAPA A: Recopilando metadatos de archivos
+[16:02:06] Encontrados 6 archivos en datos/
+=== INICIO DE AUDITORÍA ROBUSTA ===
+Fecha y hora: 2026-09-21 16:04:14 
+Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent 
+Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos 
+
+[16:04:14] ETAPA A: Recopilando metadatos de archivos
+[16:04:14] Encontrados 6 archivos en datos/
+=== INICIO DE AUDITORÍA ROBUSTA ===
+Fecha y hora: 2026-09-21 16:05:33 
+Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent 
+Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos 
+
+[16:05:33] ETAPA A: Recopilando metadatos de archivos
+[16:05:33] Encontrados 6 archivos en datos/
+[16:05:34] Inventario básico guardado: 6 archivos procesados
+[16:05:34] ETAPA B: Lectura de muestra y detección de encabezados
+[16:05:34] Iniciando procesamiento detallado de archivos...
+[16:05:34] Procesando 1/6: anexo-censal-pobreza-municipal-2018.xlsx (xlsx)
+[16:05:34]   Procesando como Excel
+[16:05:34]   Encontradas 6 hojas: 2_IPM Mpio y Dpt, 4_IPM Mpio dominios, 6_Privaciones IPM Dpt-Mpio, 8_Privaciones Mpio dominio, TB_REF, Visor
+[16:05:34]     Procesando hoja: '2_IPM Mpio y Dpt'
+[16:05:34]       Fila de encabezado detectada: 1
+[16:05:34]       Hoja pequeña (1,122 filas), procesando completamente
+[16:05:35]     Procesando hoja: '4_IPM Mpio dominios'
+[16:05:35]       Fila de encabezado detectada: 1
+[16:05:35]       Hoja pequeña (1,122 filas), procesando completamente
+[16:05:35]     Procesando hoja: '6_Privaciones IPM Dpt-Mpio'
+[16:05:35]       Fila de encabezado detectada: 1
+[16:05:36]       Hoja pequeña (1,123 filas), procesando completamente
+[16:05:36]     Procesando hoja: '8_Privaciones Mpio dominio'
+[16:05:36]       Fila de encabezado detectada: 1
+[16:05:37]       Hoja pequeña (1,123 filas), procesando completamente
+[16:05:38]     Procesando hoja: 'TB_REF'
+[16:05:38]       Fila de encabezado detectada: 1
+[16:05:38]       Hoja pequeña (1,122 filas), procesando completamente
+[16:05:38]     Procesando hoja: 'Visor'
+[16:05:38]       Fila de encabezado detectada: 1
+[16:05:38]       Hoja pequeña (126 filas), procesando completamente
+[16:05:39] Procesando 2/6: DIVIPOLA-_Códigos_municipios_20260917.csv (csv)
+[16:05:39]   Procesando como CSV
+[16:05:39]   Archivo pequeño, procesando completamente
+[16:05:39] Procesando 3/6: HOGARES_Cuadros_CNPV_2018.XLSX (xlsx)
+[16:05:39]   Procesando como Excel
+[16:05:39]   Encontradas 7 hojas: Índice, 1HD, 1HM, 2HD, 2HM, 3HD, 3HM
+[16:05:39]     Procesando hoja: 'Índice'
+[16:05:39]       Fila de encabezado detectada: 1
+[16:05:39]       Hoja pequeña (15 filas), procesando completamente
+[16:05:39]     Procesando hoja: '1HD'
+[16:05:39]       Fila de encabezado detectada: 1
+[16:05:40]       Hoja pequeña (45 filas), procesando completamente
+[16:05:40]     Procesando hoja: '1HM'
+[16:05:40]       Fila de encabezado detectada: 1
+[16:05:40]       Hoja pequeña (1,134 filas), procesando completamente
+[16:05:41]     Procesando hoja: '2HD'
+[16:05:41]       Fila de encabezado detectada: 1
+[16:05:41]       Hoja pequeña (45 filas), procesando completamente
+[16:05:41]     Procesando hoja: '2HM'
+[16:05:42]       Fila de encabezado detectada: 1
+[16:05:42]       Hoja pequeña (1,134 filas), procesando completamente
+[16:05:42]     Procesando hoja: '3HD'
+[16:05:42]       Fila de encabezado detectada: 1
+[16:05:43]       Hoja pequeña (146 filas), procesando completamente
+[16:05:43]     Procesando hoja: '3HM'
+[16:05:43]       Fila de encabezado detectada: 1
+[16:05:44]       Hoja pequeña (4,290 filas), procesando completamente
+[16:05:44] Procesando 4/6: PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx (xlsx)
+[16:05:44]   Procesando como Excel
+[16:05:44]   Encontradas 37 hojas: Índice, 1PD, 1PM, 2PT, 3PD, 3PM, 4PD, 4PM, 5.1PD, 5.1PM, 5.2PD, 5.2PM, 6PD, 7PP, 8PD, 9PD, 10PD , 11PD, 11PP , 12PD, 12PM, 13PD, 13PM, 14PD, 14PM, 15PD, 15PM, 16PD, 16PM, 17PD, 17PM, 18PD, 18PM, 19PD, 19PM, 20PD, 20.1PD
+[16:05:44]     Procesando hoja: 'Índice'
+[16:05:44]       Fila de encabezado detectada: 1
+[16:05:44]       Hoja pequeña (75 filas), procesando completamente
+[16:05:45]     Procesando hoja: '1PD'
+[16:05:45]       Fila de encabezado detectada: 1
+[16:05:45]       Hoja pequeña (2,594 filas), procesando completamente
+[16:05:45]     Procesando hoja: '1PM'
+[16:05:46]       Fila de encabezado detectada: 1
+[16:05:47]       Hoja grande (80,995 filas), procesando en chunks
+[16:05:49]     Procesando hoja: '2PT'
+[16:05:49]       Fila de encabezado detectada: 1
+[16:05:50]       Hoja pequeña (29 filas), procesando completamente
+[16:05:50]     Procesando hoja: '3PD'
+[16:05:50]       Fila de encabezado detectada: 1
+[16:05:51]       Hoja pequeña (4,864 filas), procesando completamente
+[16:05:51]     Procesando hoja: '3PM'
+[16:05:53]       Fila de encabezado detectada: 1
+[16:05:56]       Hoja grande (138,080 filas), procesando en chunks
+[16:05:59]     Procesando hoja: '4PD'
+[16:06:00]       Fila de encabezado detectada: 1
+[16:06:01]       Hoja pequeña (418 filas), procesando completamente
+[16:06:01]     Procesando hoja: '4PM'
+[16:06:04]       Fila de encabezado detectada: 1
+[16:06:06]       Hoja pequeña (12,850 filas), procesando completamente
+[16:06:07]     Procesando hoja: '5.1PD'
+[16:06:07]       Fila de encabezado detectada: 1
+[16:06:08]       Hoja pequeña (2,594 filas), procesando completamente
+[16:06:08]     Procesando hoja: '5.1PM'
+[16:06:09]       Fila de encabezado detectada: 1
+[16:06:11]       Hoja grande (80,992 filas), procesando en chunks
+[16:06:13]     Procesando hoja: '5.2PD'
+[16:06:13]       Fila de encabezado detectada: 1
+[16:06:13]       Hoja pequeña (5,178 filas), procesando completamente
+[16:06:14]     Procesando hoja: '5.2PM'
+[16:06:16]       Fila de encabezado detectada: 1
+[16:06:19]       Hoja grande (161,278 filas), procesando en chunks
+[16:06:22]     Procesando hoja: '6PD'
+[16:06:22]       Fila de encabezado detectada: 1
+[16:06:23]       Hoja pequeña (147 filas), procesando completamente
+[16:06:23]     Procesando hoja: '7PP'
+[16:06:23]       Fila de encabezado detectada: 1
+[16:06:23]       Hoja pequeña (147 filas), procesando completamente
+[16:06:24]     Procesando hoja: '8PD'
+[16:06:24]       Fila de encabezado detectada: 1
+[16:06:24]       Hoja pequeña (147 filas), procesando completamente
+[16:06:24]     Procesando hoja: '9PD'
+[16:06:24]       Fila de encabezado detectada: 1
+[16:06:25]       Hoja pequeña (147 filas), procesando completamente
+[16:06:25]     Procesando hoja: '10PD '
+[16:06:25]       Fila de encabezado detectada: 1
+[16:06:26]       Hoja pequeña (147 filas), procesando completamente
+[16:06:26]     Procesando hoja: '11PD'
+[16:06:26]       Fila de encabezado detectada: 1
+[16:06:27]       Hoja pequeña (148 filas), procesando completamente
+[16:06:27]     Procesando hoja: '11PP '
+[16:06:27]       Fila de encabezado detectada: 1
+[16:06:27]       Hoja pequeña (147 filas), procesando completamente
+[16:06:28]     Procesando hoja: '12PD'
+[16:06:29]       Fila de encabezado detectada: 1
+[16:06:30]       Hoja pequeña (658 filas), procesando completamente
+[16:06:31]     Procesando hoja: '12PM'
+[16:06:31]       Fila de encabezado detectada: 1
+[16:06:32]       Hoja pequeña (21,344 filas), procesando completamente
+[16:06:33]     Procesando hoja: '13PD'
+[16:06:34]       Fila de encabezado detectada: 1
+[16:06:34]       Hoja pequeña (118 filas), procesando completamente
+[16:06:35]     Procesando hoja: '13PM'
+[16:06:35]       Fila de encabezado detectada: 1
+[16:06:36]       Hoja pequeña (2,589 filas), procesando completamente
+[16:06:36]     Procesando hoja: '14PD'
+[16:06:39]       Fila de encabezado detectada: 1
+[16:06:41]       Hoja pequeña (1,950 filas), procesando completamente
+[16:06:42]     Procesando hoja: '14PM'
+[16:06:47]       Fila de encabezado detectada: 1
+[16:06:52]       Hoja grande (63,994 filas), procesando en chunks
+[16:07:00]     Procesando hoja: '15PD'
+[16:07:00]       Fila de encabezado detectada: 1
+[16:07:00]       Hoja pequeña (2,459 filas), procesando completamente
+[16:07:01]     Procesando hoja: '15PM'
+[16:07:01]       Fila de encabezado detectada: 1
+[16:07:02]       Hoja grande (75,716 filas), procesando en chunks
+[16:07:04]     Procesando hoja: '16PD'
+[16:07:04]       Fila de encabezado detectada: 1
+[16:07:04]       Hoja pequeña (420 filas), procesando completamente
+[16:07:05]     Procesando hoja: '16PM'
+[16:07:05]       Fila de encabezado detectada: 1
+[16:07:05]       Hoja pequeña (12,852 filas), procesando completamente
+[16:07:06]     Procesando hoja: '17PD'
+[16:07:06]       Fila de encabezado detectada: 1
+[16:07:07]       Hoja pequeña (419 filas), procesando completamente
+[16:07:07]     Procesando hoja: '17PM'
+[16:07:08]       Fila de encabezado detectada: 1
+[16:07:08]       Hoja pequeña (12,851 filas), procesando completamente
+[16:07:09]     Procesando hoja: '18PD'
+[16:07:09]       Fila de encabezado detectada: 1
+[16:07:09]       Hoja pequeña (964 filas), procesando completamente
+[16:07:10]     Procesando hoja: '18PM'
+[16:07:10]       Fila de encabezado detectada: 1
+[16:07:11]       Hoja pequeña (29,972 filas), procesando completamente
+[16:07:12]     Procesando hoja: '19PD'
+[16:07:12]       Fila de encabezado detectada: 1
+[16:07:12]       Hoja pequeña (3,051 filas), procesando completamente
+[16:07:13]     Procesando hoja: '19PM'
+[16:07:14]       Fila de encabezado detectada: 1
+[16:07:15]       Hoja grande (63,719 filas), procesando en chunks
+[16:07:17]     Procesando hoja: '20PD'
+[16:07:17]       Fila de encabezado detectada: 1
+[16:07:18]       Hoja pequeña (46 filas), procesando completamente
+[16:07:18]     Procesando hoja: '20.1PD'
+[16:07:18]       Fila de encabezado detectada: 1
+[16:07:18]       Hoja pequeña (45 filas), procesando completamente
+[16:07:19] Procesando 5/6: PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX (xlsx)
+[16:07:19]   Procesando como Excel
+[16:07:19]   Encontradas 27 hojas: Índice, 1PD, 1PM, 1.1PD, 1.1PM, 2PD, 2PM, 2.1PD, 2.1PM, 3PD, 3PM, 4PD, 4PM, 5PD, 5PM, 6PD, 6PM, 7PD, 7PM, 8PD, 8PM, 9HD, 9HM, 10HD, 10HM, 11HD, 11HM
+[16:07:19]     Procesando hoja: 'Índice'
+[16:07:19]       Fila de encabezado detectada: 1
+[16:07:19]       Hoja pequeña (55 filas), procesando completamente
+[16:07:19]     Procesando hoja: '1PD'
+[16:07:20]       Fila de encabezado detectada: 1
+[16:07:21]       Hoja pequeña (7,764 filas), procesando completamente
+[16:07:22]     Procesando hoja: '1PM'
+[16:07:32]       Hoja '1PM' vacía o error de lectura, saltando
+[16:07:32]     Procesando hoja: '1.1PD'

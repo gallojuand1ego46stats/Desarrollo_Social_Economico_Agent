@@ -1,0 +1,17 @@
+control,valor,estado,interpretacion
+archivos_obligatorios_ausentes,,PRESENTE,Se reportan faltantes sin sustituirlos
+municipios_matriz,1122,PASS,Un registro por código territorial
+indicadores_especificados,17,INFORMATIVO,Definiciones incluidas en la especificación
+candidatos_pca,7,INFORMATIVO,No equivale a selección final
+municipios_con_outlier,32,INFORMATIVO,Outlier estadístico no implica error
+pares_correlacion,21,INFORMATIVO,Se reporta estructura completa entre candidatos
+pares_abs_r_ge_090,0,INFORMATIVO,Ningún par supera el umbral
+KMO_global,0.642484078267257,INFORMATIVO,Adecuación moderada; revisar variables individuales
+Bartlett_chi_cuadrado,4664.87284751568,INFORMATIVO,Con n grande puede detectar asociaciones pequeñas
+Bartlett_gl,21,INFORMATIVO,Grados de libertad del test
+Bartlett_p_reportado,0,INFORMATIVO,El CSV redondea p a cero; interpretarlo como p<0.001
+determinante_correlacion,0.0154038457394726,INFORMATIVO,No indica por sí mismo una solución válida
+descriptivos_min_p1_mediana_media_p99_max,1.11022302462516e-16,PASS,Comparación recalculada contra estadisticos_indicadores.csv; asimetria/curtosis dependen de la convención del paquete psych.
+correlaciones_recalculadas_vs_archivo,1.11022302462516e-16,PASS,Correlaciones recalculadas desde la matriz municipal y cotejadas por par.
+sensibilidad_NR_resumen_vs_municipio,0,PASS,Municipios sensibles y diferencia máxima coinciden entre los dos CSV.
+outliers_recalculados_vs_archivo,0,PASS,Diferencia de conteo de municipios con algun |z|>4.

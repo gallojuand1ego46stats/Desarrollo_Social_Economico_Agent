@@ -1,0 +1,8 @@
+indicador,MSA,clasificacion,hallazgo
+actividad_desocupacion_incapacidad_hogar,0.8823733041916396,adecuado,"Adecuación individual favorable, no prueba suficiente por sí sola."
+sin_energia_electrica,0.5543710364538981,aceptable/marginal,Adecuación marginal; revisar comunalidades y concepto.
+sin_gas_red_publica,0.7992574663595472,adecuado,"Adecuación individual favorable, no prueba suficiente por sí sola."
+sin_recoleccion_basuras,0.7980255413119824,adecuado,"Adecuación individual favorable, no prueba suficiente por sí sola."
+sin_internet,0.587697852316609,aceptable/marginal,Adecuación marginal; revisar comunalidades y concepto.
+hogares_con_menores15,0.7443361640515891,adecuado,"Adecuación individual favorable, no prueba suficiente por sí sola."
+estrato_1_2,0.41431061174872497,problemático,La variable comparte poca varianza común; puede debilitar una solución factorial.

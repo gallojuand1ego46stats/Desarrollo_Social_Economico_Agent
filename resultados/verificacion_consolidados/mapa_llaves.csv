@@ -1,0 +1,19 @@
+archivo,hoja,bloque,codigo_municipio,nombre,departamento,area,sexo_tipo_grupo,variables,formato_codigo_original
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1HM y 2HM,B(2),B(2) texto después de _,A(1),C:N (1HM); O:Z (2HM),No aplica,C:Z: medidas por área; filas 1:3 encabezados,5 dígitos
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,17PM,B(2),B(2) texto después de _,A(1),C(3),D(4),E:T (total y 15 categorías),5 dígitos
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,5PM,B(2),B(2) texto después de _,A(1),C(3),D(4),E:O (total y actividad),5 dígitos
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6V_MPIO,B(2),B(2) texto después de _,A(1),D:AQ por cuatro áreas,C(3) tipo de vivienda,D:AQ conteos de viviendas y 9 materiales,3 dígitos + código departamento
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,8V_MPIO,AT(46),AT(46) texto después de _,AS(45),AU(47),No aplica,AV(48):BP(68) servicios y categorías,3 dígitos + código departamento
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,10V_MPIO,BS(71),BS(71) texto después de _,BR(70),BT(72),No aplica,BU(73):CD(82) personas y estratos,5 dígitos
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,1PM,B(2),B(2) texto después de _,A(1),C(3),D(4) grupo de edad,E:I (conteos e índices),5 dígitos
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,1V_MPIO,L(12),L(12) texto después de _,K(11),M(13),N(14) tipo de vivienda,O:S (conteos de vivienda),3 dígitos + código departamento
+
+
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,Formato ancho,C(3) ID,D(4) Municipio,B(2) Departamento,No aplica,No aplica,E:W IPM y privaciones,5 dígitos
+IPM_2018_organizado_region.xlsx,Indicadores_municipales,Formato largo,C(3) ID,D(4) Municipio,B(2) Departamento,No aplica,Variable_indice,F Valor,5 dígitos
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,Formato largo,C(3) ID,D(4) Municipio,B(2) Departamento,Dominio_geografico,Variable_indice,G Valor,5 dígitos
+IPM_2018_organizado_region.xlsx,Diccionario_variables,Diccionario,No aplica,No aplica,No aplica,No aplica,Variable_indice,A:F,No aplica
+IPM_2018_organizado_region.xlsx,Diccionario_dominio,Diccionario,No aplica,No aplica,No aplica,Dominio_geografico,Variable_indice,A:F,No aplica
+IPM_2018_organizado_region.xlsx,Resumen_region,Resumen,No aplica,No aplica,No aplica,Region_geografica,No aplica,A:U,No aplica
+IPM_2018_organizado_region.xlsx,Resumen_departamento,Resumen,No aplica,No aplica,No aplica,Departamento,No aplica,A:G,No aplica
+IPM_2018_organizado_region.xlsx,Control_calidad,Control,No aplica,No aplica,No aplica,No aplica,Control,A:B,No aplica

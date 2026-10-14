@@ -1,0 +1,891 @@
+[18:44:48] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[18:44:48] Fecha y hora: 2026-09-22 18:44:48
+[18:44:48] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[18:44:48] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[18:44:48] ETAPA A: Recopilando metadatos de archivos
+[18:44:48] Encontrados 7 archivos en datos/
+[18:45:34] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[18:45:34] Fecha y hora: 2026-09-22 18:45:34
+[18:45:34] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[18:45:34] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[18:45:34] ETAPA A: Recopilando metadatos de archivos
+[18:45:34] Encontrados 6 archivos en datos/
+[18:45:34] Inventario guardado: 6 archivos
+[18:45:34] ETAPA B: Procesamiento de variables por fuente
+[18:45:34] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[18:45:55] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[18:45:55] Fecha y hora: 2026-09-22 18:45:55
+[18:45:55] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[18:45:55] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[18:45:55] ETAPA A: Recopilando metadatos de archivos
+[18:45:55] Encontrados 6 archivos en datos/
+[18:45:56] Inventario guardado: 6 archivos
+[18:45:56] ETAPA B: Procesamiento de variables por fuente
+[18:45:56] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[18:45:56]   Hojas encontradas: 6
+[18:45:58]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (0 variables)
+[18:46:14] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[18:46:14] Fecha y hora: 2026-09-22 18:46:14
+[18:46:14] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[18:46:14] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[18:46:14] ETAPA A: Recopilando metadatos de archivos
+[18:46:14] Encontrados 6 archivos en datos/
+[18:46:14] Inventario guardado: 6 archivos
+[18:46:14] ETAPA B: Procesamiento de variables por fuente
+[18:46:14] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[18:46:14]   Hojas encontradas: 6
+[18:46:17]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (0 variables)
+[18:46:17]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.xlsx
+[18:46:17]   Fuente completada en 0 min
+[18:46:17] ADVERTENCIA: Archivo no encontrado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos/DIVIPOLA-_Codigos_municipios_20260917.csv
+[18:46:17] Procesando fuente: CNPV 2018 (HOGARES_Cuadros_CNPV_2018.XLSX)
+[18:46:17]   Hojas encontradas: 7
+[18:46:19]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.csv (0 variables)
+[18:46:19]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.xlsx
+[18:46:19]   Fuente completada en 0 min
+[18:46:19] Procesando fuente: CNPV 2018 (PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx)
+[18:46:19]   Hojas encontradas: 37
+[18:47:13]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.csv (0 variables)
+[18:47:13]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.xlsx
+[18:47:13]   Fuente completada en 0.9 min
+[18:47:13] Procesando fuente: CNPV 2018 (PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX)
+[18:47:13]   Hojas encontradas: 27
+[18:49:33]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.csv (0 variables)
+[18:49:33]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.xlsx
+[18:49:33]   Fuente completada en 2.3 min
+[18:49:33] Procesando fuente: CNPV 2018 (VIVIENDAS_Cuadros_CNPV_2018.XLSX)
+[18:49:33]   Hojas encontradas: 21
+[18:49:44]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.csv (0 variables)
+[18:49:44]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.xlsx
+[18:49:44]   Fuente completada en 0.2 min
+[18:49:44] ETAPA C: Guardando diccionario global
+[18:49:44] ADVERTENCIA: Diccionario global vacío
+[18:49:44] ETAPA D: Auditoría territorial
+[18:49:44] ADVERTENCIA: DIVIPOLA no encontrado para auditoría territorial
+[18:49:44] ETAPA E: Auditoría especial IPM
+[18:49:45] Auditoría IPM guardada: 10 indicadores
+[18:49:45] ETAPA F: Matriz de solapamiento IPM-CNPV
+[18:49:45] Matriz de solapamiento inicializada (requiere análisis manual)
+[18:49:45] ETAPA G: Banco de candidatos IVS
+[18:50:27] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[18:50:27] Fecha y hora: 2026-09-22 18:50:27
+[18:50:27] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[18:50:27] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[18:50:27] ETAPA A: Recopilando metadatos de archivos
+[18:50:27] Encontrados 6 archivos en datos/
+[18:50:27] Inventario guardado: 6 archivos
+[18:50:27] ETAPA B: Procesamiento de variables por fuente
+[18:50:27] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[18:50:27]   Hojas encontradas: 6
+[18:50:30]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (0 variables)
+[18:50:30]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.xlsx
+[18:50:30]   Fuente completada en 0 min
+[18:50:30] ADVERTENCIA: Archivo no encontrado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos/DIVIPOLA-_Codigos_municipios_20260917.csv
+[18:50:30] Procesando fuente: CNPV 2018 (HOGARES_Cuadros_CNPV_2018.XLSX)
+[18:50:30]   Hojas encontradas: 7
+[18:50:32]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.csv (0 variables)
+[18:50:32]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.xlsx
+[18:50:32]   Fuente completada en 0 min
+[18:50:32] Procesando fuente: CNPV 2018 (PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx)
+[18:50:32]   Hojas encontradas: 37
+[18:51:30]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.csv (0 variables)
+[18:51:30]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.xlsx
+[18:51:30]   Fuente completada en 1 min
+[18:51:30] Procesando fuente: CNPV 2018 (PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX)
+[18:51:30]   Hojas encontradas: 27
+[18:52:48]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.csv (0 variables)
+[18:52:48]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.xlsx
+[18:52:48]   Fuente completada en 1.3 min
+[18:52:48] Procesando fuente: CNPV 2018 (VIVIENDAS_Cuadros_CNPV_2018.XLSX)
+[18:52:48]   Hojas encontradas: 21
+[18:52:59]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.csv (0 variables)
+[18:52:59]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.xlsx
+[18:52:59]   Fuente completada en 0.2 min
+[18:52:59] ETAPA C: Guardando diccionario global
+[18:52:59] ADVERTENCIA: Diccionario global vacío
+[18:52:59] ETAPA D: Auditoría territorial
+[18:52:59] ADVERTENCIA: DIVIPOLA no encontrado para auditoría territorial
+[18:52:59] ETAPA E: Auditoría especial IPM
+[18:52:59] Auditoría IPM guardada: 10 indicadores
+[18:52:59] ETAPA F: Matriz de solapamiento IPM-CNPV
+[18:53:00] Matriz de solapamiento inicializada (requiere análisis manual)
+[18:53:00] ETAPA G: Banco de candidatos IVS
+[18:53:00] ADVERTENCIA: columna candidato_ivs no encontrada en diccionario_global, agregando...
+[18:53:00] Banco de candidatos guardado: 0 variables
+[18:53:00] ETAPA H: Generando informe de calidad
+[18:53:00] Informe de calidad generado
+[18:53:00] ETAPA I: Generando documentación metodológica
+[18:53:00] ETAPA J: Generando reporte final de ejecución
+[18:53:00] Reporte final guardado
+[18:53:00] === AUDITORÍA v2 COMPLETADA ===
+[18:53:00] Variables totales documentadas: 0
+[18:53:00] Fuentes procesadas: 5
+[18:55:11] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[18:55:11] Fecha y hora: 2026-09-22 18:55:11
+[18:55:11] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[18:55:11] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[18:55:11] ETAPA A: Recopilando metadatos de archivos
+[18:55:11] Encontrados 6 archivos en datos/
+[18:55:12] Inventario guardado: 6 archivos
+[18:55:12] ETAPA B: Procesamiento de variables por fuente
+[18:55:12] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[18:55:12]   Hojas encontradas: 6
+[18:55:12]   Hoja '2_IPM Mpio y Dpt': 0 variables devueltas
+[18:55:12]   ADVERTENCIA: Hoja '2_IPM Mpio y Dpt' devolvió 0 variables
+[18:55:12]   Hoja '4_IPM Mpio dominios': 0 variables devueltas
+[18:55:12]   ADVERTENCIA: Hoja '4_IPM Mpio dominios' devolvió 0 variables
+[18:55:13]   Hoja '6_Privaciones IPM Dpt-Mpio': 0 variables devueltas
+[18:55:13]   ADVERTENCIA: Hoja '6_Privaciones IPM Dpt-Mpio' devolvió 0 variables
+[18:55:15]   Hoja '8_Privaciones Mpio dominio': 0 variables devueltas
+[18:55:15]   ADVERTENCIA: Hoja '8_Privaciones Mpio dominio' devolvió 0 variables
+[18:55:15]   Hoja 'TB_REF': 0 variables devueltas
+[18:55:15]   ADVERTENCIA: Hoja 'TB_REF' devolvió 0 variables
+[18:55:15]   Hoja 'Visor': 0 variables devueltas
+[18:55:15]   ADVERTENCIA: Hoja 'Visor' devolvió 0 variables
+[18:55:15]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (0 variables)
+[18:55:15]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.xlsx
+[18:55:15]   Fuente completada en 0.1 min
+[18:55:15] ADVERTENCIA: Archivo no encontrado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos/DIVIPOLA-_Codigos_municipios_20260917.csv
+[18:55:15] Procesando fuente: CNPV 2018 (HOGARES_Cuadros_CNPV_2018.XLSX)
+[18:55:15]   Hojas encontradas: 7
+[18:55:16]   Hoja 'Índice': 0 variables devueltas
+[18:55:16]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[18:55:16]   Hoja '1HD': 0 variables devueltas
+[18:55:16]   ADVERTENCIA: Hoja '1HD' devolvió 0 variables
+[18:55:16]   Hoja '1HM': 0 variables devueltas
+[18:55:16]   ADVERTENCIA: Hoja '1HM' devolvió 0 variables
+[18:55:17]   Hoja '2HD': 0 variables devueltas
+[18:55:17]   ADVERTENCIA: Hoja '2HD' devolvió 0 variables
+[18:55:17]   Hoja '2HM': 0 variables devueltas
+[18:55:17]   ADVERTENCIA: Hoja '2HM' devolvió 0 variables
+[18:55:18]   Hoja '3HD': 0 variables devueltas
+[18:55:18]   ADVERTENCIA: Hoja '3HD' devolvió 0 variables
+[18:55:18]   Hoja '3HM': 0 variables devueltas
+[18:55:18]   ADVERTENCIA: Hoja '3HM' devolvió 0 variables
+[18:55:18]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.csv (0 variables)
+[18:55:18]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.xlsx
+[18:55:18]   Fuente completada en 0.1 min
+[18:55:18] Procesando fuente: CNPV 2018 (PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx)
+[18:55:18]   Hojas encontradas: 37
+[18:55:18]   Hoja 'Índice': 0 variables devueltas
+[18:55:18]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[18:55:19]   Hoja '1PD': 0 variables devueltas
+[18:55:19]   ADVERTENCIA: Hoja '1PD' devolvió 0 variables
+[18:55:21]   Hoja '1PM': 0 variables devueltas
+[18:55:21]   ADVERTENCIA: Hoja '1PM' devolvió 0 variables
+[18:55:21]   Hoja '2PT': 0 variables devueltas
+[18:55:21]   ADVERTENCIA: Hoja '2PT' devolvió 0 variables
+[18:55:22]   Hoja '3PD': 0 variables devueltas
+[18:55:22]   ADVERTENCIA: Hoja '3PD' devolvió 0 variables
+[18:55:26]   Hoja '3PM': 0 variables devueltas
+[18:55:26]   ADVERTENCIA: Hoja '3PM' devolvió 0 variables
+[18:55:29]   Hoja '4PD': 0 variables devueltas
+[18:55:29]   ADVERTENCIA: Hoja '4PD' devolvió 0 variables
+[18:55:34]   Hoja '4PM': 0 variables devueltas
+[18:55:34]   ADVERTENCIA: Hoja '4PM' devolvió 0 variables
+[18:55:34]   Hoja '5.1PD': 0 variables devueltas
+[18:55:34]   ADVERTENCIA: Hoja '5.1PD' devolvió 0 variables
+[18:55:37]   Hoja '5.1PM': 0 variables devueltas
+[18:55:37]   ADVERTENCIA: Hoja '5.1PM' devolvió 0 variables
+[18:55:38]   Hoja '5.2PD': 0 variables devueltas
+[18:55:38]   ADVERTENCIA: Hoja '5.2PD' devolvió 0 variables
+[18:55:44]   Hoja '5.2PM': 0 variables devueltas
+[18:55:44]   ADVERTENCIA: Hoja '5.2PM' devolvió 0 variables
+[18:55:44]   Hoja '6PD': 0 variables devueltas
+[18:55:44]   ADVERTENCIA: Hoja '6PD' devolvió 0 variables
+[18:55:45]   Hoja '7PP': 0 variables devueltas
+[18:55:45]   ADVERTENCIA: Hoja '7PP' devolvió 0 variables
+[18:55:45]   Hoja '8PD': 0 variables devueltas
+[18:55:45]   ADVERTENCIA: Hoja '8PD' devolvió 0 variables
+[18:55:46]   Hoja '9PD': 0 variables devueltas
+[18:55:46]   ADVERTENCIA: Hoja '9PD' devolvió 0 variables
+[18:55:47]   Hoja '10PD ': 0 variables devueltas
+[18:55:47]   ADVERTENCIA: Hoja '10PD ' devolvió 0 variables
+[18:55:47]   Hoja '11PD': 0 variables devueltas
+[18:55:47]   ADVERTENCIA: Hoja '11PD' devolvió 0 variables
+[18:55:48]   Hoja '11PP ': 0 variables devueltas
+[18:55:48]   ADVERTENCIA: Hoja '11PP ' devolvió 0 variables
+[18:55:51]   Hoja '12PD': 0 variables devueltas
+[18:55:51]   ADVERTENCIA: Hoja '12PD' devolvió 0 variables
+[18:55:53]   Hoja '12PM': 0 variables devueltas
+[18:55:53]   ADVERTENCIA: Hoja '12PM' devolvió 0 variables
+[18:55:53]   Hoja '13PD': 0 variables devueltas
+[18:55:53]   ADVERTENCIA: Hoja '13PD' devolvió 0 variables
+[18:55:54]   Hoja '13PM': 0 variables devueltas
+[18:55:54]   ADVERTENCIA: Hoja '13PM' devolvió 0 variables
+[18:55:59]   Hoja '14PD': 0 variables devueltas
+[18:55:59]   ADVERTENCIA: Hoja '14PD' devolvió 0 variables
+[18:56:10]   Hoja '14PM': 0 variables devueltas
+[18:56:10]   ADVERTENCIA: Hoja '14PM' devolvió 0 variables
+[18:56:10]   Hoja '15PD': 0 variables devueltas
+[18:56:10]   ADVERTENCIA: Hoja '15PD' devolvió 0 variables
+[18:56:12]   Hoja '15PM': 0 variables devueltas
+[18:56:12]   ADVERTENCIA: Hoja '15PM' devolvió 0 variables
+[18:56:12]   Hoja '16PD': 0 variables devueltas
+[18:56:12]   ADVERTENCIA: Hoja '16PD' devolvió 0 variables
+[18:56:13]   Hoja '16PM': 0 variables devueltas
+[18:56:13]   ADVERTENCIA: Hoja '16PM' devolvió 0 variables
+[18:56:14]   Hoja '17PD': 0 variables devueltas
+[18:56:14]   ADVERTENCIA: Hoja '17PD' devolvió 0 variables
+[18:56:15]   Hoja '17PM': 0 variables devueltas
+[18:56:15]   ADVERTENCIA: Hoja '17PM' devolvió 0 variables
+[18:56:15]   Hoja '18PD': 0 variables devueltas
+[18:56:15]   ADVERTENCIA: Hoja '18PD' devolvió 0 variables
+[18:56:16]   Hoja '18PM': 0 variables devueltas
+[18:56:16]   ADVERTENCIA: Hoja '18PM' devolvió 0 variables
+[18:56:17]   Hoja '19PD': 0 variables devueltas
+[18:56:17]   ADVERTENCIA: Hoja '19PD' devolvió 0 variables
+[18:56:19]   Hoja '19PM': 0 variables devueltas
+[18:56:19]   ADVERTENCIA: Hoja '19PM' devolvió 0 variables
+[18:56:19]   Hoja '20PD': 0 variables devueltas
+[18:56:19]   ADVERTENCIA: Hoja '20PD' devolvió 0 variables
+[18:56:20]   Hoja '20.1PD': 0 variables devueltas
+[18:56:20]   ADVERTENCIA: Hoja '20.1PD' devolvió 0 variables
+[18:56:20]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.csv (0 variables)
+[18:56:20]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.xlsx
+[18:56:20]   Fuente completada en 1 min
+[18:56:20] Procesando fuente: CNPV 2018 (PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX)
+[18:56:20]   Hojas encontradas: 27
+[18:56:20]   Hoja 'Índice': 0 variables devueltas
+[18:56:20]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[18:56:22]   Hoja '1PD': 0 variables devueltas
+[18:56:22]   ADVERTENCIA: Hoja '1PD' devolvió 0 variables
+[18:56:38]   Hoja '1PM': 0 variables devueltas
+[18:56:38]   ADVERTENCIA: Hoja '1PM' devolvió 0 variables
+[18:56:38]   Hoja '1.1PD': 0 variables devueltas
+[18:56:38]   ADVERTENCIA: Hoja '1.1PD' devolvió 0 variables
+[18:56:42]   Hoja '1.1PM': 0 variables devueltas
+[18:56:42]   ADVERTENCIA: Hoja '1.1PM' devolvió 0 variables
+[18:56:42]   Hoja '2PD': 0 variables devueltas
+[18:56:42]   ADVERTENCIA: Hoja '2PD' devolvió 0 variables
+[18:56:48]   Hoja '2PM': 0 variables devueltas
+[18:56:48]   ADVERTENCIA: Hoja '2PM' devolvió 0 variables
+[18:56:49]   Hoja '2.1PD': 0 variables devueltas
+[18:56:49]   ADVERTENCIA: Hoja '2.1PD' devolvió 0 variables
+[18:56:55]   Hoja '2.1PM': 0 variables devueltas
+[18:56:55]   ADVERTENCIA: Hoja '2.1PM' devolvió 0 variables
+[18:56:56]   Hoja '3PD': 0 variables devueltas
+[18:56:56]   ADVERTENCIA: Hoja '3PD' devolvió 0 variables
+[18:56:59]   Hoja '3PM': 0 variables devueltas
+[18:56:59]   ADVERTENCIA: Hoja '3PM' devolvió 0 variables
+[18:57:36]   Hoja '4PD': 0 variables devueltas
+[18:57:36]   ADVERTENCIA: Hoja '4PD' devolvió 0 variables
+[19:11:31] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[19:11:31] Fecha y hora: 2026-09-22 19:11:31
+[19:11:31] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[19:11:31] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[19:11:31] ETAPA A: Recopilando metadatos de archivos
+[19:11:31] Encontrados 6 archivos en datos/
+[19:11:31] Inventario guardado: 6 archivos
+[19:11:31] ETAPA B: Procesamiento de variables por fuente
+[19:11:31] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[19:11:31]   Hojas encontradas: 6
+[19:11:32]   Hoja '2_IPM Mpio y Dpt': 0 variables devueltas
+[19:11:32]   ADVERTENCIA: Hoja '2_IPM Mpio y Dpt' devolvió 0 variables
+[19:11:32]   Hoja '4_IPM Mpio dominios': 0 variables devueltas
+[19:11:32]   ADVERTENCIA: Hoja '4_IPM Mpio dominios' devolvió 0 variables
+[19:11:33]   Hoja '6_Privaciones IPM Dpt-Mpio': 0 variables devueltas
+[19:11:33]   ADVERTENCIA: Hoja '6_Privaciones IPM Dpt-Mpio' devolvió 0 variables
+[19:11:34]   Hoja '8_Privaciones Mpio dominio': 0 variables devueltas
+[19:11:34]   ADVERTENCIA: Hoja '8_Privaciones Mpio dominio' devolvió 0 variables
+[19:11:35]   Hoja 'TB_REF': 0 variables devueltas
+[19:11:35]   ADVERTENCIA: Hoja 'TB_REF' devolvió 0 variables
+[19:11:35]   Hoja 'Visor': 0 variables devueltas
+[19:11:35]   ADVERTENCIA: Hoja 'Visor' devolvió 0 variables
+[19:11:35]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (0 variables)
+[19:11:35]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.xlsx
+[19:11:35]   Fuente completada en 0.1 min
+[19:11:35] ADVERTENCIA: Archivo no encontrado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos/DIVIPOLA-_Codigos_municipios_20260917.csv
+[19:11:35] Procesando fuente: CNPV 2018 (HOGARES_Cuadros_CNPV_2018.XLSX)
+[19:11:35]   Hojas encontradas: 7
+[19:11:35]   Hoja 'Índice': 0 variables devueltas
+[19:11:35]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:11:36]   Hoja '1HD': 0 variables devueltas
+[19:11:36]   ADVERTENCIA: Hoja '1HD' devolvió 0 variables
+[19:11:36]   Hoja '1HM': 0 variables devueltas
+[19:11:36]   ADVERTENCIA: Hoja '1HM' devolvió 0 variables
+[19:11:36]   Hoja '2HD': 0 variables devueltas
+[19:11:36]   ADVERTENCIA: Hoja '2HD' devolvió 0 variables
+[19:11:37]   Hoja '2HM': 0 variables devueltas
+[19:11:37]   ADVERTENCIA: Hoja '2HM' devolvió 0 variables
+[19:11:37]   Hoja '3HD': 0 variables devueltas
+[19:11:37]   ADVERTENCIA: Hoja '3HD' devolvió 0 variables
+[19:11:38]   Hoja '3HM': 0 variables devueltas
+[19:11:38]   ADVERTENCIA: Hoja '3HM' devolvió 0 variables
+[19:11:38]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.csv (0 variables)
+[19:11:38]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.xlsx
+[19:11:38]   Fuente completada en 0 min
+[19:11:38] Procesando fuente: CNPV 2018 (PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx)
+[19:11:38]   Hojas encontradas: 37
+[19:11:38]   Hoja 'Índice': 0 variables devueltas
+[19:11:38]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:11:38]   Hoja '1PD': 0 variables devueltas
+[19:11:38]   ADVERTENCIA: Hoja '1PD' devolvió 0 variables
+[19:11:39]   Hoja '1PM': 0 variables devueltas
+[19:11:39]   ADVERTENCIA: Hoja '1PM' devolvió 0 variables
+[19:11:40]   Hoja '2PT': 0 variables devueltas
+[19:11:40]   ADVERTENCIA: Hoja '2PT' devolvió 0 variables
+[19:11:40]   Hoja '3PD': 0 variables devueltas
+[19:11:40]   ADVERTENCIA: Hoja '3PD' devolvió 0 variables
+[19:11:44]   Hoja '3PM': 0 variables devueltas
+[19:11:44]   ADVERTENCIA: Hoja '3PM' devolvió 0 variables
+[19:11:46]   Hoja '4PD': 0 variables devueltas
+[19:11:46]   ADVERTENCIA: Hoja '4PD' devolvió 0 variables
+[19:11:50]   Hoja '4PM': 0 variables devueltas
+[19:11:50]   ADVERTENCIA: Hoja '4PM' devolvió 0 variables
+[19:11:51]   Hoja '5.1PD': 0 variables devueltas
+[19:11:51]   ADVERTENCIA: Hoja '5.1PD' devolvió 0 variables
+[19:11:54]   Hoja '5.1PM': 0 variables devueltas
+[19:11:54]   ADVERTENCIA: Hoja '5.1PM' devolvió 0 variables
+[19:11:54]   Hoja '5.2PD': 0 variables devueltas
+[19:11:54]   ADVERTENCIA: Hoja '5.2PD' devolvió 0 variables
+[19:11:59]   Hoja '5.2PM': 0 variables devueltas
+[19:11:59]   ADVERTENCIA: Hoja '5.2PM' devolvió 0 variables
+[19:12:00]   Hoja '6PD': 0 variables devueltas
+[19:12:00]   ADVERTENCIA: Hoja '6PD' devolvió 0 variables
+[19:12:01]   Hoja '7PP': 0 variables devueltas
+[19:12:01]   ADVERTENCIA: Hoja '7PP' devolvió 0 variables
+[19:12:01]   Hoja '8PD': 0 variables devueltas
+[19:12:01]   ADVERTENCIA: Hoja '8PD' devolvió 0 variables
+[19:12:02]   Hoja '9PD': 0 variables devueltas
+[19:12:02]   ADVERTENCIA: Hoja '9PD' devolvió 0 variables
+[19:12:02]   Hoja '10PD ': 0 variables devueltas
+[19:12:02]   ADVERTENCIA: Hoja '10PD ' devolvió 0 variables
+[19:12:03]   Hoja '11PD': 0 variables devueltas
+[19:12:03]   ADVERTENCIA: Hoja '11PD' devolvió 0 variables
+[19:12:04]   Hoja '11PP ': 0 variables devueltas
+[19:12:04]   ADVERTENCIA: Hoja '11PP ' devolvió 0 variables
+[19:12:07]   Hoja '12PD': 0 variables devueltas
+[19:12:07]   ADVERTENCIA: Hoja '12PD' devolvió 0 variables
+[19:12:09]   Hoja '12PM': 0 variables devueltas
+[19:12:09]   ADVERTENCIA: Hoja '12PM' devolvió 0 variables
+[19:12:10]   Hoja '13PD': 0 variables devueltas
+[19:12:10]   ADVERTENCIA: Hoja '13PD' devolvió 0 variables
+[19:12:11]   Hoja '13PM': 0 variables devueltas
+[19:12:11]   ADVERTENCIA: Hoja '13PM' devolvió 0 variables
+[19:12:16]   Hoja '14PD': 0 variables devueltas
+[19:12:16]   ADVERTENCIA: Hoja '14PD' devolvió 0 variables
+[19:12:23]   Hoja '14PM': 0 variables devueltas
+[19:12:23]   ADVERTENCIA: Hoja '14PM' devolvió 0 variables
+[19:12:24]   Hoja '15PD': 0 variables devueltas
+[19:12:24]   ADVERTENCIA: Hoja '15PD' devolvió 0 variables
+[19:12:25]   Hoja '15PM': 0 variables devueltas
+[19:12:25]   ADVERTENCIA: Hoja '15PM' devolvió 0 variables
+[19:12:26]   Hoja '16PD': 0 variables devueltas
+[19:12:26]   ADVERTENCIA: Hoja '16PD' devolvió 0 variables
+[19:12:27]   Hoja '16PM': 0 variables devueltas
+[19:12:27]   ADVERTENCIA: Hoja '16PM' devolvió 0 variables
+[19:12:27]   Hoja '17PD': 0 variables devueltas
+[19:12:27]   ADVERTENCIA: Hoja '17PD' devolvió 0 variables
+[19:12:28]   Hoja '17PM': 0 variables devueltas
+[19:12:28]   ADVERTENCIA: Hoja '17PM' devolvió 0 variables
+[19:12:29]   Hoja '18PD': 0 variables devueltas
+[19:12:29]   ADVERTENCIA: Hoja '18PD' devolvió 0 variables
+[19:12:30]   Hoja '18PM': 0 variables devueltas
+[19:12:30]   ADVERTENCIA: Hoja '18PM' devolvió 0 variables
+[19:12:31]   Hoja '19PD': 0 variables devueltas
+[19:12:31]   ADVERTENCIA: Hoja '19PD' devolvió 0 variables
+[19:12:33]   Hoja '19PM': 0 variables devueltas
+[19:12:33]   ADVERTENCIA: Hoja '19PM' devolvió 0 variables
+[19:12:33]   Hoja '20PD': 0 variables devueltas
+[19:12:33]   ADVERTENCIA: Hoja '20PD' devolvió 0 variables
+[19:12:33]   Hoja '20.1PD': 0 variables devueltas
+[19:12:33]   ADVERTENCIA: Hoja '20.1PD' devolvió 0 variables
+[19:12:33]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.csv (0 variables)
+[19:12:34]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.xlsx
+[19:12:34]   Fuente completada en 0.9 min
+[19:12:34] Procesando fuente: CNPV 2018 (PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX)
+[19:12:34]   Hojas encontradas: 27
+[19:12:34]   Hoja 'Índice': 0 variables devueltas
+[19:12:34]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:12:36]   Hoja '1PD': 0 variables devueltas
+[19:12:36]   ADVERTENCIA: Hoja '1PD' devolvió 0 variables
+[19:14:37]   Hoja '1PM': 0 variables devueltas
+[19:14:37]   ADVERTENCIA: Hoja '1PM' devolvió 0 variables
+[19:14:37]   Hoja '1.1PD': 0 variables devueltas
+[19:14:37]   ADVERTENCIA: Hoja '1.1PD' devolvió 0 variables
+[19:14:40]   Hoja '1.1PM': 0 variables devueltas
+[19:14:40]   ADVERTENCIA: Hoja '1.1PM' devolvió 0 variables
+[19:14:41]   Hoja '2PD': 0 variables devueltas
+[19:14:41]   ADVERTENCIA: Hoja '2PD' devolvió 0 variables
+[19:14:46]   Hoja '2PM': 0 variables devueltas
+[19:14:46]   ADVERTENCIA: Hoja '2PM' devolvió 0 variables
+[19:14:46]   Hoja '2.1PD': 0 variables devueltas
+[19:14:46]   ADVERTENCIA: Hoja '2.1PD' devolvió 0 variables
+[19:14:52]   Hoja '2.1PM': 0 variables devueltas
+[19:14:52]   ADVERTENCIA: Hoja '2.1PM' devolvió 0 variables
+[19:14:53]   Hoja '3PD': 0 variables devueltas
+[19:14:53]   ADVERTENCIA: Hoja '3PD' devolvió 0 variables
+[19:14:56]   Hoja '3PM': 0 variables devueltas
+[19:14:56]   ADVERTENCIA: Hoja '3PM' devolvió 0 variables
+[19:15:23]   Hoja '4PD': 0 variables devueltas
+[19:15:23]   ADVERTENCIA: Hoja '4PD' devolvió 0 variables
+[19:15:25]   Hoja '4PM': 0 variables devueltas
+[19:15:25]   ADVERTENCIA: Hoja '4PM' devolvió 0 variables
+[19:15:26]   Hoja '5PD': 0 variables devueltas
+[19:15:26]   ADVERTENCIA: Hoja '5PD' devolvió 0 variables
+[19:15:26]   Hoja '5PM': 0 variables devueltas
+[19:15:26]   ADVERTENCIA: Hoja '5PM' devolvió 0 variables
+[19:15:27]   Hoja '6PD': 0 variables devueltas
+[19:15:27]   ADVERTENCIA: Hoja '6PD' devolvió 0 variables
+[19:15:32]   Hoja '6PM': 0 variables devueltas
+[19:15:32]   ADVERTENCIA: Hoja '6PM' devolvió 0 variables
+[19:15:32]   Hoja '7PD': 0 variables devueltas
+[19:15:32]   ADVERTENCIA: Hoja '7PD' devolvió 0 variables
+[19:15:37]   Hoja '7PM': 0 variables devueltas
+[19:15:37]   ADVERTENCIA: Hoja '7PM' devolvió 0 variables
+[19:15:37]   Hoja '8PD': 0 variables devueltas
+[19:15:37]   ADVERTENCIA: Hoja '8PD' devolvió 0 variables
+[19:15:39]   Hoja '8PM': 0 variables devueltas
+[19:15:39]   ADVERTENCIA: Hoja '8PM' devolvió 0 variables
+[19:15:40]   Hoja '9HD': 0 variables devueltas
+[19:15:40]   ADVERTENCIA: Hoja '9HD' devolvió 0 variables
+[19:15:41]   Hoja '9HM': 0 variables devueltas
+[19:15:41]   ADVERTENCIA: Hoja '9HM' devolvió 0 variables
+[19:15:41]   Hoja '10HD': 0 variables devueltas
+[19:15:41]   ADVERTENCIA: Hoja '10HD' devolvió 0 variables
+[19:15:41]   Hoja '10HM': 0 variables devueltas
+[19:15:41]   ADVERTENCIA: Hoja '10HM' devolvió 0 variables
+[19:15:42]   Hoja '11HD': 0 variables devueltas
+[19:15:42]   ADVERTENCIA: Hoja '11HD' devolvió 0 variables
+[19:15:42]   Hoja '11HM': 0 variables devueltas
+[19:15:42]   ADVERTENCIA: Hoja '11HM' devolvió 0 variables
+[19:15:42]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.csv (0 variables)
+[19:15:42]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.xlsx
+[19:15:42]   Fuente completada en 3.1 min
+[19:15:42] Procesando fuente: CNPV 2018 (VIVIENDAS_Cuadros_CNPV_2018.XLSX)
+[19:15:42]   Hojas encontradas: 21
+[19:15:42]   Hoja 'Índice': 0 variables devueltas
+[19:15:42]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:15:42]   Hoja '1V_DPTO': 0 variables devueltas
+[19:15:42]   ADVERTENCIA: Hoja '1V_DPTO' devolvió 0 variables
+[19:15:43]   Hoja '1V_MPIO': 0 variables devueltas
+[19:15:43]   ADVERTENCIA: Hoja '1V_MPIO' devolvió 0 variables
+[19:15:44]   Hoja '2V_DPTO': 0 variables devueltas
+[19:15:44]   ADVERTENCIA: Hoja '2V_DPTO' devolvió 0 variables
+[19:15:45]   Hoja '2V_MPIO': 0 variables devueltas
+[19:15:45]   ADVERTENCIA: Hoja '2V_MPIO' devolvió 0 variables
+[19:15:46]   Hoja '3V_DPTO': 0 variables devueltas
+[19:15:46]   ADVERTENCIA: Hoja '3V_DPTO' devolvió 0 variables
+[19:15:46]   Hoja '3V_MPIO': 0 variables devueltas
+[19:15:46]   ADVERTENCIA: Hoja '3V_MPIO' devolvió 0 variables
+[19:15:47]   Hoja '4V_DPTO': 0 variables devueltas
+[19:15:47]   ADVERTENCIA: Hoja '4V_DPTO' devolvió 0 variables
+[19:15:48]   Hoja '4V_MPIO': 0 variables devueltas
+[19:15:48]   ADVERTENCIA: Hoja '4V_MPIO' devolvió 0 variables
+[19:15:49]   Hoja '5V_DPTO': 0 variables devueltas
+[19:15:49]   ADVERTENCIA: Hoja '5V_DPTO' devolvió 0 variables
+[19:15:49]   Hoja '5V_MPIO': 0 variables devueltas
+[19:15:49]   ADVERTENCIA: Hoja '5V_MPIO' devolvió 0 variables
+[19:15:50]   Hoja '6V_DPTO': 0 variables devueltas
+[19:15:50]   ADVERTENCIA: Hoja '6V_DPTO' devolvió 0 variables
+[19:15:51]   Hoja '6V_MPIO': 0 variables devueltas
+[19:15:51]   ADVERTENCIA: Hoja '6V_MPIO' devolvió 0 variables
+[19:15:51]   Hoja '7V_DPTO': 0 variables devueltas
+[19:15:51]   ADVERTENCIA: Hoja '7V_DPTO' devolvió 0 variables
+[19:15:52]   Hoja '7V_MPIO': 0 variables devueltas
+[19:15:52]   ADVERTENCIA: Hoja '7V_MPIO' devolvió 0 variables
+[19:15:53]   Hoja '8V_DPTO': 0 variables devueltas
+[19:15:53]   ADVERTENCIA: Hoja '8V_DPTO' devolvió 0 variables
+[19:15:54]   Hoja '8V_MPIO': 0 variables devueltas
+[19:15:54]   ADVERTENCIA: Hoja '8V_MPIO' devolvió 0 variables
+[19:15:54]   Hoja '9V_DPTO': 0 variables devueltas
+[19:15:54]   ADVERTENCIA: Hoja '9V_DPTO' devolvió 0 variables
+[19:15:54]   Hoja '9V_MPIO': 0 variables devueltas
+[19:15:54]   ADVERTENCIA: Hoja '9V_MPIO' devolvió 0 variables
+[19:15:55]   Hoja '10V_DPTO': 0 variables devueltas
+[19:15:55]   ADVERTENCIA: Hoja '10V_DPTO' devolvió 0 variables
+[19:15:55]   Hoja '10V_MPIO': 0 variables devueltas
+[19:15:55]   ADVERTENCIA: Hoja '10V_MPIO' devolvió 0 variables
+[19:15:55]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.csv (0 variables)
+[19:15:55]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.xlsx
+[19:15:55]   Fuente completada en 0.2 min
+[19:15:55] ETAPA C: Guardando diccionario global
+[19:15:55] ADVERTENCIA: Diccionario global vacío
+[19:15:55] ETAPA D: Auditoría territorial
+[19:15:55] ADVERTENCIA: DIVIPOLA no encontrado para auditoría territorial
+[19:15:55] ETAPA E: Auditoría especial IPM
+[19:15:56] Auditoría IPM guardada: 10 indicadores
+[19:15:56] ETAPA F: Matriz de solapamiento IPM-CNPV
+[19:15:56] Matriz de solapamiento inicializada (requiere análisis manual)
+[19:15:56] ETAPA G: Banco de candidatos IVS
+[19:15:56] ADVERTENCIA: columna candidato_ivs no encontrada en diccionario_global, agregando...
+[19:15:56] Banco de candidatos guardado: 0 variables
+[19:15:56] ETAPA H: Generando informe de calidad
+[19:15:56] Informe de calidad generado
+[19:15:56] ETAPA I: Generando documentación metodológica
+[19:15:56] ETAPA J: Generando reporte final de ejecución
+[19:15:56] Reporte final guardado
+[19:15:56] === AUDITORÍA v2 COMPLETADA ===
+[19:15:56] Variables totales documentadas: 0
+[19:15:56] Fuentes procesadas: 5
+[19:22:13] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[19:22:13] Fecha y hora: 2026-09-22 19:22:13
+[19:22:13] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[19:22:13] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[19:22:13] ETAPA A: Recopilando metadatos de archivos
+[19:22:13] Encontrados 6 archivos en datos/
+[19:22:14] Inventario guardado: 6 archivos
+[19:22:14] ETAPA B: Procesamiento de variables por fuente
+[19:22:14] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[19:22:14]   Hojas encontradas: 6
+[19:22:15]   Hoja '2_IPM Mpio y Dpt': 3 variables devueltas
+[19:22:15]   Hoja '4_IPM Mpio dominios': 5 variables devueltas
+[19:22:16]   Hoja '6_Privaciones IPM Dpt-Mpio': 17 variables devueltas
+[19:22:18]   Hoja '8_Privaciones Mpio dominio': 47 variables devueltas
+[19:22:18]   Hoja 'TB_REF': 8 variables devueltas
+[19:22:19]   Hoja 'Visor': 5 variables devueltas
+[19:22:19]   Enriqueciendo 85 variables con clasificación estadística...
+[19:22:19]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (85 variables)
+[19:22:19]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.xlsx
+[19:22:19]   Fuente completada en 0.1 min
+[19:22:19] ADVERTENCIA: Archivo no encontrado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos/DIVIPOLA-_Codigos_municipios_20260917.csv
+[19:22:19] Procesando fuente: CNPV 2018 (HOGARES_Cuadros_CNPV_2018.XLSX)
+[19:22:19]   Hojas encontradas: 7
+[19:22:19]   Hoja 'Índice': 0 variables devueltas
+[19:22:19]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:22:19]   Hoja '1HD': 13 variables devueltas
+[19:22:20]   Hoja '1HM': 14 variables devueltas
+[19:22:21]   Hoja '2HD': 13 variables devueltas
+[19:22:21]   Hoja '2HM': 14 variables devueltas
+[19:22:22]   Hoja '3HD': 15 variables devueltas
+[19:22:23]   Hoja '3HM': 16 variables devueltas
+[19:22:23]   Enriqueciendo 85 variables con clasificación estadística...
+[19:22:23]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.csv (85 variables)
+[19:22:23]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.xlsx
+[19:22:23]   Fuente completada en 0.1 min
+[19:22:23] Procesando fuente: CNPV 2018 (PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx)
+[19:22:23]   Hojas encontradas: 37
+[19:22:23]   Hoja 'Índice': 0 variables devueltas
+[19:22:23]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:22:23]   Hoja '1PD': 0 variables devueltas
+[19:22:23]   ADVERTENCIA: Hoja '1PD' devolvió 0 variables
+[19:22:24]   Hoja '1PM': 0 variables devueltas
+[19:22:24]   ADVERTENCIA: Hoja '1PM' devolvió 0 variables
+[19:22:25]   Hoja '2PT': 17 variables devueltas
+[19:22:26]   Hoja '3PD': 15 variables devueltas
+[19:22:30]   Hoja '3PM': 0 variables devueltas
+[19:22:30]   ADVERTENCIA: Hoja '3PM' devolvió 0 variables
+[19:22:32]   Hoja '4PD': 20 variables devueltas
+[19:22:38]   Hoja '4PM': 21 variables devueltas
+[19:22:39]   Hoja '5.1PD': 20 variables devueltas
+[19:22:42]   Hoja '5.1PM': 0 variables devueltas
+[19:22:42]   ADVERTENCIA: Hoja '5.1PM' devolvió 0 variables
+[19:22:43]   Hoja '5.2PD': 21 variables devueltas
+[19:22:48]   Hoja '5.2PM': 0 variables devueltas
+[19:22:48]   ADVERTENCIA: Hoja '5.2PM' devolvió 0 variables
+[19:22:50]   Hoja '6PD': 39 variables devueltas
+[19:22:50]   Hoja '7PP': 14 variables devueltas
+[19:22:51]   Hoja '8PD': 7 variables devueltas
+[19:22:52]   Hoja '9PD': 39 variables devueltas
+[19:22:53]   Hoja '10PD ': 15 variables devueltas
+[19:22:54]   Hoja '11PD': 39 variables devueltas
+[19:22:55]   Hoja '11PP ': 15 variables devueltas
+[19:22:59]   Hoja '12PD': 34 variables devueltas
+[19:23:01]   Hoja '12PM': 35 variables devueltas
+[19:23:03]   Hoja '13PD': 34 variables devueltas
+[19:23:04]   Hoja '13PM': 35 variables devueltas
+[19:23:10]   Hoja '14PD': 63 variables devueltas
+[19:23:19]   Hoja '14PM': 0 variables devueltas
+[19:23:19]   ADVERTENCIA: Hoja '14PM' devolvió 0 variables
+[19:23:20]   Hoja '15PD': 13 variables devueltas
+[19:23:21]   Hoja '15PM': 0 variables devueltas
+[19:23:21]   ADVERTENCIA: Hoja '15PM' devolvió 0 variables
+[19:23:22]   Hoja '16PD': 15 variables devueltas
+[19:23:23]   Hoja '16PM': 16 variables devueltas
+[19:23:24]   Hoja '17PD': 19 variables devueltas
+[19:23:25]   Hoja '17PM': 20 variables devueltas
+[19:23:26]   Hoja '18PD': 15 variables devueltas
+[19:23:28]   Hoja '18PM': 16 variables devueltas
+[19:23:29]   Hoja '19PD': 20 variables devueltas
+[19:23:31]   Hoja '19PM': 0 variables devueltas
+[19:23:31]   ADVERTENCIA: Hoja '19PM' devolvió 0 variables
+[19:23:32]   Hoja '20PD': 17 variables devueltas
+[19:23:32]   Hoja '20.1PD': 0 variables devueltas
+[19:23:32]   ADVERTENCIA: Hoja '20.1PD' devolvió 0 variables
+[19:23:32]   Enriqueciendo 634 variables con clasificación estadística...
+[19:23:32]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.csv (634 variables)
+[19:23:32]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.xlsx
+[19:23:32]   Fuente completada en 1.2 min
+[19:23:32] Procesando fuente: CNPV 2018 (PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX)
+[19:23:32]   Hojas encontradas: 27
+[19:23:32]   Hoja 'Índice': 0 variables devueltas
+[19:23:32]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:23:35]   Hoja '1PD': 52 variables devueltas
+[19:25:34]   Hoja '1PM': 0 variables devueltas
+[19:25:34]   ADVERTENCIA: Hoja '1PM' devolvió 0 variables
+[19:25:35]   Hoja '1.1PD': 8 variables devueltas
+[19:25:38]   Hoja '1.1PM': 0 variables devueltas
+[19:25:38]   ADVERTENCIA: Hoja '1.1PM' devolvió 0 variables
+[19:25:38]   Hoja '2PD': 15 variables devueltas
+[19:25:43]   Hoja '2PM': 0 variables devueltas
+[19:25:43]   ADVERTENCIA: Hoja '2PM' devolvió 0 variables
+[19:25:44]   Hoja '2.1PD': 17 variables devueltas
+[19:25:50]   Hoja '2.1PM': 0 variables devueltas
+[19:25:50]   ADVERTENCIA: Hoja '2.1PM' devolvió 0 variables
+[19:25:51]   Hoja '3PD': 36 variables devueltas
+[19:25:55]   Hoja '3PM': 37 variables devueltas
+[19:26:20]   Hoja '4PD': 36 variables devueltas
+[19:26:23]   Hoja '4PM': 37 variables devueltas
+[19:26:23]   Hoja '5PD': 14 variables devueltas
+[19:26:24]   Hoja '5PM': 15 variables devueltas
+[19:26:25]   Hoja '6PD': 15 variables devueltas
+[19:26:30]   Hoja '6PM': 0 variables devueltas
+[19:26:30]   ADVERTENCIA: Hoja '6PM' devolvió 0 variables
+[19:26:31]   Hoja '7PD': 13 variables devueltas
+[19:26:35]   Hoja '7PM': 0 variables devueltas
+[19:26:35]   ADVERTENCIA: Hoja '7PM' devolvió 0 variables
+[19:26:36]   Hoja '8PD': 17 variables devueltas
+[19:26:38]   Hoja '8PM': 0 variables devueltas
+[19:26:38]   ADVERTENCIA: Hoja '8PM' devolvió 0 variables
+[19:26:38]   Hoja '9HD': 21 variables devueltas
+[19:26:40]   Hoja '9HM': 22 variables devueltas
+[19:26:40]   Hoja '10HD': 0 variables devueltas
+[19:26:40]   ADVERTENCIA: Hoja '10HD' devolvió 0 variables
+[19:26:40]   Hoja '10HM': 0 variables devueltas
+[19:26:40]   ADVERTENCIA: Hoja '10HM' devolvió 0 variables
+[19:26:40]   Hoja '11HD': 0 variables devueltas
+[19:26:40]   ADVERTENCIA: Hoja '11HD' devolvió 0 variables
+[19:26:41]   Hoja '11HM': 0 variables devueltas
+[19:26:41]   ADVERTENCIA: Hoja '11HM' devolvió 0 variables
+[19:26:41]   Enriqueciendo 355 variables con clasificación estadística...
+[19:26:41]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.csv (355 variables)
+[19:26:41]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.xlsx
+[19:26:41]   Fuente completada en 3.1 min
+[19:26:41] Procesando fuente: CNPV 2018 (VIVIENDAS_Cuadros_CNPV_2018.XLSX)
+[19:26:41]   Hojas encontradas: 21
+[19:26:41]   Hoja 'Índice': 0 variables devueltas
+[19:26:41]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:26:42]   Hoja '1V_DPTO': 8 variables devueltas
+[19:26:42]   Hoja '1V_MPIO': 9 variables devueltas
+[19:26:44]   Hoja '2V_DPTO': 30 variables devueltas
+[19:26:45]   Hoja '2V_MPIO': 31 variables devueltas
+[19:26:46]   Hoja '3V_DPTO': 22 variables devueltas
+[19:26:47]   Hoja '3V_MPIO': 23 variables devueltas
+[19:26:48]   Hoja '4V_DPTO': 30 variables devueltas
+[19:26:50]   Hoja '4V_MPIO': 31 variables devueltas
+[19:26:50]   Hoja '5V_DPTO': 9 variables devueltas
+[19:26:51]   Hoja '5V_MPIO': 10 variables devueltas
+[19:26:51]   Hoja '6V_DPTO': 13 variables devueltas
+[19:26:53]   Hoja '6V_MPIO': 43 variables devueltas
+[19:26:54]   Hoja '7V_DPTO': 10 variables devueltas
+[19:26:55]   Hoja '7V_MPIO': 11 variables devueltas
+[19:26:56]   Hoja '8V_DPTO': 23 variables devueltas
+[19:26:57]   Hoja '8V_MPIO': 24 variables devueltas
+[19:26:57]   Hoja '9V_DPTO': 10 variables devueltas
+[19:26:58]   Hoja '9V_MPIO': 11 variables devueltas
+[19:26:58]   Hoja '10V_DPTO': 12 variables devueltas
+[19:26:59]   Hoja '10V_MPIO': 13 variables devueltas
+[19:26:59]   Enriqueciendo 373 variables con clasificación estadística...
+[19:26:59]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.csv (373 variables)
+[19:26:59]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.xlsx
+[19:26:59]   Fuente completada en 0.3 min
+[19:26:59] ETAPA C: Guardando diccionario global
+[19:26:59] Diccionario global guardado: 1532 variables
+[19:26:59] ETAPA D: Auditoría territorial
+[19:26:59] ADVERTENCIA: DIVIPOLA no encontrado para auditoría territorial
+[19:26:59] ETAPA E: Auditoría especial IPM
+[19:27:00] Auditoría IPM guardada: 10 indicadores
+[19:27:00] ETAPA F: Matriz de solapamiento IPM-CNPV
+[19:27:00] Matriz de solapamiento inicializada (requiere análisis manual)
+[19:27:00] ETAPA G: Banco de candidatos IVS
+[19:27:00] Banco de candidatos guardado: 0 variables
+[19:27:00] ETAPA H: Generando informe de calidad
+[19:27:01] Informe de calidad generado
+[19:27:01] ETAPA I: Generando documentación metodológica
+[19:27:01] ETAPA J: Generando reporte final de ejecución
+[19:27:01] Reporte final guardado
+[19:27:01] === AUDITORÍA v2 COMPLETADA ===
+[19:27:01] Variables totales documentadas: 1532
+[19:27:01] Fuentes procesadas: 5
+[19:29:40] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[19:29:40] Fecha y hora: 2026-09-22 19:29:40
+[19:29:40] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[19:29:40] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[19:29:40] ETAPA A: Recopilando metadatos de archivos
+[19:29:40] Encontrados 6 archivos en datos/
+[19:29:40] Inventario guardado: 6 archivos
+[19:29:40] ETAPA B: Procesamiento de variables por fuente
+[19:29:40] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[19:29:40]   Hojas encontradas: 6
+[19:29:40]   Hoja '2_IPM Mpio y Dpt': 3 variables devueltas
+[19:29:41]   Hoja '4_IPM Mpio dominios': 5 variables devueltas
+[19:29:42]   Hoja '6_Privaciones IPM Dpt-Mpio': 17 variables devueltas
+[19:29:43]   Hoja '8_Privaciones Mpio dominio': 47 variables devueltas
+[19:29:44]   Hoja 'TB_REF': 8 variables devueltas
+[19:29:44]   Hoja 'Visor': 5 variables devueltas
+[19:29:44]   Enriqueciendo 85 variables con clasificación estadística...
+[19:29:44]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (85 variables)
+[19:29:44]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.xlsx
+[19:29:44]   Fuente completada en 0.1 min
+[19:29:44] Procesando fuente: DIVIPOLA (DIVIPOLA-_Códigos_municipios_20260917.csv)
+[19:32:53] === INICIO DE AUDITORÍA ROBUSTA v2 ===
+[19:32:53] Fecha y hora: 2026-09-22 19:32:53
+[19:32:53] Directorio de proyecto: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent
+[19:32:53] Directorio de datos: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/datos
+[19:32:53] ETAPA A: Recopilando metadatos de archivos
+[19:32:53] Encontrados 6 archivos en datos/
+[19:32:53] Inventario guardado: 6 archivos
+[19:32:53] ETAPA B: Procesamiento de variables por fuente
+[19:32:53] Procesando fuente: DANE/IPM (anexo-censal-pobreza-municipal-2018.xlsx)
+[19:32:53]   Hojas encontradas: 6
+[19:32:53]   Hoja '2_IPM Mpio y Dpt': 3 variables devueltas
+[19:32:54]   Hoja '4_IPM Mpio dominios': 5 variables devueltas
+[19:32:55]   Hoja '6_Privaciones IPM Dpt-Mpio': 17 variables devueltas
+[19:32:56]   Hoja '8_Privaciones Mpio dominio': 47 variables devueltas
+[19:32:57]   Hoja 'TB_REF': 8 variables devueltas
+[19:32:57]   Hoja 'Visor': 5 variables devueltas
+[19:32:57]   Enriqueciendo 85 variables con clasificación estadística...
+[19:32:57]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.csv (85 variables)
+[19:32:57]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/ipm/diccionario_ipm.xlsx
+[19:32:57]   Fuente completada en 0.1 min
+[19:32:57] Procesando fuente: DIVIPOLA (DIVIPOLA-_Códigos_municipios_20260917.csv)
+[19:32:57]   Enriqueciendo 7 variables con clasificación estadística...
+[19:32:57]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/divipola/diccionario_divipola.csv (7 variables)
+[19:32:57]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/divipola/diccionario_divipola.xlsx
+[19:32:57]   Fuente completada en 0 min
+[19:32:57] Procesando fuente: CNPV 2018 (HOGARES_Cuadros_CNPV_2018.XLSX)
+[19:32:57]   Hojas encontradas: 7
+[19:32:57]   Hoja 'Índice': 0 variables devueltas
+[19:32:57]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:32:58]   Hoja '1HD': 13 variables devueltas
+[19:32:58]   Hoja '1HM': 14 variables devueltas
+[19:32:59]   Hoja '2HD': 13 variables devueltas
+[19:33:00]   Hoja '2HM': 14 variables devueltas
+[19:33:00]   Hoja '3HD': 15 variables devueltas
+[19:33:01]   Hoja '3HM': 16 variables devueltas
+[19:33:01]   Enriqueciendo 85 variables con clasificación estadística...
+[19:33:01]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.csv (85 variables)
+[19:33:01]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/hogares/diccionario_hogares.xlsx
+[19:33:01]   Fuente completada en 0.1 min
+[19:33:01] Procesando fuente: CNPV 2018 (PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx)
+[19:33:01]   Hojas encontradas: 37
+[19:33:01]   Hoja 'Índice': 0 variables devueltas
+[19:33:01]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:33:01]   Hoja '1PD': 0 variables devueltas
+[19:33:01]   ADVERTENCIA: Hoja '1PD' devolvió 0 variables
+[19:33:02]   Hoja '1PM': 0 variables devueltas
+[19:33:02]   ADVERTENCIA: Hoja '1PM' devolvió 0 variables
+[19:33:03]   Hoja '2PT': 17 variables devueltas
+[19:33:04]   Hoja '3PD': 15 variables devueltas
+[19:33:08]   Hoja '3PM': 16 variables devueltas
+[19:33:10]   Hoja '4PD': 20 variables devueltas
+[19:33:15]   Hoja '4PM': 21 variables devueltas
+[19:33:16]   Hoja '5.1PD': 20 variables devueltas
+[19:33:19]   Hoja '5.1PM': 21 variables devueltas
+[19:33:20]   Hoja '5.2PD': 21 variables devueltas
+[19:33:26]   Hoja '5.2PM': 22 variables devueltas
+[19:33:27]   Hoja '6PD': 39 variables devueltas
+[19:33:28]   Hoja '7PP': 14 variables devueltas
+[19:33:28]   Hoja '8PD': 7 variables devueltas
+[19:33:29]   Hoja '9PD': 39 variables devueltas
+[19:33:30]   Hoja '10PD ': 15 variables devueltas
+[19:33:31]   Hoja '11PD': 39 variables devueltas
+[19:33:32]   Hoja '11PP ': 15 variables devueltas
+[19:33:35]   Hoja '12PD': 34 variables devueltas
+[19:33:38]   Hoja '12PM': 35 variables devueltas
+[19:33:39]   Hoja '13PD': 34 variables devueltas
+[19:33:40]   Hoja '13PM': 35 variables devueltas
+[19:33:46]   Hoja '14PD': 63 variables devueltas
+[19:33:54]   Hoja '14PM': 71 variables devueltas
+[19:33:55]   Hoja '15PD': 13 variables devueltas
+[19:33:57]   Hoja '15PM': 14 variables devueltas
+[19:33:58]   Hoja '16PD': 15 variables devueltas
+[19:33:59]   Hoja '16PM': 16 variables devueltas
+[19:34:00]   Hoja '17PD': 19 variables devueltas
+[19:34:01]   Hoja '17PM': 20 variables devueltas
+[19:34:02]   Hoja '18PD': 15 variables devueltas
+[19:34:03]   Hoja '18PM': 16 variables devueltas
+[19:34:04]   Hoja '19PD': 20 variables devueltas
+[19:34:07]   Hoja '19PM': 21 variables devueltas
+[19:34:08]   Hoja '20PD': 17 variables devueltas
+[19:34:08]   Hoja '20.1PD': 0 variables devueltas
+[19:34:08]   ADVERTENCIA: Hoja '20.1PD' devolvió 0 variables
+[19:34:08]   Enriqueciendo 799 variables con clasificación estadística...
+[19:34:08]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.csv (799 variables)
+[19:34:08]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_demografico/diccionario_personas_demografico.xlsx
+[19:34:08]   Fuente completada en 1.1 min
+[19:34:08] Procesando fuente: CNPV 2018 (PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX)
+[19:34:08]   Hojas encontradas: 27
+[19:34:09]   Hoja 'Índice': 0 variables devueltas
+[19:34:09]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:34:11]   Hoja '1PD': 52 variables devueltas
+[19:36:02]   Hoja '1PM': 62 variables devueltas
+[19:36:02]   Hoja '1.1PD': 8 variables devueltas
+[19:36:06]   Hoja '1.1PM': 9 variables devueltas
+[19:36:06]   Hoja '2PD': 15 variables devueltas
+[19:36:13]   Hoja '2PM': 16 variables devueltas
+[19:36:13]   Hoja '2.1PD': 17 variables devueltas
+[19:36:20]   Hoja '2.1PM': 18 variables devueltas
+[19:36:22]   Hoja '3PD': 36 variables devueltas
+[19:36:26]   Hoja '3PM': 37 variables devueltas
+[19:36:47]   Hoja '4PD': 36 variables devueltas
+[19:36:50]   Hoja '4PM': 37 variables devueltas
+[19:36:50]   Hoja '5PD': 14 variables devueltas
+[19:36:51]   Hoja '5PM': 15 variables devueltas
+[19:36:52]   Hoja '6PD': 15 variables devueltas
+[19:36:58]   Hoja '6PM': 16 variables devueltas
+[19:36:59]   Hoja '7PD': 13 variables devueltas
+[19:37:04]   Hoja '7PM': 14 variables devueltas
+[19:37:05]   Hoja '8PD': 17 variables devueltas
+[19:37:07]   Hoja '8PM': 18 variables devueltas
+[19:37:08]   Hoja '9HD': 21 variables devueltas
+[19:37:09]   Hoja '9HM': 22 variables devueltas
+[19:37:10]   Hoja '10HD': 0 variables devueltas
+[19:37:10]   ADVERTENCIA: Hoja '10HD' devolvió 0 variables
+[19:37:10]   Hoja '10HM': 0 variables devueltas
+[19:37:10]   ADVERTENCIA: Hoja '10HM' devolvió 0 variables
+[19:37:10]   Hoja '11HD': 0 variables devueltas
+[19:37:10]   ADVERTENCIA: Hoja '11HD' devolvió 0 variables
+[19:37:10]   Hoja '11HM': 0 variables devueltas
+[19:37:10]   ADVERTENCIA: Hoja '11HM' devolvió 0 variables
+[19:37:10]   Enriqueciendo 508 variables con clasificación estadística...
+[19:37:11]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.csv (508 variables)
+[19:37:11]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/personas_social/diccionario_personas_social.xlsx
+[19:37:11]   Fuente completada en 3 min
+[19:37:11] Procesando fuente: CNPV 2018 (VIVIENDAS_Cuadros_CNPV_2018.XLSX)
+[19:37:11]   Hojas encontradas: 21
+[19:37:11]   Hoja 'Índice': 0 variables devueltas
+[19:37:11]   ADVERTENCIA: Hoja 'Índice' devolvió 0 variables
+[19:37:11]   Hoja '1V_DPTO': 8 variables devueltas
+[19:37:12]   Hoja '1V_MPIO': 9 variables devueltas
+[19:37:13]   Hoja '2V_DPTO': 30 variables devueltas
+[19:37:15]   Hoja '2V_MPIO': 31 variables devueltas
+[19:37:16]   Hoja '3V_DPTO': 22 variables devueltas
+[19:37:17]   Hoja '3V_MPIO': 23 variables devueltas
+[19:37:18]   Hoja '4V_DPTO': 30 variables devueltas
+[19:37:19]   Hoja '4V_MPIO': 31 variables devueltas
+[19:37:20]   Hoja '5V_DPTO': 9 variables devueltas
+[19:37:20]   Hoja '5V_MPIO': 10 variables devueltas
+[19:37:21]   Hoja '6V_DPTO': 13 variables devueltas
+[19:37:23]   Hoja '6V_MPIO': 43 variables devueltas
+[19:37:23]   Hoja '7V_DPTO': 10 variables devueltas
+[19:37:24]   Hoja '7V_MPIO': 11 variables devueltas
+[19:37:25]   Hoja '8V_DPTO': 23 variables devueltas
+[19:37:26]   Hoja '8V_MPIO': 24 variables devueltas
+[19:37:27]   Hoja '9V_DPTO': 10 variables devueltas
+[19:37:27]   Hoja '9V_MPIO': 11 variables devueltas
+[19:37:28]   Hoja '10V_DPTO': 12 variables devueltas
+[19:37:28]   Hoja '10V_MPIO': 13 variables devueltas
+[19:37:28]   Enriqueciendo 373 variables con clasificación estadística...
+[19:37:28]   Diccionario CSV guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.csv (373 variables)
+[19:37:28]   Diccionario XLSX guardado: C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent/docs/diccionario/viviendas/diccionario_viviendas.xlsx
+[19:37:28]   Fuente completada en 0.3 min
+[19:37:28] ETAPA C: Guardando diccionario global
+[19:37:29] Diccionario global guardado: 1857 variables
+[19:37:29] ETAPA D: Auditoría territorial
+[19:37:29] ADVERTENCIA: DIVIPOLA no encontrado para auditoría territorial
+[19:37:29] ETAPA E: Auditoría especial IPM
+[19:37:29] Auditoría IPM guardada: 10 indicadores
+[19:37:29] ETAPA F: Matriz de solapamiento IPM-CNPV
+[19:37:29] Matriz de solapamiento inicializada (requiere análisis manual)
+[19:37:29] ETAPA G: Banco de candidatos IVS
+[19:37:30] Banco de candidatos guardado: 0 variables
+[19:37:30] ETAPA H: Generando informe de calidad
+[19:37:30] Informe de calidad generado
+[19:37:30] ETAPA I: Generando documentación metodológica
+[19:37:30] ETAPA J: Generando reporte final de ejecución
+[19:37:30] Reporte final guardado
+[19:37:30] === AUDITORÍA v2 COMPLETADA ===
+[19:37:30] Variables totales documentadas: 1857
+[19:37:30] Fuentes procesadas: 6

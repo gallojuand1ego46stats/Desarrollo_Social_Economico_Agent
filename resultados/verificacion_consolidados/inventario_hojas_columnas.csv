@@ -1,0 +1,249 @@
+archivo,hoja,filas_excel,columnas,filas_encabezado,filas_datos,numero_col,letra_excel,nombre_original,nombre_limpio,tipo_leido,celdas_vacias_pct
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,1,A,Departamento_Municipio,departamento_municipio,texto,96.8917
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,2,B,Columna_2,x,texto,0.3552
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,3,C,Total | Total hogares,total_total_hogares,texto,0.0888
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,4,D,hogares con menores de 15 años,hogares_con_menores_de_15_anos,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,5,E,Total menores de 15 años,total_menores_de_15_anos,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,6,F,Área | Cabecera | Total hogares,area_cabecera_total_hogares,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,7,G,hogares con menores de 15 años,hogares_con_menores_de_15_anos_2,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,8,H,Total menores de 15 años,total_menores_de_15_anos_2,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,9,I,Centro Poblado | Total hogares,centro_poblado_total_hogares,texto,0.0888
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,10,J,hogares con menores de 15 años,hogares_con_menores_de_15_anos_3,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,11,K,Total menores de 15 años,total_menores_de_15_anos_3,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,12,L,Rural Disperso | Total hogares,rural_disperso_total_hogares,texto,0.0888
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,13,M,hogares con menores de 15 años,hogares_con_menores_de_15_anos_4,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,14,N,Total menores de 15 años,total_menores_de_15_anos_4,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,15,O,Total | Total hogares,total_total_hogares_2,texto,0.0888
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,16,P,hogares con adultos mayores,hogares_con_adultos_mayores,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,17,Q,Personas de 60 años y más,personas_de_60_anos_y_mas,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,18,R,Área | Cabecera | Total hogares,area_cabecera_total_hogares_2,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,19,S,hogares con adultos mayores,hogares_con_adultos_mayores_2,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,20,T,Personas de 60 años y más,personas_de_60_anos_y_mas_2,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,21,U,Centro Poblado | Total hogares,centro_poblado_total_hogares_2,texto,0.0888
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,22,V,hogares con adultos mayores,hogares_con_adultos_mayores_3,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,23,W,Personas de 60 años y más,personas_de_60_anos_y_mas_3,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,24,X,Rural Disperso | Total hogares,rural_disperso_total_hogares_2,texto,0.0888
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,25,Y,hogares con adultos mayores,hogares_con_adultos_mayores_4,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,26,Z,Personas de 60 años y más,personas_de_60_anos_y_mas_4,texto,0.1776
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,27,AA,Columna_27,x_2,texto,100
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,28,AB,1HM,x1hm,texto,99.9112
+CUADROS_MUNICIPALES_UNIDOS.xlsx,HOGARES_MUNICIPAL,1126,29,3,1123,29,AC,2HM,x2hm,texto,99.9112
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,1,A,"Municipio, áreas (Total, Cabecera y Centros poblados y Rural disperso) y sexo",municipio_areas_total_cabecera_y_centros_poblados_y_rural_disperso_y_sexo,texto,99.7275
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,2,B,Columna_2,x,texto,91.263
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,3,C,Columna_3,x_2,texto,66.6719
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,4,D,Columna_4,x_3,texto,0.0156
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,5,E,Nivel educativo | Total,nivel_educativo_total,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,6,F,Ninguno,ninguno,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,7,G,Preescolar,preescolar,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,8,H,Primaria Completa,primaria_completa,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,9,I,Primaria Incompleta,primaria_incompleta,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,10,J,Secundaria Completa,secundaria_completa,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,11,K,Secundaria Incompleta,secundaria_incompleta,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,12,L,Media Completa,media_completa,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,13,M,Media Incompleta,media_incompleta,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,14,N,Normal Completa,normal_completa,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,15,O,Normal Incompleta,normal_incompleta,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,16,P,Tecnico,tecnico,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,17,Q,Tecnologico,tecnologico,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,18,R,Universitario,universitario,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,19,S,"Especialización, Maestria, Doctorado",especializacion_maestria_doctorado,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,20,T,Sin Información,sin_informacion,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_DEMO,12842,21,2,12840,21,U,17PM,x17pm,texto,99.9922
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,1,A,"Departamento, áreas y sexo",departamento_areas_y_sexo,texto,99.7275
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,2,B,Columna_2,x,texto,91.263
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,3,C,Columna_3,x_2,texto,66.6719
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,4,D,Columna_4,x_3,texto,0.0156
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,5,E,Total personas de 10 años y más,total_personas_de_10_anos_y_mas,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,6,F,Actividad realizada la semana anterior | No informa,actividad_realizada_la_semana_anterior_no_informa,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,7,G,Trabajó por lo menos una hora en una actividad que le generó algún ingreso,trabajo_por_lo_menos_una_hora_en_una_actividad_que_le_genero_algun_ingreso,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,8,H,Trabajó o ayudó en un negocio por lo menos una hora sin que le pagaran,trabajo_o_ayudo_en_un_negocio_por_lo_menos_una_hora_sin_que_le_pagaran,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,9,I,"No trabajó, pero tenía un empleo, trabajo o negocio por el que recibe ingresos",no_trabajo_pero_tenia_un_empleo_trabajo_o_negocio_por_el_que_recibe_ingresos,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,10,J,Busco trabajo,busco_trabajo,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,11,K,"Vivió de jubilación, pensión o renta",vivio_de_jubilacion_pension_o_renta,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,12,L,Estudió,estudio,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,13,M,Realizó oficios del hogar,realizo_oficios_del_hogar,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,14,N,Está incapacitado(a) permanentemente para trabajar,esta_incapacitado_a_permanentemente_para_trabajar,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,15,O,Estuvo en otra situación,estuvo_en_otra_situacion,texto,0.0078
+CUADROS_MUNICIPALES_UNIDOS.xlsx,PERSONA_SOCIAL,12842,16,2,12840,16,P,5PM,x5pm,texto,99.9922
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,1,A,"Departamento, municipio, áreas (Total, Cabecera, Centro poblado y Rural disperso) y tipo de vivienda",departamento_municipio_areas_total_cabecera_centro_poblado_y_rural_disperso_y_tipo_de_vivienda,texto,83.1282
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,2,B,Columna_2,x,texto,83.1582
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,3,C,Columna_3,x_2,texto,0.045
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,4,D,Total,total,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,5,E,"Total | Materiales predominantes de las paredes exteriores | Bloque, ladrillo, piedra, madera pulida",total_materiales_predominantes_de_las_paredes_exteriores_bloque_ladrillo_piedra_madera_pulida,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,6,F,Concreto vaciado,concreto_vaciado,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,7,G,Material prefabricado,material_prefabricado,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,8,H,Guadua,guadua,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,9,I,"Tapia pisada, bahareque, adobe",tapia_pisada_bahareque_adobe,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,10,J,"Madera burda, tabla, tablón",madera_burda_tabla_tablon,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,11,K,"Caña, esterilla, otros vegetales",cana_esterilla_otros_vegetales,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,12,L,"Materiales de desecho (Zinc, tela, cartón, latas, plásticos, otros)",materiales_de_desecho_zinc_tela_carton_latas_plasticos_otros,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,13,M,Sin paredes,sin_paredes,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,14,N,Total,total_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,15,O,"Cabecera | Materiales predominantes de las paredes exteriores | Bloque, ladrillo, piedra, madera pulida",cabecera_materiales_predominantes_de_las_paredes_exteriores_bloque_ladrillo_piedra_madera_pulida,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,16,P,Concreto vaciado,concreto_vaciado_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,17,Q,Material prefabricado,material_prefabricado_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,18,R,Guadua,guadua_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,19,S,"Tapia pisada, bahareque, adobe",tapia_pisada_bahareque_adobe_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,20,T,"Madera burda, tabla, tablón",madera_burda_tabla_tablon_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,21,U,"Caña, esterilla, otros vegetales",cana_esterilla_otros_vegetales_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,22,V,"Materiales de desecho (Zinc, tela, cartón, latas, plásticos, otros)",materiales_de_desecho_zinc_tela_carton_latas_plasticos_otros_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,23,W,Sin paredes,sin_paredes_2,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,24,X,Total,total_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,25,Y,"Centro poblado | Materiales predominantes de las paredes exteriores | Bloque, ladrillo, piedra, madera pulida",centro_poblado_materiales_predominantes_de_las_paredes_exteriores_bloque_ladrillo_piedra_madera_pulida,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,26,Z,Concreto vaciado,concreto_vaciado_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,27,AA,Material prefabricado,material_prefabricado_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,28,AB,Guadua,guadua_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,29,AC,"Tapia pisada, bahareque, adobe",tapia_pisada_bahareque_adobe_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,30,AD,"Madera burda, tabla, tablón",madera_burda_tabla_tablon_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,31,AE,"Caña, esterilla, otros vegetales",cana_esterilla_otros_vegetales_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,32,AF,"Materiales de desecho (Zinc, tela, cartón, latas, plásticos, otros)",materiales_de_desecho_zinc_tela_carton_latas_plasticos_otros_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,33,AG,Sin paredes,sin_paredes_3,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,34,AH,Total,total_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,35,AI,"Rural disperso | Materiales predominantes de las paredes exteriores | Bloque, ladrillo, piedra, madera pulida",rural_disperso_materiales_predominantes_de_las_paredes_exteriores_bloque_ladrillo_piedra_madera_pulida,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,36,AJ,Concreto vaciado,concreto_vaciado_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,37,AK,Material prefabricado,material_prefabricado_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,38,AL,Guadua,guadua_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,39,AM,"Tapia pisada, bahareque, adobe",tapia_pisada_bahareque_adobe_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,40,AN,"Madera burda, tabla, tablón",madera_burda_tabla_tablon_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,41,AO,"Caña, esterilla, otros vegetales",cana_esterilla_otros_vegetales_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,42,AP,"Materiales de desecho (Zinc, tela, cartón, latas, plásticos, otros)",materiales_de_desecho_zinc_tela_carton_latas_plasticos_otros_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,43,AQ,Sin paredes,sin_paredes_4,texto,0.03
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,44,AR,6V_MPIO,x6v_mpio,texto,99.985
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,45,AS,"Departamento, municipio y áreas (Total, Cabecera, Centro poblado y Rural disperso)",departamento_municipio_y_areas_total_cabecera_centro_poblado_y_rural_disperso,texto,83.1282
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,46,AT,Columna_46,x_3,texto,83.1582
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,47,AU,Columna_47,x_4,texto,35.755
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,48,AV,Total viviendas ocupadas con personas presentes,total_viviendas_ocupadas_con_personas_presentes,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,49,AW,Servicios Públicos | Total,servicios_publicos_total,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,50,AX,Energía eléctrica | Si,energia_electrica_si,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,51,AY,No,no,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,52,AZ,Total,total_5,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,53,BA,Acueducto | Si,acueducto_si,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,54,BB,No,no_2,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,55,BC,Total,total_6,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,56,BD,Alcantarillado | Si,alcantarillado_si,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,57,BE,No,no_3,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,58,BF,Total,total_7,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,59,BG,Gas natural conectado a red pública | Si,gas_natural_conectado_a_red_publica_si,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,60,BH,No,no_4,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,61,BI,Sin información,sin_informacion,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,62,BJ,Total,total_8,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,63,BK,Recolección de basuras | Si,recoleccion_de_basuras_si,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,64,BL,No,no_5,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,65,BM,Total,total_9,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,66,BN,Internet | Si,internet_si,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,67,BO,No,no_6,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,68,BP,Sin información,sin_informacion_2,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,3,6659,69,BQ,8V_MPIO,x8v_mpio,texto,99.985
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,70,BR,"Departamento, municipio y áreas (Total, Cabecera, Centro poblado y Rural disperso)",departamento_municipio_y_areas_total_cabecera_centro_poblado_y_rural_disperso_2,texto,99.4746
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,71,BS,Columna_71,x_5,texto,83.1582
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,72,BT,Columna_72,x_6,texto,35.755
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,73,BU,Estrato de energia | Perosnas en hogares particulares,estrato_de_energia_perosnas_en_hogares_particulares,texto,35.725
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,74,BV,Sin servicio de energía eléctrica,sin_servicio_de_energia_electrica,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,75,BW,No tiene,no_tiene,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,76,BX,Estrato 1,estrato_1,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,77,BY,Estrato 2,estrato_2,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,78,BZ,Estrato 3,estrato_3,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,79,CA,Estrato 4,estrato_4,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,80,CB,Estrato 5,estrato_5,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,81,CC,Estrato 6,estrato_6,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,82,CD,No sabe o no responde,no_sabe_o_no_responde,texto,35.74
+CUADROS_MUNICIPALES_UNIDOS.xlsx,VIVIENDAS,6662,83,2,6660,83,CE,10V_MPIO,x10v_mpio,texto,99.985
+CUADROS_MUNICIPALES_UNIDOS.xlsx,IPM,0,0,1,0,NA,NA,NA,NA,texto,NA
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,1,A,"Grupos de edad, municipio y áreas (Total, Cabecera y Centros poblados y Rural disperso)",grupos_de_edad_municipio_y_areas_total_cabecera_y_centros_poblados_y_rural_disperso,texto,99.9568
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,2,B,Columna_2,x,texto,98.6146
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,3,C,Columna_3,x_2,texto,94.7152
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,4,D,Columna_4,x_3,texto,0.0025
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,5,E,Total,total,texto,0.0012
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,6,F,Sexo | Hombre,sexo_hombre,texto,0
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,7,G,Mujer,mujer,texto,0.0012
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,8,H,Índice de masculinidad,indice_de_masculinidad,texto,0.8384
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,9,I,Índice de feminidad,indice_de_feminidad,texto,0.8384
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,10,J,1PM,x1pm,texto,99.9988
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,11,K,"Departamento, municipio, áreas (Total, Cabecera, Centro poblado y Rural disperso) y tipo de vivienda",departamento_municipio_areas_total_cabecera_centro_poblado_y_rural_disperso_y_tipo_de_vivienda,texto,98.6121
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,12,L,Columna_12,x_4,texto,98.6146
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,13,M,Columna_13,x_5,texto,94.7152
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,14,N,Columna_14,x_6,texto,71.0497
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,15,O,Total,total_2,texto,71.0484
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,16,P,Condición de ocupación de la vivienda | Ocupada con personas presentes,condicion_de_ocupacion_de_la_vivienda_ocupada_con_personas_presentes,texto,71.0472
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,17,Q,Ocupada con todas las personas ausentes,ocupada_con_todas_las_personas_ausentes,texto,71.0484
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,18,R,Vivienda temporal para vacaciones,vivienda_temporal_para_vacaciones,texto,71.0484
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,19,S,Desocupada,desocupada,texto,71.0484
+CUADROS_MUNICIPALES_UNIDOS.xlsx,CONTEXTO,80987,20,2,80985,20,T,1V_MPIO,x1v_mpio,texto,99.9988
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,1,A,Region_geografica,region_geografica,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,2,B,Departamento,departamento,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,3,C,ID,id,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,4,D,Municipio,municipio,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,5,E,IPM Municipal,ipm_municipal,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,6,F,IPM,ipm,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,7,G,Cabeceras,cabeceras,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,8,H,IPM Centros poblados y rural disperso,ipm_centros_poblados_y_rural_disperso,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,9,I,Analfabetismo,analfabetismo,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,10,J,Bajo logro educativo,bajo_logro_educativo,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,11,K,Barreras a servicios para cuidado de la primera infancia,barreras_a_servicios_para_cuidado_de_la_primera_infancia,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,12,L,Barreras de acceso a servicios de salud,barreras_de_acceso_a_servicios_de_salud,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,13,M,Tasa de dependencia,tasa_de_dependencia,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,14,N,Hacinamiento crítico,hacinamiento_critico,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,15,O,Inadecuada eliminación de excretas,inadecuada_eliminacion_de_excretas,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,16,P,Inasistencia escolar,inasistencia_escolar,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,17,Q,Material inadecuado de paredes exteriores,material_inadecuado_de_paredes_exteriores,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,18,R,Material inadecuado de pisos,material_inadecuado_de_pisos,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,19,S,Rezago escolar,rezago_escolar,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,20,T,Sin acceso a fuente de agua mejorada,sin_acceso_a_fuente_de_agua_mejorada,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,21,U,Sin aseguramiento en salud,sin_aseguramiento_en_salud,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,22,V,Trabajo infantil,trabajo_infantil,texto,0
+IPM_2018_organizado_region.xlsx,IPM_municipios_region,1123,23,1,1122,23,W,Trabajo informal,trabajo_informal,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_municipales,17953,6,1,17952,1,A,Region_geografica,region_geografica,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_municipales,17953,6,1,17952,2,B,Departamento,departamento,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_municipales,17953,6,1,17952,3,C,ID,id,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_municipales,17953,6,1,17952,4,D,Municipio,municipio,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_municipales,17953,6,1,17952,5,E,Variable_indice,variable_indice,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_municipales,17953,6,1,17952,6,F,Valor,valor,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,50491,7,1,50490,1,A,Region_geografica,region_geografica,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,50491,7,1,50490,2,B,Departamento,departamento,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,50491,7,1,50490,3,C,ID,id,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,50491,7,1,50490,4,D,Municipio,municipio,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,50491,7,1,50490,5,E,Variable_indice,variable_indice,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,50491,7,1,50490,6,F,Dominio_geografico,dominio_geografico,texto,0
+IPM_2018_organizado_region.xlsx,Indicadores_por_dominio,50491,7,1,50490,7,G,Valor,valor,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_variables,20,6,1,19,1,A,Variable_indice,variable_indice,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_variables,20,6,1,19,2,B,Descripcion,descripcion,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_variables,20,6,1,19,3,C,Unidad,unidad,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_variables,20,6,1,19,4,D,Nivel_geografico,nivel_geografico,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_variables,20,6,1,19,5,E,Hoja_origen,hoja_origen,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_variables,20,6,1,19,6,F,Año,ano,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_dominio,65,6,1,64,1,A,Variable_indice,variable_indice,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_dominio,65,6,1,64,2,B,Descripcion,descripcion,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_dominio,65,6,1,64,3,C,Unidad,unidad,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_dominio,65,6,1,64,4,D,Nivel_geografico,nivel_geografico,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_dominio,65,6,1,64,5,E,Hoja_origen,hoja_origen,texto,0
+IPM_2018_organizado_region.xlsx,Diccionario_dominio,65,6,1,64,6,F,Año,ano,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,1,A,Region_geografica,region_geografica,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,2,B,Municipios,municipios,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,3,C,IPM_promedio,ipm_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,4,D,IPM_mediana,ipm_mediana,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,5,E,IPM_min,ipm_min,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,6,F,IPM_max,ipm_max,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,7,G,Analfabetismo__promedio,analfabetismo_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,8,H,Bajo logro educativo__promedio,bajo_logro_educativo_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,9,I,Barreras a servicios para cuidado de la primera infancia__promedio,barreras_a_servicios_para_cuidado_de_la_primera_infancia_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,10,J,Barreras de acceso a servicios de salud__promedio,barreras_de_acceso_a_servicios_de_salud_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,11,K,Tasa de dependencia__promedio,tasa_de_dependencia_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,12,L,Hacinamiento crítico__promedio,hacinamiento_critico_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,13,M,Inadecuada eliminación de excretas__promedio,inadecuada_eliminacion_de_excretas_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,14,N,Inasistencia escolar__promedio,inasistencia_escolar_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,15,O,Material inadecuado de paredes exteriores__promedio,material_inadecuado_de_paredes_exteriores_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,16,P,Material inadecuado de pisos__promedio,material_inadecuado_de_pisos_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,17,Q,Rezago escolar__promedio,rezago_escolar_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,18,R,Sin acceso a fuente de agua mejorada__promedio,sin_acceso_a_fuente_de_agua_mejorada_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,19,S,Sin aseguramiento en salud__promedio,sin_aseguramiento_en_salud_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,20,T,Trabajo infantil__promedio,trabajo_infantil_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_region,7,21,1,6,21,U,Trabajo informal__promedio,trabajo_informal_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_departamento,34,7,1,33,1,A,Region_geografica,region_geografica,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_departamento,34,7,1,33,2,B,Departamento,departamento,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_departamento,34,7,1,33,3,C,Municipios,municipios,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_departamento,34,7,1,33,4,D,IPM_promedio,ipm_promedio,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_departamento,34,7,1,33,5,E,IPM_mediana,ipm_mediana,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_departamento,34,7,1,33,6,F,IPM_min,ipm_min,texto,0
+IPM_2018_organizado_region.xlsx,Resumen_departamento,34,7,1,33,7,G,IPM_max,ipm_max,texto,0
+IPM_2018_organizado_region.xlsx,Control_calidad,7,2,1,6,1,A,Control,control,texto,0
+IPM_2018_organizado_region.xlsx,Control_calidad,7,2,1,6,2,B,Resultado,resultado,texto,0

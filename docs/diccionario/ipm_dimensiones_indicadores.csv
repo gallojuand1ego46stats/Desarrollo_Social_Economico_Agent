@@ -1,0 +1,11 @@
+hoja,dimension,indicador,variable,definicion,ponderacion,cobertura,stringsAsFactors
+2_IPM Mpio y Dpt,por_determinar,IPM Municipal,IPM Municipal,Índice de Pobreza Multidimensional,NA,NA,FALSE
+4_IPM Mpio dominios,por_determinar,IPM,IPM,Índice de Pobreza Multidimensional,NA,NA,FALSE
+4_IPM Mpio dominios,por_determinar,IPM Centros poblados y rural disperso,IPM Centros poblados y rural disperso,Índice de Pobreza Multidimensional,NA,NA,FALSE
+6_Privaciones IPM Dpt-Mpio,por_determinar,Privaciones Municipios,Privaciones Municipios,Definición por determinar para: Privaciones Municipios,NA,NA,FALSE
+8_Privaciones Mpio dominio,salud,Barreras de acceso a servicios de salud,Barreras de acceso a servicios de salud,Cobertura y acceso a servicios de salud,NA,NA,FALSE
+8_Privaciones Mpio dominio,salud,Sin aseguramiento en salud,Sin aseguramiento en salud,Cobertura y acceso a servicios de salud,NA,NA,FALSE
+8_Privaciones Mpio dominio,trabajo,Trabajo infantil,Trabajo infantil,Condiciones de empleo y trabajo,NA,NA,FALSE
+8_Privaciones Mpio dominio,trabajo,Trabajo informal,Trabajo informal,Condiciones de empleo y trabajo,NA,NA,FALSE
+TB_REF,por_determinar,hoja_completa,estructura_hoja,Hoja 'TB_REF' del archivo IPM,NA,NA,FALSE
+Visor,condiciones_de_vida,MEDIDA DE POBREZA MULTIDIMENSIONAL MUNICIPAL - CENSO NACIONAL DE POBLACIÓN Y VIVIENDA,MEDIDA DE POBREZA MULTIDIMENSIONAL MUNICIPAL - CENSO NACIONAL DE POBLACIÓN Y VIVIENDA,Condición de pobreza multidimensional,NA,NA,FALSE

@@ -1,0 +1,735 @@
+chequeo,hoja,n_evaluado,n_violaciones,tolerancia,evidencia
+Dimensiones Excel contra contrato,HOGARES_MUNICIPAL,1,0,0,esperado 1126x29 observado 1126x29
+Dimensiones Excel contra contrato,PERSONA_DEMO,1,0,0,esperado 12842x21 observado 12842x21
+Dimensiones Excel contra contrato,PERSONA_SOCIAL,1,0,0,esperado 12842x16 observado 12842x16
+Dimensiones Excel contra contrato,VIVIENDAS,1,0,0,esperado 6662x83 observado 6662x83
+Dimensiones Excel contra contrato,CONTEXTO,1,0,0,esperado 80987x20 observado 80987x20
+Dimensiones Excel contra contrato,IPM_municipios_region,1,0,0,esperado 1123x23 observado 1123x23
+Dimensiones Excel contra contrato,Indicadores_municipales,1,0,0,esperado 17953x6 observado 17953x6
+Dimensiones Excel contra contrato,Indicadores_por_dominio,1,0,0,esperado 50491x7 observado 50491x7
+Dimensiones Excel contra contrato,Diccionario_variables,1,0,0,esperado 20x6 observado 20x6
+Dimensiones Excel contra contrato,Diccionario_dominio,1,0,0,esperado 65x6 observado 65x6
+Dimensiones Excel contra contrato,Resumen_region,1,0,0,esperado 7x21 observado 7x21
+Dimensiones Excel contra contrato,Resumen_departamento,1,0,0,esperado 34x7 observado 34x7
+Dimensiones Excel contra contrato,Control_calidad,1,0,0,esperado 7x2 observado 7x2
+Hoja IPM del libro CNPV vacía,IPM,0,0,0 celdas usadas,0x0
+Código municipal cinco caracteres,HOGARES_MUNICIPAL,4488,0,cero inválidos,
+Prefijo departamento coincide con municipio,HOGARES_MUNICIPAL,4488,0,cero diferencias,
+Unicidad codigo_municipio+area,HOGARES_MUNICIPAL,4488,0,cero duplicados,
+Conversión numérica columna 3,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 4,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 5,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 6,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 7,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 8,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 9,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 10,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 11,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 12,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 13,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 14,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 15,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 16,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 17,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 18,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 19,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 20,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 21,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 22,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 23,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 24,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 25,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 26,HOGARES_MUNICIPAL,1123,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Suma de áreas hogares_total,HOGARES_MUNICIPAL,1122,0,exacta,
+Suma de áreas hogares_menores15,HOGARES_MUNICIPAL,1122,0,exacta,
+Suma de áreas personas_menores15,HOGARES_MUNICIPAL,1122,0,exacta,
+Suma de áreas hogares_total_2HM,HOGARES_MUNICIPAL,1122,0,exacta,
+Suma de áreas hogares_adultos_mayores,HOGARES_MUNICIPAL,1122,0,exacta,
+Suma de áreas personas_60mas,HOGARES_MUNICIPAL,1122,0,exacta,
+Código municipal cinco caracteres,PERSONA_DEMO,12828,0,cero inválidos,
+Prefijo departamento coincide con municipio,PERSONA_DEMO,12828,0,cero diferencias,
+Unicidad codigo_municipio+area+sexo,PERSONA_DEMO,12828,0,cero duplicados,
+Conversión numérica columna 5,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 6,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 7,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 8,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 9,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 10,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 11,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 12,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 13,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 14,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 15,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 16,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 17,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 18,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 19,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 20,PERSONA_DEMO,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Total=Hombre+Mujer total,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer ninguno,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer preescolar,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer primaria_completa,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer primaria_incompleta,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer secundaria_completa,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer secundaria_incompleta,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer media_completa,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer media_incompleta,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer normal_completa,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer normal_incompleta,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer tecnico,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer tecnologico,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer universitario,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer especializacion_maestria_doctorado,PERSONA_DEMO,4276,0,exacta,
+Total=Hombre+Mujer sin_informacion,PERSONA_DEMO,4276,0,exacta,
+PERSONA_DEMO Total=áreas total,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas ninguno,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas preescolar,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas primaria_completa,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas primaria_incompleta,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas secundaria_completa,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas secundaria_incompleta,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas media_completa,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas media_incompleta,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas normal_completa,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas normal_incompleta,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas tecnico,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas tecnologico,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas universitario,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas especializacion_maestria_doctorado,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_DEMO Total=áreas sin_informacion,PERSONA_DEMO,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+17PM E=suma(F:T),PERSONA_DEMO,12828,0,exacta,diferencias no NA=0
+Código municipal cinco caracteres,PERSONA_SOCIAL,12828,0,cero inválidos,
+Prefijo departamento coincide con municipio,PERSONA_SOCIAL,12828,0,cero diferencias,
+Unicidad codigo_municipio+area+sexo,PERSONA_SOCIAL,12828,0,cero duplicados,
+Conversión numérica columna 5,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 6,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 7,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 8,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 9,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 10,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 11,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 12,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 13,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 14,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 15,PERSONA_SOCIAL,12840,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Total=Hombre+Mujer total,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer no_informa,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer trabajo_por_lo_menos_una_hora_en_una_actividad_que_le_genero_algun_ingreso,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer trabajo_o_ayudo_en_un_negocio_por_lo_menos_una_hora_sin_que_le_pagaran,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer no_trabajo_pero_tenia_un_empleo_trabajo_o_negocio_por_el_que_recibe_ingresos,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer busco_trabajo,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer vivio_de_jubilacion_pension_o_renta,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer estudio,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer realizo_oficios_del_hogar,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer esta_incapacitado_a_permanentemente_para_trabajar,PERSONA_SOCIAL,4276,0,exacta,
+Total=Hombre+Mujer estuvo_en_otra_situacion,PERSONA_SOCIAL,4276,0,exacta,
+PERSONA_SOCIAL Total=áreas total,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas no_informa,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas trabajo_por_lo_menos_una_hora_en_una_actividad_que_le_genero_algun_ingreso,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas trabajo_o_ayudo_en_un_negocio_por_lo_menos_una_hora_sin_que_le_pagaran,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas no_trabajo_pero_tenia_un_empleo_trabajo_o_negocio_por_el_que_recibe_ingresos,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas busco_trabajo,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas vivio_de_jubilacion_pension_o_renta,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas estudio,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas realizo_oficios_del_hogar,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas esta_incapacitado_a_permanentemente_para_trabajar,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+PERSONA_SOCIAL Total=áreas estuvo_en_otra_situacion,PERSONA_SOCIAL,2736,0,abs<=0,combinaciones sin las 4 áreas=630
+5PM E=suma(F:O),PERSONA_SOCIAL,12828,0,exacta,
+Caché fórmula N = suma materiales,VIVIENDAS_6V,6658,0,exacta,sin cache=0; recálculos necesarios=0
+Caché fórmula X = suma materiales,VIVIENDAS_6V,6658,0,exacta,sin cache=0; recálculos necesarios=0
+Caché fórmula AH = suma materiales,VIVIENDAS_6V,6658,0,exacta,sin cache=0; recálculos necesarios=0
+Código municipal cinco caracteres,VIVIENDAS_6V,6652,0,cero inválidos,
+Prefijo departamento coincide con municipio,VIVIENDAS_6V,6652,0,cero diferencias,
+Unicidad codigo_municipio+tipo_vivienda,VIVIENDAS_6V,6652,0,cero duplicados,
+Conversión numérica columna 4,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 5,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 6,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 7,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 8,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 9,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 10,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 11,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 12,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 13,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 14,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 15,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 16,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 17,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 18,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 19,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 20,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 21,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 22,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 23,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 24,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 25,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 26,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 27,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 28,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 29,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 30,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 31,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 32,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 33,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 34,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 35,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 36,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 37,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 38,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 39,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 40,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 41,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 42,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 43,VIVIENDAS_6V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+6V total=9 materiales Total,VIVIENDAS_6V,6652,0,exacta,
+6V total=9 materiales Cabecera,VIVIENDAS_6V,6652,0,exacta,
+6V total=9 materiales Centro poblado,VIVIENDAS_6V,6652,0,exacta,
+6V total=9 materiales Rural disperso,VIVIENDAS_6V,6652,0,exacta,
+6V tipo Total=suma tipos Total total,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total bloque_ladrillo_piedra_madera_pulida,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total concreto_vaciado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total material_prefabricado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total guadua,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total tapia_bahareque_adobe,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total madera_burda,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total cana_vegetales,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total desecho,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Total sin_paredes,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera total,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera bloque_ladrillo_piedra_madera_pulida,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera concreto_vaciado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera material_prefabricado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera guadua,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera tapia_bahareque_adobe,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera madera_burda,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera cana_vegetales,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera desecho,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Cabecera sin_paredes,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado total,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado bloque_ladrillo_piedra_madera_pulida,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado concreto_vaciado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado material_prefabricado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado guadua,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado tapia_bahareque_adobe,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado madera_burda,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado cana_vegetales,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado desecho,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Centro poblado sin_paredes,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso total,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso bloque_ladrillo_piedra_madera_pulida,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso concreto_vaciado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso material_prefabricado,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso guadua,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso tapia_bahareque_adobe,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso madera_burda,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso cana_vegetales,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso desecho,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V tipo Total=suma tipos Rural disperso sin_paredes,VIVIENDAS_6V,1122,0,suma de tipos observados; ausencias estructurales excluidas,
+6V Total=Cabecera+Centro+Rural total,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural bloque_ladrillo_piedra_madera_pulida,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural concreto_vaciado,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural material_prefabricado,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural guadua,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural tapia_bahareque_adobe,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural madera_burda,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural cana_vegetales,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural desecho,VIVIENDAS_6V,6652,0,exacta,
+6V Total=Cabecera+Centro+Rural sin_paredes,VIVIENDAS_6V,6652,0,exacta,
+Código municipal cinco caracteres,VIVIENDAS_8V,4276,0,cero inválidos,
+Prefijo departamento coincide con municipio,VIVIENDAS_8V,4276,0,cero diferencias,
+Unicidad codigo_municipio+area,VIVIENDAS_8V,4276,0,cero duplicados,
+Conversión numérica columna 48,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 49,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 50,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 51,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 52,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 53,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 54,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 55,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 56,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 57,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 58,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 59,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 60,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 61,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 62,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 63,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 64,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 65,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 66,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 67,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 68,VIVIENDAS_8V,6659,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+8V categorías suman total energia,VIVIENDAS_8V,4276,0,exacta,
+8V categorías suman total acueducto,VIVIENDAS_8V,4276,0,exacta,
+8V categorías suman total alcantarillado,VIVIENDAS_8V,4276,0,exacta,
+8V categorías suman total gas,VIVIENDAS_8V,4276,0,exacta,
+8V categorías suman total basuras,VIVIENDAS_8V,4276,0,exacta,
+8V categorías suman total internet,VIVIENDAS_8V,4276,0,exacta,
+VIVIENDAS_8V Total=áreas viviendas_presentes,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas energia_total,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas energia_si,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas energia_no,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas acueducto_total,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas acueducto_si,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas acueducto_no,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas alcantarillado_total,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas alcantarillado_si,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas alcantarillado_no,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas gas_total,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas gas_si,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas gas_no,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas gas_sin_informacion,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas basuras_total,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas basuras_si,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas basuras_no,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas internet_total,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas internet_si,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas internet_no,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_8V Total=áreas internet_sin_informacion,VIVIENDAS_8V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+Código municipal cinco caracteres,VIVIENDAS_10V,4276,0,cero inválidos,
+Prefijo departamento coincide con municipio,VIVIENDAS_10V,4276,0,cero diferencias,
+Unicidad codigo_municipio+area,VIVIENDAS_10V,4276,0,cero duplicados,
+Conversión numérica columna 73,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 74,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 75,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 76,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 77,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 78,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 79,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 80,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 81,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 82,VIVIENDAS_10V,6660,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+10V BU=suma BV:CD,VIVIENDAS_10V,4276,0,exacta,
+10V relación BV sin energía y BW no tiene estrato,VIVIENDAS_10V,4276,0,descriptivo; no se presupone igualdad,suma_BV=3457576; suma_BW=810822; iguales=132; BV>BW=3464; BV<BW=680
+VIVIENDAS_10V Total=áreas personas_hogares_particulares,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas sin_servicio_energia,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas no_tiene_estrato,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas estrato_1,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas estrato_2,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas estrato_3,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas estrato_4,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas estrato_5,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas estrato_6,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+VIVIENDAS_10V Total=áreas no_sabe_no_responde,VIVIENDAS_10V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+Código municipal cinco caracteres,CONTEXTO_1PM,80909,0,cero inválidos,
+Prefijo departamento coincide con municipio,CONTEXTO_1PM,80909,0,cero diferencias,
+Unicidad codigo_municipio+area+grupo_edad,CONTEXTO_1PM,80909,0,cero duplicados,
+Conversión numérica columna 5,CONTEXTO_1PM,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 6,CONTEXTO_1PM,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 7,CONTEXTO_1PM,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 8,CONTEXTO_1PM,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=71159
+Conversión numérica columna 9,CONTEXTO_1PM,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=71527
+Código municipal cinco caracteres,CONTEXTO_1V,4276,0,cero inválidos,
+Prefijo departamento coincide con municipio,CONTEXTO_1V,4276,0,cero diferencias,
+Unicidad codigo_municipio+area+tipo_vivienda,CONTEXTO_1V,4276,0,cero duplicados,
+Conversión numérica columna 15,CONTEXTO_1V,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 16,CONTEXTO_1V,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 17,CONTEXTO_1V,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 18,CONTEXTO_1V,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+Conversión numérica columna 19,CONTEXTO_1V,80985,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=0
+CONTEXTO_1PM Total=áreas total,CONTEXTO_1PM,17065,0,abs<=0,combinaciones sin las 4 áreas=4248
+CONTEXTO_1PM Total=áreas hombre,CONTEXTO_1PM,17065,0,abs<=0,combinaciones sin las 4 áreas=4248
+CONTEXTO_1PM Total=áreas mujer,CONTEXTO_1PM,17065,0,abs<=0,combinaciones sin las 4 áreas=4248
+CONTEXTO_1V Total=áreas viviendas_total,CONTEXTO_1V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+CONTEXTO_1V Total=áreas ocupada_presentes,CONTEXTO_1V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+CONTEXTO_1V Total=áreas ocupada_ausentes,CONTEXTO_1V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+CONTEXTO_1V Total=áreas temporal_vacaciones,CONTEXTO_1V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+CONTEXTO_1V Total=áreas desocupada,CONTEXTO_1V,912,0,abs<=0,combinaciones sin las 4 áreas=210
+Total Nacional vs suma municipal hogares_total,HOGARES_MUNICIPAL,1,0,exacta,nacional=14243223; suma_municipios=14243223; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal hogares_menores15,HOGARES_MUNICIPAL,1,0,exacta,nacional=6216640; suma_municipios=6216640; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal personas_menores15,HOGARES_MUNICIPAL,1,0,exacta,nacional=9932653; suma_municipios=9932653; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal hogares_total_2HM,HOGARES_MUNICIPAL,1,0,exacta,nacional=14243223; suma_municipios=14243223; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal hogares_adultos_mayores,HOGARES_MUNICIPAL,1,0,exacta,nacional=4331451; suma_municipios=4331451; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal personas_60mas,HOGARES_MUNICIPAL,1,0,exacta,nacional=5821959; suma_municipios=5821959; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal total Hombre,PERSONA_DEMO,1,0,exacta,nacional=20014888; suma_municipios=20014888; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal total Mujer,PERSONA_DEMO,1,0,exacta,nacional=21111748; suma_municipios=21111748; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal total Total,PERSONA_DEMO,1,0,exacta,nacional=41126636; suma_municipios=41126636; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal ninguno Hombre,PERSONA_DEMO,1,0,exacta,nacional=901690; suma_municipios=901690; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal ninguno Mujer,PERSONA_DEMO,1,0,exacta,nacional=904675; suma_municipios=904675; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal ninguno Total,PERSONA_DEMO,1,0,exacta,nacional=1806365; suma_municipios=1806365; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal preescolar Hombre,PERSONA_DEMO,1,0,exacta,nacional=480742; suma_municipios=480742; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal preescolar Mujer,PERSONA_DEMO,1,0,exacta,nacional=444791; suma_municipios=444791; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal preescolar Total,PERSONA_DEMO,1,0,exacta,nacional=925533; suma_municipios=925533; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal primaria_completa Hombre,PERSONA_DEMO,1,0,exacta,nacional=2430709; suma_municipios=2430709; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal primaria_completa Mujer,PERSONA_DEMO,1,0,exacta,nacional=2462382; suma_municipios=2462382; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal primaria_completa Total,PERSONA_DEMO,1,0,exacta,nacional=4893091; suma_municipios=4893091; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal primaria_incompleta Hombre,PERSONA_DEMO,1,0,exacta,nacional=3640961; suma_municipios=3640961; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal primaria_incompleta Mujer,PERSONA_DEMO,1,0,exacta,nacional=3479010; suma_municipios=3479010; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal primaria_incompleta Total,PERSONA_DEMO,1,0,exacta,nacional=7119971; suma_municipios=7119971; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal secundaria_completa Hombre,PERSONA_DEMO,1,0,exacta,nacional=772887; suma_municipios=772887; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal secundaria_completa Mujer,PERSONA_DEMO,1,0,exacta,nacional=842107; suma_municipios=842107; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal secundaria_completa Total,PERSONA_DEMO,1,0,exacta,nacional=1614994; suma_municipios=1614994; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal secundaria_incompleta Hombre,PERSONA_DEMO,1,0,exacta,nacional=2622111; suma_municipios=2622111; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal secundaria_incompleta Mujer,PERSONA_DEMO,1,0,exacta,nacional=2531297; suma_municipios=2531297; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal secundaria_incompleta Total,PERSONA_DEMO,1,0,exacta,nacional=5153408; suma_municipios=5153408; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal media_completa Hombre,PERSONA_DEMO,1,0,exacta,nacional=4360995; suma_municipios=4360995; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal media_completa Mujer,PERSONA_DEMO,1,0,exacta,nacional=4577752; suma_municipios=4577752; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal media_completa Total,PERSONA_DEMO,1,0,exacta,nacional=8938747; suma_municipios=8938747; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal media_incompleta Hombre,PERSONA_DEMO,1,0,exacta,nacional=543770; suma_municipios=543770; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal media_incompleta Mujer,PERSONA_DEMO,1,0,exacta,nacional=586162; suma_municipios=586162; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal media_incompleta Total,PERSONA_DEMO,1,0,exacta,nacional=1129932; suma_municipios=1129932; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal normal_completa Hombre,PERSONA_DEMO,1,0,exacta,nacional=11914; suma_municipios=11914; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal normal_completa Mujer,PERSONA_DEMO,1,0,exacta,nacional=33335; suma_municipios=33335; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal normal_completa Total,PERSONA_DEMO,1,0,exacta,nacional=45249; suma_municipios=45249; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal normal_incompleta Hombre,PERSONA_DEMO,1,0,exacta,nacional=52938; suma_municipios=52938; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal normal_incompleta Mujer,PERSONA_DEMO,1,0,exacta,nacional=71657; suma_municipios=71657; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal normal_incompleta Total,PERSONA_DEMO,1,0,exacta,nacional=124595; suma_municipios=124595; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal tecnico Hombre,PERSONA_DEMO,1,0,exacta,nacional=910481; suma_municipios=910481; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal tecnico Mujer,PERSONA_DEMO,1,0,exacta,nacional=1409025; suma_municipios=1409025; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal tecnico Total,PERSONA_DEMO,1,0,exacta,nacional=2319506; suma_municipios=2319506; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal tecnologico Hombre,PERSONA_DEMO,1,0,exacta,nacional=480712; suma_municipios=480712; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal tecnologico Mujer,PERSONA_DEMO,1,0,exacta,nacional=547772; suma_municipios=547772; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal tecnologico Total,PERSONA_DEMO,1,0,exacta,nacional=1028484; suma_municipios=1028484; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal universitario Hombre,PERSONA_DEMO,1,0,exacta,nacional=1910561; suma_municipios=1910561; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal universitario Mujer,PERSONA_DEMO,1,0,exacta,nacional=2280688; suma_municipios=2280688; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal universitario Total,PERSONA_DEMO,1,0,exacta,nacional=4191249; suma_municipios=4191249; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal especializacion_maestria_doctorado Hombre,PERSONA_DEMO,1,0,exacta,nacional=515152; suma_municipios=515152; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal especializacion_maestria_doctorado Mujer,PERSONA_DEMO,1,0,exacta,nacional=622625; suma_municipios=622625; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal especializacion_maestria_doctorado Total,PERSONA_DEMO,1,0,exacta,nacional=1137777; suma_municipios=1137777; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal sin_informacion Hombre,PERSONA_DEMO,1,0,exacta,nacional=379265; suma_municipios=379265; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal sin_informacion Mujer,PERSONA_DEMO,1,0,exacta,nacional=318470; suma_municipios=318470; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal sin_informacion Total,PERSONA_DEMO,1,0,exacta,nacional=697735; suma_municipios=697735; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal total Total,PERSONA_SOCIAL,1,0,exacta,nacional=37482140; suma_municipios=37482140; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal total Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=18065910; suma_municipios=18065910; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal total Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=19416230; suma_municipios=19416230; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal no_informa Total,PERSONA_SOCIAL,1,0,exacta,nacional=710699; suma_municipios=710699; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal no_informa Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=374063; suma_municipios=374063; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal no_informa Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=336636; suma_municipios=336636; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal trabajo_por_lo_menos_una_hora_en_una_actividad_que_le_genero_algun_ingreso Total,PERSONA_SOCIAL,1,0,exacta,nacional=15976509; suma_municipios=15976509; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal trabajo_por_lo_menos_una_hora_en_una_actividad_que_le_genero_algun_ingreso Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=9833983; suma_municipios=9833983; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal trabajo_por_lo_menos_una_hora_en_una_actividad_que_le_genero_algun_ingreso Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=6142526; suma_municipios=6142526; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal trabajo_o_ayudo_en_un_negocio_por_lo_menos_una_hora_sin_que_le_pagaran Total,PERSONA_SOCIAL,1,0,exacta,nacional=280432; suma_municipios=280432; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal trabajo_o_ayudo_en_un_negocio_por_lo_menos_una_hora_sin_que_le_pagaran Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=178877; suma_municipios=178877; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal trabajo_o_ayudo_en_un_negocio_por_lo_menos_una_hora_sin_que_le_pagaran Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=101555; suma_municipios=101555; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal no_trabajo_pero_tenia_un_empleo_trabajo_o_negocio_por_el_que_recibe_ingresos Total,PERSONA_SOCIAL,1,0,exacta,nacional=1208163; suma_municipios=1208163; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal no_trabajo_pero_tenia_un_empleo_trabajo_o_negocio_por_el_que_recibe_ingresos Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=720793; suma_municipios=720793; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal no_trabajo_pero_tenia_un_empleo_trabajo_o_negocio_por_el_que_recibe_ingresos Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=487370; suma_municipios=487370; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal busco_trabajo Total,PERSONA_SOCIAL,1,0,exacta,nacional=2022265; suma_municipios=2022265; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal busco_trabajo Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=1180690; suma_municipios=1180690; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal busco_trabajo Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=841575; suma_municipios=841575; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal vivio_de_jubilacion_pension_o_renta Total,PERSONA_SOCIAL,1,0,exacta,nacional=1335991; suma_municipios=1335991; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal vivio_de_jubilacion_pension_o_renta Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=684353; suma_municipios=684353; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal vivio_de_jubilacion_pension_o_renta Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=651638; suma_municipios=651638; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal estudio Total,PERSONA_SOCIAL,1,0,exacta,nacional=6771846; suma_municipios=6771846; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal estudio Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=3350988; suma_municipios=3350988; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal estudio Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=3420858; suma_municipios=3420858; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal realizo_oficios_del_hogar Total,PERSONA_SOCIAL,1,0,exacta,nacional=7111359; suma_municipios=7111359; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal realizo_oficios_del_hogar Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=504339; suma_municipios=504339; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal realizo_oficios_del_hogar Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=6607020; suma_municipios=6607020; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal esta_incapacitado_a_permanentemente_para_trabajar Total,PERSONA_SOCIAL,1,0,exacta,nacional=487497; suma_municipios=487497; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal esta_incapacitado_a_permanentemente_para_trabajar Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=264032; suma_municipios=264032; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal esta_incapacitado_a_permanentemente_para_trabajar Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=223465; suma_municipios=223465; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal estuvo_en_otra_situacion Total,PERSONA_SOCIAL,1,0,exacta,nacional=1577379; suma_municipios=1577379; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal estuvo_en_otra_situacion Hombre,PERSONA_SOCIAL,1,0,exacta,nacional=973792; suma_municipios=973792; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal estuvo_en_otra_situacion Mujer,PERSONA_SOCIAL,1,0,exacta,nacional=603587; suma_municipios=603587; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total total,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total bloque_ladrillo_piedra_madera_pulida,VIVIENDAS,1,0,exacta,nacional=11005296; suma_municipios=11005296; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total concreto_vaciado,VIVIENDAS,1,0,exacta,nacional=623477; suma_municipios=623477; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total material_prefabricado,VIVIENDAS,1,0,exacta,nacional=111720; suma_municipios=111720; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total guadua,VIVIENDAS,1,0,exacta,nacional=45410; suma_municipios=45410; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total tapia_bahareque_adobe,VIVIENDAS,1,0,exacta,nacional=720213; suma_municipios=720213; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total madera_burda,VIVIENDAS,1,0,exacta,nacional=765587; suma_municipios=765587; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total cana_vegetales,VIVIENDAS,1,0,exacta,nacional=94594; suma_municipios=94594; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total desecho,VIVIENDAS,1,0,exacta,nacional=106059; suma_municipios=106059; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Total sin_paredes,VIVIENDAS,1,0,exacta,nacional=8373; suma_municipios=8373; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera total,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera bloque_ladrillo_piedra_madera_pulida,VIVIENDAS,1,0,exacta,nacional=9411667; suma_municipios=9411667; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera concreto_vaciado,VIVIENDAS,1,0,exacta,nacional=581897; suma_municipios=581897; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera material_prefabricado,VIVIENDAS,1,0,exacta,nacional=73890; suma_municipios=73890; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera guadua,VIVIENDAS,1,0,exacta,nacional=9431; suma_municipios=9431; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera tapia_bahareque_adobe,VIVIENDAS,1,0,exacta,nacional=181439; suma_municipios=181439; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera madera_burda,VIVIENDAS,1,0,exacta,nacional=233689; suma_municipios=233689; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera cana_vegetales,VIVIENDAS,1,0,exacta,nacional=23979; suma_municipios=23979; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera desecho,VIVIENDAS,1,0,exacta,nacional=50708; suma_municipios=50708; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Cabecera sin_paredes,VIVIENDAS,1,0,exacta,nacional=775; suma_municipios=775; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado total,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado bloque_ladrillo_piedra_madera_pulida,VIVIENDAS,1,0,exacta,nacional=630164; suma_municipios=630164; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado concreto_vaciado,VIVIENDAS,1,0,exacta,nacional=19002; suma_municipios=19002; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado material_prefabricado,VIVIENDAS,1,0,exacta,nacional=10987; suma_municipios=10987; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado guadua,VIVIENDAS,1,0,exacta,nacional=5493; suma_municipios=5493; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado tapia_bahareque_adobe,VIVIENDAS,1,0,exacta,nacional=80185; suma_municipios=80185; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado madera_burda,VIVIENDAS,1,0,exacta,nacional=111178; suma_municipios=111178; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado cana_vegetales,VIVIENDAS,1,0,exacta,nacional=16779; suma_municipios=16779; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado desecho,VIVIENDAS,1,0,exacta,nacional=10198; suma_municipios=10198; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Centro poblado sin_paredes,VIVIENDAS,1,0,exacta,nacional=421; suma_municipios=421; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso total,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso bloque_ladrillo_piedra_madera_pulida,VIVIENDAS,1,0,exacta,nacional=963465; suma_municipios=963465; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso concreto_vaciado,VIVIENDAS,1,0,exacta,nacional=22578; suma_municipios=22578; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso material_prefabricado,VIVIENDAS,1,0,exacta,nacional=26843; suma_municipios=26843; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso guadua,VIVIENDAS,1,0,exacta,nacional=30486; suma_municipios=30486; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso tapia_bahareque_adobe,VIVIENDAS,1,0,exacta,nacional=458589; suma_municipios=458589; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso madera_burda,VIVIENDAS,1,0,exacta,nacional=420720; suma_municipios=420720; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso cana_vegetales,VIVIENDAS,1,0,exacta,nacional=53836; suma_municipios=53836; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso desecho,VIVIENDAS,1,0,exacta,nacional=45153; suma_municipios=45153; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 6V Rural disperso sin_paredes,VIVIENDAS,1,0,exacta,nacional=7177; suma_municipios=7177; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total viviendas_presentes,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total energia_total,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total energia_si,VIVIENDAS,1,0,exacta,nacional=12984126; suma_municipios=12984126; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total energia_no,VIVIENDAS,1,0,exacta,nacional=496603; suma_municipios=496603; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total acueducto_total,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total acueducto_si,VIVIENDAS,1,0,exacta,nacional=11644158; suma_municipios=11644158; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total acueducto_no,VIVIENDAS,1,0,exacta,nacional=1836571; suma_municipios=1836571; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total alcantarillado_total,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total alcantarillado_si,VIVIENDAS,1,0,exacta,nacional=10321871; suma_municipios=10321871; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total alcantarillado_no,VIVIENDAS,1,0,exacta,nacional=3158858; suma_municipios=3158858; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total gas_total,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total gas_si,VIVIENDAS,1,0,exacta,nacional=8998911; suma_municipios=8998911; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total gas_no,VIVIENDAS,1,0,exacta,nacional=4365784; suma_municipios=4365784; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total gas_sin_informacion,VIVIENDAS,1,0,exacta,nacional=116034; suma_municipios=116034; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total basuras_total,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total basuras_si,VIVIENDAS,1,0,exacta,nacional=10994034; suma_municipios=10994034; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total basuras_no,VIVIENDAS,1,0,exacta,nacional=2486695; suma_municipios=2486695; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total internet_total,VIVIENDAS,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total internet_si,VIVIENDAS,1,0,exacta,nacional=5857149; suma_municipios=5857149; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total internet_no,VIVIENDAS,1,0,exacta,nacional=7500779; suma_municipios=7500779; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Total internet_sin_informacion,VIVIENDAS,1,0,exacta,nacional=122801; suma_municipios=122801; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera viviendas_presentes,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera energia_total,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera energia_si,VIVIENDAS,1,0,exacta,nacional=10485896; suma_municipios=10485896; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera energia_no,VIVIENDAS,1,0,exacta,nacional=81579; suma_municipios=81579; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera acueducto_total,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera acueducto_si,VIVIENDAS,1,0,exacta,nacional=10140175; suma_municipios=10140175; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera acueducto_no,VIVIENDAS,1,0,exacta,nacional=427300; suma_municipios=427300; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera alcantarillado_total,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera alcantarillado_si,VIVIENDAS,1,0,exacta,nacional=9781253; suma_municipios=9781253; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera alcantarillado_no,VIVIENDAS,1,0,exacta,nacional=786222; suma_municipios=786222; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera gas_total,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera gas_si,VIVIENDAS,1,0,exacta,nacional=8591893; suma_municipios=8591893; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera gas_no,VIVIENDAS,1,0,exacta,nacional=1877008; suma_municipios=1877008; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera gas_sin_informacion,VIVIENDAS,1,0,exacta,nacional=98574; suma_municipios=98574; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera basuras_total,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera basuras_si,VIVIENDAS,1,0,exacta,nacional=10218161; suma_municipios=10218161; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera basuras_no,VIVIENDAS,1,0,exacta,nacional=349314; suma_municipios=349314; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera internet_total,VIVIENDAS,1,0,exacta,nacional=10567475; suma_municipios=10567475; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera internet_si,VIVIENDAS,1,0,exacta,nacional=5663192; suma_municipios=5663192; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera internet_no,VIVIENDAS,1,0,exacta,nacional=4803284; suma_municipios=4803284; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Cabecera internet_sin_informacion,VIVIENDAS,1,0,exacta,nacional=100999; suma_municipios=100999; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado viviendas_presentes,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado energia_total,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado energia_si,VIVIENDAS,1,0,exacta,nacional=846754; suma_municipios=846754; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado energia_no,VIVIENDAS,1,0,exacta,nacional=37653; suma_municipios=37653; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado acueducto_total,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado acueducto_si,VIVIENDAS,1,0,exacta,nacional=654863; suma_municipios=654863; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado acueducto_no,VIVIENDAS,1,0,exacta,nacional=229544; suma_municipios=229544; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado alcantarillado_total,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado alcantarillado_si,VIVIENDAS,1,0,exacta,nacional=385916; suma_municipios=385916; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado alcantarillado_no,VIVIENDAS,1,0,exacta,nacional=498491; suma_municipios=498491; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado gas_total,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado gas_si,VIVIENDAS,1,0,exacta,nacional=297542; suma_municipios=297542; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado gas_no,VIVIENDAS,1,0,exacta,nacional=581860; suma_municipios=581860; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado gas_sin_informacion,VIVIENDAS,1,0,exacta,nacional=5005; suma_municipios=5005; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado basuras_total,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado basuras_si,VIVIENDAS,1,0,exacta,nacional=504473; suma_municipios=504473; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado basuras_no,VIVIENDAS,1,0,exacta,nacional=379934; suma_municipios=379934; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado internet_total,VIVIENDAS,1,0,exacta,nacional=884407; suma_municipios=884407; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado internet_si,VIVIENDAS,1,0,exacta,nacional=105894; suma_municipios=105894; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado internet_no,VIVIENDAS,1,0,exacta,nacional=772516; suma_municipios=772516; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Centro poblado internet_sin_informacion,VIVIENDAS,1,0,exacta,nacional=5997; suma_municipios=5997; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso viviendas_presentes,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso energia_total,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso energia_si,VIVIENDAS,1,0,exacta,nacional=1651476; suma_municipios=1651476; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso energia_no,VIVIENDAS,1,0,exacta,nacional=377371; suma_municipios=377371; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso acueducto_total,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso acueducto_si,VIVIENDAS,1,0,exacta,nacional=849120; suma_municipios=849120; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso acueducto_no,VIVIENDAS,1,0,exacta,nacional=1179727; suma_municipios=1179727; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso alcantarillado_total,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso alcantarillado_si,VIVIENDAS,1,0,exacta,nacional=154702; suma_municipios=154702; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso alcantarillado_no,VIVIENDAS,1,0,exacta,nacional=1874145; suma_municipios=1874145; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso gas_total,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso gas_si,VIVIENDAS,1,0,exacta,nacional=109476; suma_municipios=109476; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso gas_no,VIVIENDAS,1,0,exacta,nacional=1906916; suma_municipios=1906916; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso gas_sin_informacion,VIVIENDAS,1,0,exacta,nacional=12455; suma_municipios=12455; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso basuras_total,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso basuras_si,VIVIENDAS,1,0,exacta,nacional=271400; suma_municipios=271400; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso basuras_no,VIVIENDAS,1,0,exacta,nacional=1757447; suma_municipios=1757447; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso internet_total,VIVIENDAS,1,0,exacta,nacional=2028847; suma_municipios=2028847; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso internet_si,VIVIENDAS,1,0,exacta,nacional=88063; suma_municipios=88063; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso internet_no,VIVIENDAS,1,0,exacta,nacional=1924979; suma_municipios=1924979; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 8V Rural disperso internet_sin_informacion,VIVIENDAS,1,0,exacta,nacional=15805; suma_municipios=15805; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total personas_hogares_particulares,VIVIENDAS,1,0,exacta,nacional=43835324; suma_municipios=43835324; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total sin_servicio_energia,VIVIENDAS,1,0,exacta,nacional=1728788; suma_municipios=1728788; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total no_tiene_estrato,VIVIENDAS,1,0,exacta,nacional=405411; suma_municipios=405411; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total estrato_1,VIVIENDAS,1,0,exacta,nacional=16167618; suma_municipios=16167618; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total estrato_2,VIVIENDAS,1,0,exacta,nacional=14137367; suma_municipios=14137367; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total estrato_3,VIVIENDAS,1,0,exacta,nacional=7997384; suma_municipios=7997384; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total estrato_4,VIVIENDAS,1,0,exacta,nacional=2093697; suma_municipios=2093697; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total estrato_5,VIVIENDAS,1,0,exacta,nacional=789266; suma_municipios=789266; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total estrato_6,VIVIENDAS,1,0,exacta,nacional=428676; suma_municipios=428676; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Total no_sabe_no_responde,VIVIENDAS,1,0,exacta,nacional=87117; suma_municipios=87117; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera personas_hogares_particulares,VIVIENDAS,1,0,exacta,nacional=33905550; suma_municipios=33905550; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera sin_servicio_energia,VIVIENDAS,1,0,exacta,nacional=261271; suma_municipios=261271; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera no_tiene_estrato,VIVIENDAS,1,0,exacta,nacional=137385; suma_municipios=137385; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera estrato_1,VIVIENDAS,1,0,exacta,nacional=10266016; suma_municipios=10266016; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera estrato_2,VIVIENDAS,1,0,exacta,nacional=12152634; suma_municipios=12152634; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera estrato_3,VIVIENDAS,1,0,exacta,nacional=7820818; suma_municipios=7820818; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera estrato_4,VIVIENDAS,1,0,exacta,nacional=2050020; suma_municipios=2050020; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera estrato_5,VIVIENDAS,1,0,exacta,nacional=764316; suma_municipios=764316; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera estrato_6,VIVIENDAS,1,0,exacta,nacional=405532; suma_municipios=405532; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Cabecera no_sabe_no_responde,VIVIENDAS,1,0,exacta,nacional=47558; suma_municipios=47558; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado personas_hogares_particulares,VIVIENDAS,1,0,exacta,nacional=3121127; suma_municipios=3121127; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado sin_servicio_energia,VIVIENDAS,1,0,exacta,nacional=125832; suma_municipios=125832; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado no_tiene_estrato,VIVIENDAS,1,0,exacta,nacional=67300; suma_municipios=67300; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado estrato_1,VIVIENDAS,1,0,exacta,nacional=2245509; suma_municipios=2245509; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado estrato_2,VIVIENDAS,1,0,exacta,nacional=592845; suma_municipios=592845; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado estrato_3,VIVIENDAS,1,0,exacta,nacional=50840; suma_municipios=50840; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado estrato_4,VIVIENDAS,1,0,exacta,nacional=13121; suma_municipios=13121; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado estrato_5,VIVIENDAS,1,0,exacta,nacional=7561; suma_municipios=7561; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado estrato_6,VIVIENDAS,1,0,exacta,nacional=8253; suma_municipios=8253; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Centro poblado no_sabe_no_responde,VIVIENDAS,1,0,exacta,nacional=9866; suma_municipios=9866; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso personas_hogares_particulares,VIVIENDAS,1,0,exacta,nacional=6808647; suma_municipios=6808647; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso sin_servicio_energia,VIVIENDAS,1,0,exacta,nacional=1341685; suma_municipios=1341685; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso no_tiene_estrato,VIVIENDAS,1,0,exacta,nacional=200726; suma_municipios=200726; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso estrato_1,VIVIENDAS,1,0,exacta,nacional=3656093; suma_municipios=3656093; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso estrato_2,VIVIENDAS,1,0,exacta,nacional=1391888; suma_municipios=1391888; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso estrato_3,VIVIENDAS,1,0,exacta,nacional=125726; suma_municipios=125726; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso estrato_4,VIVIENDAS,1,0,exacta,nacional=30556; suma_municipios=30556; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso estrato_5,VIVIENDAS,1,0,exacta,nacional=17389; suma_municipios=17389; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso estrato_6,VIVIENDAS,1,0,exacta,nacional=14891; suma_municipios=14891; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 10V Rural disperso no_sabe_no_responde,VIVIENDAS,1,0,exacta,nacional=29693; suma_municipios=29693; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1PM total,CONTEXTO,1,0,exacta,nacional=44164417; suma_municipios=44164417; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1PM hombre,CONTEXTO,1,0,exacta,nacional=21570493; suma_municipios=21570493; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1PM mujer,CONTEXTO,1,0,exacta,nacional=22593924; suma_municipios=22593924; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1V viviendas_total,CONTEXTO,1,0,exacta,nacional=16070893; suma_municipios=16070893; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1V ocupada_presentes,CONTEXTO,1,0,exacta,nacional=13480729; suma_municipios=13480729; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1V ocupada_ausentes,CONTEXTO,1,0,exacta,nacional=439017; suma_municipios=439017; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1V temporal_vacaciones,CONTEXTO,1,0,exacta,nacional=788763; suma_municipios=788763; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Total Nacional vs suma municipal 1V desocupada,CONTEXTO,1,0,exacta,nacional=1362384; suma_municipios=1362384; n_municipal_NA=0; diferencia_absoluta=0; diferencia_relativa=0
+Conversión numérica columna 5,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1010
+Conversión numérica columna 6,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1010
+Conversión numérica columna 7,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=20; de_ellos_sentinelas=20; negativos=0; no_enteros=1011
+Conversión numérica columna 8,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=989
+Conversión numérica columna 9,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1009
+Conversión numérica columna 10,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1008
+Conversión numérica columna 11,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1010
+Conversión numérica columna 12,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1010
+Conversión numérica columna 13,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1018
+Conversión numérica columna 14,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1033
+Conversión numérica columna 15,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=992
+Conversión numérica columna 16,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1004
+Conversión numérica columna 17,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1023
+Conversión numérica columna 18,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1000
+Conversión numérica columna 19,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1015
+Conversión numérica columna 20,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=983
+Conversión numérica columna 21,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1009
+Conversión numérica columna 22,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1015
+Conversión numérica columna 23,IPM_municipios_region,1122,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=1009
+Código municipal cinco caracteres,IPM_municipios_region,1122,0,cero inválidos,
+Prefijo departamento coincide con municipio,IPM_municipios_region,1122,0,cero diferencias,
+Unicidad codigo_municipio,IPM_municipios_region,1122,0,cero duplicados,
+ID cinco dígitos IPM,IPM_municipios_region,1122,0,0,
+IPM Municipal=IPM,IPM_municipios_region,1122,0,exacta,
+"IPM rango [0,100] ipm_municipal",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] ipm",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] cabeceras",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] ipm_centros_poblados_y_rural_disperso",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] analfabetismo",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] bajo_logro_educativo",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] barreras_a_servicios_para_cuidado_de_la_primera_infancia",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] barreras_de_acceso_a_servicios_de_salud",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] tasa_de_dependencia",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] hacinamiento_critico",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] inadecuada_eliminacion_de_excretas",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] inasistencia_escolar",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] material_inadecuado_de_paredes_exteriores",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] material_inadecuado_de_pisos",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] rezago_escolar",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] sin_acceso_a_fuente_de_agua_mejorada",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] sin_aseguramiento_en_salud",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] trabajo_infantil",IPM_municipios_region,1122,0,0-100,
+"IPM rango [0,100] trabajo_informal",IPM_municipios_region,1122,0,0-100,
+Consistencia IPM ancho vs Indicadores_municipales,Indicadores_municipales,17952,0,1e-6,sin pareja=17936
+Conversión numérica columna 6,Indicadores_municipales,17952,0,Sin no-convertibles inesperados,no_convertibles=0; de_ellos_sentinelas=0; negativos=0; no_enteros=16148
+Dominio IPM entre valores admitidos,Indicadores_por_dominio,50490,0,dominios declarados,
+Conversión numérica columna 7,Indicadores_por_dominio,50490,0,Sin no-convertibles inesperados,no_convertibles=300; de_ellos_sentinelas=300; negativos=0; no_enteros=45005
+Indicadores_por_dominio Total coincide con Indicadores_municipales,Indicadores_por_dominio,16830,0,1e-6,sin par en largo municipal=16830
+DIVIPOLA longitud código,DIVIPOLA,1122,0,cinco caracteres,
+DIVIPOLA código único,DIVIPOLA,1122,0,0,
+Conjunto municipal igual a IPM,hogares,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,persona_demo,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,persona_social,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,viviendas_6V,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,viviendas_8V,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,viviendas_10V,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,contexto_1PM,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,contexto_1V,1122,0,0 diferencias,
+Conjunto municipal igual a IPM,ipm,1122,0,0 diferencias,
+Diferencias DIVIPOLA/IPM,DIVIPOLA,1122,2,reportar ambas,DIVIPOLA solo: 27493 ; IPM solo: 94663
+Municipios sin Cabecera,CNPV/IPM,1122,0,solo informar,n sin cabecera en CNPV=20; fuera de CNPV=1
+Municipios sin Centro poblado,CNPV/IPM,1122,0,solo informar,n sin centro poblado en CNPV=192; fuera de CNPV=1
+Cobertura del área Total,VIVIENDAS_8V,1122,0,solo informar,municipios con fila de área=1122
+Cobertura del área Cabecera,VIVIENDAS_8V,1122,0,solo informar,municipios con fila de área=1102
+Cobertura del área Centro poblado,VIVIENDAS_8V,1122,0,solo informar,municipios con fila de área=930
+Cobertura del área Rural disperso,VIVIENDAS_8V,1122,0,solo informar,municipios con fila de área=1122
+Departamentos del universo,CNPV/IPM,33,0,33 departamentos incluida Bogotá D.C.,
+Áreas no municipalizadas dentro de universo IPM,DIVIPOLA/IPM,18,0,reporte de conteo,n=18
+Cabeceras IPM como --,IPM_municipios_region,1122,0,20 casos,tras convertir -- a NA: 20
+Conjunto sin Cabecera CNPV coincide con 20 -- IPM,IPM_municipios_region,20,0,0 códigos distintos,CNPV=20; IPM=20
+Composición de municipios sin Cabecera,CNPV/IPM,20,0,18 áreas no municipalizadas + 2 casos adicionales,"ANM=18 (91263,91405,91407,91430,91460,91530,91536,91669,91798,94883,94884,94885,94886,94887,94888,97511,97777,97889); otros=2 (94343 BARRANCOMINAS; 94663 MAPIRIPANA)"
+Combinación tipo vivienda ausente Total,VIVIENDAS_6V,1122,0,ausencia estructural informativa,"n ausentes=0; ausencia estructural, no es dato faltante; no imputar"
+Combinación tipo vivienda ausente Casa,VIVIENDAS_6V,1122,0,ausencia estructural informativa,"n ausentes=0; ausencia estructural, no es dato faltante; no imputar"
+Combinación tipo vivienda ausente Apartamento,VIVIENDAS_6V,1122,15,ausencia estructural informativa,"n ausentes=15; ausencia estructural, no es dato faltante; no imputar"
+Combinación tipo vivienda ausente Tipo cuarto,VIVIENDAS_6V,1122,6,ausencia estructural informativa,"n ausentes=6; ausencia estructural, no es dato faltante; no imputar"
+Combinación tipo vivienda ausente Vivienda tradicional indígena,VIVIENDAS_6V,1122,446,ausencia estructural informativa,"n ausentes=446; ausencia estructural, no es dato faltante; no imputar"
+Combinación tipo vivienda ausente Vivienda tradicional étnica,VIVIENDAS_6V,1122,594,ausencia estructural informativa,"n ausentes=594; ausencia estructural, no es dato faltante; no imputar"
+Combinación tipo vivienda ausente Otro tipo de vivienda (1),VIVIENDAS_6V,1122,141,ausencia estructural informativa,"n ausentes=141; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente Total,CONTEXTO_1PM,4276,0,ausencia estructural informativa,"n ausentes=0; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 0 a 4,CONTEXTO_1PM,4276,13,ausencia estructural informativa,"n ausentes=13; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 5 a 9,CONTEXTO_1PM,4276,8,ausencia estructural informativa,"n ausentes=8; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 10 a 14,CONTEXTO_1PM,4276,7,ausencia estructural informativa,"n ausentes=7; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 15 a 19,CONTEXTO_1PM,4276,7,ausencia estructural informativa,"n ausentes=7; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 20 a 24,CONTEXTO_1PM,4276,9,ausencia estructural informativa,"n ausentes=9; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 25 a 29,CONTEXTO_1PM,4276,6,ausencia estructural informativa,"n ausentes=6; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 30 a 34,CONTEXTO_1PM,4276,8,ausencia estructural informativa,"n ausentes=8; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 35 a 39,CONTEXTO_1PM,4276,8,ausencia estructural informativa,"n ausentes=8; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 40 a 44,CONTEXTO_1PM,4276,8,ausencia estructural informativa,"n ausentes=8; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 45 a 49,CONTEXTO_1PM,4276,5,ausencia estructural informativa,"n ausentes=5; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 50 a 54,CONTEXTO_1PM,4276,12,ausencia estructural informativa,"n ausentes=12; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 55 a 59,CONTEXTO_1PM,4276,8,ausencia estructural informativa,"n ausentes=8; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 60 a 64,CONTEXTO_1PM,4276,11,ausencia estructural informativa,"n ausentes=11; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 65 a 69,CONTEXTO_1PM,4276,12,ausencia estructural informativa,"n ausentes=12; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 70 a 74,CONTEXTO_1PM,4276,29,ausencia estructural informativa,"n ausentes=29; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 75 a 79,CONTEXTO_1PM,4276,33,ausencia estructural informativa,"n ausentes=33; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 80 a 84,CONTEXTO_1PM,4276,62,ausencia estructural informativa,"n ausentes=62; ausencia estructural, no es dato faltante; no imputar"
+Combinación grupo edad ausente 85 y más,CONTEXTO_1PM,4276,89,ausencia estructural informativa,"n ausentes=89; ausencia estructural, no es dato faltante; no imputar"
+Nombres IPM y DIVIPOLA comparados por código,IPM/DIVIPOLA,1121,0,informativo,nombres distintos tras normalizar mayúsculas/acentos/puntuación=4
+Decisión presente 1HM,HOGARES_MUNICIPAL,1,0,presente,Bloque en el consolidado
+Decisión presente 2HM,HOGARES_MUNICIPAL,1,0,presente,Bloque en el consolidado
+Decisión presente 17PM,PERSONA_DEMO,1,0,presente,Bloque en el consolidado
+Decisión presente 5PM,PERSONA_SOCIAL,1,0,presente,Bloque en el consolidado
+Decisión presente 6V_MPIO,VIVIENDAS cols A:AR,1,0,presente,Bloque en el consolidado
+Decisión presente 8V_MPIO,VIVIENDAS cols AS:BQ,1,0,presente,Bloque en el consolidado
+Decisión presente 10V_MPIO,VIVIENDAS cols BR:CE,1,0,presente,Bloque en el consolidado
+Decisión presente 1PM,CONTEXTO cols A:J,1,0,presente,Bloque en el consolidado
+Decisión presente 1V_MPIO,CONTEXTO cols K:T,1,0,presente,Bloque en el consolidado
+CSV decisión 1HM,HOGARES,1,0,INCLUIDA,"Número de hogares con personas menores de 15 años y número de personas menores de 15 años por área (Total, Cabecera y Centros poblados y Rural disperso) según municipio"
+CSV decisión 2HM,HOGARES,1,0,INCLUIDA,"Número de hogares con adultos mayores y número de personas de 60 años y más por área (Total, Cabecera y Centros poblados y Rural disperso) según Municipio"
+CSV decisión 1PM,PERSONAS_DEMOGRAFICO,1,0,CONTEXTO,"Población total censada, por sexo e índices de masculinidad y feminidad, segúnmunicipios y áreas (Total, Cabecera y Centros poblados y Rural disperso) y grupos de edad"
+CSV decisión 17PM,PERSONAS_DEMOGRAFICO,1,0,INCLUIDA,"Población censa da en hogares, de 5 años y más de edad, por asistencia escolar y sexo, según municipio y áreas y (Total, Cabecera y Centros poblados y Rural disperso) y grupos de e"
+CSV decisión 5PM,PERSONAS_SOCIAL,1,0,INCLUIDA,"Población censada en hogares particulares de 10 años y más de edad, por actividad realizada la semana anterior al censo, según municipio, área del país (Total, Cabecera y Centros p"
+CSV decisión 1V_MPIO,VIVIENDAS,1,0,CONTEXTO,"Viviendas, por condición de ocupación, según municipio, áreas (Total, Cabecera, Centro poblado y Rural disperso) y tipos de vivienda"
+CSV decisión 6V_MPIO,VIVIENDAS,1,0,INCLUIDA,"Viviendas ocupadas con personas presentes, por materiales predominantes de las paredes exteriores, según municipio, áreas (Total, Cabecera, Centro poblado y Rural disperso) y tipo"
+CSV decisión 8V_MPIO,VIVIENDAS,1,0,INCLUIDA,"Viviendas ocupadas con personas presentes, por disponibilidad de servicios públicos, según municipio y áreas (Total, Cabecera, Centro poblado y Rural disperso)"
+CSV decisión 10V_MPIO,VIVIENDAS,1,0,INCLUIDA,"Personas censadas en hogares particulaes por estrato de energia, según municipio y áreas (Total, Cabecera, Centro poblado y Rural disperso)"
+Diccionario_variables cubre 4 columnas IPM y 15 privaciones,Diccionario_variables,19,0,0 ausentes,entradas=19; ausentes=
+Diccionario_dominio filas,Diccionario_dominio,64,0,64 entradas,
+Variable IPM decisión Analfabetismo,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Bajo logro educativo,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Rezago escolar,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Inasistencia escolar,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Barreras a servicios para cuidado de la primera infancia,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Trabajo infantil,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Trabajo informal,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Tasa de dependencia,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Barreras de acceso a servicios de salud,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Sin aseguramiento en salud,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Hacinamiento crítico,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Material inadecuado de pisos,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Sin acceso a fuente de agua mejorada,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión Inadecuada eliminación de excretas,IPM_municipios_region,1,0,INCLUIDA,Presente
+Variable IPM decisión IPM Municipal,IPM_municipios_region,1,0,VALIDACIÓN,Presente
+Variable IPM decisión IPM,IPM_municipios_region,1,0,VALIDACIÓN,Presente
+Material inadecuado de paredes: presente pero no incluida,IPM_municipios_region,1,0,INCLUIDA no; DESCARTAR por duplicidad con 6V,Columna disponible en IPM y en el diccionario
+Resumen_region recalculado,Resumen_region,120,0,1e-6,
+Resumen_departamento recalculado,Resumen_departamento,165,0,1e-6,
+Control_calidad recalculado,Control_calidad,6,0,exacto,Municipios únicos en IPM:1122:1122; Municipios con departamento:1122:1122; Municipios con región:1122:1122; IPM municipal no nulo:1122:1122; Indicadores de privación:15:15; Registros dominio por municipio:50490:50490
+Integridad archivos fuente MD5 antes/después,originales,3,0,0 cambios,CUADROS:7ff8bd0f6d4590ce85988d9c63893fb9:7ff8bd0f6d4590ce85988d9c63893fb9; IPM:63093138c0ae645546f1409bb4118f12:63093138c0ae645546f1409bb4118f12; DIVIPOLA:bc963c8595abcb569039681281320732:bc963c8595abcb569039681281320732

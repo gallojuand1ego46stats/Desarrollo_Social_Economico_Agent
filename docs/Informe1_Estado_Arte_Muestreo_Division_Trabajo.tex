@@ -1,0 +1,1156 @@
+\documentclass[11pt,letterpaper]{article}
+
+% ============================================================
+% PAQUETES
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=2.7cm,right=2.7cm,top=2.8cm,bottom=2.8cm}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!50!black]{hyperref}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% ============================================================
+% COLORES INSTITUCIONALES
+% ============================================================
+\definecolor{ustablue}{RGB}{0,45,98}
+\definecolor{ustagray}{RGB}{90,90,90}
+\definecolor{boxbg}{RGB}{237,243,250}
+
+% ============================================================
+% FORMATO DE TÍTULOS
+% ============================================================
+\titleformat{\section}{\normalfont\Large\bfseries\color{ustablue}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\color{ustablue}}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{ustagray}}{\thesubsubsection.}{0.5em}{}
+
+% ============================================================
+% ENCABEZADO / PIE DE PÁGINA
+% ============================================================
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\color{ustagray} Contratación pública y vulnerabilidad socioeconómica municipal}
+\fancyhead[R]{\small\color{ustagray} Informe 1 --- Proyecto de grado}
+\fancyfoot[C]{\small\thepage}
+
+\setlist[itemize]{leftmargin=1.3em, itemsep=2pt, topsep=3pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=3pt, topsep=3pt}
+
+\newenvironment{recuadro}[1]{%
+  \begin{tcolorbox}[breakable,colback=boxbg,colframe=ustablue,boxrule=0.6pt,arc=1.5pt,
+  title={\small\bfseries #1},fonttitle=\small,coltitle=white,colbacktitle=ustablue,
+  left=6pt,right=6pt,top=4pt,bottom=4pt]
+}{\end{tcolorbox}}
+
+\renewcommand{\contentsname}{Índice}
+
+\begin{document}
+
+% ================================================================
+% PORTADA
+% ================================================================
+\begin{titlepage}
+\centering
+\vspace*{1.0cm}
+{\bfseries\large UNIVERSIDAD SANTO TOMÁS\\
+PROYECTO DE GRADO --- ESTADÍSTICA}\\[0.6cm]
+{\color{ustablue}\rule{0.85\linewidth}{1pt}}\\[0.5cm]
+{\bfseries\Large ESTADO DEL ARTE, MARCO TEÓRICO,\\
+DISEÑO METODOLÓGICO Y DIVISIÓN DE TRABAJO\\[0.2cm]
+\large INFORME 1 --- VERSIÓN INTEGRADA}\\[0.6cm]
+{\color{ustablue}\rule{0.85\linewidth}{1pt}}\\[0.9cm]
+
+{\large\itshape Contratación pública y vulnerabilidad socioeconómica municipal en Colombia}\\[0.9cm]
+
+{\bfseries Pregunta central:}\\[0.15cm]
+\parbox{0.82\linewidth}{\centering\itshape
+¿Existe una correspondencia entre la distribución territorial de la contratación pública
+y las condiciones de vulnerabilidad socioeconómica de los municipios colombianos?}\\[1.3cm]
+
+\begin{tabular}{c}
+Juan Diego Gallo Quintero\\
+Juan David Parada Fonseca
+\end{tabular}\\[1.0cm]
+
+Programa de Estadística --- Octavo semestre\\
+Documento de trabajo académico --- Primer informe integrado\\
+Septiembre de 2026
+
+\vfill
+{\small\itshape Este documento integra, en una sola versión, el estado del arte y
+marco teórico del proyecto, el diseño metodológico de muestreo estadístico ya
+definido para su ejecución, y la división de trabajo entre los dos integrantes
+de la pareja de investigación, articulada con el diagrama de flujo del proyecto.}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ================================================================
+\section{Alcance y decisiones de investigación}
+
+Este documento constituye la primera versión integrada del estado del arte, el
+marco teórico, el diseño metodológico (incluyendo el componente de muestreo
+estadístico) y la división de trabajo para un proyecto de grado orientado a
+estudiar la correspondencia entre la contratación pública y la vulnerabilidad
+socioeconómica de los municipios colombianos. El proyecto toma como punto de
+partida el repositorio público \texttt{desarrollo\_social\_y\_economico} de la
+Universidad Santo Tomás, pero no lo considera un trabajo propio ni un límite
+metodológico: el objetivo es desarrollar una investigación original,
+reproducible y estadísticamente rigurosa.
+
+La unidad principal de análisis será el municipio, siempre que la calidad y
+disponibilidad de los datos permitan la integración territorial. El nivel
+departamental se utilizará como apoyo para contextualización y visualización.
+La contratación pública será caracterizada mediante el número de contratos y su
+valor monetario, complementados por modalidad de contratación, sector, tipo de
+contrato y duración. La vulnerabilidad socioeconómica se conceptualizará a
+partir del enfoque multidimensional del DANE y se estudiará la construcción de
+un índice sintético basado en el Índice de Pobreza Multidimensional (IPM), con
+PCA como técnica estadística central.
+
+El análisis no buscará establecer causalidad. El alcance inferencial se
+limitará a estudiar asociación, correspondencia y brechas territoriales. El
+análisis espacial será incorporado cuando los diagnósticos de dependencia
+espacial lo justifiquen, y el componente de muestreo estadístico --- ya
+definido y detallado en la Sección 9 --- se incorpora para resolver dos
+problemas metodológicos concretos: la auditoría de calidad de un histórico de
+gran volumen y la validación de la estabilidad de las estimaciones.
+
+% ================================================================
+\section{Verificación inicial del repositorio y ventana temporal}
+
+La revisión directa del repositorio muestra que su componente de datos
+documenta un histórico de procesos SECOP II organizado trimestralmente. El
+notebook \texttt{Historico\_de\_Datos.ipynb} registra trimestres desde el
+segundo trimestre de 2015 hasta el cuarto trimestre de 2025, aunque este último
+trimestre está disponible solo hasta el 5 de octubre en la ejecución
+registrada. El histórico reporta 7.827.129 registros y 59 variables, con
+última fecha de publicación 2025-10-05 en la ejecución consultada.
+
+Por tanto, la ventana potencial de contratación disponible en el repositorio es
+aproximadamente 2015--2025. Sin embargo, esto no significa que todos los años
+sean igualmente comparables: será necesario revisar cobertura municipal,
+cambios de variables, calidad de identificación territorial y posibles cambios
+en el sistema de contratación antes de fijar la ventana definitiva del
+estudio --- verificación que, precisamente, se formaliza mediante el muestreo
+estratificado de auditoría descrito en la Sección 9.
+
+El README del repositorio indica que la fuente de contratación es SECOP y que
+la integración con DANE 2018 fue concebida inicialmente con departamentos y, si
+era posible, municipios. También señala que la información de SECOP se
+descarga mediante API/CSV y se organiza en archivos Parquet para facilitar el
+tratamiento de grandes volúmenes.
+
+\begin{recuadro}{Decisión metodológica}
+Se utilizará 2015--2025 como ventana de exploración del componente contractual,
+pero el periodo analítico definitivo se seleccionará después de auditar la
+cobertura y armonización de las variables socioeconómicas. Esta decisión evita
+forzar una comparabilidad temporal que los datos de DANE podrían no sostener.
+\end{recuadro}
+
+% ================================================================
+\section{Estado del arte}
+
+\subsection{Desigualdad territorial, gasto público y desarrollo regional}
+
+La literatura colombiana ha mostrado históricamente que las diferencias
+territoriales en ingreso, capacidad fiscal y prestación de servicios son
+persistentes. Ardila-Rueda (2004) estudió la convergencia del ingreso per
+cápita departamental y el papel del consumo e inversión pública, encontrando
+una alta persistencia en la distribución del ingreso y efectos del gasto
+público --- especialmente de la inversión --- sobre la posición relativa de
+algunos departamentos, sin que ello implicara una transformación completa de
+la distribución territorial.
+
+Bonet-Morón (2006) analizó los desequilibrios de la descentralización y mostró
+diferencias importantes en ingresos fiscales per cápita y en las condiciones de
+provisión de servicios entre entidades territoriales. Su argumento es
+especialmente relevante para este proyecto porque advierte que la
+descentralización y las transferencias no garantizan por sí mismas equidad
+territorial.
+
+Estos antecedentes establecen una primera base conceptual: la distribución de
+recursos públicos debe analizarse en relación con las características
+estructurales de los territorios y no solamente en términos de montos
+absolutos. Para el presente proyecto, esto justifica la utilización de medidas
+per cápita y medidas relativas, además del valor total de contratación.
+
+\subsection{Pobreza multidimensional y vulnerabilidad territorial}
+
+El enfoque de pobreza multidimensional constituye una referencia central para
+operacionalizar la vulnerabilidad socioeconómica. El DANE adopta una medición
+multidimensional que integra dimensiones y privaciones relacionadas con las
+condiciones de vida. A nivel municipal, la fuente censal de 2018 permite
+disponer de una medida territorial de IPM con amplia cobertura municipal.
+
+El uso del IPM resulta especialmente pertinente porque permite evitar una
+definición unidimensional de vulnerabilidad basada exclusivamente en ingreso.
+No obstante, el proyecto va un paso más allá: el IPM será el núcleo conceptual
+del indicador, mientras que variables adicionales disponibles y compatibles se
+evaluarán mediante PCA para construir un índice sintético de vulnerabilidad
+socioeconómica municipal.
+
+Un antecedente reciente particularmente cercano al componente territorial es
+Monsalvo Herrera y Jiménez (2025), quienes analizaron el IPM en municipios de
+Cundinamarca mediante indicadores locales de asociación espacial (LISA). El
+estudio encontró agrupamientos espaciales de pobreza y plantea la relevancia
+del efecto vecindario para orientar acciones de política pública. Este
+antecedente es directamente útil para justificar que, si los diagnósticos lo
+respaldan, el proyecto incorpore estadística espacial.
+
+\subsection{Contratación pública como instrumento de política territorial}
+
+La contratación pública puede interpretarse no solo como una actividad
+administrativa de compra de bienes y servicios, sino como un mecanismo mediante
+el cual el Estado canaliza recursos hacia territorios, sectores y proveedores.
+La literatura internacional reciente ha estudiado explícitamente esta dimensión
+territorial. Ferry et al. (2023) analizaron más de 90.000 contratos de
+autoridades locales del Reino Unido y encontraron diferencias regionales en la
+selección de proveedores, planteando que la contratación puede tener una
+dimensión territorial asociada al desarrollo regional.
+
+Arachia et al. (2024), a partir de más de 50.000 contratos de obras públicas
+municipales en Italia, estudiaron la cooperación intermunicipal mediante
+modelos de efectos fijos y estimadores de \textit{matching}. Sus resultados
+muestran que la forma institucional de organizar la contratación puede
+relacionarse con resultados de ejecución. Aunque el contexto institucional es
+distinto al colombiano, el estudio es útil para mostrar que la contratación
+municipal puede analizarse estadísticamente como fenómeno territorial y no
+únicamente jurídico.
+
+Sarter (2024) plantea una relación multidimensional entre contratación pública
+y desigualdad laboral, argumentando que el objeto comprado, los requisitos del
+proceso y el tipo de proveedor pueden afectar resultados distributivos. Este
+marco apoya la decisión de no limitar el análisis a los montos, sino incorporar
+modalidad, sector, tipo de contrato y características de ejecución.
+
+Rodriguez-Plesa et al. (2022) muestran, desde la contratación pública
+sostenible a nivel local, que las compras gubernamentales pueden utilizarse
+estratégicamente para abordar objetivos sociales, económicos y ambientales.
+Para el presente proyecto, esto fortalece la interpretación de la contratación
+como instrumento potencial de política pública, aunque no permite asumir que
+todo gasto contractual tenga un efecto social positivo.
+
+\subsection{SECOP II y análisis estadístico de datos abiertos en Colombia}
+
+La disponibilidad de SECOP II permite estudiar la contratación pública con
+microdatos administrativos. El conjunto de contratos electrónicos identifica
+información sobre entidades, ubicación, fechas, sectores, valores y otras
+características del contrato. El repositorio estudiado utiliza esta fuente y ha
+construido un proceso de extracción trimestral y consolidación histórica.
+
+En Colombia, Figueroa-Gómez y Galpin (2024) utilizaron datos abiertos de SECOP
+II para desarrollar modelos de clasificación destinados a identificar procesos
+de contratación de interés, señalando que la investigación aplicada a
+contratación pública colombiana todavía se encuentra en una etapa de
+desarrollo. Salazar, Pérez y Gallego (2024) desarrollaron VigIA, una
+herramienta basada en datos abiertos de SECOP II para detectar ineficiencias y
+construir índices de riesgo; su unidad de análisis y objetivo se concentran en
+riesgo e ineficiencia contractual, no en correspondencia socioeconómica
+territorial. Gutiérrez Vanegas (2024) utilizó \textit{Isolation Forest} sobre
+datos abiertos de SECOP II para identificar banderas rojas asociadas con
+periodos inusualmente cortos, valores anómalos y procesos con una sola oferta;
+nuevamente, el problema de investigación es la detección de anomalías y no la
+equidad territorial.
+
+Díaz Díez (2023) analiza el carácter transaccional de SECOP II y su relación
+con los principios de publicidad y transparencia. Desde la perspectiva del
+proyecto, esta literatura ayuda a comprender la naturaleza institucional de la
+fuente y sus limitaciones, evitando interpretar los datos de SECOP como una
+medición directa del desarrollo social.
+
+\subsection{Estadística espacial y brechas territoriales}
+
+La dimensión espacial es relevante porque municipios próximos pueden compartir
+condiciones económicas, sociales, geográficas e institucionales. El estudio de
+Monsalvo Herrera y Jiménez (2025) evidencia que el IPM municipal puede
+presentar patrones de dependencia espacial y agrupamientos identificables
+mediante LISA. Esto sugiere que la correlación convencional entre
+vulnerabilidad y contratación podría ser insuficiente si existe
+autocorrelación espacial.
+
+En consecuencia, el análisis espacial no se asumirá automáticamente como una
+técnica decorativa. La secuencia metodológica será: primero, diagnóstico de
+autocorrelación espacial; después, si existe evidencia suficiente,
+incorporación de modelos o indicadores espaciales. Esta regla es coherente con
+una práctica estadística rigurosa y evita sobreajustar el proyecto a técnicas
+avanzadas sin necesidad.
+
+\subsection{Síntesis crítica y vacío de investigación}
+
+La revisión muestra cuatro cuerpos de literatura parcialmente conectados.
+Primero, la investigación sobre desigualdad regional colombiana documenta
+disparidades persistentes y diferencias en capacidad fiscal y prestación de
+servicios. Segundo, la literatura sobre pobreza multidimensional permite
+operacionalizar condiciones de vulnerabilidad con una perspectiva territorial.
+Tercero, la literatura sobre contratación pública reconoce que la compra
+estatal puede ser un instrumento de política y que sus características pueden
+tener implicaciones distributivas. Cuarto, la literatura reciente sobre SECOP
+II demuestra el potencial de los datos abiertos para estadística, aprendizaje
+automático y control de riesgos.
+
+Sin embargo, en la revisión inicial no se identificó un estudio que integre de
+manera sistemática, a escala nacional y con unidad municipal, un índice
+multidimensional de vulnerabilidad construido desde el IPM/PCA con medidas de
+contratación pública y un análisis conjunto de asociación, correspondencia y
+brechas territoriales. Los trabajos encontrados sobre SECOP II se concentran
+principalmente en riesgo, eficiencia, clasificación o detección de anomalías;
+los trabajos sobre pobreza territorial estudian la distribución y dependencia
+espacial de la pobreza, pero no la correspondencia con la distribución de
+contratos públicos.
+
+Este vacío es provisional y deberá comprobarse mediante una revisión
+bibliográfica más exhaustiva en Scopus, Web of Science, SciELO, Redalyc y
+repositorios universitarios. No obstante, constituye una justificación
+razonable para la pregunta central del proyecto.
+
+% ================================================================
+\section{Matriz bibliográfica inicial}
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{2.1cm}p{3.0cm}p{3.0cm}p{3.6cm}p{3.6cm}}
+\toprule
+\textbf{Referencia} & \textbf{Datos y unidad} & \textbf{Método} & \textbf{Resultado principal} & \textbf{Limitación / utilidad} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Referencia} & \textbf{Datos y unidad} & \textbf{Método} & \textbf{Resultado principal} & \textbf{Limitación / utilidad} \\
+\midrule
+\endhead
+Ardila-Rueda (2004) & Ingreso departamental + gasto público; Colombia & Análisis de dinámica distributiva & Persistencia regional; la inversión afecta posiciones relativas & Antiguo, nivel departamental; fundamenta relación gasto--territorio \\
+Bonet-Morón (2006) & Ingresos fiscales, transferencias, servicios; departamentos/municipios & Análisis fiscal regional & Persisten desigualdades fiscales y de servicios & Antiguo; justifica medidas relativas y equidad territorial \\
+Rodriguez-Plesa et al. (2022) & Contratación sostenible local; EE.\,UU./internacional & Indicadores/modelos institucionales & La compra pública puede perseguir objetivos sociales/económicos & No estudia vulnerabilidad municipal; marco de contratación como política pública \\
+Ferry et al. (2023) & 90.000 contratos 2015--2019; autoridades locales, Reino Unido & Análisis cuantitativo regional & Existen patrones territoriales de selección de proveedores & Contexto institucional distinto; aporta dimensión territorial de contratación \\
+Sarter (2024) & Literatura sobre contratación; procesos/proveedores & Marco conceptual & Objeto, proceso y proveedor pueden afectar desigualdad laboral & No es estudio municipal colombiano; justifica variables contractuales \\
+Arachia et al. (2024) & 50.905 contratos de obras; municipios, Italia & Efectos fijos + \textit{matching} & Cooperación intermunicipal se relaciona con desempeño & No estudia pobreza; referencia para panel/municipios \\
+Figueroa-Gómez \& Galpin (2024) & SECOP II; procesos de contratación, Colombia & Modelos de clasificación & Potencial de ML sobre contratación pública & Enfoque en licitaciones de interés; antecedente de ciencia de datos \\
+Salazar et al. (2024) & SECOP II + sanciones; contratos, Colombia & ML + índices de riesgo & Detección de ineficiencias y riesgos & No estudia vulnerabilidad territorial; referencia metodológica para índices \\
+Gutiérrez Vanegas (2024) & SECOP II; contratos, Colombia & \textit{Isolation Forest} & Detección de banderas rojas & Trabajo de grado, foco en anomalías; referencia de ML aplicado a SECOP II \\
+Díaz Díez (2023) & SECOP II y normativa; sistema de contratación, Colombia & Análisis jurídico & SECOP II es transaccional y fortalece publicidad/transparencia & No es análisis estadístico; marco institucional de la fuente \\
+Monsalvo Herrera \& Jiménez (2025) & IPM municipal; municipios de Cundinamarca, Colombia & LISA/análisis espacial & Agrupamientos espaciales de pobreza & Cobertura regional; justifica diagnóstico espacial \\
+DANE (2018/2024) & CNPV/IPM; municipios, Colombia & Medición multidimensional & Base oficial de condiciones de vida & Cobertura temporal no anual; núcleo del índice de vulnerabilidad \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+% ================================================================
+\section{Marco teórico}
+
+\subsection{Desarrollo territorial y desigualdad}
+
+El desarrollo territorial se entiende aquí como un proceso diferenciado
+espacialmente en el que interactúan condiciones económicas, sociales,
+institucionales y de provisión de bienes públicos. La desigualdad territorial
+implica que los municipios enfrentan capacidades y necesidades diferentes, por
+lo que la comparación de recursos públicos debe considerar el tamaño
+poblacional y las condiciones socioeconómicas.
+
+\subsection{Pobreza multidimensional y vulnerabilidad socioeconómica}
+
+El IPM proporciona una base conceptual para reconocer que el bienestar no puede
+reducirse al ingreso. Para este proyecto, vulnerabilidad socioeconómica será un
+concepto operativo más amplio que pobreza: representará un conjunto de
+privaciones o condiciones estructurales que pueden limitar el desarrollo de la
+población municipal. El IPM será el referente principal y las variables
+adicionales solo se incorporarán cuando exista respaldo conceptual, calidad
+estadística y disponibilidad comparable.
+
+\subsection{Índices sintéticos y PCA}
+
+Un índice sintético busca resumir múltiples variables correlacionadas en una
+medida interpretable. El PCA permite transformar un conjunto de variables
+estandarizadas en componentes ortogonales que maximizan la varianza explicada.
+Si $Z$ representa la matriz estandarizada de indicadores, la descomposición
+puede expresarse como:
+\[
+Z = U \Lambda V'
+\]
+
+La construcción del índice no se decidirá únicamente por la mayor varianza
+explicada. Se evaluarán correlaciones, adecuación muestral, cargas, signos,
+estabilidad y coherencia sustantiva. También se invertirán las variables cuyo
+aumento represente menor vulnerabilidad, para asegurar que la dirección del
+índice sea consistente. La estabilidad del índice --- signos, magnitudes
+relativas y varianza explicada --- se valida formalmente mediante remuestreo
+\textit{bootstrap}, descrito en la Sección 9.4.
+
+\subsection{Contratación pública como distribución de recursos}
+
+Para el análisis, la contratación pública se operacionalizará mediante al
+menos cuatro familias de indicadores: magnitud monetaria, frecuencia
+contractual, estructura contractual y temporalidad. Entre los indicadores
+candidatos se encuentran valor total, número de contratos, valor per cápita,
+valor mediano, ticket promedio, participación sectorial, distribución por
+modalidad y duración.
+
+El valor per cápita será especialmente importante porque un valor absoluto
+elevado puede reflejar simplemente mayor población. La comparación entre
+municipios requiere, por tanto, medidas que controlen al menos parcialmente el
+tamaño poblacional.
+
+\subsection{Asociación, correspondencia y brechas}
+
+La asociación se refiere a la relación estadística entre vulnerabilidad y
+contratación. Se utilizarán correlaciones de Pearson o Spearman según escala,
+distribución y supuestos, complementadas con modelos multivariados y, como
+verificación no paramétrica, con la prueba de permutación descrita en la
+Sección 9.5.
+
+La correspondencia será un concepto analítico distinto: no preguntará
+solamente si dos variables se mueven juntas, sino si la intensidad de
+contratación resulta proporcional o compatible con la posición relativa de
+vulnerabilidad de los municipios. Se estudiarán diferentes definiciones de
+correspondencia y se seleccionará aquella que pueda justificarse
+estadísticamente.
+
+Las brechas territoriales identificarán municipios cuyo nivel de contratación
+observado sea bajo o alto respecto de lo esperado según su vulnerabilidad y
+otras características relevantes. El lenguaje será deliberadamente prudente:
+una brecha no significará automáticamente ineficiencia, corrupción o mala
+política pública.
+
+\subsection{Dependencia espacial}
+
+La estadística espacial será utilizada si existe evidencia de dependencia
+espacial. Se evaluará Moran global y, posteriormente, indicadores locales
+LISA. Si la dependencia espacial afecta los residuos de un modelo, podrán
+considerarse modelos espaciales como SAR/lag, SEM o SDM, según diagnóstico y
+factibilidad.
+
+\subsection{Estructura temporal y datos de panel}
+
+La disponibilidad de contratación desde 2015 hasta 2025 permite explorar una
+estructura municipio--año. Cuando las variables socioeconómicas no tengan
+frecuencia anual, no se imputará artificialmente su evolución; la solución se
+definirá después de auditar la disponibilidad de indicadores. Si existe
+suficiente variación temporal, los modelos de panel con efectos fijos o
+aleatorios se evaluarán mediante pruebas y criterios de especificación.
+
+% ================================================================
+\section{Modelo conceptual de investigación}
+
+La estructura conceptual del proyecto es:
+
+\begin{center}
+\itshape
+Condiciones socioeconómicas $\rightarrow$ Índice de Vulnerabilidad
+$\rightarrow$ Indicadores de Contratación $\rightarrow$ Asociación
+$\rightarrow$ Correspondencia $\rightarrow$ Brechas $\rightarrow$
+Diagnóstico espacial/temporal $\rightarrow$ Clasificación territorial.
+\end{center}
+
+La pregunta no presupone que los municipios más vulnerables deban recibir
+necesariamente más contratos. La investigación pretende determinar
+empíricamente si existe un patrón de correspondencia y cómo se distribuyen las
+desviaciones respecto de ese patrón. El muestreo estratificado de auditoría y
+el \textit{bootstrap} de validación (Sección 9) se insertan en los dos primeros
+eslabones de esta cadena --- calidad del dato de entrada y estabilidad del
+índice --- antes de avanzar a las etapas de asociación y correspondencia.
+
+% ================================================================
+\section{Variables y operacionalización preliminar}
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{2.2cm}p{2.6cm}p{4.6cm}p{1.8cm}p{2.6cm}}
+\toprule
+\textbf{Constructo} & \textbf{Variable} & \textbf{Operacionalización} & \textbf{Escala} & \textbf{Rol} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Constructo} & \textbf{Variable} & \textbf{Operacionalización} & \textbf{Escala} & \textbf{Rol} \\
+\midrule
+\endhead
+Vulnerabilidad & Índice sintético & PCA basado en IPM + indicadores compatibles & Continua & Principal \\
+IPM & Pobreza multidimensional & Fuente DANE & Continua & Base conceptual \\
+Contratación & Valor contratado & Suma por municipio--año & Continua & Dependiente/resultado \\
+Contratación & Número de contratos & Conteo por municipio--año & Conteo & Resultado \\
+Contratación & Valor per cápita & Valor contratado / población & Continua & Resultado \\
+Estructura & Modalidad & Frecuencia/participación por modalidad & Categórica & Explicativa/descriptiva \\
+Estructura & Sector & Participación por sector & Categórica & Explicativa/descriptiva \\
+Estructura & Tipo de contrato & Participación por tipo & Categórica & Explicativa/descriptiva \\
+Temporal & Duración & Días entre inicio y terminación, cuando exista & Continua & Explicativa/descriptiva \\
+Contexto & Población & Población municipal & Continua & Control \\
+Territorio & Municipio/departamento & DIVIPOLA u homologación oficial & Categórica & Identificación \\
+Calidad del dato & Indicadores de auditoría & Duplicidad, inconsistencia territorial, campos incompletos, atipicidad (ver Sección 9.3) & Binaria/proporción & Control de calidad \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+% ================================================================
+\section{Hipótesis de trabajo}
+
+\begin{recuadro}{Hipótesis H1 -- H6}
+\textbf{H1.} Existe una asociación estadísticamente significativa entre el
+índice de vulnerabilidad socioeconómica municipal y la intensidad de
+contratación pública.\\[4pt]
+\textbf{H2.} La asociación entre vulnerabilidad y contratación difiere según la
+forma de medir la contratación: valor absoluto, valor per cápita y número de
+contratos.\\[4pt]
+\textbf{H3.} Existen municipios cuya intensidad de contratación presenta
+desviaciones sistemáticas respecto de la correspondencia esperada con su
+vulnerabilidad socioeconómica.\\[4pt]
+\textbf{H4.} La distribución espacial de vulnerabilidad y/o contratación
+presenta autocorrelación espacial cuando los diagnósticos correspondientes así
+lo indiquen.\\[4pt]
+\textbf{H5.} La tasa de inconsistencias (duplicados, campos incompletos,
+valores atípicos no justificados) en el histórico de SECOP II, estimada
+mediante muestreo estratificado, no supera un umbral que comprometa la validez
+de las métricas de contratación agregadas a nivel municipio--año.\\[4pt]
+\textbf{H6.} Las cargas factoriales del componente principal utilizado para
+construir el IVS son estables ante remuestreo \textit{bootstrap}: sus
+intervalos de confianza no cambian de signo ni de orden de magnitud relativo
+entre indicadores.
+\end{recuadro}
+
+Ninguna de estas hipótesis plantea causalidad. Los resultados se interpretarán
+como asociación, correspondencia y validez estadística.
+
+% ================================================================
+\section{Diseño metodológico: integración de muestreo estadístico}
+
+Esta sección formaliza el componente de muestreo estadístico del proyecto. No
+se trata de una posibilidad exploratoria: es el diseño ya definido que se
+ejecutará como parte del pipeline metodológico, en los puntos precisos del
+diagrama de flujo que se indican en cada procedimiento.
+
+\subsection{Naturaleza poblacional de los datos y necesidad del muestreo}
+
+Tanto SECOP II (7.827.129 registros = universo administrativo de contratos, no
+una muestra de ellos) como el IPM del DANE 2018 (medición de fuente censal) son
+datos de naturaleza \textbf{poblacional}. El muestreo no se introduce para
+reemplazar el análisis censal, sino para resolver dos problemas concretos que
+la propia escala de los datos genera:
+
+\begin{enumerate}
+\item La auditoría manual exhaustiva de 7,8 millones de registros para
+diagnosticar su calidad es inviable en el tiempo disponible para el proyecto.
+\item La construcción del IVS mediante PCA y la medida de correspondencia
+producen estimaciones puntuales cuya estabilidad no queda establecida solo con
+los supuestos asintóticos convencionales.
+\end{enumerate}
+
+\begin{recuadro}{Principio metodológico}
+El muestreo se utiliza para (a) hacer viable la auditoría de calidad de una
+base de gran volumen mediante inferencia hacia esa misma población, y (b)
+cuantificar la incertidumbre de estimaciones (PCA, correspondencia) mediante
+remuestreo, cuando la teoría asintótica clásica es insuficiente o sus
+supuestos son dudosos.
+\end{recuadro}
+
+\subsection{Justificación del diseño muestral seleccionado: por qué muestreo aleatorio estratificado}
+
+La condición determinante para elegir el diseño muestral es que la calidad de
+los registros de SECOP II \textbf{no se distribuye de manera homogénea} a lo
+largo de la ventana 2015--2025. Existen al menos tres fuentes documentadas de
+heterogeneidad conocida \textit{a priori}: (i) cambios normativos en las reglas
+de reporte de la contratación pública electrónica a lo largo del periodo; (ii)
+migraciones y actualizaciones de la plataforma SECOP II, que históricamente han
+generado periodos de transición con mayor incidencia de campos vacíos,
+duplicados o cambios de esquema; y (iii) crecimiento no lineal del volumen de
+contratos publicados año a año.
+
+Esta heterogeneidad conocida y estructurada entre años es, precisamente, la
+condición bajo la cual la teoría de muestreo establece que la estratificación
+domina a las demás alternativas en eficiencia estadística (Cochran, 1977;
+Lohr, 2019). La siguiente tabla sustenta, frente a cada alternativa clásica,
+por qué el diseño estratificado es la opción seleccionada y no otra:
+
+\begin{center}
+\small
+\begin{longtable}{p{2.5cm}p{5.9cm}p{4.8cm}}
+\toprule
+\textbf{Diseño} & \textbf{Por qué no se selecciona} & \textbf{Criterio técnico} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Diseño} & \textbf{Por qué no se selecciona} & \textbf{Criterio técnico} \\
+\midrule
+\endhead
+Aleatorio simple (MAS) & No garantiza representación proporcional de los años/periodos con mayor incidencia de error; puede sobre-representar por azar los años de mayor volumen y dejar sin observaciones los años de transición de plataforma, que son los más críticos para el diagnóstico. & Varianza del estimador MAS $\geq$ varianza del estimador estratificado siempre que exista heterogeneidad entre estratos; aquí la heterogeneidad está documentada. \\
+Sistemático & Requiere un marco muestral ordenado y un salto fijo $k$. Si el archivo está ordenado por fecha o identificador correlativo, el salto puede coincidir con patrones periódicos de carga de datos, introduciendo sesgo de periodicidad. & Riesgo de covarianza no nula entre el intervalo $k$ y ciclos administrativos de reporte. \\
+Conglomerados (p.\ ej.\ por entidad contratante) & Auditar conglomerados completos implica revisar registros muy similares entre sí (una misma entidad repite sus propios errores de captura), lo cual reduce la información efectiva por unidad auditada. & Efecto de diseño ($\textit{design effect}$) $>1$ cuando existe correlación intraconglomerado. \\
+\textbf{Estratificado (seleccionado)} & Aprovecha la heterogeneidad conocida (año/periodo de plataforma) para reducir la varianza, garantiza representación mínima de cada año --- incluidos los años críticos de transición --- y entrega una estimación de calidad por estrato. & Varianza del estimador estratificado $\leq$ varianza MAS bajo asignación proporcional, y estrictamente menor bajo asignación de Neyman (Cochran, 1977, cap.\ 5). \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+Adicionalmente, únicamente un diseño estratificado produce, sin supuestos
+adicionales ni post-estratificación correctiva, estimaciones separadas y
+válidas \textbf{por año}, que se usarán directamente para priorizar las reglas
+de limpieza automatizada por periodo en la Fase 3. Por estas razones ---
+heterogeneidad documentada, menor varianza y utilidad directa para la limpieza
+posterior --- se selecciona el muestreo aleatorio estratificado como el diseño
+del proyecto.
+
+\subsection{Procedimiento 1: auditoría de calidad de SECOP II mediante muestreo estratificado}
+
+\textbf{Objetivo.} Estimar, con un nivel de confianza y margen de error
+predefinidos, la proporción de registros de SECOP II que presentan problemas
+de calidad, sin necesidad de revisar el universo completo de 7,8 millones de
+contratos.
+
+\textbf{Marco muestral y unidad de muestreo.} Población objetivo: totalidad de
+registros de SECOP II del histórico consolidado, dentro de la ventana temporal
+definitiva que se fije tras esta misma auditoría (provisionalmente
+2015--2025). Unidad de muestreo: el contrato individual. Marco muestral: el
+archivo histórico en formato Parquet ya consolidado por trimestre, una vez
+verificada su completitud a nivel de archivo.
+
+\textbf{Pasos de ejecución.}
+\begin{enumerate}
+\item Definir los estratos $h = 1, \dots, L$ cruzando año (o trimestre) con
+rango de valor del contrato (cuartiles).
+\item Calcular $N_h$, el número de registros en cada estrato dentro del marco
+muestral.
+\item Determinar el tamaño de muestra total $n$ a partir de una proporción
+esperada de inconsistencia $p$ (usar $p=0.5$ como escenario conservador si no
+hay estimación previa), un margen de error $e$ y un nivel de confianza
+$1-\alpha$:
+\[
+n_0 = \frac{z_{1-\alpha/2}^2\, p(1-p)}{e^2}, \qquad
+n = \frac{n_0}{1 + \dfrac{n_0 - 1}{N}}
+\]
+aplicando la corrección por población finita, relevante porque $N$ es grande
+pero conocido y fijo.
+\item Asignar la muestra entre estratos mediante asignación proporcional
+como opción base ($n_h = n\cdot N_h/N$), evaluando asignación de Neyman como
+alternativa en estratos con mayor variabilidad esperada de calidad:
+\[
+n_h^{\text{Neyman}} = n \cdot \frac{N_h S_h}{\sum_h N_h S_h}
+\]
+\item Extraer la muestra mediante muestreo aleatorio simple dentro de cada
+estrato, con semilla aleatoria documentada para reproducibilidad.
+\item Auditar cada registro muestreado sobre cinco dimensiones binarias de
+calidad: duplicidad; inconsistencia territorial (código DIVIPOLA inexistente o
+contradictorio); campos clave incompletos; valor atípico no justificado; e
+incoherencia temporal (duración negativa o implausible).
+\item Estimar, para cada dimensión, la proporción poblacional y su intervalo de
+confianza mediante el estimador estratificado:
+\[
+\hat p_{st} = \sum_{h=1}^{L} \frac{N_h}{N}\,\hat p_h, \qquad
+\widehat{\text{Var}}(\hat p_{st}) = \sum_{h=1}^{L}
+\left(\frac{N_h}{N}\right)^2 \frac{\hat p_h (1-\hat p_h)}{n_h - 1}
+\left(1-\frac{n_h}{N_h}\right)
+\]
+\item Redactar el reporte de calidad y la recomendación de reglas de limpieza
+priorizadas por estrato, según la tasa de error estimada.
+\end{enumerate}
+
+\textbf{Entregables.} Ficha técnica del diseño muestral; base auditada con las
+cinco dimensiones de calidad codificadas; reporte de estimaciones poblacionales
+con intervalos de confianza por dimensión y por estrato; recomendación de
+reglas de limpieza para la Fase 3.
+
+\textbf{Ubicación en el flujo del proyecto.} Este procedimiento se ejecuta
+entre las fases 2 (Revisión de datos y fuentes) y 3 (Preparación y limpieza de
+datos); formaliza estadísticamente el paso 2.1 (auditoría de la base SECOP II)
+ya previsto.
+
+\subsection{Procedimiento 2: validación del Índice de Vulnerabilidad mediante \textit{bootstrap}}
+
+\textbf{Objetivo.} Cuantificar la estabilidad estadística de los resultados
+del PCA (Fase 4) utilizado para construir el IVS, complementando la validación
+por adecuación muestral (KMO/Bartlett) con una medida explícita de
+incertidumbre sobre las cargas factoriales.
+
+\textbf{Justificación: por qué \textit{bootstrap} y no otra alternativa.} El
+PCA entrega cargas factoriales y varianza explicada como estimaciones
+puntuales; sin una medida de incertidumbre no es posible saber si esas cargas
+son estables o son un artefacto de la muestra particular de municipios
+disponible. Existen al menos tres alternativas para cuantificar esa
+incertidumbre, y se descartan por razones concretas:
+
+\begin{center}
+\small
+\begin{longtable}{p{2.8cm}p{5.9cm}p{4.8cm}}
+\toprule
+\textbf{Alternativa} & \textbf{Por qué no se selecciona} & \textbf{Criterio técnico} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Alternativa} & \textbf{Por qué no se selecciona} & \textbf{Criterio técnico} \\
+\midrule
+\endhead
+Fórmulas analíticas asintóticas (teoría clásica de PCA) & Suponen normalidad multivariada de los indicadores y un tamaño de muestra grande para que la aproximación asintótica sea válida. Los indicadores de pobreza y vulnerabilidad son característicamente asimétricos (colas pesadas, concentración en valores bajos), por lo que el supuesto de normalidad es cuestionable con $\sim$1.100 municipios. & La varianza asintótica de los \textit{eigenvectors} depende de la separación entre \textit{eigenvalues}; con valores propios cercanos, la aproximación de primer orden es inestable, mientras que el \textit{bootstrap} no depende de esa aproximación. \\
+\textit{Jackknife} (\textit{leave-one-out}) & Es conocido que el \textit{jackknife} se comporta erráticamente para estadísticos no suaves como los vectores propios de un PCA, especialmente cuando dos \textit{eigenvalues} están próximos (riesgo de rotación/cambio de signo abrupto al remover una sola observación). & El \textit{jackknife} solo genera $N$ pseudo-réplicas (una por municipio removido) frente a $B\geq 1000$ del \textit{bootstrap}, ofreciendo una aproximación mucho más pobre de la distribución muestral completa. \\
+Validación cruzada (\textit{cross-validation}) & Está diseñada para evaluar capacidad predictiva o error de generalización, no para construir intervalos de confianza de parámetros como cargas factoriales o varianza explicada. Usarla aquí respondería una pregunta distinta a la que exige H6. & No genera una distribución muestral del parámetro de interés, solo una estimación de error de predicción fuera de muestra. \\
+\textbf{\textit{Bootstrap} (seleccionado)} & No requiere supuestos distribucionales sobre los indicadores: remuestrea directamente la distribución empírica observada. Genera $B\geq 1000$ réplicas completas del PCA, permitiendo construir intervalos de confianza (percentil o BC$_a$) que capturan asimetría real en la distribución de las cargas, en lugar de asumir simetría como la teoría asintótica. & Es el método estándar en estadística multivariada para validar la estabilidad de cargas factoriales e índices sintéticos basados en PCA (Efron \& Tibshirani, 1993). \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\textbf{Pasos de ejecución.}
+\begin{enumerate}
+\item Definir la matriz de indicadores estandarizados $Z$ (municipios $\times$
+variables IPM/compatibles), ya construida en la Fase 4.
+\item Generar $B \geq 1000$ remuestras \textit{bootstrap} por remuestreo con
+reemplazo de las filas (municipios) de $Z$; cuando exista agrupamiento
+departamental relevante, ejecutar adicionalmente un \textit{bootstrap} por
+bloques (remuestreo de departamentos completos) para no romper la posible
+dependencia espacial intradepartamental.
+\item Para cada remuestra $b=1,\dots,B$, reajustar el PCA y registrar: las
+cargas factoriales del/los componente(s) retenido(s), la proporción de
+varianza explicada y el IVS resultante por municipio.
+\item Construir, para cada carga factorial y para la varianza explicada, un
+intervalo de confianza \textit{bootstrap} (percentil o BC$_a$).
+\item Verificar H6: comprobar si el signo y el orden relativo de magnitud de
+cada carga se mantienen estables a través de las $B$ remuestras.
+\end{enumerate}
+
+\textbf{Criterio de interpretación.} Cargas con intervalos que no cruzan cero y
+mantienen signo consistente: variable con contribución estable al índice.
+Cargas con intervalos que cruzan cero o cambian de signo: variable candidata a
+revisión. Municipios cuyo IVS varía sustancialmente entre remuestras: señal de
+sensibilidad del índice para ese municipio.
+
+\textbf{Entregables.} Intervalos de confianza \textit{bootstrap} para cargas
+factoriales y varianza explicada; gráfico de distribución \textit{bootstrap}
+del IVS para los municipios en los extremos del ranking; reporte de
+sensibilidad del índice.
+
+\textbf{Ubicación en el flujo del proyecto.} Se ejecuta dentro de la Fase 4.6
+(Validación y sensibilidad del índice), ya prevista en el flujo original; este
+procedimiento especifica el método concreto para ejecutar esa validación.
+
+\subsection{Procedimiento 3: prueba de permutación para la correspondencia vulnerabilidad--contratación}
+
+\textbf{Objetivo.} Aportar una vía de inferencia no paramétrica,
+complementaria a las pruebas clásicas de correlación y a los modelos de
+regresión de la Fase 7, para evaluar si la asociación observada entre el IVS y
+los indicadores de contratación es mayor de lo esperable bajo aleatoriedad.
+
+\textbf{Justificación: por qué prueba de permutación y no otra alternativa.}
+La pregunta que exige H1 es puntual: ¿la asociación observada entre IVS y
+contratación es mayor de lo esperable bajo aleatoriedad? Existen varias formas
+de responderla, y se descartan por razones concretas frente a la permutación:
+
+\begin{center}
+\small
+\begin{longtable}{p{2.8cm}p{5.9cm}p{4.8cm}}
+\toprule
+\textbf{Alternativa} & \textbf{Por qué no se selecciona} & \textbf{Criterio técnico} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Alternativa} & \textbf{Por qué no se selecciona} & \textbf{Criterio técnico} \\
+\midrule
+\endhead
+Prueba paramétrica (correlación de Pearson / regresión OLS) & Supone normalidad bivariada y relación lineal entre IVS y contratación. Los indicadores de contratación (valor total, valor per cápita) son característicamente asimétricos a la derecha, con una masa importante de municipios en valores bajos o nulos y una cola larga de valores altos, lo que viola el supuesto de normalidad requerido para que el valor $p$ paramétrico sea válido. & El valor $p$ paramétrico depende de la distribución teórica t de Student bajo normalidad; con datos sesgados, esa distribución teórica no coincide con la distribución real del estadístico, sesgando la inferencia. \\
+Correlación de Spearman/Kendall con $p$ asintótico & El valor $p$ reportado por defecto en la mayoría de \textit{software} es una aproximación asintótica (válida solo para muestras grandes) y pierde precisión cuando hay muchos empates (\textit{ties}) --- frecuentes aquí porque varios municipios comparten el mismo número de contratos o el mismo rango de IVS. & La aproximación asintótica de Spearman/Kendall no está diseñada para corregir empates de forma exacta; la permutación sí, porque recalcula la distribución nula empírica directamente sobre los datos observados, empates incluidos. \\
+Prueba de bondad de ajuste (chi-cuadrado) sobre categorías de IVS/contratación & Exige discretizar variables continuas en categorías, lo que descarta información al convertir el IVS y la contratación en pocos grupos, y el resultado depende arbitrariamente de dónde se coloquen los puntos de corte. & Pérdida de potencia estadística frente a un estadístico calculado sobre las variables continuas originales. \\
+\textbf{Prueba de permutación (seleccionada)} & No exige ningún supuesto distribucional: solo requiere que, bajo la hipótesis nula de no asociación, cualquier reasignación de los valores de contratación entre municipios sea igual de probable. Construye la distribución nula \textbf{directamente desde los datos observados}, respetando su asimetría real y sus empates, y produce un valor $p$ válido incluso en muestras finitas (no depende de aproximaciones asintóticas). & Es el método estándar para pruebas de independencia libres de distribución cuando los supuestos paramétricos son dudosos (Good, 2005); además permite usar el mismo estadístico de correspondencia definido en la Fase 7.4, en lugar de forzar el uso de una prueba genérica. \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\textbf{Pasos de ejecución.}
+\begin{enumerate}
+\item Calcular el estadístico de asociación o correspondencia observado entre
+IVS y el indicador de contratación de interés (correlación de Spearman o el
+índice de correspondencia definido en la Fase 7.4).
+\item Generar $P \geq 5000$ permutaciones de la asignación municipio--valor de
+contratación, rompiendo el vínculo real entre vulnerabilidad y contratación
+pero preservando la distribución marginal de cada variable.
+\item Recalcular el estadístico en cada permutación para construir la
+distribución nula empírica.
+\item Calcular el valor $p$ empírico como la proporción de estadísticos
+permutados iguales o más extremos que el observado.
+\end{enumerate}
+
+\textbf{Entregables.} Distribución nula empírica graficada junto al
+estadístico observado; valor $p$ empírico reportado junto al valor $p$
+paramétrico de la prueba clásica correspondiente, señalando concordancia o
+discrepancia entre ambos.
+
+\textbf{Ubicación en el flujo del proyecto.} Se ejecuta como complemento
+metodológico dentro de la Fase 7.1 (Análisis de correlación bivariada) y la
+Fase 7.4 (Medidas de correspondencia).
+
+\subsection{Línea de trabajo futuro: diseño muestral para validación externa}
+
+Como línea de trabajo futuro --- coherente con la agenda de investigación de
+la Sección 11 --- se deja documentado, sin implicar su ejecución dentro del
+alcance temporal actual, el diseño conceptual de un muestreo probabilístico
+por conglomerados (municipios como conglomerados, estratificados por región y
+nivel de vulnerabilidad) para una eventual encuesta de percepción de equidad en
+la contratación pública dirigida a funcionarios municipales o ciudadanía. Este
+diseño serviría como validación externa cualitativa de los hallazgos
+cuantitativos del proyecto, pero su levantamiento excede los recursos y el
+tiempo disponibles para el presente trabajo de grado.
+
+\textbf{Justificación: por qué conglomerados estratificados y no muestreo
+estratificado simple.} A diferencia de la auditoría de SECOP II (donde la
+unidad de muestreo es un contrato y no existe costo de desplazamiento), aquí la
+unidad es un municipio que hay que visitar o contactar directamente. Un diseño
+estratificado simple podría seleccionar municipios dispersos por todo el país,
+lo que encarecería el levantamiento de forma prohibitiva para un trabajo de
+grado. Al usar los municipios como conglomerados dentro de cada estrato
+región--nivel de vulnerabilidad, el esfuerzo de campo se concentra
+geográficamente sin sacrificar la representación de las distintas regiones y
+niveles de vulnerabilidad del país. Es, por tanto, el único diseño que
+equilibra representatividad estadística con factibilidad logística para este
+componente específico, aunque --- como ya se indicó --- su ejecución
+efectiva queda fuera del alcance temporal actual.
+
+\subsection{Integración de los procedimientos en el flujo de fases del proyecto}
+
+\begin{center}
+\small
+\begin{longtable}{p{2.4cm}p{4.6cm}p{6.3cm}}
+\toprule
+\textbf{Fase del flujo} & \textbf{Procedimiento} & \textbf{Función} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Fase del flujo} & \textbf{Procedimiento} & \textbf{Función} \\
+\midrule
+\endhead
+2 $\rightarrow$ 3 & Muestreo estratificado de auditoría (Procedimiento 1) & Estimar con IC la tasa de errores de calidad en SECOP II sin auditoría exhaustiva \\
+4.6 & \textit{Bootstrap} del IVS (Procedimiento 2) & Cuantificar estabilidad de cargas factoriales y del índice \\
+7.1 / 7.4 & Prueba de permutación (Procedimiento 3) & Inferencia no paramétrica complementaria sobre la correspondencia \\
+Agenda futura & Diseño muestral para validación externa & Documentar línea de trabajo futura, no ejecutada en este alcance \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+% ================================================================
+\section{Limitaciones previstas}
+
+\begin{itemize}
+\item El IPM municipal no tiene necesariamente frecuencia anual comparable con
+la contratación anual.
+\item SECOP II es información administrativa autodeclarada y puede contener
+errores, cambios de campos, duplicados o registros incompletos --- riesgo que
+el muestreo estratificado de auditoría (Sección 9.3) permite cuantificar, no
+eliminar por completo.
+\item El valor de un contrato no equivale necesariamente al gasto
+efectivamente ejecutado ni al beneficio social generado.
+\item La localización de una entidad contratante no implica que el beneficio
+económico del contrato permanezca en el mismo municipio.
+\item Una asociación estadística no identifica causalidad.
+\item Los municipios presentan tamaños poblacionales y estructuras
+institucionales muy diferentes.
+\item Los cambios metodológicos de SECOP y DANE deberán documentarse antes de
+comparar periodos.
+\end{itemize}
+
+% ================================================================
+\section{Agenda de investigación inmediata}
+
+\begin{enumerate}
+\item Auditar completamente las variables y años del histórico SECOP II del
+repositorio (formalizado mediante el Procedimiento 1, Sección 9.3).
+\item Construir un diccionario de variables de contratación y clasificar cada
+campo por función analítica.
+\item Identificar las variables municipales DANE compatibles con el IPM y la
+dimensión temporal.
+\item Definir el mecanismo de integración territorial mediante DIVIPOLA.
+\item Realizar EDA y auditoría de calidad antes de construir el índice.
+\item Evaluar la factibilidad estadística del PCA y construir versiones
+alternativas del índice, validadas mediante \textit{bootstrap} (Procedimiento
+2, Sección 9.4).
+\item Definir formalmente la medida de correspondencia y compararla con varias
+alternativas, incluyendo la prueba de permutación (Procedimiento 3, Sección
+9.5).
+\item Construir medidas de brecha territorial.
+\item Diagnosticar dependencia espacial antes de utilizar modelos espaciales.
+\item Definir el modelo temporal/panel según la disponibilidad real de datos.
+\item Ampliar la revisión bibliográfica en Scopus, Web of Science, SciELO,
+Redalyc y repositorios nacionales.
+\item Redactar problema, justificación, objetivo general, objetivos
+específicos y metodología definitiva.
+\end{enumerate}
+
+% ================================================================
+\section{División de trabajo entre integrantes}
+
+\subsection{Principio de división}
+
+La división se organiza alrededor de los dos pipelines de datos independientes
+que el proyecto requiere integrar (vulnerabilidad DANE/IPM y contratación
+SECOP II), de manera que cada integrante sea responsable completo de una
+fuente hasta el punto de integración territorial, evitando duplicar esfuerzo.
+Las fases posteriores a la integración (6 a 10) se dividen por tarea
+específica dentro de cada fase, dado que dependen de ambas fuentes
+simultáneamente.
+
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+\textbf{Integrante} & \textbf{Eje principal} \\
+\midrule
+Juan Diego Gallo Quintero & Vulnerabilidad socioeconómica (DANE / IPM) \\
+Juan David Parada Fonseca & Contratación pública (SECOP II) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Responsable: Juan Diego Gallo Quintero --- Eje de Vulnerabilidad}
+
+\begin{recuadro}{Fase 2 (parte DANE/IPM) --- Revisión de datos y fuentes}
+\begin{enumerate}
+\item Auditar las variables disponibles del IPM municipal 2018 (dimensiones,
+privaciones, factores de expansión).
+\item Verificar cobertura municipal completa e identificar municipios con
+datos faltantes o no certificados.
+\item Construir el diccionario de variables IPM con definición, escala y
+fuente de cada indicador.
+\item Evaluar qué otras variables municipales (TerriData/DNP u otras) son
+compatibles en periodo y calidad para complementar el IPM.
+\end{enumerate}
+\textit{Entregable:} diccionario de variables DANE/IPM, matriz de
+disponibilidad municipal, decisión documentada sobre variables adicionales
+candidatas.
+\end{recuadro}
+
+\begin{recuadro}{Fase 4 completa --- Construcción del Índice de Vulnerabilidad Socioeconómica}
+\begin{enumerate}
+\item Seleccionar y estandarizar los indicadores base (IPM + complementarios
+aprobados).
+\item Ejecutar pruebas de adecuación muestral (KMO y esfericidad de Bartlett)
+antes de correr el PCA.
+\item Ejecutar el Análisis de Componentes Principales y decidir el número de
+componentes a retener, justificando el criterio (varianza explicada, criterio
+de Kaiser, gráfico de sedimentación).
+\item Verificar signos de las cargas e invertir variables cuyo aumento
+represente menor vulnerabilidad.
+\item Construir el IVS final combinando los componentes retenidos.
+\item Ejecutar la validación mediante \textit{bootstrap} (Procedimiento 2,
+Sección 9.4) sobre las cargas factoriales y el índice resultante.
+\item Redactar el reporte de validación y sensibilidad del índice.
+\end{enumerate}
+\textit{Entregable:} IVS calculado por municipio, cargas factoriales con
+intervalos de confianza \textit{bootstrap}, reporte de validación.
+\end{recuadro}
+
+\begin{recuadro}{Transversal --- Redacción teórica y bibliográfica}
+\begin{enumerate}
+\item Mantener y ampliar el estado del arte y el marco teórico con la revisión
+bibliográfica pendiente en Scopus, Web of Science, SciELO y Redalyc.
+\item Redactar planteamiento del problema, justificación, objetivos y
+metodología definitiva del artículo final.
+\item Consolidar la matriz bibliográfica y las referencias en formato APA 7.
+\end{enumerate}
+\textit{Entregable:} documento de estado del arte y marco teórico en su
+versión final, integrado con los resultados empíricos del proyecto.
+\end{recuadro}
+
+\subsection{Responsable: Juan David Parada Fonseca --- Eje de Contratación}
+
+\begin{recuadro}{Fase 2 (parte SECOP II) --- Revisión de datos y fuentes}
+\begin{enumerate}
+\item Auditar el notebook \texttt{Historico\_de\_Datos.ipynb} y verificar de
+forma directa el número de registros, variables y cobertura temporal
+reportados.
+\item Ejecutar el muestreo estratificado de auditoría de calidad
+(Procedimiento 1, Sección 9.3): definir estratos, calcular tamaño de muestra,
+extraer la muestra y codificar las dimensiones de calidad.
+\item Estimar, con intervalos de confianza, la tasa de duplicados,
+inconsistencias territoriales, campos incompletos y valores atípicos.
+\item Definir, junto con Juan Diego, el periodo analítico definitivo a partir
+de la calidad y cobertura real encontrada.
+\end{enumerate}
+\textit{Entregable:} ficha técnica del diseño muestral, reporte de calidad de
+SECOP II con intervalos de confianza, recomendación de ventana temporal
+definitiva.
+\end{recuadro}
+
+\begin{recuadro}{Fase 3 completa --- Preparación y limpieza de datos}
+\begin{enumerate}
+\item Descargar/integrar los datos SECOP II desde los archivos Parquet
+consolidados.
+\item Estandarizar entidades territoriales mediante códigos DIVIPOLA,
+resolviendo homologaciones y municipios no identificables.
+\item Aplicar las reglas de limpieza priorizadas según el resultado del
+muestreo de auditoría (Procedimiento 1): tratamiento de duplicados, valores
+faltantes y atípicos.
+\item Agregar los contratos a nivel panel municipio--año.
+\item Construir la base final ``SECOP II limpia'' y el panel municipio--año de
+contratación pública.
+\end{enumerate}
+\textit{Entregable:} base SECOP II limpia, panel municipio--año, métricas de
+contratación agregadas.
+\end{recuadro}
+
+\begin{recuadro}{Fase 5 completa --- Índices e indicadores de contratación pública}
+\begin{enumerate}
+\item Calcular métricas principales: valor total, número de contratos, valor
+per cápita (usando población municipal como control).
+\item Construir indicadores por modalidad de contratación.
+\item Construir indicadores por sector.
+\item Construir indicadores por tipo de contrato.
+\item Construir indicadores por duración (días entre inicio y terminación).
+\item Construir los índices compuestos de contratación que resuman las
+familias anteriores.
+\end{enumerate}
+\textit{Entregable:} métricas y clasificación de contratación por
+municipio-año, índices compuestos, tablas descriptivas documentadas.
+\end{recuadro}
+
+\subsection{Trabajo conjunto --- Fases 6 a 10}
+
+Estas fases dependen simultáneamente del IVS (eje Juan Diego) y de las
+métricas de contratación (eje Juan David), por lo que no se dividen por fase
+completa sino por tarea específica dentro de cada una. Ambos revisan y validan
+el resultado del otro antes de avanzar a la siguiente fase.
+
+\begin{center}
+\small
+\begin{longtable}{p{1.6cm}p{6.3cm}p{4.5cm}}
+\toprule
+\textbf{Fase} & \textbf{Tarea} & \textbf{Responsable principal} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Fase} & \textbf{Tarea} & \textbf{Responsable principal} \\
+\midrule
+\endhead
+6 & Estadísticos descriptivos y distribuciones por municipio/año & Ambos (cada uno su eje) \\
+6 & Mapas temáticos (IVS y contratación) y curvas de Lorenz/Gini & Juan Diego \\
+6 & Comparaciones departamentales de contexto & Juan David \\
+7 & Análisis de correlación bivariada + prueba de permutación (Procedimiento 3) & Juan David \\
+7 & Modelos de regresión múltiple y de panel & Juan Diego \\
+7 & Definición de la medida de correspondencia y de brechas territoriales & Ambos (definición conjunta) \\
+8 & Matriz de pesos espaciales y pruebas de autocorrelación (Moran's I, LISA) & Juan Diego \\
+8 & Interpretación conjunta de clústeres espaciales & Ambos \\
+9 & Reducción de dimensionalidad y clustering de municipios & Juan David \\
+9 & Perfilamiento socioeconómico y contractual de los clústeres & Ambos \\
+10 & Diseño de dashboard y mapas interactivos & Juan David \\
+10 & Redacción del reporte final y recomendaciones de política pública & Juan Diego \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{Regla de coordinación}
+
+\begin{itemize}
+\item Ningún integrante avanza a una fase conjunta (6 en adelante) sin que los
+entregables de su fase individual (2--5) estén validados por el otro
+integrante.
+\item La integración territorial (unión de los paneles de vulnerabilidad y de
+contratación por código DIVIPOLA--año) se ejecuta de forma conjunta, dado que
+requiere acuerdo explícito sobre el nivel de agregación y el tratamiento de
+casos no homologables.
+\item Todo cambio en el periodo analítico definitivo, en la definición de
+correspondencia o en el tratamiento de valores atípicos debe documentarse y
+acordarse entre ambos antes de ejecutarse, dado su impacto sobre el trabajo del
+otro integrante.
+\end{itemize}
+
+% ================================================================
+\section{Nota metodológica sobre originalidad}
+
+El repositorio revisado es una referencia externa utilizada como punto de
+partida para identificar fuentes, estructura de datos y antecedentes. El
+presente proyecto se plantea como una investigación independiente. El aporte
+original propuesto consiste en integrar, a escala municipal, un índice de
+vulnerabilidad socioeconómica basado en IPM/PCA con medidas de contratación
+pública, y desarrollar un marco estadístico explícito --- que incluye
+muestreo, remuestreo y pruebas de permutación --- para estudiar asociación,
+correspondencia y brechas, incorporando dimensión temporal y espacial cuando
+los datos lo justifiquen.
+
+% ================================================================
+\section{Referencias bibliográficas --- APA 7}
+
+Arachia, G., Assisi, D., Cesi, B., Giuranno, M. G., \& Russo, F. (2024).
+Intermunicipal cooperation in public procurement. \textit{Regional Studies,
+58}(11), 2055--2073. https://doi.org/10.1080/00343404.2024.2350615
+
+Ardila-Rueda, L. (2004). Gasto público y convergencia regional en Colombia.
+\textit{Ensayos Sobre Política Económica, 22}(45), 222--268.
+
+Bonet-Morón, J. (2006). \textit{Desequilibrios regionales en la política de
+descentralización en Colombia} (Documento de Trabajo sobre Economía Regional y
+Urbana No.\ 77). Banco de la República.
+
+Cochran, W. G. (1977). \textit{Sampling techniques} (3.\textsuperscript{a}
+ed.). John Wiley \& Sons.
+
+Colombia Compra Eficiente. (2026). \textit{SECOP II: Sistema Electrónico para
+la Contratación Pública}.
+
+DANE. (2018). \textit{Medida de pobreza multidimensional de fuente censal}.
+Departamento Administrativo Nacional de Estadística.
+
+Datos Abiertos Colombia. (2026). \textit{SECOP II --- Contratos Electrónicos}.
+
+Departamento Nacional de Planeación. (2024). \textit{TerriData: Sistema de
+Estadísticas Territoriales}. DNP.
+
+Díaz Díez, C. A. (2023). Obligatoriedad del Sistema Electrónico de
+Contratación Pública (SECOP) para las entidades estatales con régimen
+contractual excepcional: un supuesto de retorno del Derecho Administrativo en
+Colombia. \textit{Revista Eurolatinoamericana de Derecho Administrativo,
+10}(2).
+
+Efron, B., \& Tibshirani, R. J. (1993). \textit{An introduction to the
+bootstrap}. Chapman \& Hall/CRC.
+
+Ferry, L., et al. (2023). Public procurement as a policy tool: The territorial
+dimension. \textit{Regional Studies, 57}(11), 2087--2101.
+https://doi.org/10.1080/00343404.2022.2134850
+
+Figueroa-Gómez, Y., \& Galpin, I. (2024). Identifying public tenders of
+interest using classification models: A comparative analysis. \textit{SN
+Computer Science, 5}, 87. https://doi.org/10.1007/s42979-023-02443-3
+
+Good, P. I. (2005). \textit{Permutation, parametric, and bootstrap tests of
+hypotheses} (3.\textsuperscript{a} ed.). Springer.
+
+Gutiérrez Vanegas, K. F. (2024). \textit{Implementación de banderas rojas en
+la contratación pública en Colombia utilizando datos abiertos} [Trabajo de
+grado]. Fundación Universitaria Los Libertadores.
+
+Lohr, S. L. (2019). \textit{Sampling: Design and analysis}
+(3.\textsuperscript{a} ed.). CRC Press.
+
+Monsalvo Herrera, A. E., \& Jiménez, W. G. (2025). Pobreza multidimensional:
+un análisis espacial en los municipios de Cundinamarca, Colombia.
+\textit{Novum Jus, 19}(2), 213--251.
+https://doi.org/10.14718/NovumJus.2025.19.2.8
+
+Norbäck, M., \& Zapata Campos, M. J. (2022). The market made us do it: Public
+procurement and collaborative labour market inclusion governance from below.
+\textit{Social Policy \& Administration, 56}(4), 632--647.
+https://doi.org/10.1111/spol.12787
+
+Open Contracting Partnership. (2023). \textit{Open contracting reforms to
+boost civic engagement and participation: The experience of nine regions in
+Colombia}.
+
+Rodriguez-Plesa, E., Dimand, A.-M., \& Alkadry, M. G. (2022). Community social
+capital, political values, or organizational capacity? Indicators of
+engagement in sustainable public procurement at the local level.
+\textit{Journal of Cleaner Production, 338}, 130556.
+https://doi.org/10.1016/j.jclepro.2022.130556
+
+Salazar, A., Pérez, J. F., \& Gallego, J. (2024). VigIA: Prioritizing public
+procurement oversight with machine learning models and risk indices.
+\textit{Data \& Policy, 6}, e75. https://doi.org/10.1017/dap.2024.83
+
+Sarter, E. K. (2024). Public procurement and labour market inequality:
+Conceptualising a multi-faceted relationship. \textit{Journal of Industrial
+Relations, 66}(1), 130--152. https://doi.org/10.1177/00221856231221417
+
+Särndal, C.-E., Swensson, B., \& Wretman, J. (1992). \textit{Model assisted
+survey sampling}. Springer-Verlag.
+
+\end{document}

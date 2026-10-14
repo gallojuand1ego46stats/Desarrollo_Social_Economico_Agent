@@ -1,0 +1,5 @@
+codigo_2018,codigo_2026,tipo_cambio,fuente,estado,se_aplica_en
+94663,94343,Fusion Mapiripana a Barrancominas,"Ordenanza 248 de 2019, Guainia",documentado,Solo enlace SECOP; ambos permanecen en universo CNPV 2018
+27615,27493,Posible segregacion a Nuevo Belen de Bajira,Hipotesis autor; verificar DANE/IGAC,pendiente de verificacion,No dividir conteos 2018; agregar contratos SECOP a 27615 solo si confirma el padre
+,27493,DIVIPOLA sin equivalente CNPV 2018,DIVIPOLA-_Códigos_municipios_20260917.csv,documentar,Fuera del universo CNPV 2018
+94663,,CNPV 2018 sin equivalente DIVIPOLA 2026,DIVIPOLA-_Códigos_municipios_20260917.csv,documentar,Conservar en universo 2018; resolver para enlace SECOP

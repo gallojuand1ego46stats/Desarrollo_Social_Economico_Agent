@@ -5,3 +5,10 @@ nada-sin-fuente/sistema/.venv/
 __pycache__/
 .DS_Store
 .Rhistory
+.venv/
+temp/
+
+# Archivos grandes que se excluyen
+datos/PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx
+datos/PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX
+temp/csv_intermediate/PERSONAS_SOCIAL_Cuadros_CNPV_2018_XLSX_1PM.csv

@@ -1,0 +1,33 @@
+codigo_municipio,n_indicadores_abs_z_mayor_4,indicadores,nombre_municipio,nombre_departamento,pob_total,flag_pob_lt5000,tipo_divipola
+05266,1,sin_internet,ENVIGADO,ANTIOQUIA,212437,FALSE,Municipio
+05360,1,sin_internet,ITAGÜÍ,ANTIOQUIA,263332,FALSE,Municipio
+05631,1,sin_internet,SABANETA,ANTIOQUIA,81797,FALSE,Municipio
+11001,1,sin_internet,"BOGOTÁ, D.C.","BOGOTÁ, D.C.",7181469,FALSE,Municipio
+19785,1,actividad_desocupacion_incapacidad_hogar,SUCRE,CAUCA,6201,FALSE,Municipio
+25175,1,sin_internet,CHÍA,CUNDINAMARCA,129613,FALSE,Municipio
+25372,1,actividad_desocupacion_incapacidad_hogar,JUNÍN,CUNDINAMARCA,5234,FALSE,Municipio
+27250,1,sin_energia_electrica,EL LITORAL DEL SAN JUAN,CHOCÓ,11579,FALSE,Municipio
+27425,2,sin_energia_electrica;estrato_1_2,MEDIO ATRATO,CHOCÓ,10140,FALSE,Municipio
+27745,2,sin_energia_electrica;estrato_1_2,SIPÍ,CHOCÓ,2768,TRUE,Municipio
+44560,1,sin_energia_electrica,MANAURE,LA GUAJIRA,74528,FALSE,Municipio
+44847,2,sin_energia_electrica;estrato_1_2,URIBIA,LA GUAJIRA,160711,FALSE,Municipio
+68001,1,sin_internet,BUCARAMANGA,SANTANDER,528855,FALSE,Municipio
+68276,1,sin_internet,FLORIDABLANCA,SANTANDER,275109,FALSE,Municipio
+76001,1,sin_internet,SANTIAGO DE CALI,VALLE DEL CAUCA,1822869,FALSE,Municipio
+91263,1,estrato_1_2,EL ENCANTO,AMAZONAS,1885,TRUE,Área no municipalizada
+91407,1,sin_energia_electrica,LA PEDRERA,AMAZONAS,3781,TRUE,Área no municipalizada
+91430,2,sin_energia_electrica;estrato_1_2,LA VICTORIA,AMAZONAS,166,TRUE,Área no municipalizada
+91460,1,sin_energia_electrica,MIRITÍ - PARANÁ,AMAZONAS,1023,TRUE,Área no municipalizada
+91530,1,estrato_1_2,PUERTO ALEGRÍA,AMAZONAS,681,TRUE,Área no municipalizada
+91669,2,sin_energia_electrica;estrato_1_2,PUERTO SANTANDER,AMAZONAS,1450,TRUE,Área no municipalizada
+91798,2,sin_energia_electrica;estrato_1_2,TARAPACÁ,AMAZONAS,3179,TRUE,Área no municipalizada
+94663,2,sin_energia_electrica;estrato_1_2,MAPIRIPANA,GUAINÍA,1011,TRUE,
+94883,2,sin_energia_electrica;estrato_1_2,SAN FELIPE,GUAINÍA,1411,TRUE,Área no municipalizada
+94884,2,sin_energia_electrica;estrato_1_2,PUERTO COLOMBIA,GUAINÍA,1643,TRUE,Área no municipalizada
+94885,2,sin_energia_electrica;estrato_1_2,LA GUADALUPE,GUAINÍA,222,TRUE,Área no municipalizada
+94886,2,sin_energia_electrica;estrato_1_2,CACAHUAL,GUAINÍA,839,TRUE,Área no municipalizada
+94887,2,actividad_desocupacion_incapacidad_hogar;estrato_1_2,PANA PANA,GUAINÍA,1182,TRUE,Área no municipalizada
+94888,3,actividad_desocupacion_incapacidad_hogar;sin_energia_electrica;estrato_1_2,MORICHAL,GUAINÍA,812,TRUE,Área no municipalizada
+97511,3,actividad_desocupacion_incapacidad_hogar;sin_energia_electrica;estrato_1_2,PACOA,VAUPÉS,3956,TRUE,Área no municipalizada
+97889,2,sin_energia_electrica;estrato_1_2,YAVARATÉ,VAUPÉS,756,TRUE,Área no municipalizada
+99773,2,sin_energia_electrica;estrato_1_2,CUMARIBO,VICHADA,43138,FALSE,Municipio
