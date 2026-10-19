@@ -1,0 +1,35 @@
+control,cumple
+CSV descriptivos: hogares_menores15,True
+CSV descriptivos: paredes_precarias_6V,True
+CSV descriptivos: sin_energia_8V,True
+CSV descriptivos: estratos_1_2_o_sin_estrato_10V,True
+correlaciones_sensibilidad.tex: 5PM: peso 1:1,True
+correlaciones_sensibilidad.tex: 5PM: peso 3:1,True
+correlaciones_sensibilidad.tex: 5PM: total,True
+correlaciones_sensibilidad.tex: 5PM: cota NR,True
+correlaciones_sensibilidad.tex: Gas: total,True
+correlaciones_sensibilidad.tex: Internet: total,True
+correlaciones_sensibilidad.tex: 10V: total,True
+correlaciones_sensibilidad.tex: Gas e internet: total,True
+descriptivos_cuatro.tex: 1HM,True
+descriptivos_cuatro.tex: 6V,True
+descriptivos_cuatro.tex: Energia,True
+descriptivos_cuatro.tex: 10V,True
+razones_sumas.tex: 1HM,True
+razones_sumas.tex: 6V,True
+razones_sumas.tex: Energia,True
+razones_sumas.tex: 10V,True
+sensibilidades.tex: 5PM: peso 1:1,True
+sensibilidades.tex: 5PM: peso 3:1,True
+sensibilidades.tex: 5PM: total,True
+sensibilidades.tex: 5PM: cota NR,True
+sensibilidades.tex: Gas: total,True
+sensibilidades.tex: Internet: total,True
+sensibilidades.tex: 10V: total,True
+sensibilidades.tex: 17PM: Normal incompleta,True
+sensibilidades.tex: 17PM: base válida,True
+Hashes de insumos conservados,True
+Sin PCA en esta corrida,True
+Sin faltantes en matriz,True
+Fórmulas sin discrepancias,True
+Compilación sin referencias indefinidas ni desbordamientos,True

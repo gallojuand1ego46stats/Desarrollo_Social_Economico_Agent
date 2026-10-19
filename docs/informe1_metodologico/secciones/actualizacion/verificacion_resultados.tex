@@ -1,0 +1,35 @@
+\subsection{Resultados de la corrida reproducible}
+
+El producto \path{resultados/indicadores_finales_ivs_20261015/resumen_ejecucion.csv} registra 1.122 códigos, nueve columnas candidatas, quince proporciones educativas descriptivas, 1.122 filas completas, cero celdas NA, cero violaciones en los controles incluidos y \texttt{PCA\_ejecutado = FALSE}. 6PM no se incluye. Los nueve indicadores están dentro del rango previsto [0,1] y las quince partes de 17PM suman uno por código territorial.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Controles de consistencia de la matriz candidata}\label{tab:controles_matriz}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}p{0.54\textwidth}r r p{0.23\textwidth}@{}}
+\toprule
+\textbf{Control} & \textbf{$n$ evaluado} & \textbf{Violaciones} & \textbf{Tolerancia}\\
+\midrule
+Cobertura y unicidad de códigos entre fuentes & 1.122 & 0 & Exacta \\
+Total 17PM = suma de categorías & 1.122 & 0 & 0,5 persona \\
+Total 5PM = suma de categorías & 1.122 & 0 & 0,5 persona \\
+Total 6V = suma de nueve materiales & 1.122 & 0 & 0,5 vivienda \\
+Total energía 8V = Sí + No & 1.122 & 0 & 0,5 vivienda \\
+Total gas e internet = Sí + No + Sin información & 2.244 & 0 & 0,5 vivienda \\
+Total 10V = suma de categorías BU:CD & 1.122 & 0 & 0,5 persona \\
+Indicadores candidatos en [0,1] & 10.098 celdas & 0 & [0,1] \\
+Completitud de las nueve candidatas & 10.098 celdas & 0 NA & NA \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Estos controles verifican aritmética, rangos y cobertura de la matriz producida; no prueban que la operacionalización represente por completo la vulnerabilidad. Asimismo, la sensibilidad por denominador de estrato documenta una limitación conceptual importante: la población fuera de categorías clasificables no entra en el indicador principal.
+
+\subsection{Qué se verificó en los consolidados}
+
+La auditoría del consolidado verificó nombres de hojas, bloques, dimensión, formatos de llave, consistencia interna, coberturas por área y correspondencia entre hoja ancha y larga del IPM. El informe correspondiente es \path{docs/calidad/auditorias/VERIFICACION_CONSOLIDADOS.md}; sus archivos tabulares están en \path{resultados/verificacion_consolidados/}. El código se usa para unir y los nombres se emplean solo para describir. La ausencia de Cabecera en 20 unidades coincide con los 20 \enquote{--} del IPM, y la ausencia de Centro poblado en 192 unidades se conserva como falta de dominio geográfico, no de dato.
+
+\subsection{Resultados que no se trasladan de versiones anteriores}
+
+Los diagnósticos KMO, Bartlett, MSA, correlaciones y extremos que aparecen en la auditoría de la matriz previa se refieren a otra especificación. No se presentan aquí como resultados de las nueve candidatas actuales ni de la futura matriz de ocho variables. Los diagnósticos de adecuación deben recalcularse sobre el universo municipal depurado y la submatriz acordada antes de decidir si procede PCA.

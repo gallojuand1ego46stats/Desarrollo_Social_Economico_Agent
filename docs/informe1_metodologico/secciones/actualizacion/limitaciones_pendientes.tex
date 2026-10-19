@@ -1,0 +1,53 @@
+\subsection{Limitaciones interpretativas}
+
+\begin{itemize}[leftmargin=1.27cm]
+  \item El CNPV mide condiciones de 2018; no representa por sí solo el contexto socioeconómico de 2026.
+  \item La unidad territorial y el cambio de límites entre 2018 y 2026 generan una incompatibilidad potencial. Los códigos 27493 y 94663 requieren crosswalk verificable antes de comparar contratación.
+  \item Las veinte ANM de 2018 se identifican y se describen aparte. El ámbito descriptivo principal incluye municipios/distritos y San Andrés; su inclusión insular en el futuro PCA requiere decisión explícita.
+  \item Hogares con menores y con personas mayores son proxies de carga potencial de cuidado, no mediciones de dependencia funcional, económica o de necesidad de cuidado.
+  \item 5PM agrupa situaciones heterogéneas y usa una ponderación normativa 2:1. El indicador no es una tasa oficial de desempleo ni describe actividad de un hogar.
+  \item El estrato es una clasificación del inmueble para servicios, no una medida directa de ingreso. La inclusión de \enquote{No tiene estrato} como condición de vulnerabilidad es una decisión del equipo, cuya sensibilidad al denominador es alta.
+  \item 17PM usa población 5+ y no controla composición de edad. Se excluye del primer PCA y se reserva para sensibilidad exploratoria.
+  \item La matriz z equaliza varianzas, pero no corrige asimetría, observaciones influyentes, error conceptual o solapamiento entre indicadores.
+  \item No se han actualizado KMO, Bartlett, MSA, análisis paralelo ni estabilidad para las ocho candidatas y el universo municipal final.
+  \item SECOP II no se ha integrado. La comparación 2018--2026 será temporalmente asimétrica y ecológica; los resultados describirán asociación, no causalidad.
+\end{itemize}
+
+\subsection{Decisiones adoptadas y asuntos abiertos}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Estado de decisiones metodológicas}\label{tab:decisiones_pendientes}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}p{0.32\textwidth}p{0.28\textwidth}p{0.32\textwidth}@{}}
+\toprule
+\textbf{Decisión / asunto} & \textbf{Estado} & \textbf{Siguiente acción}\\
+\midrule
+IVS con indicadores DANE; SECOP como análisis posterior & Acordado & Mantener separados los bloques de vulnerabilidad y contratación. \\
+Base censal 2018; SECOP II prioriza 2026 & Acordado & Documentar desfase temporal y cobertura. \\
+ANM por fuera del IVS municipal principal & Lista histórica verificada; base separada & Cerrar tratamiento de San Andrés para el PCA. \\
+27493 hacia 27615 para armonización & Decisión de enlace del equipo & Verificar límites/fuente oficial; no alterar 2018. \\
+94663 hacia 94343 para armonización & Decisión de enlace del equipo & Agregar componentes de 2018 a geografía común antes de tasas, si el diseño de enlace lo requiere. \\
+Cobertura SECOP 100\% del universo acordado & Criterio del equipo & Fijar denominador después de resolver universo y crosswalk. \\
+5PM peso 2 para incapacidad & Aprobado como ponderación experimental & Reportar sensibilidad 1:1 y 3:1; no presentarlo como peso empírico. \\
+17PM fuera del primer PCA & Acordado & Comparar luego solución de ocho variables con variante educativa, si se valida su universo. \\
+Basuras fuera de las ocho & Confirmado el 18 de octubre & Conservar únicamente como sensibilidad exploratoria. \\
+Solapamiento con IPM & Criterio acordado; matriz conceptual documentada & Contrastar después soluciones con retiro de candidatas cercanas. \\
+PCA / IVS / validación externa / SECOP & Pendientes & Ejecutar en etapas, con diagnósticos y trazabilidad versionados. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\subsection{Próximas etapas}
+
+\begin{enumerate}[leftmargin=1.27cm]
+  \item Cerrar la inclusión insular en el universo del PCA y verificar el crosswalk 2018--2026; la clasificación de veinte ANM ya está documentada.
+  \item Seleccionar el ámbito definitivo desde las matrices de ocho variables y volver a estandarizarlo; preservar el escenario separado para ANM.
+  \item Calcular KMO/MSA y Bartlett cuando se autorice la etapa multivariada. Los controles de fórmula, descriptivos, correlaciones y cotejo de extremos del ámbito municipal e insular ya se documentan en esta actualización.
+  \item Ejecutar PCA exploratorio, comparar criterios de retención e inspeccionar estabilidad de cargas y puntajes bajo sensibilidades previamente definidas.
+  \item Si la solución es interpretable y estable, formalizar la regla de construcción del IVS; posteriormente contrastarlo con IPM como criterio externo.
+  \item Obtener SECOP II 2026, documentar cobertura municipal y armonizar límites antes de analizar asociación, correspondencia y brechas.
+\end{enumerate}
+
+La secuencia es consistente con guías de construcción de indicadores compuestos: las decisiones de normalización, ponderación, agregación y análisis de incertidumbre deben ser transparentes y evaluarse antes de interpretar un ranking \citep{oecd2008composite}. El IVS no se considerará terminado solo por obtener una primera componente principal.

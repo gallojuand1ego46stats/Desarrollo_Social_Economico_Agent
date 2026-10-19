@@ -1,0 +1,2 @@
+n_municipios,n_indicadores_pca,n_prop_17PM_descriptivas,n_candidatas_educativas_en_pca,municipios_matriz_completa,celdas_na,violaciones_controles,6PM_incluido,PCA_ejecutado,nota
+1122,9,15,1,1122,0,0,FALSE,FALSE,Matriz de candidatos orientados y escalados conceptualmente; falta validacion y seleccion final. No imputada; PCA no ejecutado.

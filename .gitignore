@@ -8,6 +8,36 @@ __pycache__/
 .venv/
 temp/
 
+# Respaldos y previsualizaciones locales; no forman parte de la entrega versionada.
+tmp/
+
+# Borradores locales en preparación; no forman parte del primer avance público.
+/docs/informe1_metodologico/Resumen_Simposio_2026.pdf
+/docs/informe1_metodologico/Resumen_Simposio_2026.tex
+/docs/diccionario/decisiones_variables_IVS_CNPV2018.csv.tmp
+
+# Salida PDF duplicada generada por LaTeX. La copia pública canónica es Informe1_Metodologico.pdf.
+/docs/informe1_metodologico/main.pdf
+
+# Artefactos regenerables de compilación LaTeX.
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+
+# Corridas exploratorias intermedias; se conserva en Git la salida final citada v05.
+/resultados/solucion_pendientes/actividad_laboral_6PM_20261015_v*/
+/resultados/solucion_pendientes/ejecucion_20261015_v*/
+/resultados/solucion_pendientes/estructura_10V_6V_20261015_v0[1-4]/
+
+# Copias locales byte a byte de las salidas vigentes; se conserva manifest.csv.
+/resultados/auditoria_estadistica/baseline_antes/base_trabajo/
+/resultados/auditoria_estadistica/baseline_antes/datos_trabajo/
+
 # Archivos grandes que se excluyen
 datos/PERSONAS_DEMOGRAFICO_Cuadros_CNPV_2018.xlsx
 datos/PERSONAS_SOCIAL_Cuadros_CNPV_2018.XLSX

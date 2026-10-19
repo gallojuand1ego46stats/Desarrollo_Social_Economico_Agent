@@ -1,0 +1,2 @@
+n_municipios,n_violaciones_suma_gas,n_violaciones_suma_internet,n_delta_gas_ge_002,n_delta_internet_ge_002,max_delta_gas,max_delta_internet,rho_gas,rho_internet,nr_gas_ponderada,nr_internet_ponderada
+1122,0,0,3,1,0.03224889610719184,0.02057366423592384,0.9999645192859938,0.9998681073338263,0.008607398012377521,0.009109373832824619

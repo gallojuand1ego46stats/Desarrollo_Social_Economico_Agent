@@ -1,0 +1,10 @@
+indicador,base,alternativa,n,rho_spearman,diferencia_abs_max,municipios_delta_2pp
+5PM actividad ponderada,actividad_vulnerabilidad_10mas_5PM,actividad_5PM_sobre_total,1122,0.998867617206449,0.008427328085327937,0
+5PM actividad ponderada,actividad_vulnerabilidad_10mas_5PM,actividad_5PM_cota_superior_nr,1122,0.8127185572742637,0.1825634441341961,235
+5PM peso incapacidad,actividad_vulnerabilidad_10mas_5PM,actividad_5PM_peso1,1122,0.9496213580514408,0.21432552954292086,702
+5PM peso incapacidad,actividad_vulnerabilidad_10mas_5PM,actividad_5PM_peso3,1122,0.9760895470360311,0.07144184318097363,46
+8V gas sin servicio,sin_gas_8V,sin_gas_8V_sobre_total,1122,0.9935706737168468,0.12456560982049147,58
+8V internet sin servicio,sin_internet_8V,sin_internet_8V_sobre_total,1122,0.954424743767677,0.16757436112274826,85
+10V estratos bajos + no tiene estrato,estratos_1_2_o_sin_estrato_10V,estratos_1_2_o_sin_estrato_10V_sobre_total,1122,0.40445503985449266,0.9879518072289156,711
+17PM sin media completa,sin_media_completa_17PM,sin_media_completa_17PM_con_normal_incompleta,1122,0.9979463162235228,0.04794086589229141,12
+17PM sin media completa,sin_media_completa_17PM,sin_media_completa_17PM_base_valida,1122,0.9677624320900285,0.21413569425925766,105

@@ -1,0 +1,33 @@
+\subsection{Universo censal y códigos de enlace}
+
+El universo CNPV/IPM usado en la corrida del 15 de octubre comprende 1.122 códigos territoriales únicos. Este conteo no debe llamarse sin matices \enquote{1.122 municipios}: incluye áreas no municipalizadas y una unidad insular. La unión de ese universo con DIVIPOLA 2026 contiene un código adicional, 27493, exclusivo de la nomenclatura actual; el CNPV/IPM conserva 94663, que no aparece en DIVIPOLA 2026. La auditoría registra la fila completa de cada fuente y mantiene ambas situaciones visibles.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Casos territoriales que requieren armonización temporal}
+\label{tab:casos_territoriales}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}p{0.12\textwidth}p{0.20\textwidth}p{0.25\textwidth}p{0.33\textwidth}@{}}
+\toprule
+\textbf{Código} & \textbf{Evidencia censal / DIVIPOLA} & \textbf{Decisión del equipo} & \textbf{Tratamiento y límite} \\
+\midrule
+27493 & Está en DIVIPOLA 2026; no en CNPV/IPM 2018. DANE incorporó Nuevo Belén de Bajirá a ELIC desde enero de 2024; no se sostiene aquí la fecha de creación 2019 previamente aportada \citep{dane2024elic}. & Enlace hacia 27615 (Riosucio) propuesto por el equipo, pendiente de verificación territorial. & No se inventa una observación censal 2018 ni se divide el dato de 27615. Deben verificarse acto de creación, límites y territorio antecedente antes de fijar el crosswalk. \\
+94663 & Está en CNPV/IPM 2018; no en DIVIPOLA 2026. Corresponde a Mapiripana según el registro censal y la información aportada. & Enlace hacia 94343 (Barrancominas) para la geografía posterior. & Ambos códigos originales se preservan en la base de 2018. Para comparar con 2026 se requiere llevar las observaciones a geografía común; no se asignan contratos a unidades históricas que ya no tienen código vigente. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+La regla estadística general es conservar intacta la unidad observada por el CNPV 2018 y crear una capa separada de armonización para el enlace con SECOP II. Si una unidad de 2026 se divide respecto de 2018, los contratos de sus sucesores deben agregarse a la unidad histórica; si varias unidades de 2018 convergen en una de 2026, los conteos censales pertinentes deben agregarse primero y las tasas deben recalcularse como razón de sumas de numeradores y denominadores. No se deben promediar índices municipales ni repartir contratos proporcionalmente sin una regla y fuente justificadas. Este procedimiento es una especificación futura; no se ha ejecutado todavía.
+
+La decisión del equipo es analizar las áreas no municipalizadas por separado del IVS municipal principal. La actualización descrita en la \cref{sec:actualizacion_descriptiva} verifica veinte ANM en la capa histórica DANE 2018, incluidas Barrancominas y Mapiripana. El DANE documenta que ambas integran Barrancominas bajo la Ordenanza 248 de 2019 \citep{dane2018divipola,dane_nbi_barrancominas}. Se generan descriptivos separados y una base municipal e insular de ocho indicadores; la inclusión de San Andrés en el futuro PCA aún debe declararse. DIVIPOLA 2026 no sustituye la clasificación histórica.
+
+\subsection{Llaves, cobertura y áreas inexistentes}
+
+El código se normaliza a cinco caracteres; el código departamental corresponde a sus dos primeros caracteres. Los nombres se conservan como atributos descriptivos, nunca como llave de unión. Las discrepancias ortográficas entre IPM y DIVIPOLA no cambian la correspondencia cuando el código coincide.
+
+La auditoría CNPV/IPM registra 1.102 unidades con área Cabecera, 930 con Centro poblado, y los 1.122 códigos con Total y Rural disperso. Las ausencias de área se tratan como inexistencia estructural del dominio, no como no respuesta ni como ceros observados. En particular, los 20 códigos sin Cabecera coinciden con los 20 valores \enquote{--} de Cabeceras en el IPM. La clasificación de ANM, isla y municipios debe mantenerse ligada al registro temporal de referencia para no confundir cobertura censal con estado administrativo actual.
+
+\subsection{Alcance de la cobertura SECOP II}
+
+El criterio del equipo es exigir cobertura del 100\% del universo analítico acordado para el enlace principal con SECOP II y presentar sensibilidad si la armonización territorial reduce la cobertura. El denominador de ese porcentaje se definirá después de separar las ANM, resolver el universo municipal de referencia y fijar el crosswalk. Así se evita declarar cobertura completa contando simultáneamente unidades que representan territorios superpuestos o cambiados.

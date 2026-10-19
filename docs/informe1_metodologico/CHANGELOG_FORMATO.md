@@ -1,5 +1,18 @@
 # CHANGELOG_FORMATO — Informe 1 Metodológico
 
+## 15 de octubre de 2026 — Versión metodológica 2.0
+
+- Se actualizó el contenido científico para reflejar las decisiones tomadas hasta el 15/10/2026 y los productos reproducibles vigentes.
+- Se reemplazaron las referencias desactualizadas a siete indicadores, matrices base total/válida antiguas y ventana SECOP 2015--2025.
+- Se documentaron las nueve candidatas calculadas, la decisión de usar ocho en el primer PCA y reservar 17PM para sensibilidad, además de las limitaciones del universo territorial y ANM.
+- Se añadieron fórmulas, controles de consistencia, resultados numéricos de sensibilidad y referencias estadísticas sobre PCA, datos composicionales e indicadores compuestos.
+- Se añadió un capítulo ordenado por etapas con fórmulas de llave/cobertura, indicadores, reconciliaciones, auditoría descriptiva y de correlaciones, sensibilidad, KMO/MSA y Bartlett; se identifica qué resultados son históricos y cuáles siguen pendientes para la matriz PCA aprobada.
+- Se incorporaron las referencias primarias de Bartlett (1950) y Kaiser (1974), y se regeneró el PDF metodológico a 28 páginas.
+- Se actualizaron autoría, afiliación y asesoría; se creó una nota de navegación en la bóveda Obsidian.
+- La versión vigente no ejecuta PCA, no construye un IVS final y no integra SECOP II.
+
+---
+
 ## Fecha: 13 de octubre de 2026
 ## Versión: 2.0 (Corrección editorial, tipográfica y de maquetación)
 

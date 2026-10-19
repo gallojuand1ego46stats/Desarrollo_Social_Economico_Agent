@@ -1,27 +1,30 @@
-\section{Especificación vigente de indicadores}
-\label{anexo:a}
+\section{Inventario compacto de indicadores y fuentes}
+\label{anexo:indicadores}
 
-La especificación reproducible se mantiene en \texttt{resultados/base\_trabajo/especificacion\_indicadores.csv}. La auditoría estadística registra 17 definiciones operativas: siete variables de una matriz candidata provisional y otras variables descriptivas, contextuales o pendientes de revisión. La tabla resume únicamente las siete candidatas; su presencia no implica aprobación conceptual ni que se haya ejecutado el PCA.
+La tabla resume los códigos de cuadro y las columnas operacionales verificadas en \path{resultados/indicadores_finales_ivs_20261015/formulas_indicadores.csv}. La descripción completa del instrumento y sus valores de origen se conserva en las tablas tidy intermedias y en el diccionario de decisiones.
 
-\begin{longtable}{@{}p{0.31\textwidth}p{0.27\textwidth}p{0.32\textwidth}@{}}
-\caption{Variables de la matriz candidata y principales reservas conceptuales}\label{tab:especificacion_indicadores}\\
+\small
+\begin{longtable}{@{}p{0.14\textwidth}p{0.24\textwidth}p{0.40\textwidth}p{0.14\textwidth}@{}}
+\caption{Procedencia y destino analítico}\label{tab:procedencia_indicadores}\\
 \toprule
-\textbf{Variable} & \textbf{Medida observada} & \textbf{Reserva para interpretación} \\
+\textbf{Cuadro} & \textbf{Columnas/medida de origen} & \textbf{Transformación documentada} & \textbf{Destino}\\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Variable} & \textbf{Medida observada} & \textbf{Reserva para interpretación} \\
+\textbf{Cuadro} & \textbf{Columnas/medida de origen} & \textbf{Transformación documentada} & \textbf{Destino}\\
 \midrule
 \endhead
-Actividad combinada & Proporción de población 10+ en categorías combinadas de actividad & Agrupa búsqueda de empleo, oficios del hogar, incapacidad permanente y otras categorías; no equivale a desempleo ni a una medida unidimensional de vulnerabilidad. \\
-Sin energía eléctrica & Viviendas ocupadas sin energía eléctrica & Indicador de servicio básico; interpretar con contexto de oferta territorial. \\
-Sin gas de red & Viviendas ocupadas sin gas de red pública & La disponibilidad depende de infraestructura y oferta local. \\
-Sin recolección de basuras & Viviendas ocupadas sin recolección de basuras & La cobertura puede reflejar provisión del servicio y dispersión poblacional. \\
-Sin internet & Viviendas ocupadas sin internet & Distribución próxima al techo en parte del universo; revisar capacidad discriminante y no respuesta. \\
-Hogares con menores de 15 & Proporción de hogares con menores de 15 años & Es una característica de composición del hogar, no una privación directa. \\
-Estratos 1 y 2 & Proporción de personas en estratos 1 y 2 & Proxy administrativo con cobertura territorial desigual; MSA individual reportado de 0,414. \\
+1HM & Hogares totales; hogares con menores de 15. & Hogares con menores / hogares totales. & PCA 1 \\
+2HM & Hogares totales; hogares con personas de 60+. & Hogares con adultos mayores / hogares totales. & PCA 1 \\
+6V\_MPIO & Nueve materiales de pared por área y tipo. & Seis categorías aprobadas / total de viviendas tipo Total. & PCA 1 \\
+8V\_MPIO & Ocupadas presentes; energía, gas, internet. & Tres proporciones separadas; gas e internet usan denominador válido. & PCA 1 \\
+10V\_MPIO & BU:CD, personas por estrato/categoría. & Estratos 1--2 + no tiene estrato / estratos 1--6 + no tiene estrato. & PCA 1 \\
+5PM & Actividad semanal de población 10+. & No remunerado + búsqueda + 2 $\times$ incapacidad; denominador ponderado válido. & PCA 1, experimental \\
+17PM & Nivel educativo por municipio, área y sexo. & 15 proporciones descriptivas y agregado sin media completa. & Sensibilidad posterior \\
+1PM & Población, área, edad, sexo. & Contexto y denominadores; no deriva una dimensión PCA adicional. & Contexto \\
+1V\_MPIO & Ocupación/tipo de vivienda por área. & Contexto de estructura habitacional. & Contexto \\
+6PM & Actividad en grupos de edad. & Excluido por duplicar variables de 5PM con segmentación etaria. & Excluido \\
+IPM & Agregado municipal y privaciones. & No se incluye en PCA; reserva para contraste externo. & Validador \\
 \bottomrule
 \end{longtable}
-
-Los diagnósticos disponibles son preliminares (KMO global 0,642; Bartlett $\chi^2=4664,873$, 21 grados de libertad, $p<0,001$). No certifican por sí mismos la pertinencia del análisis ni sustituyen la revisión conceptual, la evaluación de estabilidad y la decisión sobre balance entre dominios. El IPM Municipal se reserva para análisis descriptivos y eventual contraste externo; cualquier asociación debe interpretarse considerando el solapamiento conceptual de sus privaciones con variables censales.
-
+\normalsize

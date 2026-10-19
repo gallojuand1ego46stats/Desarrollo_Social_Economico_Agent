@@ -1,0 +1,114 @@
+Esta sección presenta las expresiones aplicadas en el orden del flujo de trabajo. Se distingue entre procedimientos \textbf{ejecutados}, cuya evidencia está en scripts y salidas, y procedimientos \textbf{pendientes}, especificados para etapas futuras pero aún sin resultados para la matriz acordada. Los diagnósticos de una matriz anterior no se trasladan a la matriz candidata actual.
+
+\subsection{Etapa 1. Verificación de estructura, llaves y cobertura}
+
+Cada llave municipal se normaliza como texto de cinco dígitos, $c_i\in\{0,\ldots,9\}^5$. La consistencia departamental se evalúa con
+\[
+I_{D,i}=\mathbf{1}\{\texttt{codigo\_departamento}_i=\operatorname{substr}(c_i,1,2)\}.
+\]
+El control exige cero códigos duplicados y cero filas con $I_{D,i}=0$. La cobertura entre dos fuentes $A$ y $B$ se compara mediante la diferencia simétrica de conjuntos, $A\triangle B$. Para tablas con más de una fila municipal, la llave compuesta debe ser única: municipio--área--sexo, municipio--área--tipo de vivienda o municipio--área--grupo de edad, según el bloque.
+
+La matriz de presencia define $P_{ij}=1$ cuando el código $i$ aparece en la fuente $j$, y $0$ en caso contrario. Las combinaciones de área, edad o tipo no publicadas por el diseño se cuentan como \emph{ausencias estructurales}, no como celdas faltantes ni como ceros imputados. El cruce histórico con DIVIPOLA actual identificaba 18 ANM. La verificación de la geografía de 2018 amplía la clasificación a veinte al incorporar Barrancominas y Mapiripana; se conservan separadas en la actualización descriptiva.
+
+En reconciliaciones de conteos se calcula el residuo $e_i=T_i-\sum_{k=1}^{K}C_{ik}$, donde $T_i$ es el total publicado y $C_{ik}$ las categorías exhaustivas. Una fila viola la identidad si $|e_i|>0,5$ personas o viviendas. El rango de proporciones 0--1 se controla con $\mathbb{1}(x_i<0\ \text{o}\ x_i>1)$; para indicadores IPM se usa el rango [0,100]. La igualdad entre las columnas IPM Municipal e IPM se verifica con tolerancia $10^{-10}$. Los detalles por chequeo, hoja y tolerancia están en los CSV de verificación.
+
+\subsection{Etapa 2. Construcción de indicadores candidatos}
+
+Las expresiones usan conteos del CNPV 2018 del área \enquote{Total}. Para todo cociente se aplica $\operatorname{ratio}(a,b)=a/b$ si $b>0$; un denominador cero o indefinido genera NA y no un cero artificial.
+
+\begin{singlespace}\small
+\begin{longtable}{@{}p{0.15\textwidth}p{0.52\textwidth}p{0.23\textwidth}@{}}
+\caption{Fórmulas operacionales de las candidatas}\label{tab:formulas_algebraicas}\\
+\toprule
+\textbf{Indicador} & \textbf{Fórmula operacional} & \textbf{Estado e interpretación}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Indicador} & \textbf{Fórmula operacional} & \textbf{Estado e interpretación}\\
+\midrule
+\endhead
+1HM & $H^{<15}_i/H_i$: hogares que reportan menores de 15 / hogares totales. & Candidato; proxy de carga potencial de cuidado, no dependencia económica.\\
+2HM & $H^{60+}_i/H^{(2HM)}_i$: hogares con personas de 60+ / total de hogares del bloque 2HM. & Candidato; no mide dependencia funcional.\\
+6V & $(G_i+T_i+M_i+C_i+D_i+S_i)/V_i$: Guadua, Tapia/bahareque/adobe, Madera burda, Caña/vegetales, Desecho y Sin paredes / viviendas tipo Total. & Candidato; agregado acordado, sin pesos por severidad.\\
+8V energía & $E_i^{-}/E_i$: viviendas ocupadas presentes sin energía / total viviendas ocupadas presentes. & Candidato de carencia.\\
+8V gas & $G_i^{-}/(G_i^{T}-G_i^{NR})$. & Candidato entre respuestas clasificables; NR se conserva y se sensibiliza.\\
+8V internet & $I_i^{-}/(I_i^{T}-I_i^{NR})$. & Candidato entre respuestas clasificables; NR se conserva y se sensibiliza.\\
+10V estrato & $(E_{1i}+E_{2i}+N_i)/(\sum_{s=1}^{6}E_{si}+N_i)$. & Candidato acordado; excluye Sin servicio y No sabe/No responde del cociente.\\
+5PM actividad & $(U_i+B_i+2C_i)/[2(T_i-N_i)]$: negocio no remunerado, buscó trabajo, incapacidad permanente (peso 2), sobre respuestas válidas ponderadas. & Candidato experimental; no es tasa oficial ni dependencia del hogar.\\
+17PM sin media completa & $(Ninguno+Preescolar+Primaria_{c/i}+Secundaria_{c/i}+Media_i)/P_{5+}$. & Descriptiva reservada; fuera del primer PCA.\\
+\bottomrule
+\end{longtable}
+\end{singlespace}
+
+En 5PM el denominador ponderado limita la puntuación a [0,1], bajo categorías exhaustivas y mutuamente excluyentes. El peso 2 para incapacidad es una decisión normativa del equipo, no una estimación del censo. En 17PM las proporciones de cada una de las 15 categorías son $p_{ik}=n_{ik}/P_{5+}$; se controla $|\sum_{k=1}^{15}p_{ik}-1|\leq10^{-10}$. La sensibilidad incorpora Normal incompleta al numerador; Normal completa se excluye. El denominador 5+ incluye Sin información en la fórmula principal, con alternativa que la excluye.
+
+\subsection{Etapa 3. Controles aritméticos, rangos y completitud}
+
+El residuo $e_i$ de la etapa 1 se aplica a los totales publicados y sus categorías: distribución educativa 17PM, actividad 5PM, nueve materiales 6V, energía 8V, gas e internet 8V y categorías 10V. Para la matriz candidata también se verifica cobertura/unicidad, que cada proporción esté en [0,1], y el número de valores NA. La ejecución del 15/10/2026 registró cero violaciones en los controles incluidos y 10.098 celdas completas para nueve candidatas en 1.122 unidades territoriales. Esto confirma coherencia aritmética y cobertura de la salida, no validez teórica del constructo.
+
+En la auditoría del IPM, cada indicador se contrasta contra [0,100], se compara IPM Municipal con IPM, y se reconcilian las hojas ancha y largas por código y variable. Los resúmenes regionales, departamentales y controles se recalculan desde la tabla ancha y se informa su diferencia absoluta. El detalle por prueba está en \path{resultados/verificacion_consolidados/chequeos_consistencia.csv}; las discrepancias no se corrigen automáticamente.
+
+\subsection{Etapa 4. Auditoría descriptiva, correlaciones y extremos}
+
+Para cada variable $x$, se calculan media $\bar{x}=n^{-1}\sum_i x_i$, varianza muestral $s^2=(n-1)^{-1}\sum_i(x_i-\bar{x})^2$, mínimos, máximos y cuantiles tipo 7 de R (1\%, 25\%, 50\%, 75\%, 99\%). La función auxiliar define los momentos estandarizados como
+\[
+g_1=\frac{n^{-1}\sum_i(x_i-\bar{x})^3}{s^3},\qquad
+g_2=\frac{n^{-1}\sum_i(x_i-\bar{x})^4}{s^4}-3,
+\]
+para asimetría y curtosis en exceso; el script de auditoría también genera esos dos descriptivos con \texttt{psych::describe}, cuya convención de corrección finita puede producir pequeñas diferencias. Se inspecciona porcentaje de ceros $100n^{-1}\sum_i\mathbf{1}(x_i=0)$ y varianza casi nula ($s^2<10^{-8}$). Los umbrales de alerta exploratoria son $|g_1|>2$, al menos 50\% de ceros, o proporciones fuera de [0,1]. No son pruebas de normalidad ni reglas automáticas de exclusión.
+
+La matriz de correlaciones histórica es Pearson: $r_{jk}=\operatorname{cov}(X_j,X_k)/(s_js_k)$, calculada sobre la base total; en la auditoría se recalculó cada par y se comparó con el CSV, con tolerancia $10^{-10}$. Los niveles descriptivos fueron $|r|\geq0,40$ (moderado), $|r|\geq0,70$ (fuerte), y alertas $|r|\geq0,90$ y $|r|\geq0,95$. Estos umbrales no son contrastes de significancia.
+
+La estandarización histórica se define como $z_{ij}=(x_{ij}-\bar{x}_j)/s_j$. Se marcó como extremo si $|z_{ij}|>4$ para al menos un indicador. La matriz previa de siete candidatos produjo 32 unidades con algún valor extremo. Es un indicador para cotejar la fuente, no una razón para corregir o eliminar observaciones. La actualización recalcula 43 códigos con 47 celdas extremas para ocho variables y 1.102 unidades municipales e insulares; el cotejo fuente se documenta en la sección de actualización descriptiva.
+
+La auditoría reproducible de artefactos comprueba que los resultados almacenados coincidan con su recálculo. Para descriptivos se evalúa la máxima diferencia absoluta entre los valores guardados y recalculados de mínimo, percentil 1, mediana, media, percentil 99 y máximo; para correlaciones se usa la máxima diferencia por par. En ambos casos se exige diferencia menor que $10^{-10}$. Para sensibilidad NR se comparan los conteos de municipios marcados y la máxima diferencia absoluta entre resumen y archivo municipal; para extremos se compara el número de municipios con al menos un $|z|>4$. La auditoría histórica obtuvo diferencias de $1,11\times10^{-16}$ en descriptivos, $1,11\times10^{-16}$ en correlaciones y cero en los dos últimos controles: los cuatro controles aprobaron la conciliación de archivos. Esta verificación comprueba reproducción interna, no la validez del indicador.
+
+\subsection{Etapa 5. Sensibilidad de fórmulas y no respuesta}
+
+Para cada municipio se comparan la fórmula principal $a_i$ y la alternativa $b_i$. Se calcula diferencia absoluta $d_i=|a_i-b_i|$, correlación de rangos $\rho_s=\operatorname{cor}(rank(a),rank(b))$ en pares completos, diferencia máxima $\max_i d_i$, y número de unidades con $d_i\geq0,02$. En la auditoría histórica se definió además diferencia relativa $q_i=d_i/|a_i|$ cuando $a_i\ne0$; un municipio era sensible si $d_i\geq0,02$ \textbf{o} $q_i\geq0,10$. El resumen actual de escenarios que acompaña la matriz candidata usa el umbral absoluto de dos puntos porcentuales.
+
+Los escenarios ejecutados son: 5PM con/sin No informa; cota que asigna puntuación máxima a No informa, $(U_i+B_i+2C_i+2N_i)/(2T_i)$; pesos de incapacidad 1:1 y 3:1; gas e internet con denominador válido frente al total publicado; 10V frente al total de personas de BU; y 17PM incluyendo Normal incompleta y excluyendo Sin información del denominador. En 5PM, la alternativa que mantiene numerador observado pero emplea total es $(U_i+B_i+2C_i)/(2T_i)$. En servicios, el escenario alterno divide el conteo sin servicio por el total que incluye Sin información. Los resultados numéricos están en la Tabla \ref{tab:sensibilidad}.
+
+La tasa municipal de NR por ítem es $NR_i=n_{NR,i}/T_i$; la tasa agrupada ponderada es $\sum_i n_{NR,i}/\sum_i T_i$. Se reportan máximo municipal y unidades que exceden los umbrales 5\%, 10\% y 20\%. \enquote{No tiene estrato} es sustantiva, no NR; \enquote{No sabe/No responde} se conserva como categoría no clasificable. Las comparaciones de valores y rangos por municipio no establecen la estabilidad de correlaciones, KMO/MSA, cargas o puntajes.
+
+\subsection{Etapa 6. Adecuación para PCA: fórmulas, resultados y pendientes}
+
+El índice KMO global contrasta la suma de correlaciones ordinarias $r_{ij}$ con las correlaciones parciales $a_{ij}$:
+\[
+KMO=\frac{\sum_{i<j}r_{ij}^{2}}{\sum_{i<j}r_{ij}^{2}+\sum_{i<j}a_{ij}^{2}}.
+\]
+El MSA individual para la variable $i$ es $MSA_i=\sum_{j\ne i}r_{ij}^{2}/[\sum_{j\ne i}r_{ij}^{2}+\sum_{j\ne i}a_{ij}^{2}]$. Las correlaciones parciales controlan linealmente las restantes variables. KMO/MSA describen la proporción de correlación simple frente a parcial; son diagnósticos y no una aprobación automática \citep{kaiser1974simplicity}.
+
+La prueba de esfericidad de Bartlett contrasta $H_0:R=I_p$ frente a correlaciones no identidad. El estadístico usado por la implementación es
+\[
+\chi^2_B=-\left[n-1-\frac{2p+5}{6}\right]\ln|R|,\qquad gl=\frac{p(p-1)}{2},
+\]
+donde $n$ es el número de unidades, $p$ el número de indicadores y $|R|$ el determinante de la matriz de correlaciones. Un p-valor pequeño evidencia que $R$ difiere de identidad; no demuestra que exista un IVS unidimensional interpretable. Con $n$ grande puede resultar significativo ante asociaciones pequeñas \citep{bartlett1950factor}.
+
+La aproximación inferencial de Bartlett presupone condiciones de muestreo e independencia y un modelo de normalidad multivariada. En agregados censales territoriales, con proporciones acotadas y posible dependencia espacial, no debe interpretarse como una prueba de representatividad ni como aprobación automática del índice. La transformación PCA exploratoria puede calcularse sin exigir normalidad; las garantías inferenciales de un contraste son una cuestión distinta \citep{jolliffe2002principal}.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Estado de las pruebas de adecuación multivariada}\label{tab:estado_pruebas_pca}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}p{0.20\textwidth}p{0.25\textwidth}p{0.40\textwidth}p{0.10\textwidth}@{}}
+\toprule
+\textbf{Prueba} & \textbf{Matriz} & \textbf{Resultado documentado} & \textbf{Estado}\\
+\midrule
+KMO global & Histórica, 7 variables & 0,642484; adecuación moderada, no aprobación automática. & Ejecutado\\
+Bartlett & Histórica; $n=1.122$, $p=7$ & $\chi^2=4664,8728$, $gl=21$; archivo almacena $p=0$ por subdesbordamiento, se informa $p<0,001$. & Ejecutado\\
+MSA por variable & Histórica, 7 variables & Estrato 1--2: 0,414311, el MSA más bajo; otros valores en \path{resultados/base_trabajo/kmo_por_indicador.csv}. & Ejecutado\\
+KMO/Bartlett & Ocho candidatas aprobadas & Sin nueva ejecución; queda cerrar inclusión insular y estandarizar el universo definitivo. & Pendiente\\
+Sensibilidad multivariada NR & Matriz total vs. válida & Correlaciones comparadas en esta actualización; KMO/MSA, cargas y puntajes diferidos. & Pendiente\\
+Estabilidad PCA & Fórmulas y universos alternativos & Componentes, cargas, eigenvalores y puntuaciones aún no calculados. & Pendiente\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Los resultados KMO/Bartlett disponibles pertenecen a una versión previa de siete candidatos: actividad, energía, gas, recolección de basuras, internet, hogares con menores y estrato 1--2. No corresponden a las nueve candidatas calculadas más recientemente ni a las ocho variables acordadas para el primer PCA. Los 21 grados de libertad son coherentes con $p=7$. El p-valor registrado como cero es una limitación de representación numérica, no probabilidad exactamente nula. Estas pruebas deben recalcularse para la matriz y universo finales.
+
+\subsection{Trazabilidad y límites}
+
+Las expresiones y controles anteriores se vinculan con \path{R/02_base_final_indicadores.R}, \path{R/03_auditoria_indicadores.R}, \path{R/05_conformar_indicadores_finales.R}, la configuración \path{R/00_config.R} y sus CSV. Los indicadores y sensibilidades históricos se reproducen desde \path{resultados/indicadores_finales_ivs_20261015/}. KMO, Bartlett y MSA pertenecen a la auditoría histórica. La actualización descriptiva añade fórmulas, correlaciones y extremos mediante el script 06; no ejecuta PCA. Los chequeos estructurales de los consolidados están desglosados por hoja en \path{resultados/verificacion_consolidados/}. No se ha ejecutado PCA ni se ha validado un IVS final.
+

@@ -1,0 +1,39 @@
+\subsection{Reglas comunes}
+
+Las fórmulas usan totales municipales del área \enquote{Total}; no se derivan tasas nuevas desde áreas parciales ni se suman denominadores de universos incompatibles. Los indicadores proporcionales se expresan en escala 0--1 y se orientan positivamente como mayor condición potencial de vulnerabilidad. La matriz z se obtiene estandarizando las columnas candidatas disponibles entre las unidades territoriales del archivo. Los denominadores cero no se convierten en valores artificiales; se conservan como indefinidos cuando aparecen.
+
+\subsection{Especificación de candidatas}
+
+\begin{singlespace}
+\small
+\begin{longtable}{@{}p{0.14\textwidth}p{0.32\textwidth}p{0.31\textwidth}p{0.12\textwidth}@{}}
+\caption{Fórmulas de las nueve candidatas actualmente calculadas}\label{tab:formulas_candidatas}\\
+\toprule
+\textbf{Candidata} & \textbf{Numerador / denominador} & \textbf{Interpretación y cautela} & \textbf{Estado}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Candidata} & \textbf{Numerador / denominador} & \textbf{Interpretación y cautela} & \textbf{Estado}\\
+\midrule
+\endhead
+Hogares con menores de 15 & Hogares con menores de 15 / hogares totales (1HM). & Proxy de carga potencial de cuidado; no mide dependencia económica. & Primer PCA \\
+Hogares con personas de 60+ & Hogares con adultos mayores / hogares totales (2HM). & Proxy de carga potencial de cuidado; edad no implica dependencia funcional. & Primer PCA \\
+Paredes precarias (6V) & Viviendas con las seis categorías acordadas / viviendas tipo Total. & Indicador material agregado; no asume igual severidad de cada material. & Primer PCA \\
+Sin energía (8V) & Viviendas ocupadas presentes sin energía / viviendas ocupadas presentes. & Carencia de servicio; considerar oferta e infraestructura local. & Primer PCA \\
+Sin gas de red (8V) & Viviendas sin gas / (total de gas menos Sin información). & Proporción entre respuestas clasificables; NR conservada aparte. & Primer PCA \\
+Sin internet (8V) & Viviendas sin internet / (total de internet menos Sin información). & Proporción entre respuestas clasificables; NR conservada aparte. & Primer PCA \\
+Estratos 1--2 o sin estrato (10V) & Personas en estratos 1--2 más No tiene estrato / personas en estratos 1--6 más No tiene estrato. & Decisión operacional del equipo; Sin servicio y No sabe/No responde quedan fuera del cociente y se conservan por separado. & Primer PCA \\
+Actividad ponderada 10+ (5PM) & (No remunerado + buscó trabajo + 2 $\times$ incapacidad permanente) / [2 $\times$ (población de 10+ menos No informa)]. & Puntuación experimental; ponderación 2:1 acordada por el equipo. No es tasa oficial de desempleo ni dependencia del hogar. & Primer PCA \\
+Sin media completa (17PM) & Ninguno + preescolar + primaria completa/incompleta + secundaria completa/incompleta + media incompleta, dividido por población de 5+. & Mezcla edades; Normal incompleta solo en sensibilidad y Normal completa excluida del numerador. & Reservada \\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{singlespace}
+
+Las primeras ocho filas analíticas son las candidatas previstas para el primer PCA. La novena, educación, queda fuera hasta evaluar su sensibilidad. Las 15 proporciones educativas por categoría se almacenan descriptivamente; no se incorporan juntas en bruto porque comparten un denominador y suman uno. Esa restricción composicional induce dependencia matemática; un PCA convencional sobre todas las partes requiere transformación y tratamiento de ceros apropiados \citep{aitchison1983compositional}. El agregado de \enquote{sin media completa} reduce la dimensión, pero no elimina la confusión potencial por edad.
+
+\subsection{Denominadores y alcance de 5PM}
+
+El peso máximo por persona con respuesta válida en 5PM es dos, de modo que el denominador ponderado limita el puntaje a [0,1]. El peso 2 para incapacidad permanente es una ponderación normativa definida por los autores, no un parámetro estimado por el censo. La sensibilidad muestra que cambiarlo modifica de forma material la distribución municipal; por ello debe permanecer identificado como decisión experimental aun cuando se use en el primer análisis.
+
+El 10V usa personas clasificadas en algún estrato o en \enquote{No tiene estrato}. Al excluir \enquote{Sin servicio de energía} y \enquote{No sabe/No responde}, el indicador describe la proporción de la población bajo la regla entre categorías clasificables, no entre todos los habitantes. Las dos categorías excluidas quedan como variables observables separadas y la sensibilidad del denominador total cuantifica cuánto cambiaría la medida si se las incorporara.

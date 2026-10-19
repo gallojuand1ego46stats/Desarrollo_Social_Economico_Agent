@@ -1,0 +1,2 @@
+n_unidades,n_duplicados_codigo,n_violaciones_total_vs_suma_BV_CD,n_delta_abs_ge_002,n_delta_clasificados_ge_002,n_delta_rel_ge_10pct,max_delta_absoluta,max_delta_total_vs_clasificados,spearman_base_total_vs_valida,spearman_total_vs_clasificados,nr_ponderada
+1122,0,0,26,711,8,0.2250121189876963,0.9879518072289156,0.9961037375887263,0.40445503985449266,0.0019873698207409168

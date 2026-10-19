@@ -1,0 +1,11 @@
+indicador,numerador,denominador,orientacion,estado_en_pca,nota
+hogares_menores15,Hogares con menores de 15 años,Hogares totales 1HM,Positiva,Incluido candidato,Carga potencial de cuidado; no equivale a dependencia económica.
+hogares_adultos_mayores,Hogares con personas de 60+,Hogares totales 2HM,Positiva,Incluido candidato,Proxy de carga potencial de cuidado; edad no demuestra dependencia funcional.
+paredes_precarias_6V,Guadua + tapia/bahareque/adobe + madera burda + caña/vegetales + desecho + sin paredes,Total viviendas tipo Total 6V,Positiva,Incluido candidato,Seis categorías agregadas por decisión del autor.
+sin_energia_8V,Viviendas sin energía,Total de viviendas ocupadas presentes (8V),Positiva,Incluido candidato,Indicador separado de gas e internet.
+sin_gas_8V,Viviendas sin gas por red,Total gas - sin información gas,Positiva,Incluido candidato,La no respuesta se conserva y se prueba con total como denominador alternativo.
+sin_internet_8V,Viviendas sin internet,Total internet - sin información internet,Positiva,Incluido candidato,La no respuesta se conserva y se prueba con total como denominador alternativo.
+estratos_1_2_o_sin_estrato_10V,Personas estrato 1 + estrato 2 + no tiene estrato,Estratos 1 a 6 + no tiene estrato,Positiva,Incluido candidato,"No sabe/no responde y sin servicio de energía quedan separados; estrato clasifica inmuebles para servicios, no mide directamente ingreso."
+actividad_vulnerabilidad_10mas_5PM,No remunerado + buscó trabajo + 2 x incapacidad permanente,2 x (población 10+ - no informa),Positiva,"Incluido candidato, indicador experimental",Agregado municipal de personas 10+; no es actividad del hogar ni tasa oficial de desempleo.
+sin_media_completa_17PM,Ninguno + preescolar + primaria completa/incompleta + secundaria completa/incompleta + media incompleta,Poblacion total de 5+,Positiva,Incluido candidato exploratorio,Normal incompleta queda fuera de la formula principal; se calcula como sensibilidad. Normal completa se excluye. Edad 5+ puede confundir la comparacion municipal.
+prop_17PM_[categoria],"Proporción de cada una de las 15 categorías educativas, incluida sin información",Población 5+ total,Descriptiva; candidata pendiente,Fuera de matriz hasta definir tratamiento composicional,Quince categorías suman 1 y reflejan estructura etaria; no introducir todas crudas al PCA.

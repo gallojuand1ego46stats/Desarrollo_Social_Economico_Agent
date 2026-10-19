@@ -1,0 +1,43 @@
+\subsection{Matrices disponibles y especificación del primer PCA}
+
+La corrida del 15 de octubre creó \path{matriz_pca_candidata.csv} en escala 0--1 y \path{matriz_pca_candidata_z.csv} con nueve variables estandarizadas. Estas son matrices de preparación, no resultados de componentes ni un índice. La decisión posterior de reservar 17PM implica que el primer PCA use las ocho candidatas restantes. Se debe filtrar esa columna y volver a estandarizar las ocho variables en el universo municipal definido; no se debe utilizar sin cambios el archivo z de nueve variables ni suponer que su PCA equivale al modelo acordado.
+
+La matriz histórica cubre 1.122 códigos territoriales. La actualización del 18 de octubre crea una base descriptiva de ocho variables para 1.101 municipios/distritos y San Andrés, con veinte ANM identificadas aparte. Se conservan todos los códigos en otra salida. Antes del PCA debe cerrarse la participación de la unidad insular y estandarizarse nuevamente el universo elegido. La actualización actual no produce componentes, cargas ni puntajes.
+
+\subsection{Secuencia recomendada de diagnóstico}
+
+El análisis exploratorio se realizará sobre la matriz z de ocho variables y el universo depurado, siguiendo una secuencia reproducible:
+\begin{enumerate}[leftmargin=1.27cm]
+  \item confirmar completitud, variabilidad no nula, rangos y dirección;
+  \item examinar distribuciones, correlaciones y observaciones influyentes, cotejando extremos con fuente sin eliminarlos automáticamente;
+  \item estudiar adecuación con matriz de correlación, KMO/MSA y Bartlett como diagnósticos complementarios, no como umbrales que por sí solos aprueban PCA;
+  \item ejecutar PCA y conservar valores propios, varianza explicada, cargas y puntajes con código, semilla si corresponde, y versión de la matriz;
+  \item seleccionar componentes con evidencia conjunta: gráfico de sedimentación, análisis paralelo, interpretabilidad y estabilidad; no depender exclusivamente de la regla de eigenvalor mayor que uno \citep{horn1965rationale,jolliffe2002principal};
+  \item comparar resultados bajo sensibilidades de no respuesta, peso 5PM, inclusión de 17PM y universo territorial;
+  \item solo si la solución resulta interpretable y estable, evaluar si procede un índice unidimensional o una puntuación multidimensional.
+\end{enumerate}
+
+KMO resume la proporción de correlación parcial y Bartlett contrasta la hipótesis de matriz identidad; en un universo grande, la significancia de Bartlett puede aparecer ante asociaciones pequeñas. Por eso se interpretarán junto con magnitud de correlaciones, MSA por variable, estabilidad y sentido sustantivo. El número de componentes se decidirá mediante evidencia comparada y no se fijará de antemano.
+
+\subsection{IPM como contraste externo}
+
+El IPM municipal no participa en el cálculo de los componentes. Después de definir una solución, podrá examinarse concordancia de puntajes o rankings con el IPM, describiendo explícitamente los solapamientos conceptuales restantes. Esta asociación sería evidencia convergente parcial, no una validación definitiva ni un criterio para cambiar cargas automáticamente. Estudios territoriales que analizan IPM y estructura espacial sirven de antecedente aplicado, pero no demuestran por sí solos que la estructura del IVS propuesto sea válida \citep{monsalvo2025ipm}.
+
+\subsection{Estado explícito}
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Producto} & \textbf{Estado al 18/10/2026}\\
+\midrule
+Indicadores candidatos 0--1 & Ocho recalculados; educación reservada aparte \\
+Matriz estandarizada z & Histórica de nueve columnas; nueva definitiva pendiente \\
+Descriptivos y sensibilidad & Actualizados; incluye cambios en correlaciones \\
+Primer PCA con ocho candidatas & Diferido por instrucción del equipo \\
+Componentes, cargas y scores & Sin ejecución en esta entrega \\
+IVS final y validado & No construido \\
+Contraste externo IPM & Pendiente \\
+Integración SECOP II 2026 & Pendiente; sin base integrada en este flujo \\
+\bottomrule
+\end{tabular}
+\end{center}

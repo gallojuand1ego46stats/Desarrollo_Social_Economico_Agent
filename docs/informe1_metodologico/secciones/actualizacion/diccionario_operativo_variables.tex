@@ -1,0 +1,62 @@
+\subsection{Diccionario operativo de variables y siglas}
+\label{subsec:diccionario_operativo}
+
+Este diccionario traduce los códigos de los cuadros del CNPV 2018 y las variables empleadas en el análisis a definiciones legibles. Los códigos \textbf{1HM, 2HM, 5PM, 6V\_MPIO, 8V\_MPIO, 10V\_MPIO, 17PM, 1PM y 1V\_MPIO} son identificadores de cuadros o decisiones, no nombres de indicadores oficiales. Las definiciones censales y sus universos se toman de la documentación del DANE; la dirección de vulnerabilidad y las agrupaciones descritas como decisiones del equipo son operacionalizaciones del estudio \citep{dane2021cnpv,dane2020ipmcensal,dane_5pm}.
+
+La expresión \textbf{Total} en las tablas siguientes identifica el dominio municipal del cuadro, frente a Cabecera, Centro poblado y Rural disperso. No significa necesariamente que dos cuadros midan el mismo universo: hogares, viviendas, personas de 10+ y personas de 5+ tienen denominadores diferentes. Por ello, los numeradores y denominadores de cada indicador se interpretan dentro de su propio cuadro.
+
+\begin{singlespace}
+\small
+\begin{longtable}{@{}p{0.13\textwidth}p{0.22\textwidth}p{0.36\textwidth}p{0.21\textwidth}@{}}
+\caption{Diccionario de cuadros, variables y uso analítico}\label{tab:diccionario_operativo}\\
+\toprule
+\textbf{Código / variable} & \textbf{Qué significa} & \textbf{Definición operativa y universo} & \textbf{Uso e interpretación en el proyecto}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Código / variable} & \textbf{Qué significa} & \textbf{Definición operativa y universo} & \textbf{Uso e interpretación en el proyecto}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{Continúa en la página siguiente}\\
+\endfoot
+\bottomrule
+\endlastfoot
+1HM & Hogares con menores de 15 años & Número de hogares que reportan al menos una persona menor de 15, dividido por el total de hogares del mismo dominio. El cuadro también registra número de menores de 15. & Candidata principal. Aproxima presencia de posibles necesidades de cuidado; no mide dependencia económica, cuidado efectivamente prestado ni número de menores por hogar.\\
+2HM & Hogares con personas de 60 años o más & Hogares con al menos una persona de 60+ dividido por el total de hogares. El cuadro registra asimismo personas de 60+. & Candidata principal. Proxy de carga potencial de cuidado. La edad por sí sola no establece discapacidad, dependencia funcional ni necesidad de apoyo.\\
+Hogares totales (1HM/2HM) & Denominador de hogares & Total censal de hogares particulares del área Total del cuadro de hogares; no es el total de viviendas ni la población. & Denominador específico de 1HM y 2HM.\\
+5PM & Actividad realizada la semana anterior & Distribución de actividades declaradas para población de 10 años o más: no informa; trabajó al menos una hora; trabajó o ayudó sin remuneración; tenía empleo pero no trabajó; buscó trabajo; vivió de jubilación/pensión/renta; estudió; realizó oficios del hogar; incapacidad permanente; otra situación. & El agregado municipal ponderado es experimental. No equivale a tasa oficial de desempleo, actividad laboral actual ni dependencia económica del hogar.\\
+No remunerado (5PM) & Trabajo o ayuda sin remuneración & Personas de 10+ que trabajaron o ayudaron en un negocio por lo menos una hora sin recibir pago, según la categoría censal. & Componente del numerador de 5PM con peso 1. No es por sí solo una medida de vulnerabilidad.\\
+Búsqueda (5PM) & Buscó trabajo & Personas de 10+ que declararon buscar trabajo la semana anterior. & Componente del numerador de 5PM con peso 1; no constituye por sí solo el desempleo oficial.\\
+Incapacidad permanente (5PM) & Incapacitado(a) permanentemente para trabajar & Categoría de actividad declarada por población de 10+. & Componente de 5PM con peso 2 por acuerdo normativo del equipo; ese peso no es estimado ni validado como óptimo.\\
+No informa (5PM) & Sin clasificación de actividad & Personas de 10+ ubicadas por el cuadro en la categoría No informa. & Se excluye del denominador válido de la fórmula aprobada y se conserva para documentar cobertura/no respuesta.\\
+6V\_MPIO & Material predominante de paredes exteriores & Conteos de viviendas por material predominante, para los tipos de vivienda del cuadro y dominios geográficos. & Candidata principal agregada. El nombre operativo \path{paredes_precarias_6V} es una etiqueta del proyecto, no categoría oficial del DANE ni juicio de que cada material sea inadecuado.\\
+Seis materiales (6V) & Grupo de materiales acordado & Suma de: guadua; tapia pisada/bahareque/adobe; madera burda/tabla/tablón; caña/esterilla/otros vegetales; materiales de desecho; y sin paredes. & Numerador de la candidata agregada, dividido por el total de viviendas tipo Total de 6V. Se conservan desgloses para sensibilidad; no se presupone severidad idéntica.\\
+Viviendas tipo Total (6V) & Universo de referencia de paredes & Total de viviendas clasificadas como tipo Total en el bloque 6V. & Denominador de la candidata de paredes. No confundir con viviendas ocupadas presentes del bloque 8V.\\
+8V\_MPIO & Servicios públicos en viviendas ocupadas presentes & Conteos de viviendas ocupadas con personas presentes y categorías de respuesta por servicio. & Se consideran como candidatas separadas energía, gas e internet. Acueducto, alcantarillado y basuras no pertenecen a las ocho principales; basuras queda para sensibilidad exploratoria.\\
+Sin energía (8V) & Viviendas sin servicio de energía eléctrica & Conteo de respuesta No para energía, respecto del total de viviendas ocupadas con personas presentes. & Candidata principal de carencia declarada del servicio. No mide continuidad, calidad ni capacidad de pago.\\
+Sin gas (8V) & Viviendas sin conexión a gas natural por red pública & Respuesta No en gas; el denominador aprobado es total de gas menos Sin información. & Candidata principal entre respuestas clasificables. No equivale a carecer de combustible o energía para cocinar; Sin información se conserva aparte.\\
+Sin internet (8V) & Viviendas sin servicio de internet & Respuesta No en internet; denominador aprobado: total de internet menos Sin información. & Candidata principal entre respuestas clasificables. No mide calidad, uso ni habilidades digitales.\\
+Acueducto / alcantarillado (8V) & Acceso declarado a esos servicios & Para cada servicio, el cuadro distingue total, Sí y No. & Variables conservadas en datos; excluidas de las ocho candidatas por decisión del equipo sobre proximidad conceptual con IPM.\\
+Recolección de basuras (8V) & Servicio de recolección de residuos & Categorías Sí/No para viviendas ocupadas presentes. & Excluida de la matriz principal; sensibilidad exploratoria aprobada.\\
+Sin información (8V) & Respuesta no clasificada para gas o internet & Categoría específica de no respuesta que el cuadro reporta en esos servicios. & No se recodifica como Sí o No. Se comparan escenarios con denominador válido y con el total; no respuesta no aleatoria no se descarta.\\
+10V\_MPIO & Personas por condición de estrato de energía & Personas en hogares particulares clasificadas en estratos 1--6, sin servicio de energía, no tiene estrato o no sabe/no responde. El cuadro usa la grafía errónea \enquote{Perosnas} en un encabezado. & Candidata principal, con universo condicional explícito; clasificación socioeconómica del inmueble asociada a servicios, no medición directa del ingreso individual.\\
+Estratos 1--2 (10V) & Categorías de estrato residencial bajo & Suma de personas en estrato 1 y estrato 2. & Parte del numerador acordado para 10V; el corte es una decisión operacional del proyecto.\\
+No tiene estrato (10V) & Viviendas/personas sin clasificación de estrato & Categoría separada que el cuadro distingue de estratos 1--6 y de No sabe/No responde. & Se incluye en numerador y denominador de 10V por decisión del equipo. La inclusión no demuestra vulnerabilidad por sí misma.\\
+Sin servicio / NS-NR (10V) & Sin energía; no sabe o no responde & Categorías distintas de estratos 1--6 y No tiene estrato. & Se excluyen del cociente principal, pero se conservan y se evalúa el efecto de incorporar categorías no clasificables en sensibilidad.\\
+17PM & Nivel educativo alcanzado & Distribución por categorías educativas de la población de 5 años o más, por área y sexo. & Reservada para exploración descriptiva/sensibilidad; no mide asistencia escolar. La distribución agregada puede cambiar por composición etaria y las categorías son composicionales.\\
+Sin media completa (17PM) & Agregado educativo candidato & Ninguno, preescolar, primaria completa/incompleta, secundaria completa/incompleta y media incompleta, sobre población de 5+. Normal incompleta se evalúa solo como sensibilidad; Normal completa queda fuera. & No entra al primer PCA. No está ajustada por edad y su asociación conceptual con privaciones educativas del IPM debe tratarse como cercanía, no validación independiente.\\
+1PM & Población por edad y sexo & Conteos de población por grupos de edad y sexo, total y dominios del cuadro; incluye índices de masculinidad/feminidad. & Contexto y denominadores. No es indicador candidato de la matriz principal. Las categorías de edad sin fila en un bloque pueden representar cero casos/no registro estructural, no necesariamente NA.\\
+1V\_MPIO & Tipo y condición de ocupación de vivienda & Conteo de viviendas por tipo y estado: ocupada con personas presentes, ocupada con personas ausentes, temporal para vacaciones y desocupada. & Solo contexto. No es candidata ni denominador intercambiable con 6V o 8V.\\
+6PM & Actividad por grupos de edad & Desagregación de variables equivalentes a 5PM por grupos etarios. & Excluida por decisión del equipo para no duplicar el cuadro 5PM en la matriz principal.\\
+IPM municipal & Índice de Pobreza Multidimensional & Medida oficial construida con privaciones definidas por DANE y regla de identificación del IPM; las variables publicadas incluyen resultado municipal y dominios. & Validador externo/convergente posterior, no componente de la matriz IVS. Comparte fuente censal con las candidatas, por tanto la validación no será completamente independiente.\\
+Privaciones IPM & Indicadores de privación del hogar & Incluyen analfabetismo, bajo logro educativo, barreras a cuidado de primera infancia y salud, dependencia, hacinamiento, saneamiento, inasistencia y rezago escolar, materiales, agua, aseguramiento, trabajo infantil e informalidad. & Las quince se mantienen fuera del PCA. Se usan para contraste conceptual; el dominio compartido no implica igualdad de definición.\\
+ANM & Área no municipalizada & Unidad territorial censal identificada como área no municipalizada en la geografía DIVIPOLA de 2018. & Se conserva y describe por separado; no se denomina municipio. La inclusión de San Andrés en descriptivos se informa aparte.\\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{singlespace}
+
+\paragraph{Abreviaturas de lectura.} \textbf{DE}: desviación estándar; \textbf{NR}: no respuesta; \textbf{NS-NR}: no sabe/no responde; \textbf{PCA}: análisis de componentes principales; \textbf{IPM}: Índice de Pobreza Multidimensional; \textbf{ANM}: área no municipalizada. Los nombres de variables de los CSV se mantienen en \texttt{snake\_case}; las etiquetas de este diccionario facilitan su interpretación sin alterar archivos ni fórmulas.
+
+El inventario reproducible de variables fuente, columnas y nombres limpios está en los resultados de verificación de consolidados; este diccionario resume el significado analítico acordado. En caso de diferencia, prevalecen los encabezados y universos observados del CNPV, y la definición operacional citada en la tabla de fórmulas del informe.

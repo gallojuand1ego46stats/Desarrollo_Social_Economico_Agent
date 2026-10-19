@@ -1,5 +1,7 @@
 # Resumen_Claude.md — Documento de transferencia
 
+> **Archivo histórico (2026-10-01), no usar como estado vigente.** Para el corte actual consulta el [Informe Metodológico v2.1](informe1_metodologico/Informe1_Metodologico.pdf) y [la nota Obsidian](../Informe_Metodologico_Obsidian.md).
+
 > Generado el 2026-10-01 a partir del *Informe 1 — Versión integrada* (`Informe1_Estado_Arte_Muestreo_Division_Trabajo.tex`) y de notas del autor.
 > Convención: `[PENDIENTE: ...]` marca información que no consta en esas fuentes. Los snippets de la sección 6 son **diseño en R, no código verificado del repositorio**.
 

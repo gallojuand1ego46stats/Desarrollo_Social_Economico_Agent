@@ -1,9 +1,20 @@
 # Inicio del vault
 
-Índice de navegación del proyecto. Desde aquí puedes abrir cada nota Markdown versionada o presente en el repositorio.
+Índice de navegación del vault. El estado metodológico vigente se resume arriba; las notas históricas enlazadas más abajo pueden describir cortes anteriores del proyecto.
 
-> [!info] Mapa del vault
-> Este índice enlaza todos los archivos `.md` encontrados fuera de `.git`, `.venv` y `temp`. Los enlaces incluyen la ruta para distinguir nombres repetidos.
+## Documentación vigente — 18 de octubre de 2026
+
+- [[Informe_Metodologico_Obsidian|Estado metodológico y navegación del informe v2.1]].
+- [[docs/informe1_metodologico/Informe1_Metodologico.pdf|Informe metodológico final (PDF)]].
+- [[docs/calidad/auditorias/ACTUALIZACION_DESCRIPTIVA_20261018|Decisiones, fuentes y salidas de la actualización]].
+- [[docs/calidad/auditorias/CONTROL_ENTREGA_DESCRIPTIVA_20261018|Control de entrega y verificaciones]].
+- [[docs/metodologia/Formulas_indicadores_IVS_candidatos_2026-10-15|Fórmulas y salidas de indicadores del 15 de octubre]].
+- [[docs/diccionario/decisiones_variables_IVS_CNPV2018.csv|Diccionario de decisiones de variables]].
+- [[Solucion_pendientes|Decisiones abiertas y trazabilidad de corridas del 15 de octubre]].
+- [[docs/estructura_repositorio|Diagrama e inventario del repositorio versionado]].
+
+> [!info] Notas históricas
+> Las notas posteriores a este bloque conservan antecedentes y cortes previos. Para el estado actual, prioriza el PDF v2.1 y las notas vigentes enlazadas arriba.
 
 ## data
 
@@ -106,6 +117,7 @@
 - [[Correccion_Estructura_Bases|Correccion_Estructura_Bases]]
 - [[Estructura_Bases|Estructura_Bases]]
 - [[Final_Base|Final_Base]]
+- [[Informe_Metodologico_Obsidian|Informe metodológico IVS]]
 - [[README|README]]
 - [[Resumen_General|Resumen_General]]
 - [[SECURITY|SECURITY]]

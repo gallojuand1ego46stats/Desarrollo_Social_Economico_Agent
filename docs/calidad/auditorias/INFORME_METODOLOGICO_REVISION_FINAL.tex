@@ -1,0 +1,307 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage{amsmath}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{booktabs,longtable,tabularx,array,ragged2e}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{hyperref,natbib,xurl}
+\usepackage{pdflscape}
+\setstretch{1.25}
+\setlength{\parindent}{1.1cm}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\captionsetup{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue,
+  pdftitle={Informe metodológico revisado: preparación de indicadores candidatos IVS},
+  pdfauthor={Juan Diego Gallo Quintero; Juan David Parada Fonseca; David Santiago Sánchez Guarnizo}}
+\bibliographystyle{apalike}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{1.4cm}
+{\Large UNIVERSIDAD SANTO TOMÁS\\[0.25cm]}
+{\large Programa de Estadística\\[1.1cm]}
+{\LARGE\bfseries INFORME METODOLÓGICO\\[0.3cm]}
+{\Large Revisión de consistencia y decisiones del IVS municipal\\[0.9cm]}
+{\large Preparación de indicadores candidatos con el CNPV 2018 para un análisis posterior de contratación SECOP II 2026\\[1.1cm]}
+\vfill
+{\large\bfseries Coautores\\[0.3cm]}
+{\large Juan Diego Gallo Quintero\\Juan David Parada Fonseca\\David Santiago Sánchez Guarnizo\\[0.65cm]}
+{\large Asesor: Javier Mauricio Sierra\\[1.0cm]}
+\vfill
+{\large Bogotá, Colombia\\18 de octubre de 2026\\Edición de revisión 1.0}
+\end{titlepage}
+
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+
+Este informe reconstruye y audita el flujo documentado para preparar un Índice de Vulnerabilidad Socioeconómica (IVS) municipal con información del Censo Nacional de Población y Vivienda (CNPV) 2018. El propósito del índice es describir condiciones socioeconómicas territoriales en 2018 y, en una fase posterior, estudiar su asociación, correspondencia y brechas respecto de la distribución de contratos SECOP II 2026. La contratación no forma parte de los indicadores del IVS; el IPM se reserva para contraste externo.
+
+La etapa reproducible comprende consolidación y auditoría de cuadros DANE/IPM, normalización de códigos, diccionario de decisiones, cálculo de nueve indicadores candidatos en escala 0--1, una matriz estandarizada z y sensibilidades de fórmula y denominador. Los CSV del 15 de octubre de 2026 reportan 1.122 códigos censales, nueve columnas candidatas, 1.122 filas completas y cero violaciones en los controles registrados. La matriz contiene ocho candidatas previstas para el primer PCA y una candidata educativa reservada; el PCA no se ha ejecutado. Por ello no existe aún un IVS final, ni cargas, puntajes, selección de componentes o validación empírica.
+
+Las cifras de consistencia no prueban validez del constructo. Antes del PCA falta definir la lista territorial histórica, separar las áreas no municipalizadas (ANM) y revisar sensibilidad multivariada, especialmente en 10V y 5PM. La auditoría identifica contradicciones documentales y propone correcciones, pero esta edición no modifica archivos previos.
+
+\noindent\textbf{Palabras clave:} vulnerabilidad socioeconómica; CNPV 2018; indicadores compuestos; PCA; IPM; SECOP II; Colombia.
+\clearpage
+\tableofcontents
+\clearpage
+\listoftables
+\clearpage
+\pagenumbering{arabic}
+
+\section{Propósito, alcance y diseño}
+
+\subsection{Pregunta y constructo}
+
+El proyecto busca describir las condiciones municipales de vulnerabilidad socioeconómica observadas por el CNPV 2018 y posteriormente analizar si se asocian con la distribución territorial de contratación pública de SECOP II durante 2026. La vulnerabilidad se aborda como constructo multidimensional relacionado con activos, capacidades y estructuras de oportunidad; no se equipara con pobreza monetaria ni se infiere directamente la condición de personas particulares desde promedios municipales. Los marcos latinoamericanos de activos/oportunidades, el Indicador de Condiciones de Vulnerabilidad Urbana del DNP y la literatura espacial sobre IPM en Colombia contextualizan el tema, pero no determinan por sí mismos un conjunto de variables ni su ponderación \citep{kaztman_filgueira_1999,pizarro_2001,dnp_icvu_2023,monsalvo_jimenez_2025}.
+
+La unidad de análisis de vulnerabilidad es territorial y ecológica. Los indicadores resumen proporciones de hogares, viviendas o personas en cada código; las relaciones halladas no prueban causalidad individual ni efectos de contratación. SECOP II queda como bloque de análisis posterior y no como parte del índice. El corte 2018 frente a contratos 2026 introduce un desfase temporal explícito: las conclusiones futuras describirán asociación entre un referente censal y una distribución contractual posterior, no una relación contemporánea.
+
+\subsection{Fundamento de indicador compuesto}
+
+Un índice compuesto requiere decisiones encadenadas sobre concepto, cobertura, selección de variables, normalización, ponderación, agregación y sensibilidad. Las guías OECD/JRC y revisiones metodológicas enfatizan transparencia de esos pasos y robustez ante alternativas como parte de la calidad del índice \citep{oecd_jrc_2008,booysen2002composite,decancq_lugo_2013,greco2019composite}. La PCA, si se justifica, resumirá variación conjunta; no descubre automáticamente la dimensión social correcta ni legitima el constructo. Sus componentes maximizan varianza explicada bajo una transformación lineal, por lo que su interpretación y estabilidad deben demostrarse \citep{jolliffe_2002,abdi_williams_2010}.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox{0.82\textwidth}{\centering
+Fuentes censales DANE, IPM y DIVIPOLA\\[0.25em]
+$\downarrow$\\[0.25em]
+Llaves, cobertura y auditoría estructural\\[0.25em]
+$\downarrow$\\[0.25em]
+Indicadores candidatos 0--1 y matriz z\\[0.25em]
+$\downarrow$\\[0.25em]
+Sensibilidades y decisión territorial\\[0.25em]
+$\downarrow$\\[0.25em]
+PCA / IVS: etapa pendiente}}
+\caption{Secuencia reproducible y frontera del trabajo terminado.}
+\label{fig:flujo}
+\end{figure}
+
+\section{Fuentes, extracción y trazabilidad}
+
+\subsection{Fuentes y funciones}
+
+El insumo principal es el CNPV 2018 del DANE. El proyecto utiliza \path{datos/CUADROS_MUNICIPALES_UNIDOS.xlsx} para cuadros de hogares, personas y viviendas; \path{datos/IPM_2018_organizado_region.xlsx} para el IPM municipal, indicadores por dominio, diccionarios y controles; \path{datos/DIVIPOLA-_Códigos_municipios_20260917.csv} para contrastar códigos y nombres con la nomenclatura territorial posterior. El archivo \path{datos/Indices de bases y filas.xlsx} sirve de índice de cuadros y rangos. DANE documenta que el CNPV recoge viviendas, hogares y personas, con variables de educación, actividad y condiciones habitacionales \citep{dane_cnpv_2018}.
+
+La auditoría registró las hojas de ambos libros y trató los bloques horizontales de VIVIENDAS y CONTEXTO como tablas independientes. La hoja llamada IPM dentro del consolidado CNPV está vacía; el IPM analítico procede del segundo libro. Las dimensiones observadas se registran en \path{resultados/verificacion_consolidados/chequeos_consistencia.csv}.
+
+Los libros se leyeron como texto para conservar códigos como \texttt{05001}; las columnas cuantitativas se convirtieron explícitamente. Las fórmulas de las columnas 6V que suman materiales se cotejaron con sus componentes. Los renglones Total Nacional se conservaron como control y se excluyeron del universo territorial. Las salidas tidy usan una llave municipal textual de cinco dígitos; el nombre describe y nunca sustituye el código.
+
+\subsection{Códigos y dominios geográficos}
+
+La auditoría encontró 1.122 códigos en CNPV/IPM, 1.122 códigos en DIVIPOLA 2026 y 1.123 en su unión. Los conjuntos difieren por 27493 (solo DIVIPOLA: Nuevo Belén de Bajirá) y 94663 (solo CNPV/IPM: Mapiripana). El reporte conserva ambos casos sin imputar ni reasignar observación censal. Los nombres presentan diferencias ortográficas, pero la unión por código preserva la correspondencia.
+
+La salida de cobertura registra 1.102 unidades con Cabecera, 930 con Centro poblado y 1.122 con Total y Rural disperso. Los 20 registros sin Cabecera coinciden exactamente con los 20 valores “--” del IPM. La ausencia de Centro poblado en 192 unidades se trata como dominio inexistente según los reportes del proyecto, no como falta de respuesta.
+
+La temporalidad territorial es decisiva. El documento metodológico del CNPV caracteriza la geografía censal con 1.101 municipios, 20 ANM y el Archipiélago de San Andrés, Providencia y Santa Catalina \citep{dane_cnpv_2018}. DIVIPOLA posterior registra la incorporación de Barrancominas y Nuevo Belén de Bajirá; los 18 códigos identificados como ANM en la nomenclatura de 2026 dentro del universo censal no representan la clasificación de 2018 \citep{dane_divipola,dane_elic_2025}. Para el PCA municipal se requiere un catálogo territorial fijado al año censal. El enlace con SECOP debe usar tabla de correspondencia separada y versionada; no se deben promediar índices ni distribuir contratos sin regla y evidencia espacial.
+
+\section{Diccionario y decisiones sobre variables}
+
+El archivo \path{docs/diccionario/decisiones_variables_IVS_CNPV2018.csv} vincula cuadro, nivel, estado, motivo, descripción y verificación. La clasificación vigente conserva 1HM, 2HM, 17PM, 5PM, 6V, 8V y 10V como incluidas/candidatas; 1PM y 1V como contexto; 6PM como descartada; el IPM como validador. La inclusión administrativa no significa que todas las candidatas entren al mismo PCA: la decisión más reciente reserva 17PM para sensibilidad y prevé ocho variables para el primer análisis.
+
+La decisión de separar el IPM de la matriz evita duplicar sus 15 privaciones como predictores y usar el índice simultáneamente dentro y fuera del resultado. Sin embargo, no desaparece la cercanía temática. DANE construye el IPM municipal con cinco dimensiones y 15 indicadores definidos a nivel de hogar y con puntos de corte específicos \citep{dane_ipm_censal_2018}. La relación futura entre IVS e IPM será evidencia convergente parcial, no validación contra criterio independiente. La cercanía conceptual debe explicitarse para todas las candidatas y someterse a análisis alternos.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Matriz conceptual de proximidad entre candidatas y privaciones IPM}
+\label{tab:solapamiento}
+\begin{tabularx}{\textwidth}{P{0.22\textwidth}P{0.28\textwidth}Y}
+\toprule
+\textbf{Candidata} & \textbf{Dominio IPM próximo} & \textbf{Lectura y límite}\\
+\midrule
+1HM: hogares con menores de 15 & Cuidado primera infancia; tasa dependencia & Cercanía parcial: menor de 15 no equivale a niño de 0--5 ni a razón por ocupado.\\
+2HM: hogar con personas mayores & Tasa dependencia & Estructura de edad, no dependencia económica ni funcional.\\
+5PM: actividad ponderada & Dependencia, informalidad, trabajo infantil & Población 10+ y puntuación normativa no reproducen indicadores IPM de hogar.\\
+6V: seis materiales de pared & Paredes inadecuadas & Cercanía directa parcial. IPM tiene cortes por área; la suma candidata incorpora tapia/bahareque/adobe.\\
+8V: energía, gas, internet & Servicios y vivienda & No son equivalentes a agua/saneamiento IPM; dominio parcialmente próximo.\\
+10V: estratos 1--2 + sin estrato & Vivienda/servicios, condición socioeconómica & Proxy administrativo, no privación IPM de ingreso; denominador sensible.\\
+17PM reservada & Analfabetismo, bajo logro, inasistencia, rezago & Cercanía educativa alta; distinta variable y población 5+ no ajustada por edad.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\clearpage
+\section{Indicadores candidatos: definiciones y fórmulas}
+
+Las variables usan conteos del área Total. Sea $i$ el código territorial, $H_i$ hogares totales, $V_i$ viviendas de tipo Total, y $P_{10+,i}$ y $P_{5+,i}$ las poblaciones de referencia de 5PM y 17PM. Para 10V, $N^{elegible}_{10V,i}=\sum_{s=1}^{6}Estrato_{s,i}+NoTiene_i$. Cada cociente $a/b$ solo se define cuando $b>0$; denominador cero o indefinido no se sustituye por cero. Las orientaciones positivas expresan la hipótesis de que un valor mayor señala más de la condición candidata, no un efecto causal ni un juicio individual.
+
+\begin{longtable}{P{0.15\textwidth}P{0.50\textwidth}P{0.26\textwidth}}
+\caption{Fórmulas verificadas y estado de las nueve candidatas}\label{tab:formulas}\\
+\toprule
+\textbf{Cuadro} & \textbf{Fórmula municipal} & \textbf{Interpretación/estado}\\
+\midrule
+\endfirsthead
+\toprule\textbf{Cuadro} & \textbf{Fórmula municipal} & \textbf{Interpretación/estado}\\\midrule
+\endhead
+1HM & $H_{<15,i}/H_i$ & Carga potencial de cuidado; primer PCA planeado.\\
+2HM & $H_{60+,i}^{(2HM)}/H_i^{(2HM)}$ & Carga potencial de cuidado; edad no demuestra dependencia.\\
+6V & $(G_i+T_i+M_i+C_i+D_i+S_i)/V_i$ & Seis grupos acordados: guadua, tapia/bahareque/adobe, madera burda, caña/vegetales, desecho, sin paredes.\\
+8V energía & $E_i^{-}/E_i^{ocupadas\ presentes}$ & Carencia de energía eléctrica.\\
+8V gas & $Gas_i^{-}/(Gas_i^{total}-Gas_i^{NR})$ & Entre respuestas clasificables; no respuesta conservada aparte.\\
+8V internet & $Int_i^{-}/(Int_i^{total}-Int_i^{NR})$ & Entre respuestas clasificables; no respuesta conservada aparte.\\
+10V & $\frac{Estrato_{1,i}+Estrato_{2,i}+NoTiene_i}{N^{elegible}_{10V,i}}$ & Regla operacional. Excluye sin servicio y no sabe/no responde.\\
+5PM & $(NoRem_i+Busco_i+2Incap_i)/[2(P_{10+,i}-NoInforma_i)]$ & Puntuación experimental 2:1; no es desempleo oficial ni dependencia del hogar.\\
+17PM & $(Ninguno+Preescolar+Primaria_{c/i}+Secundaria_{c/i}+Media_i)/P_{5+,i}$ & Nivel educativo alcanzado; reservada; denominador mezcla edades.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Fórmulas de escenarios de sensibilidad}
+
+En 5PM sea $N_i^{val}=P_{10+,i}-NoInforma_i$, $NR_i$ el conteo sin información y $U_i$, $B_i$ e $I_i$ las categorías no remunerada, búsqueda e incapacidad. El escenario de peso $w$ es
+\begin{equation}
+A_i(w)=\frac{U_i+B_i+wI_i}{(1+w)N_i^{val}},\qquad w\in\{1,2,3\}.
+\end{equation}
+La alternativa sobre total usa $(U_i+B_i+2I_i)/(2P_{10+,i})$; la cota superior asigna toda la no respuesta a vulnerabilidad: $(U_i+B_i+2I_i+2NR_i)/(2P_{10+,i})$. La fórmula principal es $w=2$ y excluye No informa del denominador.
+
+Para gas e internet se comparan $S_i^{val}=No_i/(Total_i-NR_i)$ y $S_i^{total}=No_i/Total_i$. Para 10V se contrasta la proporción elegible aprobada con la misma numerador sobre el total BU de personas. En 17PM se contrastan $L_i/P_{5+,i}$, $(L_i+NormalIncompleta_i)/P_{5+,i}$ y $L_i/(P_{5+,i}-SinInformacion_i)$, donde $L_i$ suma ninguno, preescolar, primaria completa/incompleta, secundaria completa/incompleta y media incompleta. No se interpreta el escenario 5+ como ajustado por edad.
+
+El DANE describe P\_TRABAJO como actividad realizada la semana anterior y aplicada a población de 10 años o más; contiene trabajo no remunerado, búsqueda, incapacidad permanente y otras situaciones \citep{dane_ptrabajo_cnpv2018}. Por ello, el peso 2 para incapacidad es ponderación normativa del equipo, no una tasa oficial. La tabla no contiene enlace persona-hogar, así que no es defendible nombrarla dependencia económica del hogar ni última actividad laboral del hogar.
+
+La estratificación clasifica inmuebles residenciales en el régimen de servicios públicos; los niveles 1--6 aproximan diferencias socioeconómicas jerárquicas. La fuente no convierte No tiene estrato en pobreza o vulnerabilidad por mandato legal \citep{dane_estratificacion}. Su inclusión es regla del proyecto.
+
+Las quince proporciones de 17PM comparten total y suman uno. Las partes de una composición viven en un simplex; ingresarlas a PCA ordinaria sin transformación puede producir dependencias impuestas por cierre. Aitchison desarrolla análisis principal con contrastes logarítmicos para datos composicionales \citep{aitchison1983compositional}. El proyecto las conserva descriptivas y separa una candidata agregada, pero la reducción no elimina composición etaria de población 5+.
+
+\section{Tratamiento y pruebas de sensibilidad}
+
+\subsection{Reglas de datos}
+
+Se distinguen ceros observados, categorías explícitas de no respuesta, celdas vacías, áreas inexistentes y grupos de edad/tipos de vivienda ausentes. Una combinación no publicada no se transforma en cero ni se imputa automáticamente. Sin información, No informa y No sabe/no responde se preservan como estados diferenciados. Las unidades territoriales mantienen código y nombre originales; cualquier armonización se almacena fuera de la llave censal de partida.
+
+La matriz 0--1 conserva escala interpretable de proporciones. La matriz z aplica $z_{ij}=(x_{ij}-\bar{x}_j)/s_j$, con $s_j$ desviación estándar muestral. La z permite PCA sobre correlaciones y reduce efecto de magnitudes distintas; no corrige asimetría, colas, medición deficiente ni problemas teóricos. Ambas matrices son insumos, no índices.
+
+\subsection{Sensibilidad de fórmula y denominador}
+
+Para cada escenario se informa la correlación de rangos Spearman entre valor principal y alternativo, diferencia absoluta máxima y número de municipios con diferencia $\geq 0,02$:
+\begin{equation}
+\rho_s=\operatorname{cor}\{\operatorname{rank}(x_i),\operatorname{rank}(x_i^{alt})\},\quad
+\Delta_{max}=\max_i|x_i-x_i^{alt}|,\quad
+N_{2pp}=\sum_i\mathbf{1}(|x_i-x_i^{alt}|\geq0.02).
+\end{equation}
+La diferencia de rangos no equivale a estabilidad de matriz de correlaciones o cargas PCA.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Sensibilidades municipales reproducidas desde los CSV}
+\label{tab:sensibilidad}
+\begin{tabular}{P{0.18\textwidth}P{0.38\textwidth}r r r}
+\toprule
+\textbf{Indicador} & \textbf{Escenario comparado} & $\rho_s$ & $\Delta_{\max}$ & $\geq2$ pp\\
+\midrule
+5PM & Principal vs. total & 0,999 & 0,0084 & 0\\
+5PM & Principal vs. cota superior de NR & 0,813 & 0,1826 & 235\\
+5PM peso & 2:1 vs. 1:1 & 0,950 & 0,2143 & 702\\
+5PM peso & 2:1 vs. 3:1 & 0,976 & 0,0714 & 46\\
+Gas 8V & Válidas vs. total & 0,994 & 0,1246 & 58\\
+Internet 8V & Válidas vs. total & 0,954 & 0,1676 & 85\\
+10V & Clasificables vs. total personas & 0,404 & 0,9880 & 711\\
+17PM & Principal vs. sumar Normal incompleta & 0,998 & 0,0479 & 12\\
+17PM & Población 5+ vs. 5+ válida sin NR & 0,968 & 0,2141 & 105\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La sensibilidad de 10V es de gran magnitud: correlación de rangos 0,404 y cambio máximo cercano a una unidad. Aunque se mantiene la fórmula aprobada entre categorías clasificables, no debe describirse como porcentaje de todas las personas. Antes de PCA se deben recalcular correlaciones, KMO/MSA, cargas y puntajes con denominador principal y alternativa.
+
+En 5PM, la decisión 2:1 afecta valores municipales: 702 territorios difieren al menos 2 pp respecto de 1:1. Se conserva la sensibilidad junto a interpretación normativa del peso, sin elegir automáticamente el que maximice similitud de rankings. En gas e internet la no respuesta queda registrada y el denominador total funciona como comparación, no como sustitución.
+
+\section{Verificación de consistencia y resultados reproducibles}
+
+\subsection{Controles de la matriz candidata}
+
+La ejecución de 2026-10-15 genera nueve columnas candidatas para 1.122 códigos. Los chequeos incluyen sumas de categorías 17PM, 5PM, 6V, 8V y 10V; rango [0,1], cobertura y NA. Se reportan cero violaciones en los controles guardados y 10.098 celdas candidatas completas. Esto verifica aritmética y estado de salida, no validez teórica del constructo.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Resumen de controles de consistencia de indicadores}
+\label{tab:controles}
+\begin{tabularx}{\textwidth}{Y r r P{0.23\textwidth}}
+\toprule
+\textbf{Control} & \textbf{$n$} & \textbf{Violaciones} & \textbf{Tolerancia}\\
+\midrule
+Cobertura/unicidad de códigos & 1.122 & 0 & Exacta\\
+Total 17PM = suma 15 categorías & 1.122 & 0 & 0,5 persona\\
+Total 5PM = suma categorías & 1.122 & 0 & 0,5 persona\\
+Total paredes 6V = suma nueve materiales & 1.122 & 0 & 0,5 vivienda\\
+Energía 8V = sí + no & 1.122 & 0 & 0,5 vivienda\\
+Gas e internet = sí + no + sin información & 2.244 & 0 & 0,5 vivienda\\
+Total 10V = categorías publicadas & 1.122 & 0 & 0,5 persona\\
+Rango de candidatas [0,1] & 10.098 & 0 & [0,1]\\
+NA de nueve columnas & 10.098 & 0 & Ninguno\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Las verificaciones aritméticas comparan $T_i$ con la suma de sus categorías publicadas y aceptan $|T_i-\sum_c C_{ic}|\leq0,5$ para conteos redondeados. Los controles de área usan $T_i=C_i+CP_i+RD_i$, donde $C$, $CP$ y $RD$ denotan Cabecera, Centro Poblado y Rural Disperso; los de sexo, $T_i=H_i+M_i$. Para servicios se verifica $Total=Si+No$ en energía y $Total=Si+No+SinInformacion$ en gas e internet. Son identidades internas de cuadros; no equiparan universos distintos ni transforman filas ausentes en ceros.
+
+La verificación general registró 734 chequeos; su contador de violaciones incluye registros de combinaciones estructuralmente ausentes, como grupos de edad y tipos de vivienda. El reporte reconoce 20 unidades sin Cabecera, 192 sin Centro poblado y 335 combinaciones de edad ausentes. Ausencia de categoría no equivale a cero si el diseño de publicación no genera esa fila.
+
+\subsection{Diagnósticos multivariados históricos y fórmulas previstas}
+
+Para una matriz de correlación $R=(r_{jk})$ y correlaciones parciales $q_{jk}$, el índice de Kaiser--Meyer--Olkin global se define como
+\begin{equation}
+KMO=\frac{\sum_{j<k}r_{jk}^{2}}{\sum_{j<k}r_{jk}^{2}+\sum_{j<k}q_{jk}^{2}},\qquad
+MSA_j=\frac{\sum_{k\ne j}r_{jk}^{2}}{\sum_{k\ne j}r_{jk}^{2}+\sum_{k\ne j}q_{jk}^{2}}.
+\end{equation}
+El estadístico de esfericidad de Bartlett es
+\begin{equation}
+\chi_B^2=-\left[n-1-\frac{2p+5}{6}\right]\ln|R|,\qquad gl=\frac{p(p-1)}{2},
+\end{equation}
+con hipótesis nula $R=I$. KMO/MSA y Bartlett son diagnósticos de estructura correlacional, no pruebas de validez sustantiva; la aproximación de Bartlett depende de supuestos y su significancia puede ser alta con $n$ grande \citep{kaiser1974simplicity_corrected,bartlett1950factor}. Para PCA sobre correlaciones, $Rv_k=\lambda_kv_k$ y el puntaje del componente $k$ para unidad $i$ es $PC_{ik}=z_i^Tv_k$. La orientación del signo es arbitraria y debe alinearse al comparar soluciones. Estas fórmulas se dejan para la etapa futura; el PCA de ocho candidatas no se ha ejecutado.
+
+El archivo \path{resultados/base_trabajo/diagnosticos_aptitud.csv} contiene KMO=0,642484, Bartlett $\chi^2=4664,8728$, $gl=21$ y determinante 0,015404. KMO y Bartlett corresponden a siete variables históricas; $gl=21$ coincide con $p(p-1)/2$ cuando $p=7$. El CSV guardó $p=0$ por límite numérico; se expresa $p<0,001$, no $p=0$. La variable histórica con MSA más bajo fue estrato 1--2 (0,414311). Estos resultados no se transfieren a las ocho candidatas planeadas.
+
+La matriz histórica identificó 32 unidades con al menos una variable con $|z|>4$. El umbral fue alerta para inspección, no criterio de eliminación. Cada extremo se debe cotejar con su fuente en la matriz/universo que finalmente se aprueben. La secuencia de PCA debe combinar matriz de correlación, KMO/MSA, Bartlett, sedimentación, análisis paralelo y claridad sustantiva; Bartlett significativo con n grande no demuestra un factor común interpretable. Horn propuso análisis paralelo para orientar retención; Jolliffe desarrolla teoría y límites de PCA \citep{horn1965parallel,jolliffe_2002}.
+
+\section{Limitaciones y decisiones abiertas}
+
+\begin{enumerate}[leftmargin=1.2cm]
+\item \textbf{Universo temporal.} 1.122 códigos no significa 1.122 municipios administrativos. Clasificar cada código con geografía censal 2018 antes del análisis municipal y mantener ANM/insular aparte.
+\item \textbf{Enlace 2018--2026.} 27493 y 94663 se preservan en su universo original; enlaces a 27615 y 94343 son decisiones futuras de armonización que deben validarse con fuente geográfica/legal.
+\item \textbf{Solapamiento IPM.} Excluir agua y saneamiento pero mantener paredes, edad y educación es regla incompleta si no distingue coincidencia directa, parcial y temática. Los escenarios deben discutirse antes de llamar externa a la validación.
+\item \textbf{5PM.} Categorías laborales heterogéneas, población 10+ y peso normativo 2:1; sin enlace persona-hogar. Es medida experimental.
+\item \textbf{10V.} No tiene estrato es categoría propia; fórmula se refiere a categorías elegibles. Sensibilidad frente a población total exige explicar el estimando.
+\item \textbf{6V.} La suma de seis materiales agrega categorías distintas. La regla queda aprobada; mostrar sensibilidad por componentes y área.
+\item \textbf{17PM.} El cuadro mide nivel alcanzado, no asistencia. Población 5+ no controla composición de edad; candidata reservada.
+\item \textbf{SECOP.} No se encontró flujo contractual en carpeta local inspeccionada. La cifra SECOP 2015--2025 de un documento anterior no se cotejó con los datos originales. Se conserva objetivo SECOP II 2026 y cobertura 100\% como criterio del equipo.
+\item \textbf{PCA/IVS.} No se ejecutó PCA para ocho variables ni se calculó IVS. No hay cargas, puntajes ni validación disponibles.
+\end{enumerate}
+
+\section{Secuencia de trabajo recomendada}
+
+\begin{enumerate}[leftmargin=1.2cm]
+\item Fijar versión oficial de geografía 2018 y tabla de códigos, separando municipios, ANM y unidad insular.
+\item Acordar posición de basuras y regla explícita de proximidad a IPM; conservar escenarios alternativos sin reescribir fórmulas aprobadas.
+\item Construir matriz municipal de ocho variables desde candidatas originales y registrar códigos excluidos y razón; mantener matriz ANM separada.
+\item Cotejar calidad, cobertura, distribuciones, correlaciones, extremos y sensibilidad de denominadores/pesos antes de PCA.
+\item Calcular KMO/MSA y Bartlett sobre matriz definida; añadir análisis paralelo, cargas, varianza e interpretación. Son diagnósticos, no validación del constructo.
+\item Evaluar estabilidad de componentes y puntajes; analizar escenarios con y sin 5PM, escenarios 10V, paredes desagregadas y 17PM reservado.
+\item Solo tras demostrar interpretabilidad y estabilidad decidir si la primera componente puede llamarse IVS o si se requiere puntaje multidimensional.
+\item Contrastar después con IPM, describiendo solapamiento, e integrar SECOP II 2026 mediante geografía común, cobertura y asociación no causal.
+\end{enumerate}
+
+El bootstrap de cargas PCA puede evaluar estabilidad, no sustituye definición conceptual ni constituye inferencia muestral automática del censo. Se requerirá alinear signo de componentes entre réplicas y especificar tratamiento de componentes con eigenvalores cercanos.
+
+\section{Auditoría documental y control de versiones}
+
+La comparación del informe actual con documentación previa localizó: (i) matriz de nueve columnas frente a PCA planeado de ocho; (ii) decisión 6PM DESCARTAR que conserva recomendación residual de construir tasa de desempleo; (iii) basuras en matriz histórica de siete y ausencia en la actual sin decisión expresa; (iv) sección histórica de Resumen General con “14 IPM incluidas + 2 validación” frente a 17 filas IPM vigentes en VALIDACIÓN; (v) DOI erróneo en entrada activa de Kaiser; (vi) anexos rotulados dos veces por combinar \texttt{\textbackslash appendix} con prefijo manual Anexo A/B; (vii) log de compilación que no corresponde al PDF activo. Los cambios se registran en paquete de auditoría para decisión posterior; archivos de origen permanecen sin editar.
+
+La corrida de indicadores revisada fue generada el 15-10-2026. El cotejo documental se ejecuta desde la raíz mediante \texttt{Rscript} \path{docs/calidad/auditorias/verificar_cifras_auditoria.R}. La revisión solo lee resultados preexistentes y crea su CSV de cotejo dentro de la carpeta de auditoría.
+
+\section{Conclusión}
+
+La preparación ha producido matrices candidatas aritméticamente consistentes y documentación útil para continuar. No permite afirmar que el IVS esté terminado ni que PCA ya sea apropiado. El paso metodológico inmediato es fijar universo territorial censal y resolver especificaciones que afectan estimando y solapamiento; después se recalcularán diagnósticos multivariados y sensibilidades para ocho variables. IVS final y comparación con SECOP II 2026 son etapas posteriores.
+
+\bibliography{referencias_nuevas}
+\end{document}
+

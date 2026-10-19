@@ -1,0 +1,37 @@
+\subsection{Ceros, no respuesta y ausencias estructurales}
+
+Se distinguen valores cero observados, no respuesta explícita, celdas vacías, áreas inexistentes y denominadores sin población de referencia. La ausencia de una combinación área--tipo--grupo no se transforma automáticamente en cero. Las áreas geográficas inexistentes se excluyen del cálculo por área y se reportan como tales; un denominador cero produce cociente indefinido, no un cero imputado. Las categorías \enquote{Sin información}, \enquote{No informa} y \enquote{No sabe/No responde} se preservan y se analizan según la fórmula, sin ocultarlas dentro de categorías sustantivas.
+
+En gas e internet la fórmula principal excluye NR del denominador y una alternativa divide por el total publicado. Esta comparación es una sensibilidad de fórmula; no reemplaza el análisis multivariado con y sin NR. Para estrato, \enquote{No tiene estrato} es una categoría distinta a no respuesta y entra en la candidata por decisión del equipo. No se aplicó imputación estadística en la matriz final de candidatos.
+
+\subsection{Resultados históricos de sensibilidad, universo censal completo}
+
+Las diferencias se calcularon a nivel de código territorial para 1.122 unidades. \enquote{Delta 2 pp} cuenta unidades cuya diferencia absoluta es al menos 0,02 en escala 0--1. $\rho_s$ es la correlación de rangos de Spearman entre la fórmula principal y la alternativa; no evalúa estabilidad de cargas o componentes PCA.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Sensibilidad de fórmulas y denominadores}\label{tab:sensibilidad}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}p{0.23\textwidth}p{0.34\textwidth}r r r r@{}}
+\toprule
+\textbf{Indicador} & \textbf{Comparación} & \textbf{$n$} & \textbf{$\rho_s$} & \textbf{Delta máx.} & \textbf{$\geq$2 pp}\\
+\midrule
+5PM ponderado & Excluir No informa vs. total & 1.122 & 0,999 & 0,0084 & 0 \\
+5PM NR & Fórmula principal vs. cota que asigna máximo a NR & 1.122 & 0,813 & 0,1826 & 235 \\
+5PM peso & Incapacidad 2:1 vs. 1:1 & 1.122 & 0,950 & 0,2143 & 702 \\
+5PM peso & Incapacidad 2:1 vs. 3:1 & 1.122 & 0,976 & 0,0714 & 46 \\
+Gas (8V) & Denominador válido vs. total & 1.122 & 0,994 & 0,1246 & 58 \\
+Internet (8V) & Denominador válido vs. total & 1.122 & 0,954 & 0,1676 & 85 \\
+Estrato (10V) & Categorías clasificables vs. total personas & 1.122 & 0,404 & 0,9880 & 711 \\
+Educación (17PM) & Sin media completa vs. incluir Normal incompleta & 1.122 & 0,998 & 0,0479 & 12 \\
+Educación (17PM) & Población 5+ vs. 5+ válida sin Sin información & 1.122 & 0,968 & 0,2141 & 105 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+La sensibilidad de 5PM indica que el peso de incapacidad sí altera la ordenación municipal y no queda resuelto solo por la alta correlación de rangos. La elección 2:1 se conserva porque fue aprobada por el equipo, con carácter explícitamente experimental. En 10V, el cambio extremo frente al denominador de todas las personas señala que la proporción depende mucho de la regla de elegibilidad; no se recomienda interpretar ambos denominadores como equivalentes. En 17PM, la variación por denominador y la composición etaria refuerzan la decisión de no llevarla al primer PCA.
+
+\subsection{Alcance de la ampliación de sensibilidad}
+
+Las cifras anteriores comparan valores de indicadores en el universo completo. La actualización de la \cref{sec:actualizacion_descriptiva} añade resultados para el ámbito municipal e insular y cambios en correlaciones de Pearson y Spearman. KMO/MSA, cargas, número de componentes y puntuaciones siguen pendientes. No se debe elegir una fórmula solo por su correlación de rangos con otra ni tratar la estabilidad de correlaciones como validación del futuro índice.

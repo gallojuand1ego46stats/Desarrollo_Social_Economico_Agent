@@ -1,0 +1,2 @@
+# Dependency for independently checking workbook extrema against Excel.
+openpyxl==3.1.5

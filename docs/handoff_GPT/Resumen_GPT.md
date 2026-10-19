@@ -1,5 +1,7 @@
 # Resumen_GPT — Handoff del Proyecto Desarrollo Social Económico
 
+> **Archivo histórico (2026-10-01), no usar como estado vigente.** Para el corte actual consulta el [Informe Metodológico v2.1](../informe1_metodologico/Informe1_Metodologico.pdf) y [la nota Obsidian](../../Informe_Metodologico_Obsidian.md).
+
 > Documento de transferencia técnica para continuidad del desarrollo, auditoría y análisis estadístico del proyecto.  
 > **Repositorio raíz obligatorio:** `C:\Users\juand\Projects\Desarrollo_Social_Economico_Agent`
 

@@ -1,0 +1,33 @@
+\subsection{Fuentes primarias y su función}
+
+La fuente socioeconómica principal es el CNPV 2018 publicado por el DANE, cuya cobertura y conceptos se rigen por la metodología censal oficial \citep{dane2021cnpv}. Se trabajó con dos libros consolidados: \path{datos/CUADROS_MUNICIPALES_UNIDOS.xlsx}, que reúne cuadros de hogares, personas y viviendas, y \path{datos/IPM_2018_organizado_region.xlsx}, que contiene el IPM municipal, desagregaciones, diccionarios y controles. \path{datos/DIVIPOLA-_Códigos_municipios_20260917.csv} se usa para contrastar códigos y nombres con la nomenclatura territorial de 2026, no para reemplazar silenciosamente la geografía censal de 2018. La fecha y estructura de los insumos quedan en las auditorías del repositorio.
+
+Los cuadros seleccionados para la fase de indicadores son 1HM y 2HM (hogares), 5PM (actividad de personas de 10 años y más), 6V\_MPIO (material de paredes), 8V\_MPIO (servicios), 10V\_MPIO (estrato), y 17PM (nivel educativo). 1PM y 1V\_MPIO aportan denominadores y contexto. 6PM se excluyó por decisión del equipo: presenta variables coincidentes con 5PM, desagregadas por rangos de edad, y no se sumará como una dimensión adicional.
+
+\subsection{Extracción y tipado}
+
+Las tablas intermedias se producen con \path{R/01_verificar_consolidados.R}. Los libros se leen como texto para preservar ceros iniciales de códigos y se convierten las medidas a valores numéricos explícitamente. Las fórmulas de las columnas designadas en VIVIENDAS se verifican contra sus valores almacenados y sus componentes. Las filas \enquote{Total Nacional} se mantienen como controles, no como territorios. Cada bloque horizontal de VIVIENDAS y CONTEXTO se extrae con su propia llave y universo de filas.
+
+La llave analítica es \texttt{codigo\_municipio} como cadena de cinco caracteres. La construcción y verificación se basan en códigos, no en nombres. Se conservan por separado código y nombre originales y se documentan las transformaciones. Las salidas tidy se organizan en \path{datos/intermedio/}; las salidas de inventario, cobertura y consistencia, en \path{resultados/verificacion_consolidados/}.
+
+\subsection{Diccionario de variables y flujo de decisión}
+
+El archivo \path{datos/Indices de bases y filas.xlsx} sirvió para localizar cuadros, hojas y rangos de filas/columnas en los libros fuente. A partir de ese mapa se actualizó \path{docs/diccionario/decisiones_variables_IVS_CNPV2018.csv}, que documenta para cada cuadro si se incluye, se conserva como contexto, se usa para validación o se descarta, junto con motivo y descripción. El diccionario es la capa de trazabilidad entre tabla censal, concepto, indicador y decisión del equipo; no es una autorización estadística automática para combinar variables.
+
+La selección prioriza disponibilidad municipal, denominadores interpretables, comparabilidad y distancia conceptual frente al IPM. Los componentes del IPM no entran a la matriz candidata. Los cuadros del CNPV que coinciden directamente con privaciones del IPM pueden conservarse para descripción o contraste, pero no se duplican automáticamente dentro del IVS.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\begin{minipage}{0.94\textwidth}\centering
+\textbf{Flujo reproducible de preparación}\par\vspace{0.4em}
+Fuentes DANE / IPM / DIVIPOLA\par $\downarrow$\par
+Inventario de hojas, extracción textual y llave territorial\par $\downarrow$\par
+Tablas tidy + verificaciones de cobertura y consistencia\par $\downarrow$\par
+Diccionario de decisiones + fórmulas explícitas\par $\downarrow$\par
+Indicadores 0--1 + sensibilidades + matriz z\par $\downarrow$\par
+\textbf{Submatriz de ocho candidatos y universo municipal por definir}\par $\downarrow$\par
+PCA exploratorio (pendiente; no equivale a IVS validado)
+\end{minipage}}
+\caption{Etapas realizadas y transición pendiente hacia el PCA.}
+\label{fig:flujo_metodologico}
+\end{figure}

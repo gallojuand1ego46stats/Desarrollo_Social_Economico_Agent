@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,123 +7,58 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{hyperref}
-\usepackage{cleveref}
-\usepackage{natbib}
-\usepackage[
-  margin=2.54cm
-]{geometry}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{tabularx,adjustbox,ragged2e}
+\usepackage{hyperref,cleveref,natbib}
+\usepackage{xurl}
+\usepackage[margin=2.54cm]{geometry}
 \usepackage{setspace}
 \usepackage{caption}
-\usepackage{subcaption}
 \usepackage{enumitem}
 \usepackage{csquotes}
 \usepackage{xcolor}
 \usepackage{indentfirst}
 \usepackage{pdflscape}
-\usepackage{rotating}
 \usepackage{titlesec}
-\usepackage{adjustbox}
-\usepackage{tabularx}
-\usepackage{ragged2e}
 
-% Interlineado doble para lectura y revisión académica.
 \doublespacing
-
-% Sangría de primera línea.
 \setlength{\parindent}{1.27cm}
 \setlength{\parskip}{0pt}
-
-% Configuración de hipervínculos
-\hypersetup{
-  colorlinks=true,
-  linkcolor=black,
-  filecolor=black,
-  urlcolor=black,
-  citecolor=black,
-  pdftitle={Informe 1 Metodológico - Proyecto Desarrollo Social Económico},
-  pdfauthor={Juan Diego Gallo},
-  pdfsubject={Metodología},
-  pdfkeywords={vulnerabilidad socioeconómica, PCA, indicadores municipales, Colombia},
-  pdfproducer={LaTeX},
-  pdfcreator={pdfLaTeX}
-}
-
-% Jerarquía de títulos: secciones principales y subsecciones.
-\titleformat{\section}
-  {\normalfont\large\bfseries}{\thesection}{0.5em}{}
-\titleformat{\subsection}
-  {\normalfont\normalsize\bfseries}{\thesubsection}{0.5em}{}
-\titleformat{\subsubsection}
-  {\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.5em}{}
-
-% Numeración
-\setcounter{secnumdepth}{2}
+\setlength{\emergencystretch}{2em}
+\setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{2}
-
-% Configuración uniforme de captions.
-\captionsetup{
-  font=normalsize,
-  labelfont=bf,
-  textfont=it,
-  justification=raggedright,
-  singlelinecheck=false,
-  skip=6pt
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.5em}{}
+\captionsetup{font=normalsize,labelfont=bf,textfont=it,justification=raggedright,singlelinecheck=false,skip=6pt}
+\hypersetup{
+  colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue,
+  pdftitle={Contratación pública y vulnerabilidad socioeconómica municipal en Colombia},
+  pdfauthor={Juan Diego Gallo Quintero; Juan David Parada Fonseca; David Santiago Sánchez Guarnizo},
+  pdfsubject={Metodología estadística para el estudio de vulnerabilidad socioeconómica municipal},
+  pdfkeywords={CNPV 2018, vulnerabilidad socioeconómica, indicadores, PCA, Colombia}
 }
-
-% Bibliografía autor-fecha con natbib.
 \bibliographystyle{apalike}
 
 \begin{document}
-
-% Portada
+\hypersetup{pageanchor=false}
 \input{secciones/portada}
-
-% Páginas preliminares
 \pagenumbering{roman}
+\hypersetup{pageanchor=true}
 \input{secciones/resumen}
-\input{secciones/palabras_clave}
-
+\begin{singlespace}
 \tableofcontents
+\end{singlespace}
 \clearpage
 \listoftables
 \clearpage
-
-% Contenido principal
 \pagenumbering{arabic}
-
-\input{secciones/introduccion}
-\input{secciones/marco_conceptual}
-\input{secciones/metodologia}
-\input{secciones/fuentes}
-\input{secciones/unidad_analisis}
-\input{secciones/seleccion_bases}
-\input{secciones/tratamiento_faltantes}
-\input{secciones/indicadores}
-\input{secciones/control_calidad}
-\input{secciones/diagnostico}
-\input{secciones/preparacion_pca}
-\input{secciones/reproducibilidad}
-\input{secciones/limitaciones}
-\input{secciones/estado_proyecto}
-\input{secciones/conclusiones}
+\input{secciones/actualizacion_metodologica}
 \clearpage
-
-% Bibliografía
 \bibliography{referencias}
 \clearpage
-
-% Anexos
 \appendix
-\section*{Anexos}
-\addcontentsline{toc}{section}{Anexos}
 \input{anexos/anexo_a}
 \clearpage
 \input{anexos/anexo_b}
-
 \end{document}
-

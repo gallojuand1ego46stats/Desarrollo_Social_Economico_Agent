@@ -1,37 +1,34 @@
-\section{Inventario reproducible de datos y productos}
-\label{anexo:b}
+\section{Reproducción, archivos y control de versiones}
+\label{anexo:reproducibilidad}
+\begin{singlespace}\small
 
-Este inventario resume archivos presentes en el repositorio al momento de la revisión. Las rutas se expresan desde la raíz del proyecto; el detalle vigente se encuentra en cada directorio.
+\subsection{Scripts principales}
 
-\subsection{Tablas intermedias}
-\label{anexo:b_intermedio}
+Desde la raíz del repositorio, los pasos documentados son:
+\begin{verbatim}
+Rscript R/01_verificar_consolidados.R
+Rscript R/02_base_final_indicadores.R
+Rscript R/03_auditoria_indicadores.R
+Rscript R/05_conformar_indicadores_finales.R
+Rscript R/06_descriptivos_sensibilidades_ivs.R
+\end{verbatim}
 
-\texttt{datos/intermedio/} contiene diez tablas derivadas del flujo de preparación:
-\begin{itemize}[nosep]
-\item \texttt{contexto\_1PM.csv}; \texttt{contexto\_1V.csv}; \texttt{control\_nacional.csv}.
-\item \texttt{hogares\_1HM\_2HM.csv}; \texttt{ipm\_municipal\_ancho.csv}.
-\item \texttt{persona\_demo\_17PM.csv}; \texttt{persona\_social\_5PM.csv}.
-\item \texttt{viviendas\_6V.csv}; \texttt{viviendas\_8V.csv}; \texttt{viviendas\_10V.csv}.
+La conformación histórica corresponde al 15 de octubre de 2026. La actualización del 18 de octubre se reproduce con el script 06 en R 4.6.0 y R base, a partir de las tablas intermedias verificadas. No requiere instalar paquetes; en este entorno las dependencias de scripts históricos no están disponibles, por lo que no se afirma una nueva corrida completa desde Excel con aquellos scripts. El auxiliar \path{R/auxiliares/cotejar_extremos_descriptivos.py} usa Python y openpyxl del runtime disponible para cotejar los extremos directamente con el Excel. Ambos comandos deben ejecutarse desde la raíz. La nueva salida guarda ocho indicadores en escala 0--1 y no ejecuta PCA ni produce una nueva matriz z definitiva.
+
+\subsection{Artefactos principales}
+
+\begin{itemize}[leftmargin=1.27cm]
+  \item \textbf{Consolidados intermedios:} \texttt{datos/intermedio/}.
+  \item \textbf{Auditoría de consolidado:} \path{resultados/verificacion_consolidados/} y \path{docs/calidad/auditorias/VERIFICACION_CONSOLIDADOS.md}.
+  \item \textbf{Indicadores y matrices candidatas:} \path{resultados/indicadores_finales_ivs_20261015/}.
+  \item \textbf{Fórmulas y sensibilidad:} \path{docs/metodologia/Formulas_indicadores_IVS_candidatos_2026-10-15.md} y los CSV asociados.
+  \item \textbf{Decisiones de variables:} \path{docs/diccionario/decisiones_variables_IVS_CNPV2018.csv}.
+  \item \textbf{Estado de asuntos abiertos:} \path{Solucion_pendientes.md}.
+  \item \textbf{Actualización descriptiva y sensibilidades:} \path{resultados/descriptivos_sensibilidades_20261018/}.
+  \item \textbf{Decisiones y fuentes de la actualización:} \path{docs/calidad/auditorias/ACTUALIZACION_DESCRIPTIVA_20261018.md}.
 \end{itemize}
 
-\subsection{Bases de trabajo}
-\label{anexo:b_trabajo}
+\subsection{Reproducibilidad y límites de auditoría}
 
-\texttt{datos/trabajo/} contiene nueve archivos, incluidos \texttt{demografico\_1PM\_completo\_largo.csv}, \texttt{denominadores\_edad\_quinquenal.csv}, \texttt{denominadores\_municipales.csv}, \texttt{indicadores\_municipales\_base\_total.csv}, \texttt{indicadores\_municipales\_base\_valida.csv}, \texttt{ipm\_municipal\_ancho.csv}, \texttt{matriz\_pca\_base\_valida.csv}, \texttt{matriz\_pca\_z.csv} y \texttt{matriz\_pca.csv}. La matriz es candidata: no equivale a un IVS ni demuestra que se haya ejecutado PCA.
-
-\subsection{Verificación de consolidados}
-\label{anexo:b_verificacion}
-
-\texttt{resultados/verificacion\_consolidados/} contiene seis productos: \texttt{chequeos\_consistencia.csv}, \texttt{cobertura\_municipal\_por\_hoja.csv}, \texttt{discrepancias.csv}, \texttt{inventario\_hojas\_columnas.csv}, \texttt{mapa\_llaves.csv} y \texttt{universo\_municipal\_maestro.csv}. El universo incluye códigos territoriales y no debe rotularse como 1.122 municipios.
-
-\subsection{Resultados y auditoría}
-\label{anexo:b_base_trabajo}
-
-\texttt{resultados/base\_trabajo/} conserva especificaciones, estadísticas descriptivas, diagnósticos de aptitud, correlaciones, análisis de no respuesta y archivos de control. Entre los productos centrales están \texttt{especificacion\_indicadores.csv}, \texttt{estadisticos\_indicadores.csv}, \texttt{varianza\_indicadores.csv}, \texttt{diagnosticos\_aptitud.csv}, \texttt{kmo\_por\_indicador.csv}, \texttt{correlaciones\_pares.csv}, \texttt{sensibilidad\_nr.csv}, \texttt{validaciones.csv} y \texttt{crosswalk\_enlace.csv}. Consulte el directorio para el inventario actualizado.
-
-\texttt{resultados/auditoria\_estadistica/} contiene salidas de auditoría, incluido \texttt{09\_resumen\_auditoria.csv}. Los diagnósticos apoyan la revisión, pero no sustituyen la decisión metodológica sobre las variables ni constituyen una estimación del índice.
-
-\subsection{Scripts}
-\label{anexo:b_scripts}
-
-Los scripts reproducibles principales están en \texttt{R/}. Consulte sus archivos vigentes para conocer la configuración, las etapas de construcción y auditoría, y las funciones auxiliares. Se evita fijar aquí una lista de pruebas o productos generados que no haya sido verificada contra el estado actual del repositorio.
+Los controles numéricos se generan desde los archivos tabulares anteriores; este informe no modifica los libros fuente. Los hash y controles de integridad que no figuran en una salida específica de la corrida del 15 de octubre no se infieren ni se presentan como realizados en esa ejecución. Para comparar nuevas versiones se debe guardar el hash de los insumos antes y después, fecha de ejecución, versión de R, paquetes y cambios de código. Las salidas intermedias son derivadas y pueden regenerarse; las decisiones conceptuales se conservan en el CSV de decisiones y en la nota Obsidian enlazada.
+\normalsize\end{singlespace}

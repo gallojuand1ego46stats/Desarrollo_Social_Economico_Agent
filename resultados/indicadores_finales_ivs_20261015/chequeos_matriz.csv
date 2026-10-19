@@ -1,0 +1,22 @@
+chequeo,n_evaluado,n_violaciones,tolerancia,evidencia
+Cobertura/unicidad municipios por fuente,1122,0,exacta,Cada fuente tiene los mismos 1.122 codigos del universo IPM/CNPV.
+17PM total = suma de 15 categorias educativas,1122,0,0.5 persona,"Verifica distribucion educativa completa, incluida no informacion."
+Indicador 17PM sin media completa dentro de rango,1122,0,"[0,1]",FC3rmula principal excluye Normal incompleta y Normal completa.
+Proporciones 17PM suman 1,1122,0,1e-10,Las quince categorias usan el mismo denominador de poblacion 5+.
+5PM total = suma de categorias incl. no informa,1122,0,0.5 persona,Control de consistencia del agregado 5PM.
+6V total = suma nueve materiales,1122,0,0.5 vivienda,Verifica total por tipo contra todos los materiales.
+10V total = suma categorias BU:CD,1122,0,0.5 persona,Identidad publicada en 10V.
+8V energia total = si + no,1122,0,0.5 vivienda,Control de suma de categorias de servicio.
+8V gas total = si + no + sin informacion,1122,0,0.5 vivienda,Control de suma de categorias de servicio.
+8V internet total = si + no + sin informacion,1122,0,0.5 vivienda,Control de suma de categorias de servicio.
+10V suma del denominador de estratos conocidos,1122,0,0.5 persona,Denominador incluye estratos 1-6 y no tiene estrato; excluye no respuesta y no servicio.
+"PCA candidatos en rango [0,1]",10098,0,"[0,1]",No implica validacion psicometrica ni ejecucion de PCA.
+NA hogares_menores15,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA hogares_adultos_mayores,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA paredes_precarias_6V,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA sin_energia_8V,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA sin_gas_8V,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA sin_internet_8V,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA estratos_1_2_o_sin_estrato_10V,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA actividad_vulnerabilidad_10mas_5PM,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.
+NA sin_media_completa_17PM,1122,0,0 NA para matriz completa,No se imputa; esta columna requiere resolver cobertura si hay NA.

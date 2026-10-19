@@ -1,6 +1,8 @@
 # Handoff consolidado — Desarrollo Social Económico
 
-> Consolidación actualizada al 2026-10-01 con el avance informado por el autor y la documentación/archivos locales. Los libros Excel no se reabrieron ni se recalcularon sus estadísticas en esta actualización.
+> **Actualización metodológica 2026-10-18:** la referencia vigente es [Informe 1 Metodológico v2.1](Informe_Metodologico_Obsidian.md) y el [PDF final](docs/informe1_metodologico/Informe1_Metodologico.pdf). Se describen ocho candidatas, sus descriptivos y sensibilidades; el PCA, el IVS validado y la integración SECOP II siguen pendientes. El texto histórico de esta nota no prevalece sobre esa actualización.
+
+> **Contenido histórico con corte al 2026-10-01.** El texto que sigue conserva ese diagnóstico; para el estado vigente del 2026-10-18, las fórmulas, resultados y límites, consulta [[Informe_Metodologico_Obsidian|la nota del Informe 1 Metodológico]]. Los libros Excel y estadísticas no se recalcularon en la actualización de este resumen.
 
 ## 1. Resumen Ejecutivo
 
