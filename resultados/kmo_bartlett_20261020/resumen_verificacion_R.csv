@@ -1,0 +1,2 @@
+"n","p","KMO","chi_cuadrado","gl","ln_p_nominal","log10_p_nominal","p_texto","p_subdesbordamiento","determinante","log_determinante","suma_r2_pares","suma_parcial2_pares","condicion_2","minimo_autovalor_validacion","residuo_inversa","version_R","implementacion"
+1102,8,0.67240590000698,4305.68863790448,28,-2075.62134139701,-901.430895089346,"3.707703e-902",TRUE,0.0197781257248288,-3.9231787133526,3.89940139440819,1.89977644500058,23.7512767438097,0.134164573359553,1.11022302462516e-15,"4.6.0","R base: productos cruzados, solve, LU y cola finita logaritmica"

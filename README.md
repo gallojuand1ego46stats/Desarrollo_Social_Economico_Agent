@@ -31,13 +31,14 @@ La etapa prevista con SECOP II permitirá examinar cómo se relacionan las condi
 
 ## Estado metodológico
 
-Al 18 de octubre de 2026 se han auditado los consolidados CNPV/IPM y se han calculado ocho indicadores candidatos, junto con análisis descriptivos y de sensibilidad. Siguen pendientes decisiones sobre el universo territorial y la correspondencia entre códigos territoriales; también están pendientes el PCA exploratorio, la eventual construcción de un IVS y la integración con SECOP II. Por ello, los resultados disponibles son insumos de trabajo y no constituyen un índice final ni validado.
+Al 20 de octubre de 2026 se han auditado los consolidados CNPV/IPM y se han calculado ocho indicadores candidatos, junto con análisis descriptivos y de sensibilidad. El diagnóstico actual de las ocho candidatas obtuvo KMO 0,6724 y Bartlett nominal χ²(28) = 4.305,69 (p < 0,001), con adecuación moderada y los ocho MSA > 0,50. Su sensibilidad y límites están documentados en el informe. Siguen pendientes decisiones sobre el universo territorial y la correspondencia entre códigos territoriales; también están pendientes el PCA exploratorio, la eventual construcción de un IVS y la integración con SECOP II. Por ello, los resultados disponibles son insumos de trabajo y no constituyen un índice final ni validado.
 
 ## Documentación vigente
 
-- [Informe metodológico v2.1 (PDF)](docs/informe1_metodologico/Informe1_Metodologico.pdf)
+- [Informe metodológico v2.2 (PDF)](docs/informe1_metodologico/Informe1_Metodologico.pdf)
 - [Estado y navegación del informe](Informe_Metodologico_Obsidian.md)
-- [Decisiones, fuentes y salidas de la actualización del 18 de octubre](docs/calidad/auditorias/ACTUALIZACION_DESCRIPTIVA_20261018.md)
+- [KMO, MSA y Bartlett vigentes del 20 de octubre](docs/calidad/auditorias/KMO_BARTLETT_20261020.md)
+- [Decisiones, fuentes y salidas de la actualización descriptiva del 18 de octubre](docs/calidad/auditorias/ACTUALIZACION_DESCRIPTIVA_20261018.md)
 - [Control de entrega y verificaciones](docs/calidad/auditorias/CONTROL_ENTREGA_DESCRIPTIVA_20261018.md)
 - [Auditoría complementaria de la línea base del 15 de octubre](docs/calidad/auditorias/RESUMEN_EJECUTIVO_AUDITORIA.md)
 - [Informe completo de auditoría de la línea base](docs/calidad/auditorias/INFORME_METODOLOGICO_REVISION_FINAL.pdf)
@@ -67,4 +68,13 @@ python R/auxiliares/cotejar_extremos_descriptivos.py
 
 La actualización recalcula las ocho fórmulas, descriptivos y sensibilidades. No ejecuta PCA ni calcula un IVS. Este procedimiento reproduce esa actualización desde las tablas intermedias; no representa una reconstrucción completa desde los libros originales ni ejecuta las etapas históricas `R/01`–`R/05`. El flujo activo de GitHub Actions construye el sitio de documentación y no ejecuta el análisis estadístico.
 
-La auditoría independiente de consistencia revisa la línea base del 15 de octubre y se conserva como documento complementario, no como estado metodológico vigente. El informe del 18 de octubre es la referencia actual.
+La auditoría independiente de consistencia revisa la línea base del 15 de octubre y se conserva como documento complementario, no como estado metodológico vigente. El informe versión 2.2 del 20 de octubre es la referencia actual.
+
+El diagnóstico vigente y su cotejo numérico se ejecutan con R base:
+
+```sh
+Rscript --vanilla R/07_kmo_bartlett_candidatas.R
+Rscript --vanilla R/auxiliares/verificar_kmo_bartlett.R
+```
+
+El verificador está organizado en [seis módulos comentados](R/funciones/verificacion_kmo/README.md). Reconstruye los cálculos mediante una implementación distinta del script principal y concilia cinco controles globales y los ocho MSA. La versión comprobada es R 4.6.0 y no requiere paquetes adicionales. Las salidas están en `resultados/kmo_bartlett_20261020/`; el cotejo previo en Python se conserva identificado como histórico en `historico_python/`.

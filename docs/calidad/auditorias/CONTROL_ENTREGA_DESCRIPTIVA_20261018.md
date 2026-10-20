@@ -1,5 +1,7 @@
 # Control de entrega del informe metodológico — 18 de octubre de 2026
 
+Registro histórico del corte del 18 de octubre: las páginas y huella siguientes corresponden a esa versión. El PDF vigente fue actualizado el 20 de octubre; véanse [diagnóstico KMO/Bartlett](KMO_BARTLETT_20261020.md) y [control de entrega actual](CONTROL_ENTREGA_KMO_20261020.md).
+
 ## Entregable
 
 `docs/informe1_metodologico/Informe1_Metodologico.pdf`, 43 páginas. Compilado desde `main.tex` mediante pdfLaTeX, BibTeX y pasadas finales de pdfLaTeX. La última compilación no registra advertencias LaTeX, citas indefinidas, caracteres ausentes ni desbordamientos. Se revisaron visualmente las tablas, figuras y el nuevo diccionario operativo; las tablas se mantienen dentro de los márgenes y continúan en páginas posteriores con sus encabezados.

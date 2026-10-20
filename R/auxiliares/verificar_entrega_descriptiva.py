@@ -46,9 +46,15 @@ state = {r['hecho']:r['valor'] for r in rows(OUT / 'resumen_ejecucion.csv')}
 check('Sin PCA en esta corrida', state['PCA_ejecutado']=='FALSE')
 check('Sin faltantes en matriz', state['NA_matriz']=='0')
 check('Fórmulas sin discrepancias', state['violaciones_formulas']=='0')
-log = (ROOT / 'docs/informe1_metodologico/main.log').read_text(encoding='utf-8', errors='replace')
-check('Compilación sin referencias indefinidas ni desbordamientos', not re.search(
-    r'undefined|Overfull|Missing character|LaTeX Warning|Package .* Warning', log))
+# main.log no se versiona. Solo se revisa si existe tras una compilacion local;
+# su ausencia no se cuenta como una compilacion aprobada.
+log_path = ROOT / 'docs/informe1_metodologico/main.log'
+if log_path.exists():
+    log = log_path.read_text(encoding='utf-8', errors='replace')
+    check('Compilación sin referencias indefinidas ni desbordamientos', not re.search(
+        r'undefined|Overfull|Missing character|LaTeX Warning|Package .* Warning', log))
+else:
+    print('Log LaTeX no disponible: control de compilacion no realizado.')
 with (OUT / 'verificacion_tablas_pdf.csv').open('w', encoding='utf-8', newline='') as f:
     w = csv.DictWriter(f, fieldnames=['control','cumple']); w.writeheader(); w.writerows(checks)
 print(f'PDF: {len(reader.pages)} páginas; controles: {len(checks)}; fallos: {sum(not c["cumple"] for c in checks)}')

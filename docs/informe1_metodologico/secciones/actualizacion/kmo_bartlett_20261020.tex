@@ -1,0 +1,71 @@
+\subsection{Matriz analizada y alcance de la actualización}
+
+El 20 de octubre de 2026 se autorizaron y ejecutaron KMO global, MSA individual y la prueba de esfericidad de Bartlett para las ocho candidatas vigentes. El diagnóstico principal utiliza las 1.102 unidades municipales e insulares del archivo \path{matriz_ocho_municipal_e_insular_0_1.csv}: 1.101 municipios/distritos y San Andrés, con veinte ANM excluidas de este ámbito. No se trasladan resultados desde la matriz histórica de siete variables. Se conservan las ocho columnas, todos los territorios y las convenciones previamente acordadas. Esta actualización no ejecuta PCA ni construye un IVS.
+
+\subsection{Procedimiento, fórmulas y verificación independiente}
+
+El script \path{R/07_kmo_bartlett_candidatas.R}, implementado en R base, verifica llaves únicas, ausencia de NA, rango [0,1], variabilidad positiva y matriz de Pearson de rango completo. No utiliza eliminación por pares ni imputación: las mismas 1.102 filas intervienen en todas las correlaciones. Estandarizar las variables por su media y desviación convencional no modifica esta matriz de correlación; el control numérico confirma esa igualdad. Se guarda una matriz z específica para diagnóstico, que no constituye un resultado de PCA.
+
+Para $R=\operatorname{cor}(X)$, sea $\Omega=R^{-1}$. Las correlaciones parciales controlando las restantes seis variables son
+\[
+a_{jk}=-\frac{\Omega_{jk}}{\sqrt{\Omega_{jj}\Omega_{kk}}}\quad(j\ne k),\qquad
+KMO=\frac{\sum_{j<k}r_{jk}^2}{\sum_{j<k}r_{jk}^2+\sum_{j<k}a_{jk}^2}.
+\]
+El MSA del indicador $j$ restringe las sumas a sus pares con los otros siete indicadores. La anti-imagen guardada contiene el inverso escalado, con signo opuesto a las correlaciones parciales fuera de la diagonal; el cuadrado hace equivalentes ambas formas para KMO. Esta definición sigue la revisión Kaiser--Rice y las implementaciones documentadas de KMO \citep{kaiserRice1974,psychKMO2026}. Es un índice descriptivo de adecuación, no un contraste con p-valor ni una prueba de representatividad territorial. El umbral 0,50 se usa como alerta convencional y no como criterio automático de selección.
+
+Para Bartlett se especifica $H_0:R_{\mathrm{poblacional}}=I_8$ frente a una matriz no identidad. Con $n=1102$ y $p=8$, se calcula
+\[
+T_B=-\left[n-1-\frac{2p+5}{6}\right]\log|R|,
+\qquad gl=\frac{p(p-1)}{2}=28.
+\]
+La calibración nominal emplea una distribución chi-cuadrado asintótica. La corrección y su referencia se documentan en \citet{bartlett1951standardization} y en la documentación de implementación \citep{efatoolsBartlett2026}. Es una prueba de esfericidad de correlaciones, distinta de la prueba de Bartlett para igualdad de varianzas.
+
+La matriz es definida positiva: $|R|=0,0197781$, mínimo valor propio $0,134165$ y número de condición espectral $23,7513$. Estos valores se emplean exclusivamente para comprobar invertibilidad y estabilidad numérica, sin retener ni interpretar componentes. La inversión mediante Cholesky deja un residuo máximo de aproximadamente $1,01\times10^{-15}$ en $R\Omega-I$. No se aplica regularización ni pseudoinversa.
+
+El cotejo original se implementó en Python/NumPy y sus resultados se conservan identificados como históricos. El verificador vigente lo sustituye por seis módulos en R base: reconstruye Pearson mediante productos cruzados, calcula la inversa con \texttt{solve()} y el determinante logarítmico mediante LU; para la cola de Bartlett utiliza la identidad exacta de supervivencia de una chi-cuadrado con grados de libertad pares, evaluada en logaritmos. No importa el código de R/07 ni utiliza sus cifras para calcular las estadísticas independientes. Aprueba cinco conciliaciones globales y los ocho MSA individuales dentro de las tolerancias registradas (KMO/MSA y log-determinante $10^{-12}$; estadístico y log-p $10^{-8}$). La independencia es de implementación, no de plataforma, pues ambos flujos utilizan R y pueden compartir bibliotecas numéricas. Las huellas de matriz y referencias se preservan y se registra SHA-256 de los insumos y módulos. No se instaló ni se declara una ejecución del paquete \texttt{psych}: sus fórmulas documentadas son referencia de implementación.
+
+\subsection{Resultados del diagnóstico vigente}
+
+En las 1.102 unidades, $\sum_{j<k}r_{jk}^2=3,8994014$ y $\sum_{j<k}a_{jk}^2=1,8997764$, de modo que
+\[
+KMO=\frac{3,8994014}{3,8994014+1,8997764}=0,6724059.
+\]
+El resultado corresponde a adecuación \textbf{moderada}; la escala convencional de Kaiser sitúa los valores 0,60--0,69 por debajo de una adecuación alta. La evidencia permite continuar evaluando reducción de dimensión, con cautela sobre la estructura común; no acredita un único factor de vulnerabilidad.
+
+\input{../../resultados/kmo_bartlett_20261020/tablas_tex/msa_actual}
+
+Todos los MSA principales superan 0,50. El menor es 2HM ($0,5553$), seguido de 1HM ($0,5780$); energía ($0,7842$) y 6V ($0,7649$) presentan los mayores valores. Ninguna candidata activa la alerta individual de MSA bajo 0,50 en la especificación principal. Las dos variables de estructura del hogar requieren especial revisión sustantiva: su correlación negativa ($-0,721$) puede representar perfiles demográficos contrapuestos. KMO no justifica invertir automáticamente su dirección ni interpretar la presencia de personas mayores como dependencia.
+
+Para Bartlett,
+\[
+T_B=1097{,}5\times3,9231787=4305{,}6886,\qquad gl=28.
+\]
+La cola nominal es $\log_{10}(p)=-901,430895$, equivalente a aproximadamente $3,7077\times10^{-902}$. Se informa $p_{\mathrm{nominal}}<0,001$. La precisión ordinaria subdesborda: el CSV deja el p ordinario indefinido y activa el indicador de subdesbordamiento, en vez de publicar cero como si fuese una probabilidad matemáticamente nula. Las columnas logarítmicas conservan el resultado finito.
+
+\subsection{Sensibilidad territorial, de correlación y de fórmulas}
+
+\input{../../resultados/kmo_bartlett_20261020/tablas_tex/kmo_ambitos}
+
+Excluir San Andrés cambia KMO de $0,6724059$ a $0,6732228$ (diferencia absoluta $0,0008169$): la categoría de adecuación y la ausencia de alertas MSA bajo 0,50 se mantienen. El universo censal completo alcanza $0,6757796$. Es evidencia de estabilidad de este diagnóstico frente a esos ámbitos concretos; no resuelve por sí misma qué geografía es correcta para PCA ni para comparar contratos. Los estadísticos de Bartlett difieren también por el número de unidades, por lo que no se comparan como medida pura de ajuste entre modelos.
+
+Con correlaciones de Spearman, KMO es $0,7489059$ y el MSA mínimo es $0,5632880$ (5PM). Este escenario de rangos evalúa relaciones monotónicas y reduce la dependencia de magnitudes extremas; no prueba normalidad ni permite afirmar estabilidad de cargas o rankings de un PCA no ejecutado. No se reporta p-valor de Bartlett para esta sensibilidad de rangos.
+
+\input{../../resultados/kmo_bartlett_20261020/tablas_tex/kmo_sensibilidad}
+
+Las sensibilidades cambian una fórmula por vez sobre las mismas 1.102 filas. El escenario 5PM 1:1 presenta MSA de 5PM $0,4137$, aunque KMO global permanece en $0,6676$. Para 10V con total de personas, KMO cae a $0,5463$, su MSA es $0,3926$ y dos indicadores tienen MSA bajo 0,50. Por tanto, el diagnóstico global moderado no elimina la sensibilidad a las convenciones de medición. No se elige el peso de 5PM ni el denominador de 10V para maximizar KMO: esas opciones deben tener fundamento conceptual y describen medidas diferentes.
+
+El retiro individual exploratorio de columnas se guarda separado y no modifica la lista acordada. Retirar 2HM eleva KMO a $0,6933$ y retirar 1HM a $0,6843$; retirar 6V lo reduce a $0,6154$. Estos resultados no autorizan exclusiones automáticas: cada comparación modifica el conjunto conceptual y no equivale a comprobar estabilidad de componentes, cargas o puntuaciones.
+
+\subsection{Inferencias y conclusiones preliminares para el proyecto}
+
+\begin{enumerate}[leftmargin=1.27cm]
+\item \textbf{Existe estructura de asociación aprovechable para explorar reducción de dimensión.} Las correlaciones observadas no constituyen una matriz identidad y KMO es moderado. Con los ocho MSA principales sobre 0,50, no hay una razón de exclusión automática individual bajo esa alerta convencional. Esto respalda pasar a la evaluación exploratoria del PCA, una vez cerrado su universo.
+\item \textbf{Todavía no está demostrado que un puntaje único represente vulnerabilidad.} Bartlett no determina cuántas dimensiones existen ni el signo, la retención o la interpretación de componentes. El diagnóstico demográfico relativamente débil y la asociación inversa 1HM--2HM impiden asumir que todas las candidatas aumentan juntas. El IVS requiere coherencia conceptual y estabilidad de la solución, no solo significancia.
+\item \textbf{La geografía insular produce poca variación del KMO observado; las fórmulas pueden producir mucha más.} La diferencia de KMO al excluir San Andrés es inferior a 0,001, mientras el cambio de denominador 10V lo reduce en aproximadamente 0,1262. Esto identifica una prioridad metodológica concreta: justificar y someter a sensibilidad la población elegible de 10V y los pesos de 5PM antes de interpretar un índice.
+\item \textbf{La inferencia chi-cuadrado de Bartlett es nominal y dependiente del modelo.} Las unidades son agregados censales observados, no una muestra aleatoria de municipios. Las variables son proporciones acotadas y asimétricas; no se ha acreditado normalidad multivariada ni independencia espacial. No hay en esta corrida un ajuste espacial o un diseño de remuestreo que calibre el error tipo I. En consecuencia, el p-valor no expresa certeza de representatividad, no extrapola a otros años y no permite inferir causalidad. La conclusión sostenida directamente por los datos es la estructura de correlaciones del ámbito observado.
+\item \textbf{No existe aún evidencia empírica del vínculo CNPV--SECOP.} Estas pruebas utilizan solo indicadores censales 2018. No estiman asociación con contratos 2026, efectos de gasto, validación del IVS ni bienestar individual. La integración contractual y la armonización territorial siguen como etapas posteriores.
+\end{enumerate}
+
+\subsection{Archivos, reproducción y alcance temporal}
+
+Las salidas de esta corrida se conservan en \path{resultados/kmo_bartlett_20261020/}: matriz de Pearson, anti-imagen, parciales, MSA, diagnósticos por ámbito, sensibilidad de fórmulas, retiro individual, controles, manifest y entorno. Los comandos desde la raíz son \texttt{Rscript R/07\_kmo\_bartlett\_candidatas.R} y \texttt{Rscript --vanilla R/auxiliares/verificar\_kmo\_bartlett.R}. Ambos flujos requieren solo R base, con R 4.6.0 comprobado. Los CSV de cotejo vigente terminan en \texttt{\_R.csv}; el estado de ejecución figura en \path{estado_verificacion_R.csv}. El cotejo previo queda en \path{historico_python/}. La sección del 18 de octubre conserva su carácter histórico; sus afirmaciones de no ejecución de KMO/Bartlett se refieren a aquella corrida y quedan actualizadas por los resultados de esta sección.

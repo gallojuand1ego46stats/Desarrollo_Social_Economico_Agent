@@ -96,19 +96,19 @@ La aproximación inferencial de Bartlett presupone condiciones de muestreo e ind
 \textbf{Prueba} & \textbf{Matriz} & \textbf{Resultado documentado} & \textbf{Estado}\\
 \midrule
 KMO global & Histórica, 7 variables & 0,642484; adecuación moderada, no aprobación automática. & Ejecutado\\
-Bartlett & Histórica; $n=1.122$, $p=7$ & $\chi^2=4664,8728$, $gl=21$; archivo almacena $p=0$ por subdesbordamiento, se informa $p<0,001$. & Ejecutado\\
+Bartlett & Histórica; $n=1122$, $p=7$ & $\chi^2=4664,8728$, $gl=21$; archivo almacena $p=0$ por subdesbordamiento, se informa $p<0,001$. & Ejecutado\\
 MSA por variable & Histórica, 7 variables & Estrato 1--2: 0,414311, el MSA más bajo; otros valores en \path{resultados/base_trabajo/kmo_por_indicador.csv}. & Ejecutado\\
-KMO/Bartlett & Ocho candidatas aprobadas & Sin nueva ejecución; queda cerrar inclusión insular y estandarizar el universo definitivo. & Pendiente\\
-Sensibilidad multivariada NR & Matriz total vs. válida & Correlaciones comparadas en esta actualización; KMO/MSA, cargas y puntajes diferidos. & Pendiente\\
+KMO/Bartlett & Ocho candidatas; $n=1102$ & KMO 0,672406; $\chi^2=4305{,}6886$, $gl=28$, $p$ nominal $<0,001$; MSA 0,5553--0,7842. & Ejecutado 20/10\\
+Sensibilidad de adecuación & Fórmulas y ámbitos alternativos & KMO/MSA ejecutados 20/10; cargas, componentes y puntajes aún diferidos. & Parcial\\
 Estabilidad PCA & Fórmulas y universos alternativos & Componentes, cargas, eigenvalores y puntuaciones aún no calculados. & Pendiente\\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
 \end{table}
 
-Los resultados KMO/Bartlett disponibles pertenecen a una versión previa de siete candidatos: actividad, energía, gas, recolección de basuras, internet, hogares con menores y estrato 1--2. No corresponden a las nueve candidatas calculadas más recientemente ni a las ocho variables acordadas para el primer PCA. Los 21 grados de libertad son coherentes con $p=7$. El p-valor registrado como cero es una limitación de representación numérica, no probabilidad exactamente nula. Estas pruebas deben recalcularse para la matriz y universo finales.
+Los resultados KMO/Bartlett disponibles pertenecen a una versión previa de siete candidatos: actividad, energía, gas, recolección de basuras, internet, hogares con menores y estrato 1--2. No corresponden a las nueve candidatas calculadas más recientemente ni a las ocho variables acordadas para el primer PCA. Los 21 grados de libertad son coherentes con $p=7$. El p-valor registrado como cero es una limitación de representación numérica, no probabilidad exactamente nula. El diagnóstico del 20 de octubre ya recalcula estas pruebas para las ocho candidatas y el ámbito municipal e insular; si cambia la especificación final, deben repetirse.
 
 \subsection{Trazabilidad y límites}
 
-Las expresiones y controles anteriores se vinculan con \path{R/02_base_final_indicadores.R}, \path{R/03_auditoria_indicadores.R}, \path{R/05_conformar_indicadores_finales.R}, la configuración \path{R/00_config.R} y sus CSV. Los indicadores y sensibilidades históricos se reproducen desde \path{resultados/indicadores_finales_ivs_20261015/}. KMO, Bartlett y MSA pertenecen a la auditoría histórica. La actualización descriptiva añade fórmulas, correlaciones y extremos mediante el script 06; no ejecuta PCA. Los chequeos estructurales de los consolidados están desglosados por hoja en \path{resultados/verificacion_consolidados/}. No se ha ejecutado PCA ni se ha validado un IVS final.
+Las expresiones y controles anteriores se vinculan con \path{R/02_base_final_indicadores.R}, \path{R/03_auditoria_indicadores.R}, \path{R/05_conformar_indicadores_finales.R}, la configuración \path{R/00_config.R} y sus CSV. Los indicadores y sensibilidades históricos se reproducen desde \path{resultados/indicadores_finales_ivs_20261015/}. Los valores históricos de KMO, Bartlett y MSA pertenecen a la matriz de siete variables; los nuevos resultados de ocho candidatas se documentan por separado en la actualización del 20 de octubre. La actualización descriptiva añade fórmulas, correlaciones y extremos mediante el script 06; no ejecuta PCA. Los chequeos estructurales de los consolidados están desglosados por hoja en \path{resultados/verificacion_consolidados/}. No se ha ejecutado PCA ni se ha validado un IVS final.
 

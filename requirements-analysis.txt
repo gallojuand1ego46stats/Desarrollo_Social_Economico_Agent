@@ -1,2 +1,5 @@
 # Dependency for independently checking workbook extrema against Excel.
 openpyxl==3.1.5
+# PDF text checks used by both delivery-control scripts.
+pypdf==6.10.0
+# KMO/Bartlett and its independent numerical verification now use R base.

@@ -2,13 +2,15 @@
 
 Proyecto de análisis territorial de vulnerabilidad socioeconómica municipal con datos agregados del CNPV 2018. La comparación con contratación pública de SECOP II es una etapa posterior del proyecto.
 
-## Estado al 18 de octubre de 2026
+## Estado al 20 de octubre de 2026
 
-Se auditaron los consolidados CNPV/IPM y se calcularon ocho indicadores candidatos, descriptivos y sensibilidades. El IPM se reserva como contraste externo. El PCA exploratorio, el IVS validado y la integración con SECOP II continúan pendientes; los resultados actuales no constituyen un índice final.
+Se auditaron los consolidados CNPV/IPM y se calcularon ocho indicadores candidatos, descriptivos y sensibilidades. KMO/MSA y Bartlett actuales ya están ejecutados: KMO 0,6724, los ocho MSA >0,50 y Bartlett nominal χ²(28) = 4.305,69, p <0,001. La adecuación es moderada y sus límites están documentados. El IPM se reserva como contraste externo parcial. PCA, IVS e integración con SECOP II siguen pendientes.
 
 ## Documentos principales
 
-- [Informe metodológico v2.1 (PDF)](informe1_metodologico/Informe1_Metodologico.pdf)
+- [Informe metodológico v2.2 (PDF)](informe1_metodologico/Informe1_Metodologico.pdf)
+- [KMO y Bartlett vigentes, métodos y resultados](calidad/auditorias/KMO_BARTLETT_20261020.md)
+- [Control de entrega vigente del 20 de octubre](calidad/auditorias/CONTROL_ENTREGA_KMO_20261020.md)
 - [Actualización descriptiva: decisiones, fuentes y salidas](calidad/auditorias/ACTUALIZACION_DESCRIPTIVA_20261018.md)
 - [Control de entrega y verificaciones](calidad/auditorias/CONTROL_ENTREGA_DESCRIPTIVA_20261018.md)
 - [Auditoría de los consolidados](calidad/auditorias/VERIFICACION_CONSOLIDADOS.md)

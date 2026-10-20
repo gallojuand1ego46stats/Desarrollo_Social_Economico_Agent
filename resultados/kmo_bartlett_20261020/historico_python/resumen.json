@@ -1,0 +1,25 @@
+{
+  "n": 1102,
+  "p": 8,
+  "KMO": 0.67240590000698,
+  "chi": 4305.6886379044845,
+  "df": 28,
+  "log10p": -901.4308950893475,
+  "p_text": "3.707703e-902",
+  "determinant": 0.019778125724828708,
+  "sum_r2_upper": 3.8994013944081862,
+  "sum_partial2_upper": 1.8997764450005814,
+  "condition": 23.751276743809903,
+  "minimum_eigenvalue_validation_only": 0.1341645733595523,
+  "msa": {
+    "hogares_menores15": 0.5779810316625746,
+    "hogares_adultos_mayores": 0.5553173653061976,
+    "paredes_precarias_6V": 0.7649251700524439,
+    "sin_energia_8V": 0.7842057949451957,
+    "sin_gas_8V": 0.7123135303031021,
+    "sin_internet_8V": 0.6489353664759006,
+    "estratos_1_2_o_sin_estrato_10V": 0.6781015003820108,
+    "actividad_vulnerabilidad_10mas_5PM": 0.630253692770003
+  },
+  "python_numpy_version": "2.3.5"
+}

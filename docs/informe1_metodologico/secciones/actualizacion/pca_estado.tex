@@ -4,20 +4,22 @@ La corrida del 15 de octubre creó \path{matriz_pca_candidata.csv} en escala 0--
 
 La matriz histórica cubre 1.122 códigos territoriales. La actualización del 18 de octubre crea una base descriptiva de ocho variables para 1.101 municipios/distritos y San Andrés, con veinte ANM identificadas aparte. Se conservan todos los códigos en otra salida. Antes del PCA debe cerrarse la participación de la unidad insular y estandarizarse nuevamente el universo elegido. La actualización actual no produce componentes, cargas ni puntajes.
 
-\subsection{Secuencia recomendada de diagnóstico}
+\subsection{Diagnóstico ejecutado y secuencia posterior}
 
-El análisis exploratorio se realizará sobre la matriz z de ocho variables y el universo depurado, siguiendo una secuencia reproducible:
+La actualización del 20 de octubre ejecuta KMO/MSA y Bartlett para las ocho candidatas en el ámbito municipal e insular. KMO es 0,6724; los ocho MSA superan 0,50; Bartlett nominal es $\chi^2(28)=4305{,}689$, $p<0,001$. La Sección~\ref{sec:kmo_actual} documenta supuestos, sensibilidades y límites. Quedan pendientes los componentes y su estabilidad, no este diagnóstico de la matriz vigente.
+
+La secuencia de trabajo, distinguiendo controles ya ejecutados y análisis posteriores, es:
 \begin{enumerate}[leftmargin=1.27cm]
   \item confirmar completitud, variabilidad no nula, rangos y dirección;
   \item examinar distribuciones, correlaciones y observaciones influyentes, cotejando extremos con fuente sin eliminarlos automáticamente;
-  \item estudiar adecuación con matriz de correlación, KMO/MSA y Bartlett como diagnósticos complementarios, no como umbrales que por sí solos aprueban PCA;
+  \item considerar la adecuación ya calculada con KMO/MSA y Bartlett; recalcularla si cambia la matriz o su universo, sin tratarla como aprobación automática de PCA;
   \item ejecutar PCA y conservar valores propios, varianza explicada, cargas y puntajes con código, semilla si corresponde, y versión de la matriz;
   \item seleccionar componentes con evidencia conjunta: gráfico de sedimentación, análisis paralelo, interpretabilidad y estabilidad; no depender exclusivamente de la regla de eigenvalor mayor que uno \citep{horn1965rationale,jolliffe2002principal};
   \item comparar resultados bajo sensibilidades de no respuesta, peso 5PM, inclusión de 17PM y universo territorial;
   \item solo si la solución resulta interpretable y estable, evaluar si procede un índice unidimensional o una puntuación multidimensional.
 \end{enumerate}
 
-KMO resume la proporción de correlación parcial y Bartlett contrasta la hipótesis de matriz identidad; en un universo grande, la significancia de Bartlett puede aparecer ante asociaciones pequeñas. Por eso se interpretarán junto con magnitud de correlaciones, MSA por variable, estabilidad y sentido sustantivo. El número de componentes se decidirá mediante evidencia comparada y no se fijará de antemano.
+KMO compara correlaciones simples y parciales al cuadrado y Bartlett contrasta la hipótesis de matriz identidad; en un universo grande, la significancia de Bartlett puede aparecer ante asociaciones pequeñas. Por eso se interpretan junto con magnitud de correlaciones, MSA por variable, estabilidad y sentido sustantivo. El número de componentes se decidirá mediante evidencia comparada y no se fijará de antemano.
 
 \subsection{IPM como contraste externo}
 
@@ -26,18 +28,19 @@ El IPM municipal no participa en el cálculo de los componentes. Después de def
 \subsection{Estado explícito}
 
 \begin{center}
-\begin{tabular}{@{}ll@{}}
+\begin{tabularx}{\textwidth}{@{}p{0.34\textwidth}X@{}}
 \toprule
-\textbf{Producto} & \textbf{Estado al 18/10/2026}\\
+\textbf{Producto} & \textbf{Estado al 20/10/2026}\\
 \midrule
 Indicadores candidatos 0--1 & Ocho recalculados; educación reservada aparte \\
-Matriz estandarizada z & Histórica de nueve columnas; nueva definitiva pendiente \\
+Matriz estandarizada z & Ocho columnas para diagnóstico; universo PCA definitivo pendiente \\
 Descriptivos y sensibilidad & Actualizados; incluye cambios en correlaciones \\
-Primer PCA con ocho candidatas & Diferido por instrucción del equipo \\
+KMO/MSA y Bartlett actuales & Ejecutados el 20/10; adecuación moderada \\
+Primer PCA con ocho candidatas & Pendiente; no ejecutado \\
 Componentes, cargas y scores & Sin ejecución en esta entrega \\
 IVS final y validado & No construido \\
 Contraste externo IPM & Pendiente \\
 Integración SECOP II 2026 & Pendiente; sin base integrada en este flujo \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}

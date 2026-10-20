@@ -4,6 +4,8 @@ tags: [metodologia, IVS, auditoria, sensibilidad]
 
 # Actualización descriptiva del informe — 18 de octubre de 2026
 
+Registro de la corrida descriptiva del 18 de octubre. El [diagnóstico autorizado del 20 de octubre](KMO_BARTLETT_20261020.md) añade KMO/MSA y Bartlett; las menciones de no ejecución de esas pruebas en esta nota se refieren exclusivamente al corte del día 18.
+
 ## Alcance autorizado y decisiones
 
 Entregable principal: [[docs/informe1_metodologico/Informe1_Metodologico.pdf|Informe 1 Metodológico]]. El usuario autorizó actualizar fuentes, cálculos descriptivos, sensibilidades y PDF; **ordenó no ejecutar PCA**. Esta entrega no calcula PCA, componentes, puntajes, KMO, Bartlett ni IVS. Los resultados preliminares de conversación no se incorporan como resultados reproducibles del informe.

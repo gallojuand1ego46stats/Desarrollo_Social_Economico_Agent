@@ -11,6 +11,22 @@ temp/
 # Respaldos y previsualizaciones locales; no forman parte de la entrega versionada.
 tmp/
 
+# Materiales locales de exposición, excluidos por decisión del equipo.
+/docs/materiales_exposicion/
+/docs/*.pptx
+/docs/Guion*.docx
+/docs/1_Explicacion_Proyecto_Grado_desde_cero.docx
+/docs/2_Guia_de_Exposicion_Proyecto_Grado.docx
+/docs/3_Guia_Teorica_Estadistica_Calculos_Proyecto.docx
+/docs/Presentacion_Proyecto_Grado_CNPV_SECOP.pdf
+/resultados/kmo_bartlett_20261020/control_formato_guion_tres.json
+/resultados/kmo_bartlett_20261020/control_revision_exposicion_*.json
+/resultados/kmo_bartlett_20261020/control_revision_guion_*.json
+/resultados/kmo_bartlett_20261020/control_entrega.csv
+/resultados/kmo_bartlett_20261020/control_entrega_exposicion_local.csv
+/resultados/kmo_bartlett_20261020/sincronizacion_presentacion_guiones.csv
+/resultados/kmo_bartlett_20261020/entregables_sha256.csv
+
 # Borradores locales en preparación; no forman parte del primer avance público.
 /docs/informe1_metodologico/Resumen_Simposio_2026.pdf
 /docs/informe1_metodologico/Resumen_Simposio_2026.tex

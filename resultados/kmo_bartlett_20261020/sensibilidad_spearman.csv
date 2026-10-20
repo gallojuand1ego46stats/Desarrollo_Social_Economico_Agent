@@ -1,0 +1,2 @@
+"escenario","metodo","n","p","KMO","MSA_min","indicador_MSA_min","MSA_menor_05","determinante","log_determinante","condicion_2","residuo_inversa","chi_cuadrado","gl","p_nominal","p_subdesbordamiento","ln_p_nominal","log10_p_nominal"
+"municipal_e_insular_spearman","spearman",1102,8,0.748905864175883,0.563287995172318,"actividad_vulnerabilidad_10mas_5PM",0,0.02426530756467,-3.71870762096646,16.6251948447092,4.44089209850063e-16,,,,,,

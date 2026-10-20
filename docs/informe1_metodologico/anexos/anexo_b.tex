@@ -11,9 +11,13 @@ Rscript R/02_base_final_indicadores.R
 Rscript R/03_auditoria_indicadores.R
 Rscript R/05_conformar_indicadores_finales.R
 Rscript R/06_descriptivos_sensibilidades_ivs.R
+Rscript R/07_kmo_bartlett_candidatas.R
+Rscript --vanilla R/auxiliares/verificar_kmo_bartlett.R
 \end{verbatim}
 
 La conformación histórica corresponde al 15 de octubre de 2026. La actualización del 18 de octubre se reproduce con el script 06 en R 4.6.0 y R base, a partir de las tablas intermedias verificadas. No requiere instalar paquetes; en este entorno las dependencias de scripts históricos no están disponibles, por lo que no se afirma una nueva corrida completa desde Excel con aquellos scripts. El auxiliar \path{R/auxiliares/cotejar_extremos_descriptivos.py} usa Python y openpyxl del runtime disponible para cotejar los extremos directamente con el Excel. Ambos comandos deben ejecutarse desde la raíz. La nueva salida guarda ocho indicadores en escala 0--1 y no ejecuta PCA ni produce una nueva matriz z definitiva.
+
+El diagnóstico del 20 de octubre utiliza R base (script 07) y lee la matriz de ocho candidatas ya versionada. El cotejo vigente también utiliza R base, organizado en seis módulos comentados en \path{R/funciones/verificacion_kmo/}, con R 4.6.0 comprobado. Sustituye al cotejo original en Python/NumPy, cuyos resultados se conservan como históricos. Las salidas, tablas y controles se guardan en \path{resultados/kmo_bartlett_20261020/}. Esta etapa no ejecuta PCA ni modifica los datos censales.
 
 \subsection{Artefactos principales}
 
